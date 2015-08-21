@@ -1,0 +1,286 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="theme-color" content="#1b7aca">
+  <link rel="icon" href="/icon.jpg">
+  <meta name="application-name" content="oliver's blog"/>
+  <meta name="msapplication-TileColor" content="#1b7aca"/>
+  <meta name="msapplication-square70x70logo" content="/icon.jpg" />
+  <meta name="msapplication-square150x150logo" content="/icon.jpg" />
+  <meta name="msapplication-wide310x150logo" content="/icon.jpg" />
+  <meta name="msapplication-square310x310logo" content="/icon.jpg" />
+  <meta name="msapplication-notification" content="frequency=30; polling-uri=/atom.xml" />
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="apple-touch-icon" href="/icon.jpg">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-startup-image" href="/icon.jpg">
+
+  
+  <title>PiOC学习笔记10——Cocoa, Cocoa Touch and the iOS SDK | oliver&#39;s blog</title>
+  <meta name="author" content="Oliver Wu">
+  
+  <meta name="description" content="##PART III —— Cocoa, Cocoa Touch and the iOS SDK chapter 20, 21
+###Introduction to Cocoa and Cocoa Touchframework layers （Mac OS X）
+
+###Writing iOS Ap">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="PiOC学习笔记10——Cocoa, Cocoa Touch and the iOS SDK"/>
+  <meta property="og:site_name" content="oliver&#39;s blog"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="oliver&#39;s blog" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  
+    <link href="/css/animate.css" rel="stylesheet">
+  
+  
+    <script src="/js/jquery-2.0.3.min.js"></script>
+  
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <script>
+    if (window.location.href.indexOf("wut0719.github.io")<0) {      location.href = location.href.replace(location.host, "wut0719.github.io");    }
+  </script>
+
+</head>
+
+
+<body>
+<!--[if lt IE9]>
+<script>
+alert("Please Update Your IE \n请升级您的IE浏览器");
+</script>
+< ![endif]-->
+  <header id="header" class="header header--fixed hide-from-print animated slideInDown"><div class="alignleft backtohome">
+  <a href="/">
+    <img id="icon-photo-small" class="personal-photo  animated rotateIn" src="/icon.jpg" alt="Oliver Wu">
+  </a>
+  <h1 id="title-mini" class=""><a href="/">oliver&#39;s blog</a></h1>
+</div>
+<a target="_blank" id="mini-toggle" class="more icon alignright"></a>
+<nav id="main-nav" class="alignright animated slideInRight">
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  <div class="clearfix"></div>
+</nav>
+
+</header>
+  <aside id="sidebar" class="alignleft animated slideInLeft"><div class="personal-info">
+  <figure>
+    
+    <div  class="backtohome">
+      <a href="/">
+        <img id="icon-photo-normal" class="personal-photo animated rotateIn" src="/icon.jpg" alt="Oliver Wu">
+      </a>
+    </div>
+    
+    <figcaption>
+      <h3 class=>Oliver Wu</h3>
+      <p></p>
+    </figcaption>
+  </figure>
+  <section class="social">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </section>
+</div>
+<div class="theme-info">
+  <a target="_blank" href="https://github.com/heruoxin/hexo-persona-color" class="html5"> Persona Color Theme</a> 
+  &copy; - 2015 Oliver Wu
+  
+</div>
+</aside>
+  <div id="content" class="inner">
+    <p id="header-fix"></p>
+    <div id="main-col" class="alignright"><div id="wrapper"><article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon depth"></div>
+        <time class="depth" datetime="2015-08-21T15:40:38.000Z"><a href="#">2015-08-21</a></time>
+      
+      
+  
+    <h1 class="depth title">PiOC学习笔记10——Cocoa, Cocoa Touch and the iOS SDK</h1>
+  
+
+    </header>
+    <div class="entry depth">
+      
+        <p>##PART III —— Cocoa, Cocoa Touch and the iOS SDK<br> chapter 20, 21</p>
+<p>###Introduction to Cocoa and Cocoa Touch<br>framework layers （Mac OS X）</p>
+<p><img src="/images/2014-09-01-framework_layers.jpeg" alt="framework layers"></p>
+<p>###Writing iOS Applications</p>
+<ul>
+<li>Class Prefix:设置类名前缀</li>
+<li>outlet：一种instance variable，与view内容的管理相关联</li>
+<li>虽然IBOutlet，IBAction本身没有实际内容，但Xcode需要利用它们来确定哪些instance variable和method需要与何种特定view对象和动作绑定</li>
+<li>设置button的Tag属性 → tag与button一一对应</li>
+</ul>
+<hr>
+<p>###部分C语言特性<br>chapter 13</p>
+<p>####<strong>Blocks</strong></p>
+<p>与函数相似：可以接收参数，可以有返回值</p>
+<p>与函数不同：可以使用blocks外的变量（在其作用域内），但是不能改变其值</p>
+<ul>
+<li>__block modifier （两道下划线）——此种变量可以在block内改变其值</li>
+<li><code>__block</code>的使用方法：在声明变量的语句前插入<code>__block</code></li>
+</ul>
+<p>block可以作为函数和方法的参数传递 ——好处之一：可以由系统分配给其他处理器或其他线程运算</p>
+<p>block可以被声明为全局的（main函数外）或局部的（方法内）</p>
+<p>syntax：</p>
+<ul>
+<li>声明并赋初值：<code>返回值类型 ^(block名)(参数1类型, 参数2类型, …) = ^(参数1类型 参数1名, 参数2类型 参数2名, …) { … body … };</code></li>
+<li>使用block：<code>block名(参数);</code></li>
+</ul>
+
+      
+    </div>
+    <footer>
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/技术学习/">技术学习</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/Objective-C/">Objective-C</a>
+  </div>
+
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+</div></div>
+    <div class="clearfix"></div>
+  </div>
+
+  <footer id="footer" class="inner"></footer>
+  <script src="/js/headroom.min.and.gallery.js"></script>
+<script>
+$("#mini-toggle").click(function () {
+    $( "#main-nav" ).css("display","inline");
+    setTimeout(function(){
+        $( "#main-nav" ).removeClass("slideInRight").addClass("slideOutRight");
+    }, 3000);
+    setTimeout(function(){
+        $( "#main-nav" ).css("display","");
+        $( "#main-nav" ).removeClass("slideOutRight").addClass("slideInRight");
+    }, 3555);
+});
+</script>
+
+<script>
+$("#header").headroom({
+  "tolerance": 0,
+  "offset": 200,
+  "classes": {
+    "initial": "",
+    "pinned": "slideInDown",
+    "unpinned": "slideOutUp"
+  }
+});
+$("#header").headroom("destroy");
+console.log("这网站没彩蛋，不用找了……")
+</script>
+
+<script>
+$("a").click(function () {
+    $( "#icon-photo-small"  ).removeClass( "rotateIn" ).addClass( "rotateOut" );
+    $( "#icon-photo-normal" ).removeClass( "rotateIn" ).addClass( "rotateOut" );
+    setTimeout(function(){
+        $( "#icon-photo-small"  ).removeClass( "rotateOut" ).addClass( "rotateIn" );
+        $( "#icon-photo-normal" ).removeClass( "rotateOut" ).addClass( "rotateIn" );
+    }, 900);
+});
+</script>
+
+
+
+<!--[if lt IE 9]><script src="/js/excanvas.js"></script><![endif]-->
+<script src="/js/jquery.tagcanvas.min.js"></script>
+ <script type="text/javascript">
+ $(document).ready(function() {
+   if( ! $('#myCanvas').tagcanvas({
+     textColour : '#6d6d6d',
+     outlineThickness : 1,
+     textHeight: 20,
+     maxSpeed : 0.04,
+     depth : 0.75
+   })) {
+     // TagCanvas failed to load
+     $('#myCanvasContainer').hide();
+   }
+   // your other jQuery stuff here...
+ });
+ </script>
+
+
+<script src="/js/pangu.js"></script>
+<script>pangu.page_spacing();</script>
+
+
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+</body>
+</html>

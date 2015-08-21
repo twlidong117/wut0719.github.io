@@ -1,0 +1,342 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="theme-color" content="#1b7aca">
+  <link rel="icon" href="/icon.jpg">
+  <meta name="application-name" content="oliver's blog"/>
+  <meta name="msapplication-TileColor" content="#1b7aca"/>
+  <meta name="msapplication-square70x70logo" content="/icon.jpg" />
+  <meta name="msapplication-square150x150logo" content="/icon.jpg" />
+  <meta name="msapplication-wide310x150logo" content="/icon.jpg" />
+  <meta name="msapplication-square310x310logo" content="/icon.jpg" />
+  <meta name="msapplication-notification" content="frequency=30; polling-uri=/atom.xml" />
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="apple-touch-icon" href="/icon.jpg">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-startup-image" href="/icon.jpg">
+
+  
+  <title>PiOC学习笔记05——Category和Protocol | oliver&#39;s blog</title>
+  <meta name="author" content="Oliver Wu">
+  
+  <meta name="description" content="##Chapter 11 Categories and Protocols
+###主要内容：
+
+Categories
+Protocols###Categories
+将类的定义模块化到相关方法的组或分类中
+扩展现有类的定义而无需获取源代码，也不用创建子类
+
+syntax:
+
+must import t">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="PiOC学习笔记05——Category和Protocol"/>
+  <meta property="og:site_name" content="oliver&#39;s blog"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="oliver&#39;s blog" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  
+    <link href="/css/animate.css" rel="stylesheet">
+  
+  
+    <script src="/js/jquery-2.0.3.min.js"></script>
+  
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <script>
+    if (window.location.href.indexOf("wut0719.github.io")<0) {      location.href = location.href.replace(location.host, "wut0719.github.io");    }
+  </script>
+
+</head>
+
+
+<body>
+<!--[if lt IE9]>
+<script>
+alert("Please Update Your IE \n请升级您的IE浏览器");
+</script>
+< ![endif]-->
+  <header id="header" class="header header--fixed hide-from-print animated slideInDown"><div class="alignleft backtohome">
+  <a href="/">
+    <img id="icon-photo-small" class="personal-photo  animated rotateIn" src="/icon.jpg" alt="Oliver Wu">
+  </a>
+  <h1 id="title-mini" class=""><a href="/">oliver&#39;s blog</a></h1>
+</div>
+<a target="_blank" id="mini-toggle" class="more icon alignright"></a>
+<nav id="main-nav" class="alignright animated slideInRight">
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  <div class="clearfix"></div>
+</nav>
+
+</header>
+  <aside id="sidebar" class="alignleft animated slideInLeft"><div class="personal-info">
+  <figure>
+    
+    <div  class="backtohome">
+      <a href="/">
+        <img id="icon-photo-normal" class="personal-photo animated rotateIn" src="/icon.jpg" alt="Oliver Wu">
+      </a>
+    </div>
+    
+    <figcaption>
+      <h3 class=>Oliver Wu</h3>
+      <p></p>
+    </figcaption>
+  </figure>
+  <section class="social">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </section>
+</div>
+<div class="theme-info">
+  <a target="_blank" href="https://github.com/heruoxin/hexo-persona-color" class="html5"> Persona Color Theme</a> 
+  &copy; - 2015 Oliver Wu
+  
+</div>
+</aside>
+  <div id="content" class="inner">
+    <p id="header-fix"></p>
+    <div id="main-col" class="alignright"><div id="wrapper"><article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon depth"></div>
+        <time class="depth" datetime="2015-08-21T15:40:02.000Z"><a href="#">2015-08-21</a></time>
+      
+      
+  
+    <h1 class="depth title">PiOC学习笔记05——Category和Protocol</h1>
+  
+
+    </header>
+    <div class="entry depth">
+      
+        <p>##Chapter 11 Categories and Protocols</p>
+<p>###主要内容：</p>
+<ul>
+<li>Categories</li>
+<li>Protocols<br>###Categories</li>
+<li>将类的定义模块化到相关方法的组或分类中</li>
+<li>扩展现有类的定义而无需获取源代码，也不用创建子类</li>
+</ul>
+<p>syntax:</p>
+<ul>
+<li>must import the original interface section (unless you incorporate the new category directly into the original (.h) header file)</li>
+<li>@interface ClassName (CategoryName)<ul>
+<li>no superclass; no properties; 加入的methods的声明</li>
+</ul>
+</li>
+<li>@implementation部分：category中的方法可以与@interface部分的方法放在同一个@implementation部分里实现，也可以单独在@implementation ClassName (CategoryName)部分里实现</li>
+</ul>
+<p>Class Extensions—— <strong>a category without a name</strong></p>
+<ul>
+<li>extend the class by adding <strong>additional instance variables and properties</strong> (not allowed for named categories)</li>
+<li>位于.m文件中，@implementation部分之前</li>
+<li>相应的@implementation部分在class的@implementation部分中，不是独立的</li>
+<li>Useful——“private”方法（仅在implementation部分使用的方法；不用在class的@interface（.h）中声明，外界看不到），但是如果事先得知方法名，仍然可以调用</li>
+<li>※ 如果有独立的category模块，在其中使用extensions里的方法，也需要在.m文件中添加extension的声明</li>
+</ul>
+<p>在category中可以override类中的方法，不过是不好的习惯 → 如有override方法的需求，创建subclass更好</p>
+<p>category的数目没有限制，如果一个方法在多个category中都有定义，不会指定是哪个</p>
+<p>通过category给class增加新方法不仅会影响class，也会影响其subclass</p>
+<p>加入新方法可能与class的原始设计或意图相冲突</p>
+<p>object/category 命名对必须是唯一的（在给定的Objective-C名称空间中）→ 潜在的麻烦：Objective-C名称空间为程序代码和所有libraries、frameworks 和 plug-ins所共享。</p>
+<p>###Protocols and Delegation<br>protocol —— a list of methods that is shared <strong>among classes</strong>.</p>
+<ul>
+<li>these methods do not have corresponding implementations ；需要别人（使用者）在自己的class中去实现</li>
+<li>通常有文档documentation说明</li>
+</ul>
+<p>protocol中的方法有些是可选的，有些是必须实现的（可以都是可选的或都是必须实现的）：实现protocol中的方法称为遵守（conform to）或采用（adopt）这项协议</p>
+<p>syntax：在.h文件中<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">@protocol</span> <span class="title">ProtocolName</span></span></span><br><span class="line"> 声明方法（与<span class="class"><span class="keyword">@interface</span>相同）</span></span><br><span class="line">在<span class="keyword">@optional</span>之前声明的是必须实现的方法，其后声明的方法都是可选的（可以通过@require来再列出必须实现的方法）</span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure><br>在class中使用protocol：<br><code>@interface ClassName &lt; ProtocolName1, ProtocolName2,… &gt;</code></p>
+<p>在class中声明的protocol不必在其@implementation部分中实现；但是提醒其他人遵守protocol所要实现的方法</p>
+<p>class中遵守的protocol，其subclass也遵守（尽管并不意味着能够在subclass中正确地实现）</p>
+<p>protocol不依赖于class，任何class都可以遵守之而无需继承</p>
+<p>编译器检查变量的一致性：</p>
+<ul>
+<li>id currentObject;</li>
+<li>对于currentObject接收的对象，编译器都会检查其是否遵守指定的protocol</li>
+<li>而对于currentObject本身，编译器不会检查（原因：id类型）</li>
+</ul>
+<p>扩充已有protocol：<code>@protocol NewProtocolName &lt;OldProtocolName&gt;</code></p>
+<ul>
+<li>遵守这个NewProtocol不仅需要实现其自定的方法，还有实现原来Protocol的方法</li>
+</ul>
+<p>category和extension都可以可以遵守protocol</p>
+<p><strong>protocol命名必须唯一</strong></p>
+<p>####delegation</p>
+<ul>
+<li>如果把protocol看作是两个class之间的interface definition，那么定义protocol的class可以看作是将定义在protocol中的方法委托（delegate）给另一个class去实现</li>
+<li>class可以更加抽象，具体工作（对具体事件的响应和处理特定参数…）通过protocol交给the delegate class实现</li>
+</ul>
+<p>####informal protocol</p>
+<ul>
+<li>实质是一个category，定义一组方法但不实现</li>
+<li>通常由root class（比如NSObject）定义；也被称为抽象协议（abstract protocol）</li>
+<li>辅助文档说明和模块化方法</li>
+<li>这些方法要在subclass中实现，需要在自己的@interface部分重新声明，然后再实现</li>
+</ul>
+<p>对遵守formal protocol的对象的检查，编译时和运行时都会进行；对informal protocol，对象不必全都实现其方法，编译时不检查，运行时可以通过方法respondsToSelector:进行检查（手动）</p>
+<ul>
+<li><strong>在Objective-C 2.0中使用@optional来代替informal protocol的使用</strong></li>
+</ul>
+<p>####合成对象Composite Objects</p>
+<ul>
+<li>其class中包含其他class的一个或多个对象</li>
+<li>subclass的麻烦：superclass的一些方法在subclass中并不适用（但是都一并继承）；必须确保superclass的方法都能在subclass中正确使用；对superclass的修改同样会影响subclass（可能造成意外状况）</li>
+<li>替代方案：定义一个包含所需要扩展的实例变量（通过对象）的新class，然后在新class中只用定义合适的方法即可</li>
+</ul>
+<p>如果以这种方式定义新class的对象，alloc和init方法只会创建新class的对象而不会为存储在实例变量中的对象分配空间 → 需要override init方法或编写新的initWith……方法进行此操作（rect = [Rectangle alloc];）</p>
+
+      
+    </div>
+    <footer>
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/技术学习/">技术学习</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/Objective-C/">Objective-C</a>
+  </div>
+
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+</div></div>
+    <div class="clearfix"></div>
+  </div>
+
+  <footer id="footer" class="inner"></footer>
+  <script src="/js/headroom.min.and.gallery.js"></script>
+<script>
+$("#mini-toggle").click(function () {
+    $( "#main-nav" ).css("display","inline");
+    setTimeout(function(){
+        $( "#main-nav" ).removeClass("slideInRight").addClass("slideOutRight");
+    }, 3000);
+    setTimeout(function(){
+        $( "#main-nav" ).css("display","");
+        $( "#main-nav" ).removeClass("slideOutRight").addClass("slideInRight");
+    }, 3555);
+});
+</script>
+
+<script>
+$("#header").headroom({
+  "tolerance": 0,
+  "offset": 200,
+  "classes": {
+    "initial": "",
+    "pinned": "slideInDown",
+    "unpinned": "slideOutUp"
+  }
+});
+$("#header").headroom("destroy");
+console.log("这网站没彩蛋，不用找了……")
+</script>
+
+<script>
+$("a").click(function () {
+    $( "#icon-photo-small"  ).removeClass( "rotateIn" ).addClass( "rotateOut" );
+    $( "#icon-photo-normal" ).removeClass( "rotateIn" ).addClass( "rotateOut" );
+    setTimeout(function(){
+        $( "#icon-photo-small"  ).removeClass( "rotateOut" ).addClass( "rotateIn" );
+        $( "#icon-photo-normal" ).removeClass( "rotateOut" ).addClass( "rotateIn" );
+    }, 900);
+});
+</script>
+
+
+
+<!--[if lt IE 9]><script src="/js/excanvas.js"></script><![endif]-->
+<script src="/js/jquery.tagcanvas.min.js"></script>
+ <script type="text/javascript">
+ $(document).ready(function() {
+   if( ! $('#myCanvas').tagcanvas({
+     textColour : '#6d6d6d',
+     outlineThickness : 1,
+     textHeight: 20,
+     maxSpeed : 0.04,
+     depth : 0.75
+   })) {
+     // TagCanvas failed to load
+     $('#myCanvasContainer').hide();
+   }
+   // your other jQuery stuff here...
+ });
+ </script>
+
+
+<script src="/js/pangu.js"></script>
+<script>pangu.page_spacing();</script>
+
+
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+</body>
+</html>
