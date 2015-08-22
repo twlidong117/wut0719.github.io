@@ -67,6 +67,8 @@ alert("Please Update Your IE \n请升级您的IE浏览器");
       <a target="_blank" class="icon email" href="mailto:olivewu81@outlook.com"></a>
     
     
+      <a target="_blank" class="icon twitter" href="http://twitter.com/oliver3760"></a>
+    
     
     
     
@@ -106,16 +108,17 @@ alert("Please Update Your IE \n请升级您的IE浏览器");
       <a target="_blank" class="icon email depth" href="mailto:olivewu81@outlook.com"></a>
     
     
-    
-    
-    
-      <a target="_blank" class="icon github depth" href="http://github.com/wut0719"></a>
+      <a target="_blank" class="icon twitter depth" href="https://twitter.com/oliver3760"></a>
     
     
     
     
-      <a target="_blank" class="icon instagram depth" href="http://instagram.com/wut0719"></a>
-      <a target="_blank" class="icon instagram depth" href="http://instagram.com/wut0719"></a>
+      <a target="_blank" class="icon github depth" href="https://github.com/wut0719"></a>
+    
+    
+    
+    
+      <a target="_blank" class="icon instagram depth" href="https://tofo.me/wut0719"></a>
     
     
     
@@ -128,6 +131,7 @@ alert("Please Update Your IE \n请升级您的IE浏览器");
   <a target="_blank" href="https://github.com/heruoxin/hexo-persona-color" class="html5"> Persona Color Theme</a> 
   &copy; - 2015 Oliver Wu
   
+  <p>from<a target="_blank" href="https://www.1littlecup.com">little_cup</a></p>
 </div>
 </aside>
   <div id="content" class="inner">
@@ -138,10 +142,10 @@ alert("Please Update Your IE \n请升级您的IE浏览器");
       <div class="post-content animated fadeIn">
         <header>
             
-              <div class="icon depth"><a href="/2015/08/22/2014-08-23-PiOC01/"> </a></div>
-              <h2 class="depth title" ><a class="animated" href="/2015/08/22/2014-08-23-PiOC01/">Programming in Objective-C 6th Edition学习笔记1</a></h2>
+              <div class="icon depth"><a href="/2015/08/22/2014-08-30-PiOC07/"> </a></div>
+              <h2 class="depth title" ><a class="animated" href="/2015/08/22/2014-08-30-PiOC07/">PiOC学习笔记07——Foundation框架基础1</a></h2>
             
-            <time class="time title depth" datetime="2015-08-22T02:39:13.000Z">2015-08-22</time>
+            <time class="time title depth" datetime="2015-08-22T02:53:30.000Z">2015-08-22</time>
           </header>
       </div>
     </article>
@@ -152,10 +156,10 @@ alert("Please Update Your IE \n请升级您的IE浏览器");
       <div class="post-content animated fadeIn">
         <header>
             
-              <div class="icon depth"><a href="/2015/08/22/2014-08-24-PiOC02/"> </a></div>
-              <h2 class="depth title" ><a class="animated" href="/2015/08/22/2014-08-24-PiOC02/">PiOC学习笔记——OC相关2</a></h2>
+              <div class="icon depth"><a href="/2015/08/22/2014-08-25-PiOC03/"> </a></div>
+              <h2 class="depth title" ><a class="animated" href="/2015/08/22/2014-08-25-PiOC03/">PiOC学习笔记03——多态、动态绑定和动态类型</a></h2>
             
-            <time class="time title depth" datetime="2015-08-22T02:39:13.000Z">2015-08-22</time>
+            <time class="time title depth" datetime="2015-08-22T02:53:30.000Z">2015-08-22</time>
           </header>
       </div>
     </article>
@@ -276,8 +280,8 @@ alert("Please Update Your IE \n请升级您的IE浏览器");
 
 
 
-  <div class="animated fadeIn" idplus="ProgramminginObjective-C6thEdition学习笔记1" style="display: none;">
-    <div idplusp="ProgramminginObjective-C6thEdition学习笔记1">
+  <div class="animated fadeIn" idplus="PiOC学习笔记07——Foundation框架基础1" style="display: none;">
+    <div idplusp="PiOC学习笔记07——Foundation框架基础1">
       <article class="post">
   
     <div class="gallery">
@@ -296,48 +300,103 @@ alert("Please Update Your IE \n请升级您的IE浏览器");
     <header>
       
         <div class="icon depth"></div>
-        <time class="depth" datetime="2015-08-22T02:39:13.000Z"><a href="#">2015-08-22</a></time>
+        <time class="depth" datetime="2015-08-22T02:53:30.000Z"><a href="#">2015-08-22</a></time>
       
       
   
-    <h1 class="depth title">Programming in Objective-C 6th Edition学习笔记1</h1>
+    <h1 class="depth title">PiOC学习笔记07——Foundation框架基础1</h1>
   
 
     </header>
     <div class="entry depth">
       
-        <h2 id="PART_I_——_The_Objective-C_Language（ch-2-4）">PART I —— The Objective-C Language（ch.2-4）</h2><ul>
-<li>在Obj-C中，一个class包含两部分：<br>@interface：继承关系，{实例变量}，方法声明<br>@implementation：@interface中声明的方法的实现代码</li>
-<li>命名：<ul>
-<li>基础规则：<ul>
-<li>选择范围：下划线，字母(‘a’-‘z’, ‘A’-‘Z’)，数字0-9</li>
-<li>不能以数字开头</li>
-<li>不能选择关键字</li>
-<li>Obj-C大小写敏感</li>
+        <h2 id="PART_II_——_Foundation_Framework">PART II —— Foundation Framework</h2><p>Chapter 14-15</p>
+<h4 id="Introduction">Introduction</h4><ul>
+<li>a <strong>framework</strong> is <strong>a collection of classes, methods, functions and documentation</strong> logically grouped together to make developing programs easier.</li>
+<li><strong>Foundation framework</strong> —— provides the base of foundation for all your program development：numbers, strings, arrays, dictionaries, and sets</li>
+<li>Application Kit framework —— an extensive collection of classes and methods to develop interactive graphical applications：texts, menus, toolbars, tables, …</li>
+<li><strong>Cocoa</strong> (OS X)环境包括Foundation framework、the Application Kit framework 和 Core Data</li>
+<li><strong>Cocoa Touch</strong> (iOS)环境包括Foundation、Core Data 和 UIKit framework</li>
+<li>官方提供的Foundation Documentation</li>
+</ul>
+<h4 id="数字对象_—_NSNumber">数字对象 — NSNumber</h4><ul>
+<li>Xcode 5 新特性——“modules” can help speed up compilation time as well as help to avoid name conflicts between different libraries<ul>
+<li>Modules相当于将框架进行了封装，然后加入在实际编译之时加入了一个用来存放已编译添加过的Modules列表<a href="http://www.cocoachina.com/ios/20131106/7308.html" target="_blank" rel="external">1</a>。</li>
 </ul>
 </li>
-<li>好的原则：<ul>
-<li>class name 首字母大写</li>
-<li>variable name和method name首字母小写</li>
-<li>method name 以动词开头</li>
+<li>All number objects must be newly created. You cannot change the value of a previously created NSNumber object. <em>immutable</em><ul>
+<li>numberWithInt: → intValue → %i</li>
+<li>numberWithInteger： → integerValue → %li</li>
 </ul>
 </li>
 </ul>
-</li>
-<li>创建对象的过程（三步走）<ul>
-<li>Step1：建立指向待新建对象的引用（对应class的类型，在Stack）</li>
-<li>Step2：向class发送分配内存空间（Heap）的消息（alloc），返回相应的内存地址给变量，实现引用与对象的绑定</li>
-<li>Step3：向对象发送初始化的消息（init），返回初始化后的可用对象</li>
+<h4 id="字符串对象_—_NSString">字符串对象 — NSString</h4><ul>
+<li>objects(NSString….) → %@</li>
+<li><strong>description</strong>方法：使用%@格式化输出自己写的class的对象；默认显示class名和objects的内存地址，override就可以修改其显示内容 → good debugging tool</li>
+<li>NSString对象 → immutable<ul>
+<li>但是指向对象的引用可以更改</li>
 </ul>
 </li>
-<li>Data Encapsulation 数据封装<ul>
-<li>class外的方法不能直接读写class中声明的instance variables，而是通过getters和setters方法（都在class中定义）来读和写 =&gt;阻止意外访问</li>
-<li>setters方法不需要返回值；getters方法一定要有返回值</li>
+<li>NSMutableString对象 → mutable</li>
+<li>stringWithString: → 复制字符串的内容，创建新的NSString对象 ； “=” →复制指向对象的引用，不创建新对象</li>
+<li>caseInsensitiveCompare: → 不区分大小写的比较</li>
+<li><strong>NSRange</strong><ul>
+<li>一个C结构体的别名，包含location和length两个元素（类型NSUInteger）</li>
+<li>字符串中的location从0开始</li>
+<li>创建一个NSRange：NSMakeRange(location, length)</li>
 </ul>
 </li>
-<li>一种特殊的数据类型(泛型) Type id<ul>
-<li>用于存储任何类型的对象，通用对象类型</li>
-<li>The id type is the basis for very important features in Objective-C known as polymorphism and dynamic binding</li>
+</ul>
+<h4 id="数组对象_—_NSArray">数组对象 — NSArray</h4><ul>
+<li>an ordered collection of <strong>objects</strong></li>
+<li><p>immutable (NSArray) and mutable (NSMutableArray, subclass of NSArray)</p>
+<ul>
+<li><code>[NSArray arrayWithObjects: elem1,…,nil];</code>等价于 <code>@[elem1, elem2, …]</code></li>
+<li><code>array[index]</code> 等价于<code>[array objectAtIndex:index]</code></li>
+<li><code>array[index] = object</code> 等价于 <code>[array setObject: object forIndex: index]</code></li>
+</ul>
+</li>
+<li><p>for each element in the array, NSLog uses the description method from the class the element belongs to</p>
+</li>
+<li>利用复杂算法处理大量的数据数组，c语言的方法更好</li>
+<li>property的attributes    (copy, nonatomic,…)<ul>
+<li>copy：make a copy of the instance variable in the setter method；default是not copy</li>
+<li>nonatomic：don’t need to worry about race conditions that could occur from multiple threads trying to access the instance variable at the same time</li>
+<li>strong：make an additional reference to the object whenever the setter method is used. Influence the life span of the object.</li>
+</ul>
+</li>
+<li>初始化（init，initWith……）方法的返回值类型使用instancetype，便于其subclass使用：编译器会根据receiver的类型确定方法的返回值类型</li>
+<li>fast enumeration ：for（variable in array）{……}</li>
+<li>enumerateObjectUsingBlock</li>
+<li>identical object → objects with the same location in memory</li>
+<li><em>NSComparator</em> → <code>typedef NSComparisonResult (^NSComparator)(id obj1, id obj2);</code><ul>
+<li>NSComparator is a block that takes two objects as its arguments and that returns a value of type NSComparisonResult.</li>
+<li>使用block可以提速（多线程）</li>
+<li>don’t have to add a comparison method to the class whose objects are being compared</li>
+<li>if you want to change the way they are compared, you can do it directly in the method (block), which means you don’t have to change original class.</li>
+</ul>
+</li>
+<li>NSValue class ： 结构体 →wrap→ 对象；对象 →unwrap→ 结构体<ul>
+<li>CGPoint, CGSize, CGRect 等是结构体而非对象，不能直接放入array中</li>
+</ul>
+</li>
+</ul>
+<h4 id="字典对象_—_NSDictionary">字典对象 — NSDictionary</h4><ul>
+<li>key must be unique, but can be of any type object; often is string<br>value can also be of any type object, but not nil.<ul>
+<li><code>dict[key]</code> 等价于<code>[dict objectForKey: key]</code></li>
+<li><code>dict[key] = object</code>等价于 <code>[dict setObject: object forKey: key]</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="Set_Objects">Set Objects</h4><ul>
+<li>a collection of unique object</li>
+<li>NSSet, NSMutableSet, NSIndexSet, NSCountedSet, …</li>
+<li>包含的一些操作：<ul>
+<li>searching, adding, and removing members (mutable sets); comparing two sets; and finding the intersection(交集) and union(并集) of two sets.</li>
+</ul>
+</li>
+<li><em>NSIndexSet</em> ：store ordered indexes into some other data structure, typically an array<ul>
+<li>只有immutable，没有mutable的</li>
 </ul>
 </li>
 </ul>
@@ -373,8 +432,8 @@ alert("Please Update Your IE \n请升级您的IE浏览器");
 
 
 
-  <div class="animated fadeIn" idplus="PiOC学习笔记——OC相关2" style="display: none;">
-    <div idplusp="PiOC学习笔记——OC相关2">
+  <div class="animated fadeIn" idplus="PiOC学习笔记03——多态、动态绑定和动态类型" style="display: none;">
+    <div idplusp="PiOC学习笔记03——多态、动态绑定和动态类型">
       <article class="post">
   
     <div class="gallery">
@@ -393,74 +452,67 @@ alert("Please Update Your IE \n请升级您的IE浏览器");
     <header>
       
         <div class="icon depth"></div>
-        <time class="depth" datetime="2015-08-22T02:39:13.000Z"><a href="#">2015-08-22</a></time>
+        <time class="depth" datetime="2015-08-22T02:53:30.000Z"><a href="#">2015-08-22</a></time>
       
       
   
-    <h1 class="depth title">PiOC学习笔记——OC相关2</h1>
+    <h1 class="depth title">PiOC学习笔记03——多态、动态绑定和动态类型</h1>
   
 
     </header>
     <div class="entry depth">
       
-        <h2 id="PART_I_——_The_Objective-C_Language_(ch-5-8)">PART I —— The Objective-C Language (ch.5-8)</h2><p>for循环过程：</p>
-<ul>
-<li>Step1：index variable赋初值</li>
-<li>Step2：循环条件判断  → 执行循环体前先做一次判断<ul>
-<li>true则执行循环体</li>
-<li>false则直接跳出循环，继续程序</li>
+        <h2 id="PART_I_——_The_Objective-C_Language_(ch-9)">PART I —— The Objective-C Language (ch.9)</h2><h4 id="Polymorphism_多态">Polymorphism 多态</h4><ul>
+<li>同名的method，不同的class</li>
+<li>运行时系统总是携带有关“对象属于哪个类”的信息 → This enables it to make key decisions at runtime instead of at compile time.</li>
+<li>Each class definition encapsulates the code needed to respond to that particular method, and this makes it independent of the other class definitions.</li>
+</ul>
+<h4 id="Dynamic_Binding_and_the_id_Type_动态绑定和id类型（即dynamic_typing）">Dynamic Binding and the id Type 动态绑定和id类型（即dynamic typing）</h4><ul>
+<li>During execution of the program, before the system sends the message to id type variable, it first checks the class of the object stored inside the variable.</li>
+<li>When combined with polymorphism, dynamic binding and dynamic typing enable you to easily write code that can send the same message to objects from different classes.</li>
+<li>id类型的某些错误（比如使用错误的方法），在编译时不会被发现，只有在运行时会导致程序崩溃</li>
+<li>对id类型的对象不能使用点操作符（“.”）,编译器会报错</li>
+<li><strong>id类型作参数类型和返回值类型</strong><ul>
+<li>若某方法在一个class中使用基本数据类型作参数类型而在另一个class中使用对象作参数类型（返回值同理），当用id类型调用此方法（或传参）时，编译器会生成错误错误代码</li>
+<li>但是若方法的参数类型（返回值类型）是不同class的对象，则用id类型时不会产生编译错误（原因：传递的时指向对象的引用）</li>
 </ul>
 </li>
-<li>Step3：计算更新index variable的表达式 loop expression</li>
-<li>返回Step2</li>
-</ul>
-<p>格式化字符串 %2i ——表示右端对齐的2位整数；左端对齐%-2i</p>
-<ul>
-<li>scanf(格式化字符串,&amp;变量)<ul>
-<li>字符串是String类型，不是NSString对象（不加@）</li>
-<li>第二个参数用于指定用户键入的值存储在哪里（“&amp;变量”是指向变量内存空间的指针）</li>
-<li>当使用scanf输入 <em>char型字符</em> 时，最好在格式化字符串 <em>%c之前加个空格</em> (“ %c”) —— 这样可以让scanf跳过“空白字符”（如回车，制表符……），避免读入不想要的字符</li>
+<li>Static typing 静态类型：定义一个变量用于存放特定class的对象</li>
+<li>尽量使用static typing → ①便于编译器检查错误；②提高代码的可读性</li>
+<li>NSObject类提供一些用于处理Dynamic types的方法</li>
+<li>class-object（类对象）——generated with the class method（方法名为class）</li>
+<li>selector 是 SEL类型的值——由@selector指令产生</li>
+<li>根据class名或另一个对象生成类对象（class object），可以向它发送class消息<ol>
+<li>[class名 class];</li>
+<li>[对象名 class];   //可以获知对象所属的class</li>
+</ol>
+</li>
+<li>@selector：生成SEL类型的值，可以保存到SEL类型的变量中<ul>
+<li>@selector(方法名)   //方法如果有参数，冒号要写，参数不用写</li>
 </ul>
 </li>
+<li>判断id类型对象能否执行某方法 respondsToSelector:@selector(…)</li>
 </ul>
-<p>for循环的变体：多个index variables；fast enumerations快速遍历（ch.15）<br>for循环适合的情景：预先确定循环次数的循环；initial expression, looping expression, and looping condition都使用相同的变量</p>
-<p>字符测试最好使用standard library提供的方法，避免内部表示问题</p>
+<hr>
+<h3 id="使用@try处理异常">使用@try处理异常</h3><p>Good programming practice dictate that you try to anticipate problems that can occur in your program.<br>syntax:</p>
 <ul>
-<li>相关库文件：ctype.h</li>
-<li>方法：islower(char ch)是否为小写；isupper(char ch)是否为大写；isdigit(char ch)是否为数字（0-9）……是则返回非0值，否则返回0（返回值类型int）</li>
-</ul>
-<p>条件运算符的一种特殊情形（non-ANSI extension）:   “condition?: expression”</p>
-<ul>
-<li>如果condition的结果是真，则运算的值是计算condition的结果；若condition是假，则值为计算expression的结果</li>
-<li>与“condition? condition: expression”对比：前者condition计算一次，后者condition计算两次</li>
-</ul>
-<p>Think of the <strong>interface file(.h文件)</strong> as containing the <strong>public</strong> information about a class—the information you share with the users of the class. In contrast, the <strong>implementation section(.m文件)</strong> contains the <strong>private</strong> information—the instance variables and the actual code.<br>(In fact, the code may actually be stored someplace else, such as in a framework or library.)</p>
-<p>在objective-c 2.0中的新特性：自动生成setter和getter方法（统称accessor methods）</p>
-<ul>
-<li>首先要在interface部分使用@property声明属性（总是与实例变量重名，但非必须）</li>
-<li>然后要在implementation部分使用@synthesize，给属性加上accessor methods</li>
-<li>注：<ul>
-<li>优点：更有效率，也能更安全地运行在多核多线程环境中</li>
-<li>如果省略@synthesize部分，编译器会自动创建一个相关联的实例变量，以“<em>属性名”为变量名(则@implementation部分中所有使用属性名的地方都要替换为“</em>属性名”)</li>
-<li>不要使用new, alloc, copy, init作为属性名的开头</li>
+<li>@try block中运行正常，程序继续；若出现异常，则进入@catch block中执行语句，通常为记录错误信息，清理，结束程序</li>
+<li>@finally block ：无论@try block中是否抛出异常（exception）都要执行的code，比如release/clean up resources like open sockets, open files, database locks, semaphore locks, and so on.<ul>
+<li>The finally block is the last, best chance to exit cleaning from an application that is about to crash.</li>
 </ul>
 </li>
+<li>@throw：“@throw;” enables you to throw your own exception. → 让系统完成其余工作<ul>
+<li>可以抛出特定异常，或者处理@catch block中的异常</li>
+<li>完成异常处理后（比如清理）</li>
 </ul>
-<p>当使用对象做为方法的参数时，参数类型是“（Class名 *）”（星号不可少）<br>返回对象（引用）时，接收的变量不用alloc和init而直接获取对象；对象的alloc和init已经在method的执行中完成。</p>
-<p><strong>#import和@class</strong>：在@interface部分使用@class告诉编译器这是一个class名，提高编译效率（不必导入整个文件），而如果要使用这个class中定义的属性和方法，需要在@implementation部分使用#import</p>
-<ul>
-<li>特殊情形：若两个class彼此之间互相依赖，用#import会引发编译错误，要用@class</li>
+</li>
+<li>可以使用多个@catch blocks处理不同类型的异常</li>
+<li>It’s better to<ul>
+<li>test for errors before they occur rather than catch them</li>
+<li>test for an error in a method and return some value as an error indicator than to throw an exception</li>
 </ul>
-<p>对象类型的实例变量不要用@synthesize合成（@synthesize自动生成的accessor方法只是复制指向对象的引用，而不是对象），单独写setter和getter，同样要注意复制对象<br>override：在subclass中对superclass的方法修改，方法名，参数，返回值类型都相同<br>多个class中override的方法，编译器选择在receiver所属的class中查找<br>使用subclass的情形？</p>
-<ul>
-<li>通过增加方法和（或）实例变量，扩展superclass的功能</li>
-<li>对superclass进行细化（如在图形class的基础上细化得到矩形class、椭圆class……）</li>
-<li>通过override改变class的default behavior</li>
-</ul>
-<p>abstract class：仅仅是用于方便创建子类的类（定义实例变量和方法，但不会创建实例）</p>
-<ul>
-<li>abstract class有很多concrete subclasses，总称为簇（a class cluster）。这些子类是private的，不能直接访问，只能通过abstract class中定义的公共接口访问。创建对象也是使用abstract class，alloc和init由其concrete subclass解决，不用coder处理</li>
-<li>举例：NSNumber……</li>
+</li>
+<li>If you catch an exception, you only do so with the intention of cleaning up and terminating your application.</li>
 </ul>
 
       
@@ -1239,5 +1291,6 @@ $("a").click(function () {
 
 
 
+  <a href="https://github.com/you"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"></a>
 </body>
 </html>
