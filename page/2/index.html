@@ -138,6 +138,20 @@ alert("Please Update Your IE \n请升级您的IE浏览器");
       <div class="post-content animated fadeIn">
         <header>
             
+              <div class="icon depth"><a href="/2014/08/24/PiOC02/"> </a></div>
+              <h2 class="depth title" ><a class="animated" href="/2014/08/24/PiOC02/">PiOC学习笔记——OC相关2</a></h2>
+            
+            <time class="time title depth" datetime="2014-08-23T16:00:00.000Z">2014-08-24</time>
+          </header>
+      </div>
+    </article>
+  </div>
+
+  <div class="archive titlelist">
+    <article class="post">
+      <div class="post-content animated fadeIn">
+        <header>
+            
               <div class="icon depth"><a href="/2014/08/23/PiOC01/"> </a></div>
               <h2 class="depth title" ><a class="animated" href="/2014/08/23/PiOC01/">Programming in Objective-C 6th Edition学习笔记1</a></h2>
             
@@ -250,8 +264,8 @@ alert("Please Update Your IE \n请升级您的IE浏览器");
       <div class="post-content animated fadeIn">
         <header>
             
-              <div class="icon depth"><a href="/2013/03/19/从高考改革说开去/"> </a></div>
-              <h2 class="depth title" ><a class="animated" href="/2013/03/19/从高考改革说开去/">从高考改革说开去</a></h2>
+              <div class="icon depth"><a href="/2013/03/19/《叫魂》笔记/"> </a></div>
+              <h2 class="depth title" ><a class="animated" href="/2013/03/19/《叫魂》笔记/">《叫魂》笔记</a></h2>
             
             <time class="time title depth" datetime="2013-03-18T16:00:00.000Z">2013-03-19</time>
           </header>
@@ -259,20 +273,127 @@ alert("Please Update Your IE \n请升级您的IE浏览器");
     </article>
   </div>
 
-  <div class="archive titlelist">
-    <article class="post">
-      <div class="post-content animated fadeIn">
-        <header>
-            
-              <div class="icon depth"><a href="/2013/03/19/Be-Right-Back——黑镜s02e01/"> </a></div>
-              <h2 class="depth title" ><a class="animated" href="/2013/03/19/Be-Right-Back——黑镜s02e01/">Be Right Back——黑镜s02e01</a></h2>
-            
-            <time class="time title depth" datetime="2013-03-18T16:00:00.000Z">2013-03-19</time>
-          </header>
-      </div>
-    </article>
+
+
+
+  <div class="animated fadeIn" idplus="PiOC学习笔记——OC相关2" style="display: none;">
+    <div idplusp="PiOC学习笔记——OC相关2">
+      <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img s1c="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon depth"></div>
+        <time class="depth" datetime="2014-08-23T16:00:00.000Z"><a href="#">2014-08-24</a></time>
+      
+      
+  
+    <h1 class="depth title">PiOC学习笔记——OC相关2</h1>
+  
+
+    </header>
+    <div class="entry depth">
+      
+        <h2 id="PART_I_——_The_Objective-C_Language_(ch-5-8)">PART I —— The Objective-C Language (ch.5-8)</h2><p>for循环过程：</p>
+<ul>
+<li>Step1：index variable赋初值</li>
+<li>Step2：循环条件判断  → 执行循环体前先做一次判断<ul>
+<li>true则执行循环体</li>
+<li>false则直接跳出循环，继续程序</li>
+</ul>
+</li>
+<li>Step3：计算更新index variable的表达式 loop expression</li>
+<li>返回Step2</li>
+</ul>
+<p>格式化字符串 %2i ——表示右端对齐的2位整数；左端对齐%-2i</p>
+<ul>
+<li>scanf(格式化字符串,&amp;变量)<ul>
+<li>字符串是String类型，不是NSString对象（不加@）</li>
+<li>第二个参数用于指定用户键入的值存储在哪里（“&amp;变量”是指向变量内存空间的指针）</li>
+<li>当使用scanf输入 <em>char型字符</em> 时，最好在格式化字符串 <em>%c之前加个空格</em> (“ %c”) —— 这样可以让scanf跳过“空白字符”（如回车，制表符……），避免读入不想要的字符</li>
+</ul>
+</li>
+</ul>
+<p>for循环的变体：多个index variables；fast enumerations快速遍历（ch.15）<br>for循环适合的情景：预先确定循环次数的循环；initial expression, looping expression, and looping condition都使用相同的变量</p>
+<p>字符测试最好使用standard library提供的方法，避免内部表示问题</p>
+<ul>
+<li>相关库文件：ctype.h</li>
+<li>方法：islower(char ch)是否为小写；isupper(char ch)是否为大写；isdigit(char ch)是否为数字（0-9）……是则返回非0值，否则返回0（返回值类型int）</li>
+</ul>
+<p>条件运算符的一种特殊情形（non-ANSI extension）:   “condition?: expression”</p>
+<ul>
+<li>如果condition的结果是真，则运算的值是计算condition的结果；若condition是假，则值为计算expression的结果</li>
+<li>与“condition? condition: expression”对比：前者condition计算一次，后者condition计算两次</li>
+</ul>
+<p>Think of the <strong>interface file(.h文件)</strong> as containing the <strong>public</strong> information about a class—the information you share with the users of the class. In contrast, the <strong>implementation section(.m文件)</strong> contains the <strong>private</strong> information—the instance variables and the actual code.<br>(In fact, the code may actually be stored someplace else, such as in a framework or library.)</p>
+<p>在objective-c 2.0中的新特性：自动生成setter和getter方法（统称accessor methods）</p>
+<ul>
+<li>首先要在interface部分使用@property声明属性（总是与实例变量重名，但非必须）</li>
+<li>然后要在implementation部分使用@synthesize，给属性加上accessor methods</li>
+<li>注：<ul>
+<li>优点：更有效率，也能更安全地运行在多核多线程环境中</li>
+<li>如果省略@synthesize部分，编译器会自动创建一个相关联的实例变量，以“<em>属性名”为变量名(则@implementation部分中所有使用属性名的地方都要替换为“</em>属性名”)</li>
+<li>不要使用new, alloc, copy, init作为属性名的开头</li>
+</ul>
+</li>
+</ul>
+<p>当使用对象做为方法的参数时，参数类型是“（Class名 *）”（星号不可少）<br>返回对象（引用）时，接收的变量不用alloc和init而直接获取对象；对象的alloc和init已经在method的执行中完成。</p>
+<p><strong>#import和@class</strong>：在@interface部分使用@class告诉编译器这是一个class名，提高编译效率（不必导入整个文件），而如果要使用这个class中定义的属性和方法，需要在@implementation部分使用#import</p>
+<ul>
+<li>特殊情形：若两个class彼此之间互相依赖，用#import会引发编译错误，要用@class</li>
+</ul>
+<p>对象类型的实例变量不要用@synthesize合成（@synthesize自动生成的accessor方法只是复制指向对象的引用，而不是对象），单独写setter和getter，同样要注意复制对象<br>override：在subclass中对superclass的方法修改，方法名，参数，返回值类型都相同<br>多个class中override的方法，编译器选择在receiver所属的class中查找<br>使用subclass的情形？</p>
+<ul>
+<li>通过增加方法和（或）实例变量，扩展superclass的功能</li>
+<li>对superclass进行细化（如在图形class的基础上细化得到矩形class、椭圆class……）</li>
+<li>通过override改变class的default behavior</li>
+</ul>
+<p>abstract class：仅仅是用于方便创建子类的类（定义实例变量和方法，但不会创建实例）</p>
+<ul>
+<li>abstract class有很多concrete subclasses，总称为簇（a class cluster）。这些子类是private的，不能直接访问，只能通过abstract class中定义的公共接口访问。创建对象也是使用abstract class，alloc和init由其concrete subclass解决，不用coder处理</li>
+<li>举例：NSNumber……</li>
+</ul>
+
+      
+    </div>
+    <footer>
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/技术学习/">技术学习</a>
   </div>
 
+        
+  
+  <div class="tags">
+    <a href="/tags/Objective-C/">Objective-C</a>
+  </div>
+
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+      
+    </div>
+  </div>
 
 
 
@@ -846,8 +967,8 @@ alert("Please Update Your IE \n请升级您的IE浏览器");
 
 
 
-  <div class="animated fadeIn" idplus="从高考改革说开去" style="display: none;">
-    <div idplusp="从高考改革说开去">
+  <div class="animated fadeIn" idplus="《叫魂》笔记" style="display: none;">
+    <div idplusp="《叫魂》笔记">
       <article class="post">
   
     <div class="gallery">
@@ -870,19 +991,60 @@ alert("Please Update Your IE \n请升级您的IE浏览器");
       
       
   
-    <h1 class="depth title">从高考改革说开去</h1>
+    <h1 class="depth title">《叫魂》笔记</h1>
   
 
     </header>
     <div class="entry depth">
       
-        <p>新博客开起来了，总要有些文章撑撑场面。想到自己既然算是比较关心教育的人，又经历了高考这件事，不如就拿这个话题做个开场白，总好过随便或精心转载的文章吧。之所以选择高考改革作为出发点，其实也算是对那篇民间高考改革方案的报道有感而发。我后来在网上搜索了一下，发现方案还不少，比报道里的还多，也不只是民间的，还有机构的。先说民间的三种方案吧。<br><img s1c="http://ww1.sinaimg.cn/large/3ca59d76gw1evb8qjucopj20h907pt8x.jpg" alt="民间高考改革方案"></p>
-<p>这三种方案虽然侧重点各有不同，不过其核心是相似的，那就是在统考的前提下加强考试的区分度和减轻学生负担。前二种都把考试科目数调低而代之以更为全面的学业水平测试，后一种突出高职与普通高校的区别，也能降低目标高职之考生的压力。这些与西式教育体系下的联考制度有异曲同工之妙，所以不能简单地谓之不现实。对于联考制度，我相信即使这不是我国高考改革的终点，也一定是个必经之路。不过与民间方案“减负”的出发点不同，我认为其中的主要原因是招生自主乃大学办学自主权的最终体现。差异化的招生结构必然反映学校差异化的办学思路，也能促使学校制定更具特色的培养方案。</p>
-<p>另一方面，民间方案的问题在于其过于理想化。不妨我们先来看一看方案1。这套方案中虽然强调高考只考3门且不分科，但是作为补充的学业水平测试难道不会看作是另一种形式的高考？那岂不是就等同于高考变成了9门(甚至更多)？更不必说依目前各省独立组织这测试的情况下又会滋生多少腐败弊案了。然后再看方案2。实验学科与人文学科各择其一与不分科的矛盾暂且不提，这以报考专业为选择依据不正好必然要求考前填志愿吗？至于专业是不是与实验学科和人文学科相关就更不必说了。最后再谈谈方案3。不是说两种类型的学校不应该分别考试，而是很有必要这么做，这样就能将职业教育同高等教育分割开，对双方都很有好处。只是在现行社会主流思想的背景下，这种做法差不多算是判了高职死刑。所以说这些民间改革方案虽然可以说是反映了某种民间的愿望，而其根本上不足为用。</p>
-<p>除了民间的方案，还有一些机构也有他们自己的构想，比如21世纪教育研究院的一份报告（内容太长，我就不贴内容了，留下链接<a href="http://edu.sina.com.cn/l/2009-06-14/1548172839.shtml" target="_blank" rel="external">http://edu.sina.com.cn/l/2009-06-14/1548172839.shtml</a>）。与粗糙的民间方案相比，机构方案明显更为规范，内容也更加完整详实，是比较让人满意的。后面所附小调查的结果也是很好的说明。但是从教育的角度出发，我不同意其中有关降低英语权重的内容。首先降低英语权重并不会必然导致对母语重视程度的提高。这一点是显而易见的，即使在目前语数外三者分数权重相同的情况下，数学的重要程度也是要超过其他两门的。实际上，一门学科在实际学习生活中的地位是受很多因素影响的，其中比较关键的一条就是学生在此科目上提分的难易程度。提分容易的自然受更多的重视，而提分难的往往就会被首先牺牲掉。此外，在英语上针对不同地区进行区别对待，虽然短时间内使得那些英语教学薄弱地区少吃点亏，但从长远来看反而促成了更大的不平等。这些地区的教育资源本身就比较匮乏暂且不说，更低的英语标准就意味着一部分在英语上的教学资源需要放到其他更有价值的学科上去，其结果就是这些地区的学生总体英语基础进一步落后。与此同时那些英语教学并不薄弱的地区，与其外向型的经济解构密不可分。也就是说，英语在这些地区本身就具有很高的市场需求，与学校教学资源的分配倒不是密切相关，从不断增长的外语培训行业就可见一斑了。长此以往，这两个地区在英语方面的差距就越来越大，显然这不是我们所愿意看到的，更不必说由此引发的其他影响了。</p>
-<p>与民间方案相同，机构方案也存在过理想化的缺点，使得一些措施显得十分幼稚。也许有人要问我是不是有个更好的方案，我的答案是除了联考制度便没了。因为联考制度相比于我们现行的制度确实有很多重要的优点。但是如果要立刻改革，或者定个十年二十年的时间表，我都是坚决反对的。谈及这些民间方案与机构方案的利弊，再算上各省已经进行了的各式各样的改革，像什么基本能力，小高考等等，以及舆论讨论最为激烈的录取制度，我想说的是，无论什么样的措施都不可能是完美的，总有人受益亦总有人受损。而且更为重要的是，高考最大的价值，或曰优势，就在于其稳定性。无论加在高考上什么样的改革，都是对学生的新负担，制造了更多的混乱。</p>
-<p>更为重要的是，一个非常重要的问题往往被大家轻易地忽略掉，那就是高考为什么这么重要。也许有人会说，不就是因为上大学嘛。这话二三十年前说没什么问题，但是在已经进入高等教育大众化的今天恐怕就不能算作是很好的解释了。实际上高考之所以在今天仍然如此之重要并非在于大学，而是在于重点大学，在于名牌大学。从对北大清华的生源结构的争论就能感受到了，其实争来争去不过就是希望能多招本地区的学生而已。就地高考也是同样的道理，不能增加名额，那我就去名额多的地方考，其实质无非就是高考移民。由此引出的一个现象颇值玩味，当年高考移民一片火热之时，反对呼声很强，最终促成了政府的禁令，而如今换汤不换药的就地高考反而一片赞扬之声，个中缘由亦值深思，不过此非本文主旨，按下不表。</p>
-<p>于是就可以看出，与其改革高考，不如直接从高等教育入手。在我看来，高考的变化是与高校的变化息息相关的，同时高考是服从并服务于高校的。关于高教改革的内容，则涉及的内容更为广泛，非此文之力所能及，但是大概内容还是可以谈谈的。针对高教大众化的现状，改革的重点应当置于平等而不是争什么世界一流。差异化的办学思路实际上是提高了高校的办学门槛，也增加其对资源的需求。另一方面对生源结构问题的最好应对措施，不是把那俩学校变成社会平等的牺牲品，而是让更多地的学校具备他们的条件，也唯有这样道路才能从根本上促进我国高等教育的健康发展，由此而带动的其他各领域的进步才会很坚实有力。同时，这也是最根本性的高考改革。</p>
+        <p>####第一章</p>
+<ol>
+<li>叫魂：石匠们需要将活人的姓名写在纸片上，贴在木桩的顶部，这样会给大锤的撞击添加某种精神力量。</li>
+<li>萧山事件—容易轻信的民众，受到贪婪的地方捕役中的恶棍以及无能的县府官员的挑动，而造成的又一桩司空见惯的丑事。</li>
+<li>阻止公众为对付妖术而大动干戈——对比乌干达（英国）方法：惩罚为了威胁对手或为了制造让人畏惧的名声而＂假冒＂为巫师的人</li>
+</ol>
+<p>政府没有支持巫术，而是同假冒巫术作斗争，然而普通民众没有能力辨别真假巫术，也没有被赋予这样的权力。于是政府就在保护巫术的旗帜下消灭它的敌人</p>
+<p>####第二章</p>
+<ol>
+<li><p>背景：1768年，康乾盛世。<br>①区域发展不平衡②人口流动，人口增长（玉米甜薯等作物的引进使得山地得以利用） ③扩大耕地面积导致的水土流失与生态灾难④商业发展➡阶层贫富分化➡流浪者（恐慌中被怀疑的对象）</p>
+</li>
+<li><p>对妖术的恐惧：那些无根无基的人们不受控制的流动而产生的焦虑</p>
+</li>
+</ol>
+<p>####第三章<br>皇帝：谋反与汉化——同一威胁的不同侧面（1755年胡中藻）剪辫的恐慌（薙发令）</p>
+<p>满清帝国的问题：同时从普世主义角度和自身种族的角度出发表现其统治合法性➡处理谋逆的微妙处境(马朝柱谋反案：乾隆朝首次以复明为号召的运动，影响极大。)</p>
+<p>文字狱：同可能造成群众性骚乱的大规模谋反事件相比，这一类尽在皇帝掌握中，可以大声颂扬满人的种族尊严而不必担心会引发什么意外。</p>
+<p>官僚集团自身才是专制最大的障碍。</p>
+<p>江南问题：行政机构效率下降</p>
+<p>####第五章<br>妖术：通过对精神世界的操纵来强化个人力量。</p>
+<ol>
+<li>认识上的强化力量（超越时间和空间，特别是预言未来）</li>
+<li>遥控事物（穿越空间移动物体）</li>
+<li>驾驭生死</li>
+</ol>
+<p>整件事最令人厌恶的地方：术士以谋命为目的的作法程序竟然同挚爱孩子的父母所从事的礼仪活动有着相同的语言表述方式（对平常礼仪活动的嘲弄）</p>
+<p>####第六章<br>各省的清剿—妖术与政治的关系</p>
+<p>官僚责任制度的运作是围绕着对信息的控制而展开的</p>
+<p>####第九章<br>中华帝国后期政治制度研究的两大传统：</p>
+<ol>
+<li>着眼于行政官僚制的结构、人事和价值</li>
+<li>注重于帝国的机制，特别是通讯制度的发展 ➡ 君主是帝国政治制度的一个部分而非权力无限的专制者</li>
+</ol>
+<p>专制权力和常规权力之间的互动关系：</p>
+<ol>
+<li>马克思韦伯—从长远看，后者取代前者（常规化和合理化）；二者相互冲突</li>
+<li>Hans Rosenberg—对普鲁士个案的研究，专制权力与常规权力不能长期共存</li>
+<li>＂官僚君主制＂</li>
+<li>克罗齐耶(Michel Crozier)—规则的扩展会限制他（皇帝）的权力，而太多的例外又会削弱他控制别人的权力像叫魂案这样一桩政治罪所造成的最大冲击，就在于它动摇了官僚们用以有效保护自己的常规行为方式，从而为弘历创造一个环境，使他得以就自己所关心的问题同官僚们直接摊牌。</li>
+</ol>
+<p>政治罪将官僚生涯中的整洁有序的后院置于专制权力的严厉狂暴之下</p>
+<p>官僚的抵制：①忙而不动②转移视线③统一步调（集体上奏）④常规化（卡尔•曼海姆Karl Mannheim——官僚思维的基本倾向是把所有的政治问题化约为行政问题）</p>
+<p>####第十章</p>
+<p>对这一事件的不同表达，取决于人们不同的社会角色及生活经历。从这一角度来看，叫魂主题被赋予不同变调，敷衍成不同的故事，每一个故事所表达的则是某一特定群体的恐惧。<br>——共同主题：伴随着未知人物和未知力量而来的凶险。</p>
+<p>一旦官府认真发起对妖术的清剿，普通人就有了很好的机会来清算宿怨或谋取私利。</p>
+<p>在这个权力对普通民众来说向来稀缺的社会里，以＂叫魂＂罪名来恶意中伤他人成了普通人的一种突然可得的权力。</p>
+<p>（官僚制度）它的特性可以阻挡任何一种狂热。没有这样一个应急的锚碇，中国就会在风暴中急剧偏航。</p>
+<p>附评：<br>这本书并没有黄仁宇的几本那么火，不知何故。文笔内容都很好，角度对我们来说也比较新颖。当然毕竟是洋人，角度不同也是很正常的事。如果不是专门研究的话，这样的书看一两本就差不多，再多就烦了。</p>
 
       
     </div>
@@ -897,73 +1059,7 @@ alert("Please Update Your IE \n请升级您的IE浏览器");
         
   
   <div class="tags">
-    <a href="/tags/杂谈/">杂谈</a>
-  </div>
-
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-      
-    </div>
-  </div>
-
-
-
-  <div class="animated fadeIn" idplus="BeRightBack——黑镜s02e01" style="display: none;">
-    <div idplusp="BeRightBack——黑镜s02e01">
-      <article class="post">
-  
-    <div class="gallery">
-  <div class="photoset">
-    
-      <img s1c="">
-    
-  </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
-  </div>
-</div>
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon depth"></div>
-        <time class="depth" datetime="2013-03-18T16:00:00.000Z"><a href="#">2013-03-19</a></time>
-      
-      
-  
-    <h1 class="depth title">Be Right Back——黑镜s02e01</h1>
-  
-
-    </header>
-    <div class="entry depth">
-      
-        <p>这么饱含深意，给人无限想象空间的片子必须是不能错过的，虽然我不是第一时间看的。万般思绪留驻心头，不吐不快，然而又不知从何处入手，所以就上豆瓣看看影评，如果有共鸣也就省得劳神费力了。</p>
-<p>也许是片中的未来科技使然，有的人开始谈论智能机器人到底能不能被当作人来看。探讨那个话题的电影不在少数，但是窃以为本片并没有涉及到这方面的内容。用来代替男主的那个程序，自始至终都没有产生人的情感，也没有把自己当作活人来看待。与女主的对话，都是基于男主生前留下的各种资料而产生，以至于到后来女主开始把它当成真人来对待的时候，它都没有办法进行回应，只能等待女主的命令。最极端的就是在悬崖边的对话，女主对它进行了一次测试，当然它没有通过，他们的故事就此结束。而由此引发的关于自我意识形成，以及他人对我的印象与我之自我意识的偏差等等的问题，真是很难得出一个结论。从极端的角度看，完全可以把这个机器人看成变化后的男主（比如经历重大事件或挫折或变心等等），所以其实真正的主角是女主，她才是片中世界的中心。</p>
-<p>另外一点就是社交网络，于是就有诸如隐私泄露之类的。一方面，隐私泄露成立的逻辑前提是泄漏的信息是隐私。正如片中女主同机器人上床之前所发生的那种状况。男主没有在社交网络中透露那方面的情况，机器人也就无从得知了。社交网络的实质在于分享而不是记录，记录只是一个为分享服务的手段，而拿出来分享的信息，无论是在大圈子还是小圈子，都可以算是一定程度的公开。在这种情况下发布的信息中有多少真正的隐私就可想而知了。另一方面，我们无论是独处还是置身于集体之中，都在不断向外界传递信息，更甚于社交网络。当然大多数情况下，这些信息都石沉大海了，不会留下什么痕迹。但是对那些有特殊考虑的人来说，这已经足够丰富，正如一句俗话“不怕贼偷，就怕贼惦记”所揭示的一样。</p>
-<p>社交网络更大的威胁在于成瘾。不知道是不是像毒品成瘾一样会改变脑部某些组织的结构，但是这种成瘾对个人生活造成的影响可一点儿也不小。当然，这不是本片的重点。</p>
-
-      
-    </div>
-    <footer>
-      
-        
-  
-  <div class="categories">
-    <a href="/categories/个人/">个人</a>
-  </div>
-
-        
-  
-  <div class="tags">
-    <a href="/tags/观影/">观影</a>
+    <a href="/tags/读书/">读书</a>
   </div>
 
         
@@ -990,6 +1086,8 @@ alert("Please Update Your IE \n请升级您的IE浏览器");
     <li><h2><a href="/tags/Android/">Android</a></h2></li>
   
     <li><h2><a href="/tags/Objective-C/">Objective-C</a></h2></li>
+  
+    <li><h2><a href="/tags/hexo/">hexo</a></h2></li>
   
     <li><h2><a href="/tags/iOS/">iOS</a></h2></li>
   
