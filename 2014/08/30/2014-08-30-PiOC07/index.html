@@ -18,18 +18,17 @@
   <link rel="apple-touch-startup-image" href="/icon.jpg">
 
   
-  <title>PiOC学习笔记10——Cocoa, Cocoa Touch and the iOS SDK | oliver&#39;s blog</title>
+  <title>PiOC学习笔记07——Foundation框架基础1 | oliver&#39;s blog</title>
   <meta name="author" content="Oliver Wu">
   
-  <meta name="description" content="PART III —— Cocoa, Cocoa Touch and the iOS SDK chapter 20, 21
-Introduction to Cocoa and Cocoa Touchframework layers （Mac OS X）
-
-Writing iOS Applicatio">
+  <meta name="description" content="PART II —— Foundation FrameworkChapter 14-15
+Introduction
+a framework is a collection of classes, methods, functions and documentation logically group">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="PiOC学习笔记10——Cocoa, Cocoa Touch and the iOS SDK"/>
+  <meta property="og:title" content="PiOC学习笔记07——Foundation框架基础1"/>
   <meta property="og:site_name" content="oliver&#39;s blog"/>
 
   
@@ -159,39 +158,105 @@ alert("Please Update Your IE \n请升级您的IE浏览器");
     <header>
       
         <div class="icon depth"></div>
-        <time class="depth" datetime="2015-08-22T03:47:14.000Z"><a href="#">2015-08-22</a></time>
+        <time class="depth" datetime="2014-08-29T16:00:00.000Z"><a href="#">2014-08-30</a></time>
       
       
   
-    <h1 class="depth title">PiOC学习笔记10——Cocoa, Cocoa Touch and the iOS SDK</h1>
+    <h1 class="depth title">PiOC学习笔记07——Foundation框架基础1</h1>
   
 
     </header>
     <div class="entry depth">
       
-        <h2 id="PART_III_——_Cocoa,_Cocoa_Touch_and_the_iOS_SDK">PART III —— Cocoa, Cocoa Touch and the iOS SDK</h2><p> chapter 20, 21</p>
-<h3 id="Introduction_to_Cocoa_and_Cocoa_Touch">Introduction to Cocoa and Cocoa Touch</h3><p>framework layers （Mac OS X）</p>
-<p><img src="http://ww4.sinaimg.cn/large/3ca59d76gw1evb8qirlxmj20dm0dwgm3.jpg" alt="framework layers"></p>
-<h3 id="Writing_iOS_Applications">Writing iOS Applications</h3><ul>
-<li>Class Prefix:设置类名前缀</li>
-<li>outlet：一种instance variable，与view内容的管理相关联</li>
-<li>虽然IBOutlet，IBAction本身没有实际内容，但Xcode需要利用它们来确定哪些instance variable和method需要与何种特定view对象和动作绑定</li>
-<li>设置button的Tag属性 → tag与button一一对应</li>
+        <h2 id="PART_II_——_Foundation_Framework">PART II —— Foundation Framework</h2><p>Chapter 14-15</p>
+<h4 id="Introduction">Introduction</h4><ul>
+<li>a <strong>framework</strong> is <strong>a collection of classes, methods, functions and documentation</strong> logically grouped together to make developing programs easier.</li>
+<li><strong>Foundation framework</strong> —— provides the base of foundation for all your program development：numbers, strings, arrays, dictionaries, and sets</li>
+<li>Application Kit framework —— an extensive collection of classes and methods to develop interactive graphical applications：texts, menus, toolbars, tables, …</li>
+<li><strong>Cocoa</strong> (OS X)环境包括Foundation framework、the Application Kit framework 和 Core Data</li>
+<li><strong>Cocoa Touch</strong> (iOS)环境包括Foundation、Core Data 和 UIKit framework</li>
+<li>官方提供的Foundation Documentation</li>
 </ul>
-<hr>
-<h3 id="部分C语言特性">部分C语言特性</h3><p>chapter 13</p>
-<h4 id="Blocks"><strong>Blocks</strong></h4><p>与函数相似：可以接收参数，可以有返回值</p>
-<p>与函数不同：可以使用blocks外的变量（在其作用域内），但是不能改变其值</p>
-<ul>
-<li>__block modifier （两道下划线）——此种变量可以在block内改变其值</li>
-<li><code>__block</code>的使用方法：在声明变量的语句前插入<code>__block</code></li>
+<h4 id="数字对象_—_NSNumber">数字对象 — NSNumber</h4><ul>
+<li>Xcode 5 新特性——“modules” can help speed up compilation time as well as help to avoid name conflicts between different libraries<ul>
+<li>Modules相当于将框架进行了封装，然后加入在实际编译之时加入了一个用来存放已编译添加过的Modules列表<a href="http://www.cocoachina.com/ios/20131106/7308.html" target="_blank" rel="external">1</a>。</li>
 </ul>
-<p>block可以作为函数和方法的参数传递 ——好处之一：可以由系统分配给其他处理器或其他线程运算</p>
-<p>block可以被声明为全局的（main函数外）或局部的（方法内）</p>
-<p>syntax：</p>
+</li>
+<li>All number objects must be newly created. You cannot change the value of a previously created NSNumber object. <em>immutable</em><ul>
+<li>numberWithInt: → intValue → %i</li>
+<li>numberWithInteger： → integerValue → %li</li>
+</ul>
+</li>
+</ul>
+<h4 id="字符串对象_—_NSString">字符串对象 — NSString</h4><ul>
+<li>objects(NSString….) → %@</li>
+<li><strong>description</strong>方法：使用%@格式化输出自己写的class的对象；默认显示class名和objects的内存地址，override就可以修改其显示内容 → good debugging tool</li>
+<li>NSString对象 → immutable<ul>
+<li>但是指向对象的引用可以更改</li>
+</ul>
+</li>
+<li>NSMutableString对象 → mutable</li>
+<li>stringWithString: → 复制字符串的内容，创建新的NSString对象 ； “=” →复制指向对象的引用，不创建新对象</li>
+<li>caseInsensitiveCompare: → 不区分大小写的比较</li>
+<li><strong>NSRange</strong><ul>
+<li>一个C结构体的别名，包含location和length两个元素（类型NSUInteger）</li>
+<li>字符串中的location从0开始</li>
+<li>创建一个NSRange：NSMakeRange(location, length)</li>
+</ul>
+</li>
+</ul>
+<h4 id="数组对象_—_NSArray">数组对象 — NSArray</h4><ul>
+<li>an ordered collection of <strong>objects</strong></li>
+<li><p>immutable (NSArray) and mutable (NSMutableArray, subclass of NSArray)</p>
 <ul>
-<li>声明并赋初值：<code>返回值类型 ^(block名)(参数1类型, 参数2类型, …) = ^(参数1类型 参数1名, 参数2类型 参数2名, …) { … body … };</code></li>
-<li>使用block：<code>block名(参数);</code></li>
+<li><code>[NSArray arrayWithObjects: elem1,…,nil];</code>等价于 <code>@[elem1, elem2, …]</code></li>
+<li><code>array[index]</code> 等价于<code>[array objectAtIndex:index]</code></li>
+<li><code>array[index] = object</code> 等价于 <code>[array setObject: object forIndex: index]</code></li>
+</ul>
+</li>
+<li><p>for each element in the array, NSLog uses the description method from the class the element belongs to</p>
+</li>
+<li>利用复杂算法处理大量的数据数组，c语言的方法更好</li>
+<li>property的attributes    (copy, nonatomic,…)<ul>
+<li>copy：make a copy of the instance variable in the setter method；default是not copy</li>
+<li>nonatomic：don’t need to worry about race conditions that could occur from multiple threads trying to access the instance variable at the same time</li>
+<li>strong：make an additional reference to the object whenever the setter method is used. Influence the life span of the object.</li>
+</ul>
+</li>
+<li>初始化（init，initWith……）方法的返回值类型使用instancetype，便于其subclass使用：编译器会根据receiver的类型确定方法的返回值类型</li>
+<li>fast enumeration ：for（variable in array）{……}</li>
+<li>enumerateObjectUsingBlock</li>
+<li>identical object → objects with the same location in memory</li>
+<li><em>NSComparator</em> → <code>typedef NSComparisonResult (^NSComparator)(id obj1, id obj2);</code><ul>
+<li>NSComparator is a block that takes two objects as its arguments and that returns a value of type NSComparisonResult.</li>
+<li>使用block可以提速（多线程）</li>
+<li>don’t have to add a comparison method to the class whose objects are being compared</li>
+<li>if you want to change the way they are compared, you can do it directly in the method (block), which means you don’t have to change original class.</li>
+</ul>
+</li>
+<li>NSValue class ： 结构体 →wrap→ 对象；对象 →unwrap→ 结构体<ul>
+<li>CGPoint, CGSize, CGRect 等是结构体而非对象，不能直接放入array中</li>
+</ul>
+</li>
+</ul>
+<h4 id="字典对象_—_NSDictionary">字典对象 — NSDictionary</h4><ul>
+<li>key must be unique, but can be of any type object; often is string<br>value can also be of any type object, but not nil.<ul>
+<li><code>dict[key]</code> 等价于<code>[dict objectForKey: key]</code></li>
+<li><code>dict[key] = object</code>等价于 <code>[dict setObject: object forKey: key]</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="Set_Objects">Set Objects</h4><ul>
+<li>a collection of unique object</li>
+<li>NSSet, NSMutableSet, NSIndexSet, NSCountedSet, …</li>
+<li>包含的一些操作：<ul>
+<li>searching, adding, and removing members (mutable sets); comparing two sets; and finding the intersection(交集) and union(并集) of two sets.</li>
+</ul>
+</li>
+<li><em>NSIndexSet</em> ：store ordered indexes into some other data structure, typically an array<ul>
+<li>只有immutable，没有mutable的</li>
+</ul>
+</li>
 </ul>
 
       
