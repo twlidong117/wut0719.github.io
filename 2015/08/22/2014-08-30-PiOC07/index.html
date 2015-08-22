@@ -18,16 +18,17 @@
   <link rel="apple-touch-startup-image" href="/icon.jpg">
 
   
-  <title>莫言 | oliver&#39;s blog</title>
+  <title>PiOC学习笔记07——Foundation框架基础1 | oliver&#39;s blog</title>
   <meta name="author" content="Oliver Wu">
   
-  <meta name="description" content="很久没写了，确实是懒惰啊。。。。
-今天文学奖的结果出来了，是莫言的。我没读过莫言的书，也没听说过这个人。不过大家耳熟能详的几个作家我还是知道的，可见他在国内的影响力有多大，当然诺奖才不会考虑这个呢。所以，对于他获此奖是不是名至实归，我无权评判，也没有评判的兴趣。无论他是不是得奖，我都没有拜读其作品的">
+  <meta name="description" content="PART II —— Foundation FrameworkChapter 14-15
+Introduction
+a framework is a collection of classes, methods, functions and documentation logically group">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="莫言"/>
+  <meta property="og:title" content="PiOC学习笔记07——Foundation框架基础1"/>
   <meta property="og:site_name" content="oliver&#39;s blog"/>
 
   
@@ -135,22 +136,106 @@ alert("Please Update Your IE \n请升级您的IE浏览器");
     <header>
       
         <div class="icon depth"></div>
-        <time class="depth" datetime="2015-08-21T15:26:23.000Z"><a href="#">2015-08-21</a></time>
+        <time class="depth" datetime="2015-08-22T02:53:30.000Z"><a href="#">2015-08-22</a></time>
       
       
   
-    <h1 class="depth title">莫言</h1>
+    <h1 class="depth title">PiOC学习笔记07——Foundation框架基础1</h1>
   
 
     </header>
     <div class="entry depth">
       
-        <p>很久没写了，确实是懒惰啊。。。。</p>
-<p>今天文学奖的结果出来了，是莫言的。我没读过莫言的书，也没听说过这个人。不过大家耳熟能详的几个作家我还是知道的，可见他在国内的影响力有多大，当然诺奖才不会考虑这个呢。所以，对于他获此奖是不是名至实归，我无权评判，也没有评判的兴趣。无论他是不是得奖，我都没有拜读其作品的打算，没那个闲情逸致。我说真的，大部分当代作家的小说我都没读过，兴趣不能说没有，只不过时间有限罢了。至于他的竞争对手村上，我倒是读过不少。故事虽然没一个完全看明白的，但是感觉很畅快。必须要承认的是，这种看法很肤浅，幸好再也不用做阅读了。还要补充一句，文学奖的热门人物居然是莫言和村上，呵呵。</p>
-<p>不出意外，他的得奖很快引发了国内舆论的强烈关注，各路段子层出不穷。而更重要的是，他的东西肯定要大卖了，奖金和版税神马的，不知道国内其他各路作家会作何感想。竟然还有预计他要做中央委员，还有什么文化部部长，真是搞笑，诺奖在国内有那么大威力么，别YY了。</p>
-<p>最后，谈谈诺奖吧。医学奖中又有一个日本人。远的说不清，今几年中自然科学方面的奖项总能看见日本人的身影。期间差距不言自明。倒不是说这些奖项中又个什么高低之分，只是觉得自然科学奖的评选相比较而言更加客观些罢了，而在这些需要硬功夫的领域里，我们要走的路还长着呢。至于这个文学奖，莎士比亚没拿，好像也没有妨碍他成为一代文豪。</p>
-<p>明天的和平奖更令人期待，嘿嘿</p>
-<p>真没想到这么久写一篇居然是谈这个的。<br>PS：没想到和平奖居然是欧盟。。。</p>
+        <h2 id="PART_II_——_Foundation_Framework">PART II —— Foundation Framework</h2><p>Chapter 14-15</p>
+<h4 id="Introduction">Introduction</h4><ul>
+<li>a <strong>framework</strong> is <strong>a collection of classes, methods, functions and documentation</strong> logically grouped together to make developing programs easier.</li>
+<li><strong>Foundation framework</strong> —— provides the base of foundation for all your program development：numbers, strings, arrays, dictionaries, and sets</li>
+<li>Application Kit framework —— an extensive collection of classes and methods to develop interactive graphical applications：texts, menus, toolbars, tables, …</li>
+<li><strong>Cocoa</strong> (OS X)环境包括Foundation framework、the Application Kit framework 和 Core Data</li>
+<li><strong>Cocoa Touch</strong> (iOS)环境包括Foundation、Core Data 和 UIKit framework</li>
+<li>官方提供的Foundation Documentation</li>
+</ul>
+<h4 id="数字对象_—_NSNumber">数字对象 — NSNumber</h4><ul>
+<li>Xcode 5 新特性——“modules” can help speed up compilation time as well as help to avoid name conflicts between different libraries<ul>
+<li>Modules相当于将框架进行了封装，然后加入在实际编译之时加入了一个用来存放已编译添加过的Modules列表<a href="http://www.cocoachina.com/ios/20131106/7308.html" target="_blank" rel="external">1</a>。</li>
+</ul>
+</li>
+<li>All number objects must be newly created. You cannot change the value of a previously created NSNumber object. <em>immutable</em><ul>
+<li>numberWithInt: → intValue → %i</li>
+<li>numberWithInteger： → integerValue → %li</li>
+</ul>
+</li>
+</ul>
+<h4 id="字符串对象_—_NSString">字符串对象 — NSString</h4><ul>
+<li>objects(NSString….) → %@</li>
+<li><strong>description</strong>方法：使用%@格式化输出自己写的class的对象；默认显示class名和objects的内存地址，override就可以修改其显示内容 → good debugging tool</li>
+<li>NSString对象 → immutable<ul>
+<li>但是指向对象的引用可以更改</li>
+</ul>
+</li>
+<li>NSMutableString对象 → mutable</li>
+<li>stringWithString: → 复制字符串的内容，创建新的NSString对象 ； “=” →复制指向对象的引用，不创建新对象</li>
+<li>caseInsensitiveCompare: → 不区分大小写的比较</li>
+<li><strong>NSRange</strong><ul>
+<li>一个C结构体的别名，包含location和length两个元素（类型NSUInteger）</li>
+<li>字符串中的location从0开始</li>
+<li>创建一个NSRange：NSMakeRange(location, length)</li>
+</ul>
+</li>
+</ul>
+<h4 id="数组对象_—_NSArray">数组对象 — NSArray</h4><ul>
+<li>an ordered collection of <strong>objects</strong></li>
+<li><p>immutable (NSArray) and mutable (NSMutableArray, subclass of NSArray)</p>
+<ul>
+<li><code>[NSArray arrayWithObjects: elem1,…,nil];</code>等价于 <code>@[elem1, elem2, …]</code></li>
+<li><code>array[index]</code> 等价于<code>[array objectAtIndex:index]</code></li>
+<li><code>array[index] = object</code> 等价于 <code>[array setObject: object forIndex: index]</code></li>
+</ul>
+</li>
+<li><p>for each element in the array, NSLog uses the description method from the class the element belongs to</p>
+</li>
+<li>利用复杂算法处理大量的数据数组，c语言的方法更好</li>
+<li>property的attributes    (copy, nonatomic,…)<ul>
+<li>copy：make a copy of the instance variable in the setter method；default是not copy</li>
+<li>nonatomic：don’t need to worry about race conditions that could occur from multiple threads trying to access the instance variable at the same time</li>
+<li>strong：make an additional reference to the object whenever the setter method is used. Influence the life span of the object.</li>
+</ul>
+</li>
+<li>初始化（init，initWith……）方法的返回值类型使用instancetype，便于其subclass使用：编译器会根据receiver的类型确定方法的返回值类型</li>
+<li>fast enumeration ：for（variable in array）{……}</li>
+<li>enumerateObjectUsingBlock</li>
+<li>identical object → objects with the same location in memory</li>
+<li><em>NSComparator</em> → <code>typedef NSComparisonResult (^NSComparator)(id obj1, id obj2);</code><ul>
+<li>NSComparator is a block that takes two objects as its arguments and that returns a value of type NSComparisonResult.</li>
+<li>使用block可以提速（多线程）</li>
+<li>don’t have to add a comparison method to the class whose objects are being compared</li>
+<li>if you want to change the way they are compared, you can do it directly in the method (block), which means you don’t have to change original class.</li>
+</ul>
+</li>
+<li>NSValue class ： 结构体 →wrap→ 对象；对象 →unwrap→ 结构体<ul>
+<li>CGPoint, CGSize, CGRect 等是结构体而非对象，不能直接放入array中</li>
+</ul>
+</li>
+</ul>
+<h4 id="字典对象_—_NSDictionary">字典对象 — NSDictionary</h4><ul>
+<li>key must be unique, but can be of any type object; often is string<br>value can also be of any type object, but not nil.<ul>
+<li><code>dict[key]</code> 等价于<code>[dict objectForKey: key]</code></li>
+<li><code>dict[key] = object</code>等价于 <code>[dict setObject: object forKey: key]</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="Set_Objects">Set Objects</h4><ul>
+<li>a collection of unique object</li>
+<li>NSSet, NSMutableSet, NSIndexSet, NSCountedSet, …</li>
+<li>包含的一些操作：<ul>
+<li>searching, adding, and removing members (mutable sets); comparing two sets; and finding the intersection(交集) and union(并集) of two sets.</li>
+</ul>
+</li>
+<li><em>NSIndexSet</em> ：store ordered indexes into some other data structure, typically an array<ul>
+<li>只有immutable，没有mutable的</li>
+</ul>
+</li>
+</ul>
 
       
     </div>
@@ -159,13 +244,13 @@ alert("Please Update Your IE \n请升级您的IE浏览器");
         
   
   <div class="categories">
-    <a href="/categories/个人/">个人</a>
+    <a href="/categories/技术学习/">技术学习</a>
   </div>
 
         
   
   <div class="tags">
-    <a href="/tags/杂谈/">杂谈</a>
+    <a href="/tags/Objective-C/">Objective-C</a>
   </div>
 
         
