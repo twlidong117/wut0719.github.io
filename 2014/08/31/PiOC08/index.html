@@ -1,0 +1,367 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="theme-color" content="#1b7aca">
+  <link rel="icon" href="/icon.jpg">
+  <meta name="application-name" content="oliver's blog"/>
+  <meta name="msapplication-TileColor" content="#1b7aca"/>
+  <meta name="msapplication-square70x70logo" content="/icon.jpg" />
+  <meta name="msapplication-square150x150logo" content="/icon.jpg" />
+  <meta name="msapplication-wide310x150logo" content="/icon.jpg" />
+  <meta name="msapplication-square310x310logo" content="/icon.jpg" />
+  <meta name="msapplication-notification" content="frequency=30; polling-uri=/atom.xml" />
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="apple-touch-icon" href="/icon.jpg">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-startup-image" href="/icon.jpg">
+
+  
+  <title>PiOC学习笔记08——文件和ARC | oliver&#39;s blog</title>
+  <meta name="author" content="Oliver Wu">
+  
+  <meta name="description" content="Working with files
+NSFileManager: 对文件和目录的基本操作
+
+Create a new fileRead from an existing fileWrite data to a fileRename a fileRemove (delete) a fileTest ">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="PiOC学习笔记08——文件和ARC"/>
+  <meta property="og:site_name" content="oliver&#39;s blog"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="oliver&#39;s blog" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  
+    <link href="/css/animate.css" rel="stylesheet">
+  
+  
+    <script src="/js/jquery-2.0.3.min.js"></script>
+  
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <script>
+    if (window.location.href.indexOf("wut0719.github.io")<0) {      location.href = location.href.replace(location.host, "wut0719.github.io");    }
+  </script>
+
+</head>
+
+
+<body>
+<!--[if lt IE9]>
+<script>
+alert("Please Update Your IE \n请升级您的IE浏览器");
+</script>
+< ![endif]-->
+  <header id="header" class="header header--fixed hide-from-print animated slideInDown"><div class="alignleft backtohome">
+  <a href="/">
+    <img id="icon-photo-small" class="personal-photo  animated rotateIn" src="/icon.jpg" alt="Oliver Wu">
+  </a>
+  <h1 id="title-mini" class=""><a href="/">oliver&#39;s blog</a></h1>
+</div>
+<a target="_blank" id="mini-toggle" class="more icon alignright"></a>
+<nav id="main-nav" class="alignright animated slideInRight">
+
+    
+      <a target="_blank" class="icon email" href="mailto:oliverwu81@outlook.com"></a>
+    
+    
+    
+    
+    
+      <a target="_blank" class="icon github" href="http://github.com/wut0719"></a>
+    
+    
+    
+    
+      <a target="_blank" class="icon instagram" href="http://instagram.com/wut0719"></a>
+      <a target="_blank" class="icon instagram" href="http://instagram.com/wut0719"></a>
+    
+    
+    
+      <a target="_blank" class="icon weibo" href="http://weibo.com/wut0719"></a>
+    
+    
+  <div class="clearfix"></div>
+</nav>
+
+</header>
+  <aside id="sidebar" class="alignleft animated slideInLeft"><div class="personal-info">
+  <figure>
+    
+    <div  class="backtohome">
+      <a href="/">
+        <img id="icon-photo-normal" class="personal-photo animated rotateIn" src="/icon.jpg" alt="Oliver Wu">
+      </a>
+    </div>
+    
+    <figcaption>
+      <h3 class=>Oliver Wu</h3>
+      <p></p>
+    </figcaption>
+  </figure>
+  <section class="social">
+    
+      <a target="_blank" class="icon email depth" href="mailto:oliverwu81@outlook.com"></a>
+    
+    
+    
+    
+    
+      <a target="_blank" class="icon github depth" href="https://github.com/wut0719"></a>
+    
+    
+    
+    
+      <a target="_blank" class="icon instagram depth" href="https://tofo.me/wut0719"></a>
+    
+    
+    
+      <a target="_blank" class="icon weibo depth" href="http://weibo.com/wut0719"></a>
+    
+    
+  </section>
+</div>
+<div class="theme-info">
+  <a target="_blank" href="https://github.com/heruoxin/hexo-persona-color" class="html5"> Persona Color Theme</a> 
+  &copy; - 2015 Oliver Wu
+  
+  <p>from <a target="_blank" href="https://www.1littlecup.com">little_cup</a></p>
+</div>
+</aside>
+  <div id="content" class="inner">
+    <p id="header-fix"></p>
+    <div id="main-col" class="alignright"><div id="wrapper"><article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon depth"></div>
+        <time class="depth" datetime="2014-08-30T16:00:00.000Z"><a href="#">2014-08-31</a></time>
+      
+      
+  
+    <h1 class="depth title">PiOC学习笔记08——文件和ARC</h1>
+  
+
+    </header>
+    <div class="entry depth">
+      
+        <h3 id="Working_with_files">Working with files</h3><ul>
+<li><strong>NSFileManager</strong>: 对文件和目录的基本操作</li>
+</ul>
+<p>Create a new file<br>Read from an existing file<br>Write data to a file<br>Rename a file<br>Remove (delete) a file<br>Test for the existence of a file<br>Determine the size of a file as well as other attributes Make a copy of a file<br>Test two files to see whether their contents are equal</p>
+<ul>
+<li><strong>NSFileHandle</strong>: 对文件内容的基本操作</li>
+</ul>
+<p>Open a file for reading, writing, or updating (reading and writing)<br>Seek to a specified position within a file<br>Read or write a specified number of bytes from and to a file</p>
+<ul>
+<li><strong>NSURL</strong> —— work with URLs</li>
+<li><strong>NSBundle</strong> —— work with application’s bundle</li>
+</ul>
+<h3 id="Managing_Files_and_Directories:_NSFileManager">Managing Files and Directories: <em>NSFileManager</em></h3><ul>
+<li>relative pathname: relative to the current directory</li>
+<li>absolute pathname: begin with root directory “/”</li>
+<li>“~username”: 用户的home directory地址（=/User/username）</li>
+</ul>
+<p>创建一个NSFileManeger对象：<code>[NSFileManager defaultManager];</code></p>
+<p>attributes dictionary 属性词典：includes information such as the file’s owner, its size, its creation date, ……</p>
+<p>symbolic link（符号链接、软链接）：一类特殊的文件， 其包含有一条以绝对路径或者相对路径的形式指向其它文件或者目录的引用。一个符号链接文件仅包含有一个文本字符串，其被操作系统解释为一条指向另一个文件或者目录的路径。它是一个独立文件，其存在并不依赖于目标文件。（与快捷方式不同，快捷方式是普通文件，具有.lnk扩展名）</p>
+<h3 id="NSData:">NSData:</h3><p>set up a buffer(内存缓冲区), read the contents of the file into it, or write the contents of a buffer out to a file.</p>
+<p>immutable (NSData) or mutable (NSMutableData)</p>
+<p>枚举目录的内容：获得目录内容的列表，enumeratorAtPath:（枚举子目录内容）和contentsOfDirectoryAtPath:方法（不检索子目录）</p>
+<h3 id="NSPathUtilities-h">NSPathUtilities.h</h3><p>Work with path：包含NSString的函数和category扩展，可以操作路径名。尽量使用</p>
+<p>函数NSTemporaryDirectory返回系统用来存放临时文件的目录路径名，如果在此目录中创建临时文件，在运行结束时一定要删除之，并且要保证文件名的唯一性，特别是应用程序有多个实例运行时（多用户登录系统且运行程序时）。</p>
+<p>lastPathComponent方法用来从路径中提取最后一个组成部分：从绝对路径中提取文件名</p>
+<h3 id="常用iOS应用文件目录">常用iOS应用文件目录</h3><p><img src="http://ww4.sinaimg.cn/large/3ca59d76gw1evb8qjdjqlj20j60d3dhm.jpg" alt="常用iOS应用文件目录"></p>
+<p>【注】<a href="https://developer.apple.com/icloud/documentation/data-storage/index.html" target="_blank" rel="external">iOS Data Storage Guidelines</a></p>
+<h3 id="NSProcessInfo_class">NSProcessInfo class</h3><p>set and retrieve various types of information about your running application（进程）</p>
+<h3 id="NSFileHandle_class">NSFileHandle class</h3><p>处理文件的通用步骤（3 steps）：</p>
+<ul>
+<li>打开文件，生成NSFileHandle对象以在接下来的I/O操作中引用文件</li>
+<li>在打开的文件中进行I/O操作</li>
+<li>关闭文件</li>
+</ul>
+<p>NSFileHandle class不包含创建文件的方法，需要使用NSFileManager class中的方法完成</p>
+<h3 id="NSBundle_class">NSBundle class</h3><p>application bundle: 应用所使用的一些资源，包括图片、本地化语言、图标…</p>
+<hr>
+<h3 id="Memory_Management_and_Automatic_Reference_Counting(ARC)">Memory Management and Automatic Reference Counting(ARC)</h3><ul>
+<li>Memory Management的核心是回收不用的内存空间以重复利用</li>
+<li>两种内存管理模式：Manual Reference Counting和Automatic Reference Counting（垃圾回收机制已经被抛弃了）</li>
+</ul>
+<h3 id="Manual_Reference_Counting">Manual Reference Counting</h3><ul>
+<li>learn how to work with reference counts</li>
+<li>general concept：当一个对象创建时，其初始引用计数(initial reference count)置为1。每次需要确认对象存在时，你会通过引用计数加1的方式创建一个指向对象的引用: (具体方法)向对象发送retain消息。当不需要对象时，引用计数减1：(具体方法)向对象发送release消息。当对象的引用计数为0时，系统认为对象不会再被使用，就释放其所占用的内存(deallocate)：(具体方法)向对象发送dealloc消息。dealloc方法可能需要根据具体情形进行override</li>
+</ul>
+<p>有些方法会改变引用计数：对象使用NSMutableArray的addObject:方法加入到一个array中，一个view通过UIView的addSubview:方法加入为子视图；与之相反的动作则减少引用计数</p>
+<p>对象被销毁（引用计数降为0且发送了dealloc消息）后，就不能被引用</p>
+<p>Autorelease pool 自动释放池</p>
+<ul>
+<li>某些方法使用完对象后因为需要返回对象而不能释放之 → 需要自动释放池来辅助管理</li>
+<li>当自动释放池“干涸”(drained)时，就释放其管理的对象：向自动释放池对象发送drain消息</li>
+<li>将对象加入自动释放池：向对象发送autorelease消息</li>
+<li>当程序使用Foundation、UIKit、或AppKit框架中的class时，需要用@autorelease指令创建一个自动释放池</li>
+<li>使用以alloc、copy、mutableCopy 或 new 开头的方法创建的对象都不会自动释放，需要手动释放或手动加入自动释放池</li>
+<li>Event Loop 事件轮询机制<ul>
+<li>当外界操作出发事件时，系统自动创建一个自动释放池然后调用应用程序的一些方法处理之。当事件处理完毕时，系统销毁自动释放池，返回event loop等待下一个事件，而所有在这个自动释放池中的对象也都会被释放，除非被retained</li>
+</ul>
+</li>
+<li>override dealloc方法：先释放自己创建的对象，再[super dealloc];</li>
+</ul>
+<h3 id="Automatic_Reference_Counting">Automatic Reference Counting</h3><p>Strong variables ——(变量的default值)</p>
+<ul>
+<li>声明变量的关键字：_strong —— “_strong ClassName var;”</li>
+<li>assigning an object reference to such a variable causes that object to be automatically retained</li>
+<li>the old object reference will be released before the assignment is made</li>
+<li>strong variables are initialized to zero by default</li>
+<li>properties的默认属性不是strong，而是unsafe_unretained(相当于assign) → 需要手动声明：(strong, nonatomic)</li>
+</ul>
+<p>Weak variables</p>
+<ul>
+<li>背景：互相引用的对象（main view 与 subview）→ 若两者都是strong，则产生retain circle，导致两者都不能销毁 → 解决：weak reference，拥有另个对象的对象（main view 拥有 subview）设置为strong，而余下一个设置为weak</li>
+<li>声明变量的关键字：_weak —— “_weak … ;”</li>
+<li>相应的properties的声明：(weak, nonatomic)</li>
+<li>另一个用处：delegates —— By making the variable that holds the reference to the delegate a weak variable, you’re assured that the variable will be zeroed if the delegate object gets deallocated.</li>
+</ul>
+
+      
+    </div>
+    <footer>
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/技术学习/">技术学习</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/Objective-C/">Objective-C</a>
+  </div>
+
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+</div></div>
+    <div class="clearfix"></div>
+  </div>
+
+  <footer id="footer" class="inner"></footer>
+  <script src="/js/headroom.min.and.gallery.js"></script>
+<script>
+$("#mini-toggle").click(function () {
+    $( "#main-nav" ).css("display","inline");
+    setTimeout(function(){
+        $( "#main-nav" ).removeClass("slideInRight").addClass("slideOutRight");
+    }, 3000);
+    setTimeout(function(){
+        $( "#main-nav" ).css("display","");
+        $( "#main-nav" ).removeClass("slideOutRight").addClass("slideInRight");
+    }, 3555);
+});
+</script>
+
+<script>
+$("#header").headroom({
+  "tolerance": 0,
+  "offset": 200,
+  "classes": {
+    "initial": "",
+    "pinned": "slideInDown",
+    "unpinned": "slideOutUp"
+  }
+});
+$("#header").headroom("destroy");
+console.log("这网站没彩蛋，不用找了……")
+</script>
+
+<script>
+$("a").click(function () {
+    $( "#icon-photo-small"  ).removeClass( "rotateIn" ).addClass( "rotateOut" );
+    $( "#icon-photo-normal" ).removeClass( "rotateIn" ).addClass( "rotateOut" );
+    setTimeout(function(){
+        $( "#icon-photo-small"  ).removeClass( "rotateOut" ).addClass( "rotateIn" );
+        $( "#icon-photo-normal" ).removeClass( "rotateOut" ).addClass( "rotateIn" );
+    }, 900);
+});
+</script>
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-66639807-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+<!--[if lt IE 9]><script src="/js/excanvas.js"></script><![endif]-->
+<script src="/js/jquery.tagcanvas.min.js"></script>
+ <script type="text/javascript">
+ $(document).ready(function() {
+   if( ! $('#myCanvas').tagcanvas({
+     textColour : '#6d6d6d',
+     outlineThickness : 1,
+     textHeight: 20,
+     maxSpeed : 0.04,
+     depth : 0.75
+   })) {
+     // TagCanvas failed to load
+     $('#myCanvasContainer').hide();
+   }
+   // your other jQuery stuff here...
+ });
+ </script>
+
+
+<script src="/js/pangu.js"></script>
+<script>pangu.page_spacing();</script>
+
+
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+  <a href="https://github.com/you"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"></a>
+</body>
+</html>
