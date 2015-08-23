@@ -317,7 +317,11 @@ alert("Please Update Your IE \n请升级您的IE浏览器");
 <h1 id="测试标题，“=”相当于h1">测试标题，“=”相当于h1</h1><h2 id="测试标题h2，“-”相当于h2">测试标题h2，“-”相当于h2</h2><p>方法二仍然有效，但最少要2个。（且不会与分隔线混淆）</p>
 <h3 id="区块引用_Blockquote">区块引用 Blockquote</h3><ul>
 <li>方法一：在引文的每行或每段前面加上<code>&gt;</code>，用一个空格与后文分开</li>
-<li>方法二：利用标签插件（tag-plugins）。语法是：<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">blockquote</span>&gt;</span><span class="tag">&lt;<span class="title">p</span>&gt;</span>引用内容<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">footer</span>&gt;</span><span class="tag">&lt;<span class="title">strong</span>&gt;</span>[参数]<span class="tag">&lt;/<span class="title">strong</span>&gt;</span><span class="tag">&lt;/<span class="title">footer</span>&gt;</span><span class="tag">&lt;/<span class="title">blockquote</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<li>方法二：利用标签插件（tag-plugins）。语法是：
+{% blockquote [参数] %}
+引用内容
+{% endblockquote %}
+
 <h2 id="区段元素">区段元素</h2><h2 id="列表">列表</h2><h2 id="特殊字符">特殊字符</h2></li>
 </ul>
 <p>任务列表<br>参考<a href="https://help.github.com/articles/writing-on-github/" target="_blank" rel="external">Writing on GitHub</a></p>
