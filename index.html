@@ -308,17 +308,29 @@ alert("Please Update Your IE \n请升级您的IE浏览器");
       
         <h2 id="区块元素">区块元素</h2><h3 id="段落与换行">段落与换行</h3><p>一个 Markdown 段落是由一个或多个连续的文本行组成，它的前后要有一个以上的空行（空行的定义是显示上看起来像是空的，便会被视为空行。比方说，若某一行只包含空格和制表符，则该行也会被视为空行）。</p>
 <p>段内强制换行直接回车，不用加两个空格。（ GFM 特性）</p>
-<h3 id="标题">标题</h3><p>两种方法：</p>
-<ul>
-<li>方法一：<br>1到6个#，分别表示一到六级标题。#后要加一个空格</li>
-<li>方法二：<br>使用“=”和“-”，用法如下：<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="header">测试标题，“=”相当于h1</span><br><span class="line">==</span></span><br><span class="line"><span class="header">测试标题h2，“-”相当于h2</span><br><span class="line">--</span></span><br></pre></td></tr></table></figure>
+<h3 id="标题">标题</h3><ul>
+<li>方法一：1到6个#，分别表示一到六级标题。#后要加一个空格与标题内容分开。</li>
+<li>方法二：使用“=”和“-”，用法如下：<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="header">测试标题，“=”相当于h1</span><br><span class="line">==</span></span><br><span class="line"><span class="header">测试标题h2，“-”相当于h2</span><br><span class="line">---</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <p>效果：</p>
-<h1 id="测试标题，“=”相当于h1">测试标题，“=”相当于h1</h1><h2 id="测试标题h2，“-”相当于h2">测试标题h2，“-”相当于h2</h2><p>“=”和“-”也是有效的，不过要求其数量最少2个。“—”不会与分隔线混淆。</p>
-<h3 id="区块引用_Blockquote">区块引用 Blockquote</h3><h2 id="区段元素">区段元素</h2><h2 id="列表">列表</h2><h2 id="特殊字符">特殊字符</h2><p>任务列表<br>参考<a href="https://help.github.com/articles/writing-on-github/" target="_blank" rel="external">Writing on GitHub</a></p>
+<h1 id="测试标题，“=”相当于h1">测试标题，“=”相当于h1</h1><h2 id="测试标题h2，“-”相当于h2">测试标题h2，“-”相当于h2</h2><p>方法二仍然有效，但最少要2个。（且不会与分隔线混淆）</p>
+<h3 id="区块引用_Blockquote">区块引用 Blockquote</h3><ul>
+<li>方法一：在引文的每行或每段前面加上<code>&gt;</code>，用一个空格与后文分开</li>
+<li>方法二：利用标签插件（tag-plugins）。语法是：<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">blockquote</span>&gt;</span><span class="tag">&lt;<span class="title">p</span>&gt;</span>引用内容<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">footer</span>&gt;</span><span class="tag">&lt;<span class="title">strong</span>&gt;</span>[参数]<span class="tag">&lt;/<span class="title">strong</span>&gt;</span><span class="tag">&lt;/<span class="title">footer</span>&gt;</span><span class="tag">&lt;/<span class="title">blockquote</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="区段元素">区段元素</h2><h2 id="列表">列表</h2><h2 id="特殊字符">特殊字符</h2></li>
+</ul>
+<p>任务列表<br>参考<a href="https://help.github.com/articles/writing-on-github/" target="_blank" rel="external">Writing on GitHub</a></p>
 <hr>
-<p>参考：<br><a href="http://hp256.com/2014/12/23/post-1/" target="_blank" rel="external">Hexo于Markdown语法的支持之基础篇</a><br><a href="http://hp256.com/2014/12/24/post-0002/" target="_blank" rel="external">Hexo于Markdown语法的支持之进阶篇</a><br><a href="https://help.github.com/articles/markdown-basics/" target="_blank" rel="external">Markdown Basics</a><br><a href="https://help.github.com/articles/github-flavored-markdown/" target="_blank" rel="external">GitHub Flavored Markdown</a><br><a href="http://wowubuntu.com/markdown/" target="_blank" rel="external">Markdown 语法说明 (简体中文版)</a></p>
+<p>参考：</p>
+<ul>
+<li><a href="http://hp256.com/2014/12/23/post-1/" target="_blank" rel="external">Hexo于Markdown语法的支持之基础篇</a></li>
+<li><a href="http://hp256.com/2014/12/24/post-0002/" target="_blank" rel="external">Hexo于Markdown语法的支持之进阶篇</a></li>
+<li><a href="https://help.github.com/articles/markdown-basics/" target="_blank" rel="external">Markdown Basics</a></li>
+<li><a href="https://help.github.com/articles/github-flavored-markdown/" target="_blank" rel="external">GitHub Flavored Markdown</a></li>
+<li><a href="http://wowubuntu.com/markdown/" target="_blank" rel="external">Markdown 语法说明 (简体中文版)</a></li>
+<li><a href="https://hexo.io/zh-cn/docs/tag-plugins.html" target="_blank" rel="external">Hexo官方文档-标签插件</a></li>
+</ul>
 
       
     </div>
