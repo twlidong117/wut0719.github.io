@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wut0719.github.io/"/>
-  <updated>2016-03-12T13:52:32.000Z</updated>
+  <updated>2016-03-13T16:25:09.000Z</updated>
   <id>http://wut0719.github.io/</id>
   
   <author>
@@ -14,6 +14,96 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo3可用的Markdown语法</title>
+    <link href="http://wut0719.github.io/2016/03/14/markdown%E8%AF%AD%E6%B3%95/"/>
+    <id>http://wut0719.github.io/2016/03/14/markdown语法/</id>
+    <published>2016-03-13T16:00:00.000Z</published>
+    <updated>2016-03-13T16:25:09.000Z</updated>
+    
+    <content type="html">&lt;p&gt;讲Markdown语法的文章在网络上有很多，但是Markdown语法在不同的环境和工具中还有很多变种，本文就记录下在hexo 3.2.0中有效的语法格式。可能有不完善的地方，欢迎在评论中指出。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h1 id=&quot;区块元素&quot;&gt;&lt;a href=&quot;#区块元素&quot; class=&quot;headerlink&quot; title=&quot;区块元素&quot;&gt;&lt;/a&gt;区块元素&lt;/h1&gt;&lt;h2 id=&quot;段落和换行&quot;&gt;&lt;a href=&quot;#段落和换行&quot; class=&quot;headerlink&quot; title=&quot;段落和换行&quot;&gt;&lt;/a&gt;段落和换行&lt;/h2&gt;&lt;p&gt;段落：前后有一个以上的空行&lt;/p&gt;
+&lt;h2 id=&quot;标题&quot;&gt;&lt;a href=&quot;#标题&quot; class=&quot;headerlink&quot; title=&quot;标题&quot;&gt;&lt;/a&gt;标题&lt;/h2&gt;&lt;p&gt;两种方法：&lt;/p&gt;
+&lt;h3 id=&quot;类Setext&quot;&gt;&lt;a href=&quot;#类Setext&quot; class=&quot;headerlink&quot; title=&quot;类Setext&quot;&gt;&lt;/a&gt;类Setext&lt;/h3&gt;&lt;p&gt;两级标题。符号要至少要有一个&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;大标题&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;===&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;小标题&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;---&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&quot;类Atx&quot;&gt;&lt;a href=&quot;#类Atx&quot; class=&quot;headerlink&quot; title=&quot;类Atx&quot;&gt;&lt;/a&gt;类Atx&lt;/h3&gt;&lt;p&gt;六级标题,相当于H1~H6。&lt;code&gt;#&lt;/code&gt;与内容之间有一个空格&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# H1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;## H2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;……&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;###### H6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&quot;区块引用&quot;&gt;&lt;a href=&quot;#区块引用&quot; class=&quot;headerlink&quot; title=&quot;区块引用&quot;&gt;&lt;/a&gt;区块引用&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;引用。引用块在一段落内引用，相当于blockquote&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;引用可以嵌套，&lt;strong&gt;加粗&lt;/strong&gt;也有效&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;四个空格。相当于pre
+&lt;/code&gt;&lt;/pre&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt;引用。引用块在一段落内引用&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; &amp;gt;&amp;gt;引用可以嵌套，**加粗**也有效&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     相当于pre&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;列表&quot;&gt;&lt;a href=&quot;#列表&quot; class=&quot;headerlink&quot; title=&quot;列表&quot;&gt;&lt;/a&gt;列表&lt;/h2&gt;&lt;h3 id=&quot;有序列表&quot;&gt;&lt;a href=&quot;#有序列表&quot; class=&quot;headerlink&quot; title=&quot;有序列表&quot;&gt;&lt;/a&gt;有序列表&lt;/h3&gt;&lt;p&gt;点号后有一个空格,数字乱序也可以。嵌套的缩进是一个空格。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;有序列表&lt;ol&gt;
+&lt;li&gt;嵌套有序列表&lt;/li&gt;
+&lt;li&gt;嵌套有序列表&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;有序列表&lt;/li&gt;
+&lt;li&gt;有序列表&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1. 有序列表&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; 1. 嵌套有序列表&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; 3. 嵌套有序列表&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2. 有序列表&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3. 有序列表&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;无序列表&quot;&gt;&lt;a href=&quot;#无序列表&quot; class=&quot;headerlink&quot; title=&quot;无序列表&quot;&gt;&lt;/a&gt;无序列表&lt;/h3&gt;&lt;p&gt;无序列表的符号有&lt;code&gt;-&lt;/code&gt;,&lt;code&gt;+&lt;/code&gt;,&lt;code&gt;*&lt;/code&gt;。作用相同，可以混用，与列表项之间有一个空格。嵌套的缩进也是一个空格。只能做到两级。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;无序列表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;无序列表&lt;ul&gt;
+&lt;li&gt;嵌套列表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;嵌套子列表&lt;/li&gt;
+&lt;li&gt;嵌套子列表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;嵌套列表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;无序列表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;- 无序列表&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;+ 无序列表&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; - 嵌套列表&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  * 嵌套子列表&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  * 嵌套子列表&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; - 嵌套列表&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;* 无序列表&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;代码区块&quot;&gt;&lt;a href=&quot;#代码区块&quot; class=&quot;headerlink&quot; title=&quot;代码区块&quot;&gt;&lt;/a&gt;代码区块&lt;/h2&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; o = &amp;#123;&amp;#125; &lt;span class=&quot;comment&quot;&gt;//hexo解析&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(o)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% codeblock lang:javascript %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;var o = &amp;#123;&amp;#125; //hexo解析&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;console.log(o)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% endcodeblock %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;分隔线&quot;&gt;&lt;a href=&quot;#分隔线&quot; class=&quot;headerlink&quot; title=&quot;分隔线&quot;&gt;&lt;/a&gt;分隔线&lt;/h2&gt;&lt;p&gt;你可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。下面每种写法都可以建立分隔线：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;* * *&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;***&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;*****&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;- - -&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;---------------------------------------&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h1 id=&quot;区段元素&quot;&gt;&lt;a href=&quot;#区段元素&quot; class=&quot;headerlink&quot; title=&quot;区段元素&quot;&gt;&lt;/a&gt;区段元素&lt;/h1&gt;&lt;h2 id=&quot;链接&quot;&gt;&lt;a href=&quot;#链接&quot; class=&quot;headerlink&quot; title=&quot;链接&quot;&gt;&lt;/a&gt;链接&lt;/h2&gt;&lt;p&gt;两种方式：行内式和索引式&lt;br&gt;行内式：&lt;a href=&quot;http://wut0719.github.io&quot; title=&quot;吴桐的博客&quot;&gt;吴桐&lt;/a&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;行内式：[&amp;lt;a&amp;gt;内容](href属性值 &amp;quot;title属性值&amp;quot;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;强调&quot;&gt;&lt;a href=&quot;#强调&quot; class=&quot;headerlink&quot; title=&quot;强调&quot;&gt;&lt;/a&gt;强调&lt;/h2&gt;&lt;p&gt;星号或下划线。一个=em，两个=strong。也可以直接用html标签&lt;em&gt;em&lt;/em&gt;和&lt;strong&gt;strong&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;single asterisks&lt;/em&gt;&lt;br&gt;&lt;em&gt;single underscores&lt;/em&gt;&lt;br&gt;&lt;strong&gt;double asterisks&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;double underscores&lt;/strong&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;*single asterisks*&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;_single underscores_&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;**double asterisks**&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;__double underscores__&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&quot;代码&quot;&gt;&lt;a href=&quot;#代码&quot; class=&quot;headerlink&quot; title=&quot;代码&quot;&gt;&lt;/a&gt;代码&lt;/h2&gt;&lt;p&gt;行内代码:&lt;code&gt;code&lt;/code&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;`code`&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;图片&quot;&gt;&lt;a href=&quot;#图片&quot; class=&quot;headerlink&quot; title=&quot;图片&quot;&gt;&lt;/a&gt;图片&lt;/h2&gt;&lt;p&gt;也有两种方式：行内式和参考式&lt;/p&gt;
+&lt;p&gt;行内式：&lt;img src=&quot;//img3.doubanio.com/f/shire/8308f83ca66946299fc80efb1f10ea21f99ec2a5/pics/nav/lg_main_a11_1.png&quot; alt=&quot;Douban&quot;&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;行内式：![alt属性值](src属性值)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h1 id=&quot;其它&quot;&gt;&lt;a href=&quot;#其它&quot; class=&quot;headerlink&quot; title=&quot;其它&quot;&gt;&lt;/a&gt;其它&lt;/h1&gt;&lt;h2 id=&quot;反斜杠-转义字符&quot;&gt;&lt;a href=&quot;#反斜杠-转义字符&quot; class=&quot;headerlink&quot; title=&quot;反斜杠-转义字符&quot;&gt;&lt;/a&gt;反斜杠-转义字符&lt;/h2&gt;&lt;p&gt;\ 反斜杠&lt;br&gt;` 反引号&lt;br&gt;* 星号&lt;br&gt;_ 下划线&lt;br&gt;{} 大括号&lt;br&gt;[] 中括号&lt;br&gt;() 小括号&lt;br&gt;# 井号&lt;br&gt;+ 加号&lt;br&gt;- 减号&lt;br&gt;. 英文句号&lt;br&gt;! 感叹号&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;\\ 反斜杠&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\` 反引号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\* 星号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\_ 下划线&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\&amp;#123;\&amp;#125; 大括号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\[\] 中括号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\(\) 小括号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\# 井号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\+ 加号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\- 减号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\. 英文句号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\! 感叹号&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&quot;自动链接&quot;&gt;&lt;a href=&quot;#自动链接&quot; class=&quot;headerlink&quot; title=&quot;自动链接&quot;&gt;&lt;/a&gt;自动链接&lt;/h2&gt;&lt;p&gt;尖括号，包括链接和邮件地址。&lt;br&gt;&lt;a href=&quot;http://wut0719.github.io&quot;&gt;http://wut0719.github.io&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;&amp;#109;&amp;#x61;&amp;#105;&amp;#108;&amp;#x74;&amp;#x6f;&amp;#58;&amp;#x65;&amp;#120;&amp;#97;&amp;#x6d;&amp;#112;&amp;#x6c;&amp;#x65;&amp;#x40;&amp;#101;&amp;#x78;&amp;#97;&amp;#109;&amp;#112;&amp;#108;&amp;#x65;&amp;#x2e;&amp;#99;&amp;#111;&amp;#109;&quot;&gt;&amp;#x65;&amp;#120;&amp;#97;&amp;#x6d;&amp;#112;&amp;#x6c;&amp;#x65;&amp;#x40;&amp;#101;&amp;#x78;&amp;#97;&amp;#109;&amp;#112;&amp;#108;&amp;#x65;&amp;#x2e;&amp;#99;&amp;#111;&amp;#109;&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;http://wut0719.github.io&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;example@example.com&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;参考：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://ibruce.info/2013/11/26/markdown/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Markdown简明语法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://wowubuntu.com/markdown&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Markdown 语法说明(简体中文版)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;讲Markdown语法的文章在网络上有很多，但是Markdown语法在不同的环境和工具中还有很多变种，本文就记录下在hexo 3.2.0中有效的语法格式。可能有不完善的地方，欢迎在评论中指出。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术学习" scheme="http://wut0719.github.io/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="hexo" scheme="http://wut0719.github.io/tags/hexo/"/>
+    
+      <category term="Markdown" scheme="http://wut0719.github.io/tags/Markdown/"/>
+    
+  </entry>
   
   <entry>
     <title>新工具hexo</title>
@@ -124,6 +214,91 @@
   </entry>
   
   <entry>
+    <title>PiOC学习笔记09——对象复制与归档</title>
+    <link href="http://wut0719.github.io/2014/08/31/PiOC09/"/>
+    <id>http://wut0719.github.io/2014/08/31/PiOC09/</id>
+    <published>2014-08-30T16:00:00.000Z</published>
+    <updated>2016-03-13T14:03:39.000Z</updated>
+    
+    <content type="html">&lt;p&gt;chapter 18-19&lt;/p&gt;
+&lt;h3 id=&quot;Copy-Objects&quot;&gt;&lt;a href=&quot;#Copy-Objects&quot; class=&quot;headerlink&quot; title=&quot;Copy Objects&quot;&gt;&lt;/a&gt;Copy Objects&lt;/h3&gt;&lt;p&gt;复制对象 → Foundation中的方法：copy和mutableCopy&lt;/p&gt;
+&lt;p&gt;protocol：&lt;code&gt;&amp;lt;NSCopying&amp;gt; , &amp;lt;NSMutableCopying&amp;gt;&lt;/code&gt;→ 在自己写的class中使用&lt;/p&gt;
+&lt;p&gt;mutable复制不要求object是mutable；immutable不要求object是immutable&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;mutable复制与 immutable复制的对比：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对immutable对象复制，copy是指针复制（shadow copy），但mutableCopy就是对象复制（deep copy）。如果是对mutable对象复制，都是deep copy，但是copy返回的对象是immutable&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.cnblogs.com/ydhliphonedev/archive/2012/04/27/2473927.html&quot; title=&quot;iOS开发之深拷贝与浅拷贝详解&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;iOS开发之深拷贝与浅拷贝详解&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;copy的默认值是&lt;strong&gt;shadow&lt;/strong&gt; —— just copying the reference from one element of the array to another&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;与shadow copy相对的是&lt;strong&gt;deep&lt;/strong&gt; copy —— make distinct copies of each element of the array&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;shadow copy、deep copy 与直接赋值(assignment)的对比：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;shadow copy创建新的array对象，但array中的object（实质为引用）直接复制原始array中的object（object引用所指向的object空间不变，不开辟新内存空间）&lt;/li&gt;
+&lt;li&gt;assignment则是直接复制对原始array对象的引用，并不创建新array对象&lt;/li&gt;
+&lt;li&gt;deep copy既创建新array对象，也创建新的array中的object（开辟新内存空间，存放与原始object值相同的新object）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在property中使用copy：&lt;code&gt;(copy,nonatomic)&lt;/code&gt;（默认值不是copy）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;nonatomic / atomic → 不使用 / 使用 mutex lock 保护 访问property的accessor&lt;/li&gt;
+&lt;li&gt;mutex lock ( &lt;em&gt;mut&lt;/em&gt; ually  &lt;em&gt;ex&lt;/em&gt; clusive) 互斥锁 —— 在任一时刻，只能有一个线程访问该对象&lt;/li&gt;
+&lt;li&gt;默认值是atomic；atomic更安全，但降低程序运行速度，nonatomic提高效率&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果复制的是包含immutable对象的实例变量 → 没有必要把 immutable对象也复制一遍，直接复制其引用就足够了（之后的修改不会影响到immutable对象本身）&lt;/p&gt;
+&lt;h3 id=&quot;Archiving&quot;&gt;&lt;a href=&quot;#Archiving&quot; class=&quot;headerlink&quot; title=&quot;Archiving&quot;&gt;&lt;/a&gt;Archiving&lt;/h3&gt;&lt;p&gt;对象归档：the process of saving one or more objects in a format so that they can later be restored → 即将对象写入文件中&lt;/p&gt;
+&lt;p&gt;两种方式：property list (属性列表，即.plist文件) 和 key-valued coding (KVC机制) —— &lt;a href=&quot;http://zhangbin.cc/2012/08/16/kvc-kvo/&quot; title=&quot;KVC和KVO&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;KVC和KVO&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Key-value coding is a mechanism for &lt;strong&gt;accessing an object’s properties indirectly&lt;/strong&gt;, using strings to identify properties, rather than through invocation of an accessor method or accessing them directly through instance variables.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;XML Property List&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;NSString, NSDictionary, NSArray, NSDate, NSData, or NSNumber类的对象可以使用writeToFile:atomically:方法将对象写入文件中&lt;/li&gt;
+&lt;li&gt;atomically:参数取值YES/NO；YES——先写进一个临时备份文件，全部完成后再移入目标文件中，防止意外情况（system crash等）对plist文件可能造成的损害&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;将plist文件的内容读入程序中：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;返回dictionary：dictionaryWithContentsOfFile: 方法&lt;/li&gt;
+&lt;li&gt;返回array：arrayWithContentsOfFile:方法&lt;/li&gt;
+&lt;li&gt;返回data：dataWithContentsOfFile:方法&lt;/li&gt;
+&lt;li&gt;返回string：stringWithContentsOfFile:方法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;更灵活的保存方式——NSKeyedArchiver class——任何类型的objects&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对应的读取方式——NSKeyedUnarchiver class&lt;/li&gt;
+&lt;li&gt;需要在class中定义encodeWithCoder:方法（如何归档，即encode）and initWithCoder:方法（如何解档，即decode），遵守&lt;code&gt;&amp;lt;NSCoding&amp;gt;&lt;/code&gt;协议&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Using &lt;em&gt;NSData&lt;/em&gt; to Create Custom Archives —— 将多种objects收集起来保存到一个文件&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用initForWritingWithMutableData:方法从NSData对象创建NSKeyedArchiver对象&lt;/li&gt;
+&lt;li&gt;归档的objects对应所属的class都要实现各自的encoder和decoder方法&lt;/li&gt;
+&lt;li&gt;使用finishEncoding方法结束归档&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;使用归档进行deep copy&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You don’t need to use a file for this process; the archiving and unarchiving process can all take place in memory. ( buffer )&lt;/li&gt;
+&lt;li&gt;不用遵守NSCopying协议&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;chapter 18-19&lt;/p&gt;
+&lt;h3 id=&quot;Copy-Objects&quot;&gt;&lt;a href=&quot;#Copy-Objects&quot; class=&quot;headerlink&quot; title=&quot;Copy Objects&quot;&gt;&lt;/a&gt;Copy Objects&lt;/h3&gt;&lt;p&gt;复制对象 → Foundation中的方法：copy和mutableCopy&lt;/p&gt;
+&lt;p&gt;protocol：&lt;code&gt;&amp;lt;NSCopying&amp;gt; , &amp;lt;NSMutableCopying&amp;gt;&lt;/code&gt;→ 在自己写的class中使用&lt;/p&gt;
+&lt;p&gt;mutable复制不要求object是mutable；immutable不要求object是immutable&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="iOS开发" scheme="http://wut0719.github.io/categories/iOS%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="Objective-C" scheme="http://wut0719.github.io/tags/Objective-C/"/>
+    
+  </entry>
+  
+  <entry>
     <title>PiOC学习笔记08——文件和ARC</title>
     <link href="http://wut0719.github.io/2014/08/31/PiOC08/"/>
     <id>http://wut0719.github.io/2014/08/31/PiOC08/</id>
@@ -214,91 +389,6 @@
 &lt;li&gt;&lt;strong&gt;NSFileManager&lt;/strong&gt;: 对文件和目录的基本操作&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Create a new file&lt;br&gt;Read from an existing file&lt;br&gt;Write data to a file&lt;br&gt;Rename a file&lt;br&gt;Remove (delete) a file&lt;br&gt;Test for the existence of a file&lt;br&gt;Determine the size of a file as well as other attributes Make a copy of a file&lt;br&gt;Test two files to see whether their contents are equal&lt;br&gt;
-    
-    </summary>
-    
-      <category term="iOS开发" scheme="http://wut0719.github.io/categories/iOS%E5%BC%80%E5%8F%91/"/>
-    
-    
-      <category term="Objective-C" scheme="http://wut0719.github.io/tags/Objective-C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PiOC学习笔记09——对象复制与归档</title>
-    <link href="http://wut0719.github.io/2014/08/31/PiOC09/"/>
-    <id>http://wut0719.github.io/2014/08/31/PiOC09/</id>
-    <published>2014-08-30T16:00:00.000Z</published>
-    <updated>2016-03-13T14:03:39.000Z</updated>
-    
-    <content type="html">&lt;p&gt;chapter 18-19&lt;/p&gt;
-&lt;h3 id=&quot;Copy-Objects&quot;&gt;&lt;a href=&quot;#Copy-Objects&quot; class=&quot;headerlink&quot; title=&quot;Copy Objects&quot;&gt;&lt;/a&gt;Copy Objects&lt;/h3&gt;&lt;p&gt;复制对象 → Foundation中的方法：copy和mutableCopy&lt;/p&gt;
-&lt;p&gt;protocol：&lt;code&gt;&amp;lt;NSCopying&amp;gt; , &amp;lt;NSMutableCopying&amp;gt;&lt;/code&gt;→ 在自己写的class中使用&lt;/p&gt;
-&lt;p&gt;mutable复制不要求object是mutable；immutable不要求object是immutable&lt;/p&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;p&gt;mutable复制与 immutable复制的对比：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;对immutable对象复制，copy是指针复制（shadow copy），但mutableCopy就是对象复制（deep copy）。如果是对mutable对象复制，都是deep copy，但是copy返回的对象是immutable&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.cnblogs.com/ydhliphonedev/archive/2012/04/27/2473927.html&quot; title=&quot;iOS开发之深拷贝与浅拷贝详解&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;iOS开发之深拷贝与浅拷贝详解&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;copy的默认值是&lt;strong&gt;shadow&lt;/strong&gt; —— just copying the reference from one element of the array to another&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;与shadow copy相对的是&lt;strong&gt;deep&lt;/strong&gt; copy —— make distinct copies of each element of the array&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;shadow copy、deep copy 与直接赋值(assignment)的对比：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;shadow copy创建新的array对象，但array中的object（实质为引用）直接复制原始array中的object（object引用所指向的object空间不变，不开辟新内存空间）&lt;/li&gt;
-&lt;li&gt;assignment则是直接复制对原始array对象的引用，并不创建新array对象&lt;/li&gt;
-&lt;li&gt;deep copy既创建新array对象，也创建新的array中的object（开辟新内存空间，存放与原始object值相同的新object）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;在property中使用copy：&lt;code&gt;(copy,nonatomic)&lt;/code&gt;（默认值不是copy）&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;nonatomic / atomic → 不使用 / 使用 mutex lock 保护 访问property的accessor&lt;/li&gt;
-&lt;li&gt;mutex lock ( &lt;em&gt;mut&lt;/em&gt; ually  &lt;em&gt;ex&lt;/em&gt; clusive) 互斥锁 —— 在任一时刻，只能有一个线程访问该对象&lt;/li&gt;
-&lt;li&gt;默认值是atomic；atomic更安全，但降低程序运行速度，nonatomic提高效率&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;如果复制的是包含immutable对象的实例变量 → 没有必要把 immutable对象也复制一遍，直接复制其引用就足够了（之后的修改不会影响到immutable对象本身）&lt;/p&gt;
-&lt;h3 id=&quot;Archiving&quot;&gt;&lt;a href=&quot;#Archiving&quot; class=&quot;headerlink&quot; title=&quot;Archiving&quot;&gt;&lt;/a&gt;Archiving&lt;/h3&gt;&lt;p&gt;对象归档：the process of saving one or more objects in a format so that they can later be restored → 即将对象写入文件中&lt;/p&gt;
-&lt;p&gt;两种方式：property list (属性列表，即.plist文件) 和 key-valued coding (KVC机制) —— &lt;a href=&quot;http://zhangbin.cc/2012/08/16/kvc-kvo/&quot; title=&quot;KVC和KVO&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;KVC和KVO&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Key-value coding is a mechanism for &lt;strong&gt;accessing an object’s properties indirectly&lt;/strong&gt;, using strings to identify properties, rather than through invocation of an accessor method or accessing them directly through instance variables.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;XML Property List&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;NSString, NSDictionary, NSArray, NSDate, NSData, or NSNumber类的对象可以使用writeToFile:atomically:方法将对象写入文件中&lt;/li&gt;
-&lt;li&gt;atomically:参数取值YES/NO；YES——先写进一个临时备份文件，全部完成后再移入目标文件中，防止意外情况（system crash等）对plist文件可能造成的损害&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;将plist文件的内容读入程序中：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;返回dictionary：dictionaryWithContentsOfFile: 方法&lt;/li&gt;
-&lt;li&gt;返回array：arrayWithContentsOfFile:方法&lt;/li&gt;
-&lt;li&gt;返回data：dataWithContentsOfFile:方法&lt;/li&gt;
-&lt;li&gt;返回string：stringWithContentsOfFile:方法&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;更灵活的保存方式——NSKeyedArchiver class——任何类型的objects&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;对应的读取方式——NSKeyedUnarchiver class&lt;/li&gt;
-&lt;li&gt;需要在class中定义encodeWithCoder:方法（如何归档，即encode）and initWithCoder:方法（如何解档，即decode），遵守&lt;code&gt;&amp;lt;NSCoding&amp;gt;&lt;/code&gt;协议&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Using &lt;em&gt;NSData&lt;/em&gt; to Create Custom Archives —— 将多种objects收集起来保存到一个文件&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;使用initForWritingWithMutableData:方法从NSData对象创建NSKeyedArchiver对象&lt;/li&gt;
-&lt;li&gt;归档的objects对应所属的class都要实现各自的encoder和decoder方法&lt;/li&gt;
-&lt;li&gt;使用finishEncoding方法结束归档&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;使用归档进行deep copy&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;You don’t need to use a file for this process; the archiving and unarchiving process can all take place in memory. ( buffer )&lt;/li&gt;
-&lt;li&gt;不用遵守NSCopying协议&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;chapter 18-19&lt;/p&gt;
-&lt;h3 id=&quot;Copy-Objects&quot;&gt;&lt;a href=&quot;#Copy-Objects&quot; class=&quot;headerlink&quot; title=&quot;Copy Objects&quot;&gt;&lt;/a&gt;Copy Objects&lt;/h3&gt;&lt;p&gt;复制对象 → Foundation中的方法：copy和mutableCopy&lt;/p&gt;
-&lt;p&gt;protocol：&lt;code&gt;&amp;lt;NSCopying&amp;gt; , &amp;lt;NSMutableCopying&amp;gt;&lt;/code&gt;→ 在自己写的class中使用&lt;/p&gt;
-&lt;p&gt;mutable复制不要求object是mutable；immutable不要求object是immutable&lt;/p&gt;
     
     </summary>
     
@@ -431,72 +521,6 @@
   </entry>
   
   <entry>
-    <title>PiOC学习笔记06—— Preprocessor</title>
-    <link href="http://wut0719.github.io/2014/08/27/PiOC06/"/>
-    <id>http://wut0719.github.io/2014/08/27/PiOC06/</id>
-    <published>2014-08-26T16:00:00.000Z</published>
-    <updated>2016-03-13T14:03:09.000Z</updated>
-    
-    <content type="html">&lt;h2 id=&quot;The-Preprocessor&quot;&gt;&lt;a href=&quot;#The-Preprocessor&quot; class=&quot;headerlink&quot; title=&quot;The Preprocessor&quot;&gt;&lt;/a&gt;The Preprocessor&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;从语言上定制Objective-C，使其适应自己的编程风格或特定的编程应用&lt;/li&gt;
-&lt;li&gt;是编译过程的一部分，识别散布在程序中的特定语句&lt;/li&gt;
-&lt;li&gt;“#”开头&lt;/li&gt;
-&lt;/ul&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h3 id=&quot;define&quot;&gt;&lt;a href=&quot;#define&quot; class=&quot;headerlink&quot; title=&quot;#define&quot;&gt;&lt;/a&gt;#define&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;给符号名称指派程序常量（包括但不限于）&lt;/li&gt;
-&lt;li&gt;a defined name is not a variable; 字母全部大写&lt;/li&gt;
-&lt;li&gt;often placed toward the beginning of the program, after #import or #include, but not required; must be placed &lt;strong&gt;before it is referenced&lt;/strong&gt; by the program.&lt;/li&gt;
-&lt;li&gt;more than a constant value: expression, “;”(所以不要用“;”结尾), 逻辑运算符, …&lt;ul&gt;
-&lt;li&gt;Careful：使用#define重新定义底层语言语法的行为不是好习惯（会让人费解）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;在#define语句中可以使用其他#define（不分前后）定义的符号名称&lt;/li&gt;
-&lt;li&gt;good use of #define often reduces the need for comments&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;macro&lt;/strong&gt; 宏——常用带一个或多个参数的定义；&lt;ul&gt;
-&lt;li&gt;syntax——#define NAME(参数) （表达式(参数));  //参数和表达式都要用（）括起来，确保完整替换&lt;/li&gt;
-&lt;li&gt;简化表达式的编写&lt;/li&gt;
-&lt;li&gt;macro中也可以使用其他macro&lt;h3 id=&quot;import&quot;&gt;&lt;a href=&quot;#import&quot; class=&quot;headerlink&quot; title=&quot;#import&quot;&gt;&lt;/a&gt;#import&lt;/h3&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;collect all your definitions into a separate file; import it and you can use&lt;/li&gt;
-&lt;li&gt;(in Xcode 5) “@import UIKit;” &lt;strong&gt;module&lt;/strong&gt; (new feature)&lt;/li&gt;
-&lt;li&gt;条件编译 Conditional Compilation&lt;/li&gt;
-&lt;li&gt;often used to create one program that can be compiled to run on different computer systems (for example, an iPhone versus an iPad)&lt;/li&gt;
-&lt;li&gt;switch on or off various statements in the program&lt;h3 id=&quot;条件控制语句&quot;&gt;&lt;a href=&quot;#条件控制语句&quot; class=&quot;headerlink&quot; title=&quot;条件控制语句&quot;&gt;&lt;/a&gt;条件控制语句&lt;/h3&gt;&lt;/li&gt;
-&lt;li&gt;#ifdef，#endif，#else，#ifndef 语句&lt;ul&gt;
-&lt;li&gt;检查某name是否已预编译（判断机型，系统，是否是debug状态……）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;#ifndef 与#ifdef 功能相同，条件相反&lt;/li&gt;
-&lt;li&gt;if，#elif 语句——更加通用的条件编译控制&lt;ul&gt;
-&lt;li&gt;test whether a constant expression evaluates to nonzero.是就执行后面语句直到#else、#elif或#endif；否就直接跳过&lt;/li&gt;
-&lt;li&gt;#if defined (name) 与 #ifdef name 等价&lt;/li&gt;
-&lt;li&gt;添加注释的新方法：“#if 0 …注释… #endif”&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;#undef 语句——remove the definition of a particular name :“#undef name”&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;The-Preprocessor&quot;&gt;&lt;a href=&quot;#The-Preprocessor&quot; class=&quot;headerlink&quot; title=&quot;The Preprocessor&quot;&gt;&lt;/a&gt;The Preprocessor&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;从语言上定制Objective-C，使其适应自己的编程风格或特定的编程应用&lt;/li&gt;
-&lt;li&gt;是编译过程的一部分，识别散布在程序中的特定语句&lt;/li&gt;
-&lt;li&gt;“#”开头&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="iOS开发" scheme="http://wut0719.github.io/categories/iOS%E5%BC%80%E5%8F%91/"/>
-    
-    
-      <category term="Objective-C" scheme="http://wut0719.github.io/tags/Objective-C/"/>
-    
-  </entry>
-  
-  <entry>
     <title>PiOC学习笔记05——Category和Protocol</title>
     <link href="http://wut0719.github.io/2014/08/27/PiOC05/"/>
     <id>http://wut0719.github.io/2014/08/27/PiOC05/</id>
@@ -583,6 +607,72 @@
 &lt;li&gt;Protocols&lt;h3 id=&quot;Categories&quot;&gt;&lt;a href=&quot;#Categories&quot; class=&quot;headerlink&quot; title=&quot;Categories&quot;&gt;&lt;/a&gt;Categories&lt;/h3&gt;&lt;/li&gt;
 &lt;li&gt;将类的定义模块化到相关方法的组或分类中&lt;/li&gt;
 &lt;li&gt;扩展现有类的定义而无需获取源代码，也不用创建子类&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="iOS开发" scheme="http://wut0719.github.io/categories/iOS%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="Objective-C" scheme="http://wut0719.github.io/tags/Objective-C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PiOC学习笔记06—— Preprocessor</title>
+    <link href="http://wut0719.github.io/2014/08/27/PiOC06/"/>
+    <id>http://wut0719.github.io/2014/08/27/PiOC06/</id>
+    <published>2014-08-26T16:00:00.000Z</published>
+    <updated>2016-03-13T14:03:09.000Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;The-Preprocessor&quot;&gt;&lt;a href=&quot;#The-Preprocessor&quot; class=&quot;headerlink&quot; title=&quot;The Preprocessor&quot;&gt;&lt;/a&gt;The Preprocessor&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;从语言上定制Objective-C，使其适应自己的编程风格或特定的编程应用&lt;/li&gt;
+&lt;li&gt;是编译过程的一部分，识别散布在程序中的特定语句&lt;/li&gt;
+&lt;li&gt;“#”开头&lt;/li&gt;
+&lt;/ul&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h3 id=&quot;define&quot;&gt;&lt;a href=&quot;#define&quot; class=&quot;headerlink&quot; title=&quot;#define&quot;&gt;&lt;/a&gt;#define&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;给符号名称指派程序常量（包括但不限于）&lt;/li&gt;
+&lt;li&gt;a defined name is not a variable; 字母全部大写&lt;/li&gt;
+&lt;li&gt;often placed toward the beginning of the program, after #import or #include, but not required; must be placed &lt;strong&gt;before it is referenced&lt;/strong&gt; by the program.&lt;/li&gt;
+&lt;li&gt;more than a constant value: expression, “;”(所以不要用“;”结尾), 逻辑运算符, …&lt;ul&gt;
+&lt;li&gt;Careful：使用#define重新定义底层语言语法的行为不是好习惯（会让人费解）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;在#define语句中可以使用其他#define（不分前后）定义的符号名称&lt;/li&gt;
+&lt;li&gt;good use of #define often reduces the need for comments&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;macro&lt;/strong&gt; 宏——常用带一个或多个参数的定义；&lt;ul&gt;
+&lt;li&gt;syntax——#define NAME(参数) （表达式(参数));  //参数和表达式都要用（）括起来，确保完整替换&lt;/li&gt;
+&lt;li&gt;简化表达式的编写&lt;/li&gt;
+&lt;li&gt;macro中也可以使用其他macro&lt;h3 id=&quot;import&quot;&gt;&lt;a href=&quot;#import&quot; class=&quot;headerlink&quot; title=&quot;#import&quot;&gt;&lt;/a&gt;#import&lt;/h3&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;collect all your definitions into a separate file; import it and you can use&lt;/li&gt;
+&lt;li&gt;(in Xcode 5) “@import UIKit;” &lt;strong&gt;module&lt;/strong&gt; (new feature)&lt;/li&gt;
+&lt;li&gt;条件编译 Conditional Compilation&lt;/li&gt;
+&lt;li&gt;often used to create one program that can be compiled to run on different computer systems (for example, an iPhone versus an iPad)&lt;/li&gt;
+&lt;li&gt;switch on or off various statements in the program&lt;h3 id=&quot;条件控制语句&quot;&gt;&lt;a href=&quot;#条件控制语句&quot; class=&quot;headerlink&quot; title=&quot;条件控制语句&quot;&gt;&lt;/a&gt;条件控制语句&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;#ifdef，#endif，#else，#ifndef 语句&lt;ul&gt;
+&lt;li&gt;检查某name是否已预编译（判断机型，系统，是否是debug状态……）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;#ifndef 与#ifdef 功能相同，条件相反&lt;/li&gt;
+&lt;li&gt;if，#elif 语句——更加通用的条件编译控制&lt;ul&gt;
+&lt;li&gt;test whether a constant expression evaluates to nonzero.是就执行后面语句直到#else、#elif或#endif；否就直接跳过&lt;/li&gt;
+&lt;li&gt;#if defined (name) 与 #ifdef name 等价&lt;/li&gt;
+&lt;li&gt;添加注释的新方法：“#if 0 …注释… #endif”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;#undef 语句——remove the definition of a particular name :“#undef name”&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;The-Preprocessor&quot;&gt;&lt;a href=&quot;#The-Preprocessor&quot; class=&quot;headerlink&quot; title=&quot;The Preprocessor&quot;&gt;&lt;/a&gt;The Preprocessor&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;从语言上定制Objective-C，使其适应自己的编程风格或特定的编程应用&lt;/li&gt;
+&lt;li&gt;是编译过程的一部分，识别散布在程序中的特定语句&lt;/li&gt;
+&lt;li&gt;“#”开头&lt;/li&gt;
 &lt;/ul&gt;
     
     </summary>
@@ -866,96 +956,6 @@
     
     
       <category term="Objective-C" scheme="http://wut0719.github.io/tags/Objective-C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo3可用的Markdown语法</title>
-    <link href="http://wut0719.github.io/2014/08/23/markdown%E8%AF%AD%E6%B3%95/"/>
-    <id>http://wut0719.github.io/2014/08/23/markdown语法/</id>
-    <published>2014-08-22T16:00:00.000Z</published>
-    <updated>2016-03-13T16:10:20.000Z</updated>
-    
-    <content type="html">&lt;p&gt;讲Markdown语法的文章在网络上有很多，但是Markdown语法在不同的环境和工具中还有很多变种，本文就记录下在hexo 3.2.0中有效的语法格式。可能有不完善的地方，欢迎在评论中指出。&lt;/p&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h1 id=&quot;区块元素&quot;&gt;&lt;a href=&quot;#区块元素&quot; class=&quot;headerlink&quot; title=&quot;区块元素&quot;&gt;&lt;/a&gt;区块元素&lt;/h1&gt;&lt;h2 id=&quot;段落和换行&quot;&gt;&lt;a href=&quot;#段落和换行&quot; class=&quot;headerlink&quot; title=&quot;段落和换行&quot;&gt;&lt;/a&gt;段落和换行&lt;/h2&gt;&lt;p&gt;段落：前后有一个以上的空行&lt;/p&gt;
-&lt;h2 id=&quot;标题&quot;&gt;&lt;a href=&quot;#标题&quot; class=&quot;headerlink&quot; title=&quot;标题&quot;&gt;&lt;/a&gt;标题&lt;/h2&gt;&lt;p&gt;两种方法：&lt;/p&gt;
-&lt;h3 id=&quot;类Setext&quot;&gt;&lt;a href=&quot;#类Setext&quot; class=&quot;headerlink&quot; title=&quot;类Setext&quot;&gt;&lt;/a&gt;类Setext&lt;/h3&gt;&lt;p&gt;两级标题。符号要至少要有一个&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;大标题&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;===&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;小标题&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;---&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;h3 id=&quot;类Atx&quot;&gt;&lt;a href=&quot;#类Atx&quot; class=&quot;headerlink&quot; title=&quot;类Atx&quot;&gt;&lt;/a&gt;类Atx&lt;/h3&gt;&lt;p&gt;六级标题,相当于H1~H6。&lt;code&gt;#&lt;/code&gt;与内容之间有一个空格&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# H1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;## H2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;……&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;###### H6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;h2 id=&quot;区块引用&quot;&gt;&lt;a href=&quot;#区块引用&quot; class=&quot;headerlink&quot; title=&quot;区块引用&quot;&gt;&lt;/a&gt;区块引用&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;引用。引用块在一段落内引用，相当于blockquote&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;引用可以嵌套，&lt;strong&gt;加粗&lt;/strong&gt;也有效&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;pre&gt;&lt;code&gt;四个空格。相当于pre
-&lt;/code&gt;&lt;/pre&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt;引用。引用块在一段落内引用&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; &amp;gt;&amp;gt;引用可以嵌套，**加粗**也有效&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     相当于pre&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&quot;列表&quot;&gt;&lt;a href=&quot;#列表&quot; class=&quot;headerlink&quot; title=&quot;列表&quot;&gt;&lt;/a&gt;列表&lt;/h2&gt;&lt;h3 id=&quot;有序列表&quot;&gt;&lt;a href=&quot;#有序列表&quot; class=&quot;headerlink&quot; title=&quot;有序列表&quot;&gt;&lt;/a&gt;有序列表&lt;/h3&gt;&lt;p&gt;点号后有一个空格,数字乱序也可以。嵌套的缩进是一个空格。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;有序列表&lt;ol&gt;
-&lt;li&gt;嵌套有序列表&lt;/li&gt;
-&lt;li&gt;嵌套有序列表&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;有序列表&lt;/li&gt;
-&lt;li&gt;有序列表&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1. 有序列表&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; 1. 嵌套有序列表&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; 3. 嵌套有序列表&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2. 有序列表&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3. 有序列表&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&quot;无序列表&quot;&gt;&lt;a href=&quot;#无序列表&quot; class=&quot;headerlink&quot; title=&quot;无序列表&quot;&gt;&lt;/a&gt;无序列表&lt;/h3&gt;&lt;p&gt;无序列表的符号有&lt;code&gt;-&lt;/code&gt;,&lt;code&gt;+&lt;/code&gt;,&lt;code&gt;*&lt;/code&gt;。作用相同，可以混用，与列表项之间有一个空格。嵌套的缩进也是一个空格。只能做到两级。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;无序列表&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;无序列表&lt;ul&gt;
-&lt;li&gt;嵌套列表&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;嵌套子列表&lt;/li&gt;
-&lt;li&gt;嵌套子列表&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;嵌套列表&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;无序列表&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;- 无序列表&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;+ 无序列表&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; - 嵌套列表&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  * 嵌套子列表&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  * 嵌套子列表&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; - 嵌套列表&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;* 无序列表&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&quot;代码区块&quot;&gt;&lt;a href=&quot;#代码区块&quot; class=&quot;headerlink&quot; title=&quot;代码区块&quot;&gt;&lt;/a&gt;代码区块&lt;/h2&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; o = &amp;#123;&amp;#125; &lt;span class=&quot;comment&quot;&gt;//hexo解析&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(o)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% codeblock lang:javascript %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;var o = &amp;#123;&amp;#125; //hexo解析&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;console.log(o)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% endcodeblock %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&quot;分隔线&quot;&gt;&lt;a href=&quot;#分隔线&quot; class=&quot;headerlink&quot; title=&quot;分隔线&quot;&gt;&lt;/a&gt;分隔线&lt;/h2&gt;&lt;p&gt;你可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。下面每种写法都可以建立分隔线：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;* * *&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;***&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;*****&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;- - -&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;---------------------------------------&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;h1 id=&quot;区段元素&quot;&gt;&lt;a href=&quot;#区段元素&quot; class=&quot;headerlink&quot; title=&quot;区段元素&quot;&gt;&lt;/a&gt;区段元素&lt;/h1&gt;&lt;h2 id=&quot;链接&quot;&gt;&lt;a href=&quot;#链接&quot; class=&quot;headerlink&quot; title=&quot;链接&quot;&gt;&lt;/a&gt;链接&lt;/h2&gt;&lt;p&gt;两种方式：行内式和索引式&lt;br&gt;行内式：&lt;a href=&quot;http://wut0719.github.io&quot; title=&quot;吴桐的博客&quot;&gt;吴桐&lt;/a&gt;&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;行内式：[&amp;lt;a&amp;gt;内容](href属性值 &amp;quot;title属性值&amp;quot;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&quot;强调&quot;&gt;&lt;a href=&quot;#强调&quot; class=&quot;headerlink&quot; title=&quot;强调&quot;&gt;&lt;/a&gt;强调&lt;/h2&gt;&lt;p&gt;星号或下划线。一个=em，两个=strong。也可以直接用html标签&lt;em&gt;em&lt;/em&gt;和&lt;strong&gt;strong&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;single asterisks&lt;/em&gt;&lt;br&gt;&lt;em&gt;single underscores&lt;/em&gt;&lt;br&gt;&lt;strong&gt;double asterisks&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;double underscores&lt;/strong&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;*single asterisks*&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;_single underscores_&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;**double asterisks**&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;__double underscores__&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;h2 id=&quot;代码&quot;&gt;&lt;a href=&quot;#代码&quot; class=&quot;headerlink&quot; title=&quot;代码&quot;&gt;&lt;/a&gt;代码&lt;/h2&gt;&lt;p&gt;行内代码:&lt;code&gt;code&lt;/code&gt;&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;`code`&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&quot;图片&quot;&gt;&lt;a href=&quot;#图片&quot; class=&quot;headerlink&quot; title=&quot;图片&quot;&gt;&lt;/a&gt;图片&lt;/h2&gt;&lt;p&gt;也有两种方式：行内式和参考式&lt;/p&gt;
-&lt;p&gt;行内式：&lt;img src=&quot;//img3.doubanio.com/f/shire/8308f83ca66946299fc80efb1f10ea21f99ec2a5/pics/nav/lg_main_a11_1.png&quot; alt=&quot;Douban&quot;&gt;&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;行内式：![alt属性值](src属性值)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h1 id=&quot;其它&quot;&gt;&lt;a href=&quot;#其它&quot; class=&quot;headerlink&quot; title=&quot;其它&quot;&gt;&lt;/a&gt;其它&lt;/h1&gt;&lt;h2 id=&quot;反斜杠-转义字符&quot;&gt;&lt;a href=&quot;#反斜杠-转义字符&quot; class=&quot;headerlink&quot; title=&quot;反斜杠-转义字符&quot;&gt;&lt;/a&gt;反斜杠-转义字符&lt;/h2&gt;&lt;p&gt;\ 反斜杠&lt;br&gt;` 反引号&lt;br&gt;* 星号&lt;br&gt;_ 下划线&lt;br&gt;{} 大括号&lt;br&gt;[] 中括号&lt;br&gt;() 小括号&lt;br&gt;# 井号&lt;br&gt;+ 加号&lt;br&gt;- 减号&lt;br&gt;. 英文句号&lt;br&gt;! 感叹号&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;\\ 反斜杠&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\` 反引号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\* 星号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\_ 下划线&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\&amp;#123;\&amp;#125; 大括号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\[\] 中括号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\(\) 小括号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\# 井号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\+ 加号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\- 减号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\. 英文句号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\! 感叹号&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;h2 id=&quot;自动链接&quot;&gt;&lt;a href=&quot;#自动链接&quot; class=&quot;headerlink&quot; title=&quot;自动链接&quot;&gt;&lt;/a&gt;自动链接&lt;/h2&gt;&lt;p&gt;尖括号，包括链接和邮件地址。&lt;br&gt;&lt;a href=&quot;http://wut0719.github.io&quot;&gt;http://wut0719.github.io&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;&amp;#109;&amp;#97;&amp;#105;&amp;#108;&amp;#x74;&amp;#111;&amp;#58;&amp;#101;&amp;#x78;&amp;#x61;&amp;#x6d;&amp;#x70;&amp;#x6c;&amp;#101;&amp;#64;&amp;#x65;&amp;#120;&amp;#97;&amp;#109;&amp;#x70;&amp;#108;&amp;#x65;&amp;#x2e;&amp;#x63;&amp;#x6f;&amp;#109;&quot;&gt;&amp;#101;&amp;#x78;&amp;#x61;&amp;#x6d;&amp;#x70;&amp;#x6c;&amp;#101;&amp;#64;&amp;#x65;&amp;#120;&amp;#97;&amp;#109;&amp;#x70;&amp;#108;&amp;#x65;&amp;#x2e;&amp;#x63;&amp;#x6f;&amp;#109;&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;http://wut0719.github.io&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;example@example.com&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;参考：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://ibruce.info/2013/11/26/markdown/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Markdown简明语法&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://wowubuntu.com/markdown&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Markdown 语法说明(简体中文版)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;讲Markdown语法的文章在网络上有很多，但是Markdown语法在不同的环境和工具中还有很多变种，本文就记录下在hexo 3.2.0中有效的语法格式。可能有不完善的地方，欢迎在评论中指出。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术学习" scheme="http://wut0719.github.io/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="hexo" scheme="http://wut0719.github.io/tags/hexo/"/>
-    
-      <category term="Markdown" scheme="http://wut0719.github.io/tags/Markdown/"/>
     
   </entry>
   
