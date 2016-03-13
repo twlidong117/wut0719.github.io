@@ -35,6 +35,8 @@
         <h1 id="logo-wrap">
           <a href="/" id="logo">吴桐的博客
           
+              <span id="subtitle">Stay Young Stay Simple Always Naive</span>
+          
           </a>
         </h1>
       </div>
@@ -60,145 +62,6 @@
       <div class="outer">
         
           <section id="main">
-  
-    <article id="post-测试hexo支持的markdown语法" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/08/23/测试hexo支持的markdown语法/" class="article-date">
-  <time datetime="2015-08-22T16:00:00.000Z" itemprop="datePublished">2015-08-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/08/23/测试hexo支持的markdown语法/">测试hexo支持的markdown语法</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="区块元素"><a href="#区块元素" class="headerlink" title="区块元素"></a>区块元素</h3><h4 id="段落与换行"><a href="#段落与换行" class="headerlink" title="段落与换行"></a>段落与换行</h4><p>一个 Markdown 段落是由一个或多个连续的文本行组成，它的前后要有一个以上的空行（空行的定义是显示上看起来像是空的，便会被视为空行。比方说，若某一行只包含空格和制表符，则该行也会被视为空行）。</p>
-<p>段内强制换行直接回车，不用加两个空格。</p>
-<h4 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h4><ul>
-<li>方法一：1到6个#，分别表示一到六级标题。#后要加一个空格与标题内容分开。</li>
-<li>方法二：使用“=”和“-”，用法如下：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">测试标题，“=”相当于h1</span><br><span class="line">==</span><br><span class="line">测试标题h2，“-”相当于h2</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>效果：</p>
-<h1 id="测试标题，“-”相当于h1"><a href="#测试标题，“-”相当于h1" class="headerlink" title="测试标题，“=”相当于h1"></a>测试标题，“=”相当于h1</h1><h2 id="测试标题h2，“-”相当于h2"><a href="#测试标题h2，“-”相当于h2" class="headerlink" title="测试标题h2，“-”相当于h2"></a>测试标题h2，“-”相当于h2</h2><p>方法二仍然有效，但最少要2个。（且不会与分隔线混淆）</p>
-<h4 id="区块引用-Blockquote"><a href="#区块引用-Blockquote" class="headerlink" title="区块引用 Blockquote"></a>区块引用 Blockquote</h4><ul>
-<li>方法一：在引文的每行或每段前面加上<code>&gt;</code>，用一个空格与后文分开</li>
-<li>方法二：利用block quote插件。语法是：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% blockquote [参数] %&#125;</span><br><span class="line">引用内容</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>可选参数：作者、链接地址、链接名称（书名、网页标题……）。用空格分开。</p>
-<p><strong>注意</strong>——在blockquote中markdown语法依然有效。如果期望其失效，则可用<code>&lt;pre&gt;</code>标签包裹之。此外，raw标签插件中的内容不会被解析，可以保留原样。</p>
-<h4 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h4><p>无序列表用减号或星号都可以，但不要混用。有序列表用数字接一个英文句点。</p>
-<ul>
-<li>第一级</li>
-<li>第一级<ul>
-<li>第二级</li>
-<li>第二级</li>
-</ul>
-<ol>
-<li>第二级</li>
-<li>第二级<ul>
-<li>第三级</li>
-<li>第三级</li>
-</ul>
-<ol>
-<li>第三级</li>
-<li>第三级</li>
-</ol>
-</li>
-</ol>
-</li>
-<li>第一级<br>列表的嵌套支持超过两级以上，缩进为两个空格。无序列表的标号会根据层级变化，有序列表的数字标号则不受影响。</li>
-</ul>
-<h4 id="代码区块"><a href="#代码区块" class="headerlink" title="代码区块"></a>代码区块</h4><ul>
-<li><p>方法一：使用```。在起始```后加上语言即可实现代码高亮。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">举例：</span><br><span class="line">undefined</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>方法二：使用code block插件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% codeblock [参数] %&#125;</span><br><span class="line">引用内容</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>可选参数：指定语言（lang:xxx，用于代码高亮）、附加说明、链接地址。用空格分开。</p>
-<h4 id="分隔线"><a href="#分隔线" class="headerlink" title="分隔线"></a>分隔线</h4><p>遵循markdown标准语法：在一行中用<strong>三个以上</strong>的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。</p>
-<h3 id="区段元素"><a href="#区段元素" class="headerlink" title="区段元素"></a>区段元素</h3><h4 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h4><p>支持两种形式：行内式和参考式。</p>
-<ul>
-<li>行内式：<code>[显示的文字](链接地址 &quot;title内容&quot;)</code></li>
-<li>参考式：<code>[显示的文字][数字标号]</code><br>然后在文章末尾，<code>[对应数字标号]:链接地址 &quot;title内容&quot;</code></li>
-</ul>
-<p>直接添加链接：<a href="http://example.com" target="_blank" rel="external">http://example.com</a> 如果要使链接加上<code>target=&quot;_blank&quot;</code>属性，则可用link插件，使用方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% link text url [external] [title] %&#125;</span><br></pre></td></tr></table></figure></p>
-<h4 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h4><p>不用下划线，只用星号。<em>斜体（em）</em> ，<strong>加粗（strong）</strong>。两者嵌套：<strong><em>Everyone</em> must attend the meeting at 5 o’clock today.</strong></p>
-<p>删除线：<code>~~</code>。<del>删除</del></p>
-<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><p>行内代码使用单反引号。效果：Here’s an idea: why don’t we take <code>SuperiorProject</code> and turn it into <code>**Reasonable**Project</code>.</p>
-<h4 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h4><p>与链接类似，支持两种形式：行内式和参考式。</p>
-<ul>
-<li>行内式：<code>![alt文本](链接地址)</code></li>
-<li>参考式：<code>![alt文本][数字标号]</code><br>然后在文章末尾，<code>[对应数字标号]:链接地址</code></li>
-</ul>
-<h4 id="反斜杠"><a href="#反斜杠" class="headerlink" title="反斜杠"></a>反斜杠</h4><p>可以利用反斜杠来插入一些在语法中有其它意义的符号。如反引号`</p>
-<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><h4 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h4><table>
-<thead>
-<tr>
-<th>Left-Aligned</th>
-<th style="text-align:center">Center Aligned</th>
-<th style="text-align:right">Right Aligned</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>col 3 is</td>
-<td style="text-align:center">some wordy text</td>
-<td style="text-align:right">$1600</td>
-</tr>
-<tr>
-<td>col 2 is</td>
-<td style="text-align:center">centered</td>
-<td style="text-align:right">$12</td>
-</tr>
-<tr>
-<td>zebra stripes</td>
-<td style="text-align:center">are neat</td>
-<td style="text-align:right">$1</td>
-</tr>
-</tbody>
-</table>
-<p>代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">| Left-Aligned  | Center Aligned  | Right Aligned |</span><br><span class="line">| ------------ |:---------------:| -----:|</span><br><span class="line">| col 3 is      | some wordy text | $1600 |</span><br><span class="line">| col 2 is      | centered        |   $12 |</span><br><span class="line">| zebra stripes | are neat        |    $1 |</span><br></pre></td></tr></table></figure></p>
-<p>文本对齐：默认为左对齐。冒号在右边则为右对齐。冒号在两边则为居中。</p>
-<hr>
-<p>参考：</p>
-<ul>
-<li><a href="http://hp256.com/2014/12/23/post-1/" target="_blank" rel="external">Hexo于Markdown语法的支持之基础篇</a></li>
-<li><a href="http://hp256.com/2014/12/24/post-0002/" target="_blank" rel="external">Hexo于Markdown语法的支持之进阶篇</a></li>
-<li><a href="https://help.github.com/articles/markdown-basics/" target="_blank" rel="external">Markdown Basics</a></li>
-<li><a href="https://help.github.com/articles/github-flavored-markdown/" target="_blank" rel="external">GitHub Flavored Markdown</a></li>
-<li><a href="http://wowubuntu.com/markdown/" target="_blank" rel="external">Markdown 语法说明 (简体中文版)</a></li>
-<li><a href="https://hexo.io/zh-cn/docs/tag-plugins.html" target="_blank" rel="external">Hexo官方文档-标签插件</a></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://wut0719.github.io/2015/08/23/测试hexo支持的markdown语法/" data-id="cilqfnn2r002jro3e4o7342c1" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
   
     <article id="post-新工具hexo" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -231,8 +94,8 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wut0719.github.io/2015/08/22/新工具hexo/" data-id="cilqfnn1u001sro3eok7h0uz4" class="article-share-link">Share</a>
-      
+      <!--<a data-url="http://wut0719.github.io/2015/08/22/新工具hexo/" data-id="cilqntlmw001zgis6gzsphwfr" class="article-share-link">Share</a>
+      -->
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
 
@@ -276,8 +139,8 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wut0719.github.io/2014/09/18/iOS_supported_video_formats/" data-id="cilqfnn0t000wro3ejqnhmksw" class="article-share-link">Share</a>
-      
+      <!--<a data-url="http://wut0719.github.io/2014/09/18/iOS_supported_video_formats/" data-id="cilqntllz000tgis6o4wvh6sf" class="article-share-link">Share</a>
+      -->
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
 
@@ -295,7 +158,7 @@
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/技术学习/">技术学习</a>
+    <a class="article-category-link" href="/categories/iOS开发/">iOS开发</a>
   </div>
 
   </div>
@@ -321,7 +184,8 @@
 <li>Class Prefix:设置类名前缀</li>
 <li>outlet：一种instance variable，与view内容的管理相关联</li>
 <li>虽然IBOutlet，IBAction本身没有实际内容，但Xcode需要利用它们来确定哪些instance variable和method需要与何种特定view对象和动作绑定</li>
-<li>设置button的Tag属性 → tag与button一一对应
+<li>设置button的Tag属性 → tag与button一一对应</li>
+</ul>
         
           <p class="article-more-link">
             <a href="/2014/09/01/PiOC10/#more">More</a>
@@ -330,8 +194,8 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wut0719.github.io/2014/09/01/PiOC10/" data-id="cilqfnn130017ro3et9q5h1m0" class="article-share-link">Share</a>
-      
+      <!--<a data-url="http://wut0719.github.io/2014/09/01/PiOC10/" data-id="cilqntlm50010gis62b8t2a8j" class="article-share-link">Share</a>
+      -->
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Objective-C/">Objective-C</a></li></ul>
 
@@ -349,7 +213,7 @@
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/技术学习/">技术学习</a>
+    <a class="article-category-link" href="/categories/iOS开发/">iOS开发</a>
   </div>
 
   </div>
@@ -380,8 +244,8 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wut0719.github.io/2014/08/31/PiOC08/" data-id="cilqfnn0n000pro3e9yq7v6lt" class="article-share-link">Share</a>
-      
+      <!--<a data-url="http://wut0719.github.io/2014/08/31/PiOC08/" data-id="cilqntlm2000xgis6oi32rf6m" class="article-share-link">Share</a>
+      -->
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Objective-C/">Objective-C</a></li></ul>
 
@@ -399,7 +263,7 @@
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/技术学习/">技术学习</a>
+    <a class="article-category-link" href="/categories/iOS开发/">iOS开发</a>
   </div>
 
   </div>
@@ -421,7 +285,7 @@
         <p>chapter 18-19</p>
 <h3 id="Copy-Objects"><a href="#Copy-Objects" class="headerlink" title="Copy Objects"></a>Copy Objects</h3><p>复制对象 → Foundation中的方法：copy和mutableCopy</p>
 <p>protocol：<code>&lt;NSCopying&gt; , &lt;NSMutableCopying&gt;</code>→ 在自己写的class中使用</p>
-<p>mutable复制不要求object是mutable；immutable不要求object是immutable<br>
+<p>mutable复制不要求object是mutable；immutable不要求object是immutable</p>
         
           <p class="article-more-link">
             <a href="/2014/08/31/PiOC09/#more">More</a>
@@ -430,8 +294,8 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wut0719.github.io/2014/08/31/PiOC09/" data-id="cilqfnn0q000tro3esiiv0g3u" class="article-share-link">Share</a>
-      
+      <!--<a data-url="http://wut0719.github.io/2014/08/31/PiOC09/" data-id="cilqntllj000dgis6x2ri3swo" class="article-share-link">Share</a>
+      -->
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Objective-C/">Objective-C</a></li></ul>
 
@@ -449,7 +313,7 @@
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/技术学习/">技术学习</a>
+    <a class="article-category-link" href="/categories/iOS开发/">iOS开发</a>
   </div>
 
   </div>
@@ -475,7 +339,8 @@
 <li>Application Kit framework —— an extensive collection of classes and methods to develop interactive graphical applications：texts, menus, toolbars, tables, …</li>
 <li><strong>Cocoa</strong> (OS X)环境包括Foundation framework、the Application Kit framework 和 Core Data</li>
 <li><strong>Cocoa Touch</strong> (iOS)环境包括Foundation、Core Data 和 UIKit framework</li>
-<li>官方提供的Foundation Documentation
+<li>官方提供的Foundation Documentation</li>
+</ul>
         
           <p class="article-more-link">
             <a href="/2014/08/30/PiOC07/#more">More</a>
@@ -484,8 +349,8 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wut0719.github.io/2014/08/30/PiOC07/" data-id="cilqfnn0l000mro3e5jsd8qiy" class="article-share-link">Share</a>
-      
+      <!--<a data-url="http://wut0719.github.io/2014/08/30/PiOC07/" data-id="cilqntlle0008gis6q0spp9bz" class="article-share-link">Share</a>
+      -->
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Objective-C/">Objective-C</a></li></ul>
 
@@ -503,7 +368,7 @@
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/技术学习/">技术学习</a>
+    <a class="article-category-link" href="/categories/iOS开发/">iOS开发</a>
   </div>
 
   </div>
@@ -525,7 +390,8 @@
         <h2 id="The-Preprocessor"><a href="#The-Preprocessor" class="headerlink" title="The Preprocessor"></a>The Preprocessor</h2><ul>
 <li>从语言上定制Objective-C，使其适应自己的编程风格或特定的编程应用</li>
 <li>是编译过程的一部分，识别散布在程序中的特定语句</li>
-<li>“#”开头
+<li>“#”开头</li>
+</ul>
         
           <p class="article-more-link">
             <a href="/2014/08/27/PiOC06/#more">More</a>
@@ -534,8 +400,8 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wut0719.github.io/2014/08/27/PiOC06/" data-id="cilqfnn0j000jro3eaqhxx6ug" class="article-share-link">Share</a>
-      
+      <!--<a data-url="http://wut0719.github.io/2014/08/27/PiOC06/" data-id="cilqntlme001bgis6zmlopkg9" class="article-share-link">Share</a>
+      -->
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Objective-C/">Objective-C</a></li></ul>
 
@@ -553,7 +419,7 @@
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/技术学习/">技术学习</a>
+    <a class="article-category-link" href="/categories/iOS开发/">iOS开发</a>
   </div>
 
   </div>
@@ -576,7 +442,8 @@
 <li>Categories</li>
 <li>Protocols<h3 id="Categories"><a href="#Categories" class="headerlink" title="Categories"></a>Categories</h3></li>
 <li>将类的定义模块化到相关方法的组或分类中</li>
-<li><p>扩展现有类的定义而无需获取源代码，也不用创建子类</p>
+<li>扩展现有类的定义而无需获取源代码，也不用创建子类</li>
+</ul>
         
           <p class="article-more-link">
             <a href="/2014/08/27/PiOC05/#more">More</a>
@@ -585,8 +452,8 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wut0719.github.io/2014/08/27/PiOC05/" data-id="cilqfnn0h000hro3e6q1ba2sx" class="article-share-link">Share</a>
-      
+      <!--<a data-url="http://wut0719.github.io/2014/08/27/PiOC05/" data-id="cilqntlls000lgis6xh1iqa5i" class="article-share-link">Share</a>
+      -->
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Objective-C/">Objective-C</a></li></ul>
 
@@ -604,7 +471,7 @@
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/技术学习/">技术学习</a>
+    <a class="article-category-link" href="/categories/iOS开发/">iOS开发</a>
   </div>
 
   </div>
@@ -629,6 +496,8 @@
 <li>data types in more detail ——enum枚举<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3></li>
 <li>initialization methods：初始化+赋初值</li>
 <li>override init方法的“模板”syntax :<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">- (instancetype) init  </span><br><span class="line">&#123;  </span><br><span class="line">2<span class="keyword">self</span> = [<span class="keyword">super</span> init];  </span><br><span class="line">2<span class="keyword">if</span> (<span class="keyword">self</span>) &#123;  </span><br><span class="line">22<span class="comment">// Initialization code here.  </span></span><br><span class="line">2&#125;  </span><br><span class="line">2<span class="keyword">return</span> <span class="keyword">self</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
         
           <p class="article-more-link">
             <a href="/2014/08/26/PiOC04/#more">More</a>
@@ -637,8 +506,59 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wut0719.github.io/2014/08/26/PiOC04/" data-id="cilqfnn08000cro3el4fd3egy" class="article-share-link">Share</a>
+      <!--<a data-url="http://wut0719.github.io/2014/08/26/PiOC04/" data-id="cilqntllp000igis61svhlamg" class="article-share-link">Share</a>
+      -->
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Objective-C/">Objective-C</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-PiOC03" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/08/25/PiOC03/" class="article-date">
+  <time datetime="2014-08-24T16:00:00.000Z" itemprop="datePublished">2014-08-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/iOS开发/">iOS开发</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/08/25/PiOC03/">PiOC学习笔记03——多态、动态绑定和动态类型</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="PART-I-——-The-Objective-C-Language-ch-9"><a href="#PART-I-——-The-Objective-C-Language-ch-9" class="headerlink" title="PART I —— The Objective-C Language (ch.9)"></a>PART I —— The Objective-C Language (ch.9)</h2><h4 id="Polymorphism-多态"><a href="#Polymorphism-多态" class="headerlink" title="Polymorphism 多态"></a>Polymorphism 多态</h4><ul>
+<li>同名的method，不同的class</li>
+<li>运行时系统总是携带有关“对象属于哪个类”的信息 → This enables it to make key decisions at runtime instead of at compile time.</li>
+<li>Each class definition encapsulates the code needed to respond to that particular method, and this makes it independent of the other class definitions.</li>
+</ul>
+        
+          <p class="article-more-link">
+            <a href="/2014/08/25/PiOC03/#more">More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <!--<a data-url="http://wut0719.github.io/2014/08/25/PiOC03/" data-id="cilqntllh000bgis6o0v0yx2w" class="article-share-link">Share</a>
+      -->
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Objective-C/">Objective-C</a></li></ul>
 
@@ -663,7 +583,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/个人/">个人</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术学习/">技术学习</a><span class="category-list-count">12</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/iOS开发/">iOS开发</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/个人/">个人</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术学习/">技术学习</a><span class="category-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -673,10 +593,6 @@
     <h3 class="widget-title">最近文章</h3>
     <div class="widget recents">
       <ul>
-        
-          <li>
-            <a href="/2015/08/23/测试hexo支持的markdown语法/">测试hexo支持的markdown语法</a>
-          </li>
         
           <li>
             <a href="/2015/08/22/新工具hexo/">新工具hexo</a>
@@ -694,6 +610,10 @@
             <a href="/2014/08/31/PiOC08/">PiOC学习笔记08——文件和ARC</a>
           </li>
         
+          <li>
+            <a href="/2014/08/31/PiOC09/">PiOC学习笔记09——对象复制与归档</a>
+          </li>
+        
       </ul>
     </div>
   </div>
@@ -703,7 +623,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/Objective-C/" style="font-size: 20px;">Objective-C</a> <a href="/tags/hexo/" style="font-size: 13.33px;">hexo</a> <a href="/tags/iOS/" style="font-size: 10px;">iOS</a> <a href="/tags/旅游/" style="font-size: 10px;">旅游</a> <a href="/tags/杂谈/" style="font-size: 16.67px;">杂谈</a> <a href="/tags/观影/" style="font-size: 13.33px;">观影</a> <a href="/tags/读书/" style="font-size: 13.33px;">读书</a>
+      <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Objective-C/" style="font-size: 20px;">Objective-C</a> <a href="/tags/hexo/" style="font-size: 13.33px;">hexo</a> <a href="/tags/iOS/" style="font-size: 10px;">iOS</a> <a href="/tags/旅游/" style="font-size: 10px;">旅游</a> <a href="/tags/杂谈/" style="font-size: 16.67px;">杂谈</a> <a href="/tags/观影/" style="font-size: 13.33px;">观影</a> <a href="/tags/读书/" style="font-size: 13.33px;">读书</a>
     </div>
   </div>
 
@@ -712,7 +632,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">八月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">九月 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">八月 2014</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">四月 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02/">二月 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">十二月 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">五月 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/03/">三月 2013</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/10/">十月 2012</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">八月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">九月 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">八月 2014</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">四月 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02/">二月 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">十二月 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">五月 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/03/">三月 2013</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/10/">十月 2012</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 

@@ -17,7 +17,7 @@ mutable复制不要求object是mutable；immutable不要求object是immutable">
 Copy Objects复制对象 → Foundation中的方法：copy和mutableCopy
 protocol：&amp;lt;NSCopying&amp;gt; , &amp;lt;NSMutableCopying&amp;gt;→ 在自己写的class中使用
 mutable复制不要求object是mutable；immutable不要求object是immutable">
-<meta property="og:updated_time" content="2016-03-12T13:52:32.000Z">
+<meta property="og:updated_time" content="2016-03-13T14:03:39.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PiOC学习笔记09——对象复制与归档">
 <meta name="twitter:description" content="chapter 18-19
@@ -44,6 +44,8 @@ mutable复制不要求object是mutable；immutable不要求object是immutable">
       <div id="header-title">
         <h1 id="logo-wrap">
           <a href="/" id="logo">吴桐的博客
+          
+              <span id="subtitle">Stay Young Stay Simple Always Naive</span>
           
           </a>
         </h1>
@@ -76,7 +78,7 @@ mutable复制不要求object是mutable；immutable不要求object是immutable">
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/技术学习/">技术学习</a>
+    <a class="article-category-link" href="/categories/iOS开发/">iOS开发</a>
   </div>
 
   </div>
@@ -98,7 +100,9 @@ mutable复制不要求object是mutable；immutable不要求object是immutable">
         <p>chapter 18-19</p>
 <h3 id="Copy-Objects"><a href="#Copy-Objects" class="headerlink" title="Copy Objects"></a>Copy Objects</h3><p>复制对象 → Foundation中的方法：copy和mutableCopy</p>
 <p>protocol：<code>&lt;NSCopying&gt; , &lt;NSMutableCopying&gt;</code>→ 在自己写的class中使用</p>
-<p>mutable复制不要求object是mutable；immutable不要求object是immutable<br><a id="more"></a><br>mutable复制与 immutable复制的对比：</p>
+<p>mutable复制不要求object是mutable；immutable不要求object是immutable</p>
+<a id="more"></a>
+<p>mutable复制与 immutable复制的对比：</p>
 <ul>
 <li>对immutable对象复制，copy是指针复制（shadow copy），但mutableCopy就是对象复制（deep copy）。如果是对mutable对象复制，都是deep copy，但是copy返回的对象是immutable</li>
 <li><a href="http://www.cnblogs.com/ydhliphonedev/archive/2012/04/27/2473927.html" title="iOS开发之深拷贝与浅拷贝详解" target="_blank" rel="external">iOS开发之深拷贝与浅拷贝详解</a></li>
@@ -157,8 +161,8 @@ mutable复制不要求object是mutable；immutable不要求object是immutable">
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wut0719.github.io/2014/08/31/PiOC09/" data-id="cilqfnn0q000tro3esiiv0g3u" class="article-share-link">Share</a>
-      
+      <!--<a data-url="http://wut0719.github.io/2014/08/31/PiOC09/" data-id="cilqntllj000dgis6x2ri3swo" class="article-share-link">Share</a>
+      -->
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Objective-C/">Objective-C</a></li></ul>
 
@@ -195,7 +199,7 @@ mutable复制不要求object是mutable；immutable不要求object是immutable">
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
-    var duoshuoQuery = {short_name:'oliver&#39;s blog'};
+    var duoshuoQuery = {short_name:'oliverwu'};
       (function() {
         var ds = document.createElement('script');
         ds.type = 'text/javascript';ds.async = true;
@@ -211,65 +215,17 @@ mutable复制不要求object是mutable；immutable不要求object是immutable">
           
             
               <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">分类</h3>
+    <div class="widget-wrap fixed">
+    <h3 class="widget-title">目录</h3>
+
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/个人/">个人</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术学习/">技术学习</a><span class="category-list-count">12</span></li></ul>
+        <ul class='toc'>
+        <li><a class='anchor' href='#logo'>标题</a></li>
+        <li><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Copy-Objects"><span class="toc-number">1.</span> <span class="toc-text">Copy Objects</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Archiving"><span class="toc-number">2.</span> <span class="toc-text">Archiving</span></a></li></ol></li>
+        <li><a class='anchor' href='#comments'>评论</a></li> 
+        </ul>
     </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">最近文章</h3>
-    <div class="widget recents">
-      <ul>
-        
-          <li>
-            <a href="/2015/08/23/测试hexo支持的markdown语法/">测试hexo支持的markdown语法</a>
-          </li>
-        
-          <li>
-            <a href="/2015/08/22/新工具hexo/">新工具hexo</a>
-          </li>
-        
-          <li>
-            <a href="/2014/09/18/iOS_supported_video_formats/">iOS主要设备支持的视频格式</a>
-          </li>
-        
-          <li>
-            <a href="/2014/09/01/PiOC10/">PiOC学习笔记10——Cocoa, Cocoa Touch and the iOS SDK</a>
-          </li>
-        
-          <li>
-            <a href="/2014/08/31/PiOC08/">PiOC学习笔记08——文件和ARC</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签云</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/Objective-C/" style="font-size: 20px;">Objective-C</a> <a href="/tags/hexo/" style="font-size: 13.33px;">hexo</a> <a href="/tags/iOS/" style="font-size: 10px;">iOS</a> <a href="/tags/旅游/" style="font-size: 10px;">旅游</a> <a href="/tags/杂谈/" style="font-size: 16.67px;">杂谈</a> <a href="/tags/观影/" style="font-size: 13.33px;">观影</a> <a href="/tags/读书/" style="font-size: 13.33px;">读书</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">八月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">九月 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">八月 2014</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">四月 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02/">二月 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">十二月 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">五月 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/03/">三月 2013</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/10/">十月 2012</a><span class="archive-list-count">1</span></li></ul>
-    </div>
-  </div>
-
-  
+</div>
 </aside>
             
           

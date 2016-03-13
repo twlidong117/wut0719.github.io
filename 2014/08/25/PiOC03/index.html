@@ -17,7 +17,7 @@ Each class definition">
 同名的method，不同的class
 运行时系统总是携带有关“对象属于哪个类”的信息 → This enables it to make key decisions at runtime instead of at compile time.
 Each class definition">
-<meta property="og:updated_time" content="2016-03-12T13:52:32.000Z">
+<meta property="og:updated_time" content="2016-03-13T14:05:07.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PiOC学习笔记03——多态、动态绑定和动态类型">
 <meta name="twitter:description" content="PART I —— The Objective-C Language (ch.9)Polymorphism 多态
@@ -44,6 +44,8 @@ Each class definition">
       <div id="header-title">
         <h1 id="logo-wrap">
           <a href="/" id="logo">吴桐的博客
+          
+              <span id="subtitle">Stay Young Stay Simple Always Naive</span>
           
           </a>
         </h1>
@@ -76,7 +78,7 @@ Each class definition">
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/技术学习/">技术学习</a>
+    <a class="article-category-link" href="/categories/iOS开发/">iOS开发</a>
   </div>
 
   </div>
@@ -98,8 +100,10 @@ Each class definition">
         <h2 id="PART-I-——-The-Objective-C-Language-ch-9"><a href="#PART-I-——-The-Objective-C-Language-ch-9" class="headerlink" title="PART I —— The Objective-C Language (ch.9)"></a>PART I —— The Objective-C Language (ch.9)</h2><h4 id="Polymorphism-多态"><a href="#Polymorphism-多态" class="headerlink" title="Polymorphism 多态"></a>Polymorphism 多态</h4><ul>
 <li>同名的method，不同的class</li>
 <li>运行时系统总是携带有关“对象属于哪个类”的信息 → This enables it to make key decisions at runtime instead of at compile time.</li>
-<li>Each class definition encapsulates the code needed to respond to that particular method, and this makes it independent of the other class definitions.<a id="more"></a>
-<h4 id="Dynamic-Binding-and-the-id-Type-动态绑定和id类型（即dynamic-typing）"><a href="#Dynamic-Binding-and-the-id-Type-动态绑定和id类型（即dynamic-typing）" class="headerlink" title="Dynamic Binding and the id Type 动态绑定和id类型（即dynamic typing）"></a>Dynamic Binding and the id Type 动态绑定和id类型（即dynamic typing）</h4></li>
+<li>Each class definition encapsulates the code needed to respond to that particular method, and this makes it independent of the other class definitions.</li>
+</ul>
+<a id="more"></a>
+<h4 id="Dynamic-Binding-and-the-id-Type-动态绑定和id类型（即dynamic-typing）"><a href="#Dynamic-Binding-and-the-id-Type-动态绑定和id类型（即dynamic-typing）" class="headerlink" title="Dynamic Binding and the id Type 动态绑定和id类型（即dynamic typing）"></a>Dynamic Binding and the id Type 动态绑定和id类型（即dynamic typing）</h4><ul>
 <li>During execution of the program, before the system sends the message to id type variable, it first checks the class of the object stored inside the variable.</li>
 <li>When combined with polymorphism, dynamic binding and dynamic typing enable you to easily write code that can send the same message to objects from different classes.</li>
 <li>id类型的某些错误（比如使用错误的方法），在编译时不会被发现，只有在运行时会导致程序崩溃</li>
@@ -150,8 +154,8 @@ Each class definition">
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://wut0719.github.io/2014/08/25/PiOC03/" data-id="cilqfnn02000aro3euk5ii09o" class="article-share-link">Share</a>
-      
+      <!--<a data-url="http://wut0719.github.io/2014/08/25/PiOC03/" data-id="cilqntllh000bgis6o0v0yx2w" class="article-share-link">Share</a>
+      -->
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Objective-C/">Objective-C</a></li></ul>
 
@@ -188,7 +192,7 @@ Each class definition">
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
-    var duoshuoQuery = {short_name:'oliver&#39;s blog'};
+    var duoshuoQuery = {short_name:'oliverwu'};
       (function() {
         var ds = document.createElement('script');
         ds.type = 'text/javascript';ds.async = true;
@@ -204,65 +208,17 @@ Each class definition">
           
             
               <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">分类</h3>
+    <div class="widget-wrap fixed">
+    <h3 class="widget-title">目录</h3>
+
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/个人/">个人</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术学习/">技术学习</a><span class="category-list-count">12</span></li></ul>
+        <ul class='toc'>
+        <li><a class='anchor' href='#logo'>标题</a></li>
+        <li><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#PART-I-——-The-Objective-C-Language-ch-9"><span class="toc-number">1.</span> <span class="toc-text">PART I —— The Objective-C Language (ch.9)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Polymorphism-多态"><span class="toc-number">1.0.1.</span> <span class="toc-text">Polymorphism 多态</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Dynamic-Binding-and-the-id-Type-动态绑定和id类型（即dynamic-typing）"><span class="toc-number">1.0.2.</span> <span class="toc-text">Dynamic Binding and the id Type 动态绑定和id类型（即dynamic typing）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用-try处理异常"><span class="toc-number">1.1.</span> <span class="toc-text">使用@try处理异常</span></a></li></ol></li></ol></li>
+        <li><a class='anchor' href='#comments'>评论</a></li> 
+        </ul>
     </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">最近文章</h3>
-    <div class="widget recents">
-      <ul>
-        
-          <li>
-            <a href="/2015/08/23/测试hexo支持的markdown语法/">测试hexo支持的markdown语法</a>
-          </li>
-        
-          <li>
-            <a href="/2015/08/22/新工具hexo/">新工具hexo</a>
-          </li>
-        
-          <li>
-            <a href="/2014/09/18/iOS_supported_video_formats/">iOS主要设备支持的视频格式</a>
-          </li>
-        
-          <li>
-            <a href="/2014/09/01/PiOC10/">PiOC学习笔记10——Cocoa, Cocoa Touch and the iOS SDK</a>
-          </li>
-        
-          <li>
-            <a href="/2014/08/31/PiOC08/">PiOC学习笔记08——文件和ARC</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签云</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/Objective-C/" style="font-size: 20px;">Objective-C</a> <a href="/tags/hexo/" style="font-size: 13.33px;">hexo</a> <a href="/tags/iOS/" style="font-size: 10px;">iOS</a> <a href="/tags/旅游/" style="font-size: 10px;">旅游</a> <a href="/tags/杂谈/" style="font-size: 16.67px;">杂谈</a> <a href="/tags/观影/" style="font-size: 13.33px;">观影</a> <a href="/tags/读书/" style="font-size: 13.33px;">读书</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">八月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">九月 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">八月 2014</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">四月 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02/">二月 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">十二月 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">五月 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/03/">三月 2013</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/10/">十月 2012</a><span class="archive-list-count">1</span></li></ul>
-    </div>
-  </div>
-
-  
+</div>
 </aside>
             
           

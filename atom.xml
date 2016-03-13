@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>吴桐的博客</title>
-  
+  <subtitle>Stay Young Stay Simple Always Naive</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wut0719.github.io/"/>
-  <updated>2015-08-23T15:32:20.000Z</updated>
+  <updated>2016-03-12T13:52:32.000Z</updated>
   <id>http://wut0719.github.io/</id>
   
   <author>
@@ -14,127 +14,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>测试hexo支持的markdown语法</title>
-    <link href="http://wut0719.github.io/2015/08/23/%E6%B5%8B%E8%AF%95hexo%E6%94%AF%E6%8C%81%E7%9A%84markdown%E8%AF%AD%E6%B3%95/"/>
-    <id>http://wut0719.github.io/2015/08/23/测试hexo支持的markdown语法/</id>
-    <published>2015-08-22T16:00:00.000Z</published>
-    <updated>2015-08-23T15:32:20.000Z</updated>
-    
-    <content type="html">&lt;h3 id=&quot;区块元素&quot;&gt;&lt;a href=&quot;#区块元素&quot; class=&quot;headerlink&quot; title=&quot;区块元素&quot;&gt;&lt;/a&gt;区块元素&lt;/h3&gt;&lt;h4 id=&quot;段落与换行&quot;&gt;&lt;a href=&quot;#段落与换行&quot; class=&quot;headerlink&quot; title=&quot;段落与换行&quot;&gt;&lt;/a&gt;段落与换行&lt;/h4&gt;&lt;p&gt;一个 Markdown 段落是由一个或多个连续的文本行组成，它的前后要有一个以上的空行（空行的定义是显示上看起来像是空的，便会被视为空行。比方说，若某一行只包含空格和制表符，则该行也会被视为空行）。&lt;/p&gt;
-&lt;p&gt;段内强制换行直接回车，不用加两个空格。&lt;/p&gt;
-&lt;h4 id=&quot;标题&quot;&gt;&lt;a href=&quot;#标题&quot; class=&quot;headerlink&quot; title=&quot;标题&quot;&gt;&lt;/a&gt;标题&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;方法一：1到6个#，分别表示一到六级标题。#后要加一个空格与标题内容分开。&lt;/li&gt;
-&lt;li&gt;方法二：使用“=”和“-”，用法如下：&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;测试标题，“=”相当于h1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;==&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;测试标题h2，“-”相当于h2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;---&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;效果：&lt;/p&gt;
-&lt;h1 id=&quot;测试标题，“-”相当于h1&quot;&gt;&lt;a href=&quot;#测试标题，“-”相当于h1&quot; class=&quot;headerlink&quot; title=&quot;测试标题，“=”相当于h1&quot;&gt;&lt;/a&gt;测试标题，“=”相当于h1&lt;/h1&gt;&lt;h2 id=&quot;测试标题h2，“-”相当于h2&quot;&gt;&lt;a href=&quot;#测试标题h2，“-”相当于h2&quot; class=&quot;headerlink&quot; title=&quot;测试标题h2，“-”相当于h2&quot;&gt;&lt;/a&gt;测试标题h2，“-”相当于h2&lt;/h2&gt;&lt;p&gt;方法二仍然有效，但最少要2个。（且不会与分隔线混淆）&lt;/p&gt;
-&lt;h4 id=&quot;区块引用-Blockquote&quot;&gt;&lt;a href=&quot;#区块引用-Blockquote&quot; class=&quot;headerlink&quot; title=&quot;区块引用 Blockquote&quot;&gt;&lt;/a&gt;区块引用 Blockquote&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;方法一：在引文的每行或每段前面加上&lt;code&gt;&amp;gt;&lt;/code&gt;，用一个空格与后文分开&lt;/li&gt;
-&lt;li&gt;方法二：利用block quote插件。语法是：&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% blockquote [参数] %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;引用内容&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% endblockquote %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;可选参数：作者、链接地址、链接名称（书名、网页标题……）。用空格分开。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;——在blockquote中markdown语法依然有效。如果期望其失效，则可用&lt;code&gt;&amp;lt;pre&amp;gt;&lt;/code&gt;标签包裹之。此外，raw标签插件中的内容不会被解析，可以保留原样。&lt;/p&gt;
-&lt;h4 id=&quot;列表&quot;&gt;&lt;a href=&quot;#列表&quot; class=&quot;headerlink&quot; title=&quot;列表&quot;&gt;&lt;/a&gt;列表&lt;/h4&gt;&lt;p&gt;无序列表用减号或星号都可以，但不要混用。有序列表用数字接一个英文句点。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;第一级&lt;/li&gt;
-&lt;li&gt;第一级&lt;ul&gt;
-&lt;li&gt;第二级&lt;/li&gt;
-&lt;li&gt;第二级&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol&gt;
-&lt;li&gt;第二级&lt;/li&gt;
-&lt;li&gt;第二级&lt;ul&gt;
-&lt;li&gt;第三级&lt;/li&gt;
-&lt;li&gt;第三级&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol&gt;
-&lt;li&gt;第三级&lt;/li&gt;
-&lt;li&gt;第三级&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;第一级&lt;br&gt;列表的嵌套支持超过两级以上，缩进为两个空格。无序列表的标号会根据层级变化，有序列表的数字标号则不受影响。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&quot;代码区块&quot;&gt;&lt;a href=&quot;#代码区块&quot; class=&quot;headerlink&quot; title=&quot;代码区块&quot;&gt;&lt;/a&gt;代码区块&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;方法一：使用```。在起始```后加上语言即可实现代码高亮。&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;举例：&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;undefined&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;方法二：使用code block插件&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% codeblock [参数] %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;引用内容&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% endcodeblock %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;可选参数：指定语言（lang:xxx，用于代码高亮）、附加说明、链接地址。用空格分开。&lt;/p&gt;
-&lt;h4 id=&quot;分隔线&quot;&gt;&lt;a href=&quot;#分隔线&quot; class=&quot;headerlink&quot; title=&quot;分隔线&quot;&gt;&lt;/a&gt;分隔线&lt;/h4&gt;&lt;p&gt;遵循markdown标准语法：在一行中用&lt;strong&gt;三个以上&lt;/strong&gt;的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。&lt;/p&gt;
-&lt;h3 id=&quot;区段元素&quot;&gt;&lt;a href=&quot;#区段元素&quot; class=&quot;headerlink&quot; title=&quot;区段元素&quot;&gt;&lt;/a&gt;区段元素&lt;/h3&gt;&lt;h4 id=&quot;链接&quot;&gt;&lt;a href=&quot;#链接&quot; class=&quot;headerlink&quot; title=&quot;链接&quot;&gt;&lt;/a&gt;链接&lt;/h4&gt;&lt;p&gt;支持两种形式：行内式和参考式。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;行内式：&lt;code&gt;[显示的文字](链接地址 &amp;quot;title内容&amp;quot;)&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;参考式：&lt;code&gt;[显示的文字][数字标号]&lt;/code&gt;&lt;br&gt;然后在文章末尾，&lt;code&gt;[对应数字标号]:链接地址 &amp;quot;title内容&amp;quot;&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;直接添加链接：&lt;a href=&quot;http://example.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://example.com&lt;/a&gt; 如果要使链接加上&lt;code&gt;target=&amp;quot;_blank&amp;quot;&lt;/code&gt;属性，则可用link插件，使用方法：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% link text url [external] [title] %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;h4 id=&quot;强调&quot;&gt;&lt;a href=&quot;#强调&quot; class=&quot;headerlink&quot; title=&quot;强调&quot;&gt;&lt;/a&gt;强调&lt;/h4&gt;&lt;p&gt;不用下划线，只用星号。&lt;em&gt;斜体（em）&lt;/em&gt; ，&lt;strong&gt;加粗（strong）&lt;/strong&gt;。两者嵌套：&lt;strong&gt;&lt;em&gt;Everyone&lt;/em&gt; must attend the meeting at 5 o’clock today.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;删除线：&lt;code&gt;~~&lt;/code&gt;。&lt;del&gt;删除&lt;/del&gt;&lt;/p&gt;
-&lt;h4 id=&quot;代码&quot;&gt;&lt;a href=&quot;#代码&quot; class=&quot;headerlink&quot; title=&quot;代码&quot;&gt;&lt;/a&gt;代码&lt;/h4&gt;&lt;p&gt;行内代码使用单反引号。效果：Here’s an idea: why don’t we take &lt;code&gt;SuperiorProject&lt;/code&gt; and turn it into &lt;code&gt;**Reasonable**Project&lt;/code&gt;.&lt;/p&gt;
-&lt;h4 id=&quot;图片&quot;&gt;&lt;a href=&quot;#图片&quot; class=&quot;headerlink&quot; title=&quot;图片&quot;&gt;&lt;/a&gt;图片&lt;/h4&gt;&lt;p&gt;与链接类似，支持两种形式：行内式和参考式。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;行内式：&lt;code&gt;![alt文本](链接地址)&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;参考式：&lt;code&gt;![alt文本][数字标号]&lt;/code&gt;&lt;br&gt;然后在文章末尾，&lt;code&gt;[对应数字标号]:链接地址&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&quot;反斜杠&quot;&gt;&lt;a href=&quot;#反斜杠&quot; class=&quot;headerlink&quot; title=&quot;反斜杠&quot;&gt;&lt;/a&gt;反斜杠&lt;/h4&gt;&lt;p&gt;可以利用反斜杠来插入一些在语法中有其它意义的符号。如反引号`&lt;/p&gt;
-&lt;h3 id=&quot;其他&quot;&gt;&lt;a href=&quot;#其他&quot; class=&quot;headerlink&quot; title=&quot;其他&quot;&gt;&lt;/a&gt;其他&lt;/h3&gt;&lt;h4 id=&quot;表格&quot;&gt;&lt;a href=&quot;#表格&quot; class=&quot;headerlink&quot; title=&quot;表格&quot;&gt;&lt;/a&gt;表格&lt;/h4&gt;&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Left-Aligned&lt;/th&gt;
-&lt;th style=&quot;text-align:center&quot;&gt;Center Aligned&lt;/th&gt;
-&lt;th style=&quot;text-align:right&quot;&gt;Right Aligned&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;col 3 is&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;some wordy text&lt;/td&gt;
-&lt;td style=&quot;text-align:right&quot;&gt;$1600&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;col 2 is&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;centered&lt;/td&gt;
-&lt;td style=&quot;text-align:right&quot;&gt;$12&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;zebra stripes&lt;/td&gt;
-&lt;td style=&quot;text-align:center&quot;&gt;are neat&lt;/td&gt;
-&lt;td style=&quot;text-align:right&quot;&gt;$1&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;代码如下：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;| Left-Aligned  | Center Aligned  | Right Aligned |&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;| ------------ |:---------------:| -----:|&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;| col 3 is      | some wordy text | $1600 |&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;| col 2 is      | centered        |   $12 |&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;| zebra stripes | are neat        |    $1 |&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;文本对齐：默认为左对齐。冒号在右边则为右对齐。冒号在两边则为居中。&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;参考：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://hp256.com/2014/12/23/post-1/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo于Markdown语法的支持之基础篇&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://hp256.com/2014/12/24/post-0002/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo于Markdown语法的支持之进阶篇&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://help.github.com/articles/markdown-basics/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Markdown Basics&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://help.github.com/articles/github-flavored-markdown/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub Flavored Markdown&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://wowubuntu.com/markdown/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Markdown 语法说明 (简体中文版)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://hexo.io/zh-cn/docs/tag-plugins.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo官方文档-标签插件&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;区块元素&quot;&gt;&lt;a href=&quot;#区块元素&quot; class=&quot;headerlink&quot; title=&quot;区块元素&quot;&gt;&lt;/a&gt;区块元素&lt;/h3&gt;&lt;h4 id=&quot;段落与换行&quot;&gt;&lt;a href=&quot;#段落与换行&quot; class=&quot;headerlink&quot; title=&quot;段落与换行&quot;&gt;
-    
-    </summary>
-    
-    
-      <category term="hexo" scheme="http://wut0719.github.io/tags/hexo/"/>
-    
-  </entry>
   
   <entry>
     <title>新工具hexo</title>
@@ -194,7 +73,7 @@
     <link href="http://wut0719.github.io/2014/09/01/PiOC10/"/>
     <id>http://wut0719.github.io/2014/09/01/PiOC10/</id>
     <published>2014-08-31T16:00:00.000Z</published>
-    <updated>2016-03-12T13:52:32.000Z</updated>
+    <updated>2016-03-13T14:03:09.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;PART-III-——-Cocoa-Cocoa-Touch-and-the-iOS-SDK&quot;&gt;&lt;a href=&quot;#PART-III-——-Cocoa-Cocoa-Touch-and-the-iOS-SDK&quot; class=&quot;headerlink&quot; title=&quot;PART III —— Cocoa, Cocoa Touch and the iOS SDK&quot;&gt;&lt;/a&gt;PART III —— Cocoa, Cocoa Touch and the iOS SDK&lt;/h2&gt;&lt;p&gt; chapter 20, 21&lt;/p&gt;
 &lt;h3 id=&quot;Introduction-to-Cocoa-and-Cocoa-Touch&quot;&gt;&lt;a href=&quot;#Introduction-to-Cocoa-and-Cocoa-Touch&quot; class=&quot;headerlink&quot; title=&quot;Introduction to Cocoa and Cocoa Touch&quot;&gt;&lt;/a&gt;Introduction to Cocoa and Cocoa Touch&lt;/h3&gt;&lt;p&gt;framework layers （Mac OS X）&lt;/p&gt;
@@ -203,9 +82,9 @@
 &lt;li&gt;Class Prefix:设置类名前缀&lt;/li&gt;
 &lt;li&gt;outlet：一种instance variable，与view内容的管理相关联&lt;/li&gt;
 &lt;li&gt;虽然IBOutlet，IBAction本身没有实际内容，但Xcode需要利用它们来确定哪些instance variable和method需要与何种特定view对象和动作绑定&lt;/li&gt;
-&lt;li&gt;设置button的Tag属性 → tag与button一一对应&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;/li&gt;
+&lt;li&gt;设置button的Tag属性 → tag与button一一对应&lt;/li&gt;
 &lt;/ul&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;hr&gt;
 &lt;h3 id=&quot;部分C语言特性&quot;&gt;&lt;a href=&quot;#部分C语言特性&quot; class=&quot;headerlink&quot; title=&quot;部分C语言特性&quot;&gt;&lt;/a&gt;部分C语言特性&lt;/h3&gt;&lt;p&gt;chapter 13&lt;/p&gt;
 &lt;h4 id=&quot;Blocks&quot;&gt;&lt;a href=&quot;#Blocks&quot; class=&quot;headerlink&quot; title=&quot;Blocks&quot;&gt;&lt;/a&gt;&lt;strong&gt;Blocks&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;与函数相似：可以接收参数，可以有返回值&lt;/p&gt;
@@ -232,11 +111,12 @@
 &lt;li&gt;Class Prefix:设置类名前缀&lt;/li&gt;
 &lt;li&gt;outlet：一种instance variable，与view内容的管理相关联&lt;/li&gt;
 &lt;li&gt;虽然IBOutlet，IBAction本身没有实际内容，但Xcode需要利用它们来确定哪些instance variable和method需要与何种特定view对象和动作绑定&lt;/li&gt;
-&lt;li&gt;设置button的Tag属性 → tag与button一一对应
+&lt;li&gt;设置button的Tag属性 → tag与button一一对应&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
-      <category term="技术学习" scheme="http://wut0719.github.io/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
+      <category term="iOS开发" scheme="http://wut0719.github.io/categories/iOS%E5%BC%80%E5%8F%91/"/>
     
     
       <category term="Objective-C" scheme="http://wut0719.github.io/tags/Objective-C/"/>
@@ -248,7 +128,7 @@
     <link href="http://wut0719.github.io/2014/08/31/PiOC08/"/>
     <id>http://wut0719.github.io/2014/08/31/PiOC08/</id>
     <published>2014-08-30T16:00:00.000Z</published>
-    <updated>2016-03-12T13:52:32.000Z</updated>
+    <updated>2016-03-13T14:03:39.000Z</updated>
     
     <content type="html">&lt;h3 id=&quot;Working-with-files&quot;&gt;&lt;a href=&quot;#Working-with-files&quot; class=&quot;headerlink&quot; title=&quot;Working with files&quot;&gt;&lt;/a&gt;Working with files&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;NSFileManager&lt;/strong&gt;: 对文件和目录的基本操作&lt;/li&gt;
@@ -337,7 +217,7 @@
     
     </summary>
     
-      <category term="技术学习" scheme="http://wut0719.github.io/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
+      <category term="iOS开发" scheme="http://wut0719.github.io/categories/iOS%E5%BC%80%E5%8F%91/"/>
     
     
       <category term="Objective-C" scheme="http://wut0719.github.io/tags/Objective-C/"/>
@@ -349,12 +229,14 @@
     <link href="http://wut0719.github.io/2014/08/31/PiOC09/"/>
     <id>http://wut0719.github.io/2014/08/31/PiOC09/</id>
     <published>2014-08-30T16:00:00.000Z</published>
-    <updated>2016-03-12T13:52:32.000Z</updated>
+    <updated>2016-03-13T14:03:39.000Z</updated>
     
     <content type="html">&lt;p&gt;chapter 18-19&lt;/p&gt;
 &lt;h3 id=&quot;Copy-Objects&quot;&gt;&lt;a href=&quot;#Copy-Objects&quot; class=&quot;headerlink&quot; title=&quot;Copy Objects&quot;&gt;&lt;/a&gt;Copy Objects&lt;/h3&gt;&lt;p&gt;复制对象 → Foundation中的方法：copy和mutableCopy&lt;/p&gt;
 &lt;p&gt;protocol：&lt;code&gt;&amp;lt;NSCopying&amp;gt; , &amp;lt;NSMutableCopying&amp;gt;&lt;/code&gt;→ 在自己写的class中使用&lt;/p&gt;
-&lt;p&gt;mutable复制不要求object是mutable；immutable不要求object是immutable&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;br&gt;mutable复制与 immutable复制的对比：&lt;/p&gt;
+&lt;p&gt;mutable复制不要求object是mutable；immutable不要求object是immutable&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;mutable复制与 immutable复制的对比：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;对immutable对象复制，copy是指针复制（shadow copy），但mutableCopy就是对象复制（deep copy）。如果是对mutable对象复制，都是deep copy，但是copy返回的对象是immutable&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://www.cnblogs.com/ydhliphonedev/archive/2012/04/27/2473927.html&quot; title=&quot;iOS开发之深拷贝与浅拷贝详解&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;iOS开发之深拷贝与浅拷贝详解&lt;/a&gt;&lt;/li&gt;
@@ -416,11 +298,11 @@
       &lt;p&gt;chapter 18-19&lt;/p&gt;
 &lt;h3 id=&quot;Copy-Objects&quot;&gt;&lt;a href=&quot;#Copy-Objects&quot; class=&quot;headerlink&quot; title=&quot;Copy Objects&quot;&gt;&lt;/a&gt;Copy Objects&lt;/h3&gt;&lt;p&gt;复制对象 → Foundation中的方法：copy和mutableCopy&lt;/p&gt;
 &lt;p&gt;protocol：&lt;code&gt;&amp;lt;NSCopying&amp;gt; , &amp;lt;NSMutableCopying&amp;gt;&lt;/code&gt;→ 在自己写的class中使用&lt;/p&gt;
-&lt;p&gt;mutable复制不要求object是mutable；immutable不要求object是immutable&lt;br&gt;
+&lt;p&gt;mutable复制不要求object是mutable；immutable不要求object是immutable&lt;/p&gt;
     
     </summary>
     
-      <category term="技术学习" scheme="http://wut0719.github.io/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
+      <category term="iOS开发" scheme="http://wut0719.github.io/categories/iOS%E5%BC%80%E5%8F%91/"/>
     
     
       <category term="Objective-C" scheme="http://wut0719.github.io/tags/Objective-C/"/>
@@ -432,7 +314,7 @@
     <link href="http://wut0719.github.io/2014/08/30/PiOC07/"/>
     <id>http://wut0719.github.io/2014/08/30/PiOC07/</id>
     <published>2014-08-29T16:00:00.000Z</published>
-    <updated>2016-03-12T13:52:32.000Z</updated>
+    <updated>2016-03-13T14:03:09.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;PART-II-——-Foundation-Framework&quot;&gt;&lt;a href=&quot;#PART-II-——-Foundation-Framework&quot; class=&quot;headerlink&quot; title=&quot;PART II —— Foundation Framework&quot;&gt;&lt;/a&gt;PART II —— Foundation Framework&lt;/h2&gt;&lt;p&gt;Chapter 14-15&lt;/p&gt;
 &lt;h4 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h4&gt;&lt;ul&gt;
@@ -441,8 +323,10 @@
 &lt;li&gt;Application Kit framework —— an extensive collection of classes and methods to develop interactive graphical applications：texts, menus, toolbars, tables, …&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Cocoa&lt;/strong&gt; (OS X)环境包括Foundation framework、the Application Kit framework 和 Core Data&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Cocoa Touch&lt;/strong&gt; (iOS)环境包括Foundation、Core Data 和 UIKit framework&lt;/li&gt;
-&lt;li&gt;官方提供的Foundation Documentation&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h4 id=&quot;数字对象-—-NSNumber&quot;&gt;&lt;a href=&quot;#数字对象-—-NSNumber&quot; class=&quot;headerlink&quot; title=&quot;数字对象 — NSNumber&quot;&gt;&lt;/a&gt;数字对象 — NSNumber&lt;/h4&gt;&lt;/li&gt;
+&lt;li&gt;官方提供的Foundation Documentation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h4 id=&quot;数字对象-—-NSNumber&quot;&gt;&lt;a href=&quot;#数字对象-—-NSNumber&quot; class=&quot;headerlink&quot; title=&quot;数字对象 — NSNumber&quot;&gt;&lt;/a&gt;数字对象 — NSNumber&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;Xcode 5 新特性——“modules” can help speed up compilation time as well as help to avoid name conflicts between different libraries&lt;ul&gt;
 &lt;li&gt;Modules相当于将框架进行了封装，然后加入在实际编译之时加入了一个用来存放已编译添加过的Modules列表&lt;a href=&quot;http://www.cocoachina.com/ios/20131106/7308.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;1&lt;/a&gt;。&lt;/li&gt;
 &lt;/ul&gt;
@@ -534,11 +418,12 @@
 &lt;li&gt;Application Kit framework —— an extensive collection of classes and methods to develop interactive graphical applications：texts, menus, toolbars, tables, …&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Cocoa&lt;/strong&gt; (OS X)环境包括Foundation framework、the Application Kit framework 和 Core Data&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Cocoa Touch&lt;/strong&gt; (iOS)环境包括Foundation、Core Data 和 UIKit framework&lt;/li&gt;
-&lt;li&gt;官方提供的Foundation Documentation
+&lt;li&gt;官方提供的Foundation Documentation&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
-      <category term="技术学习" scheme="http://wut0719.github.io/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
+      <category term="iOS开发" scheme="http://wut0719.github.io/categories/iOS%E5%BC%80%E5%8F%91/"/>
     
     
       <category term="Objective-C" scheme="http://wut0719.github.io/tags/Objective-C/"/>
@@ -550,13 +435,15 @@
     <link href="http://wut0719.github.io/2014/08/27/PiOC06/"/>
     <id>http://wut0719.github.io/2014/08/27/PiOC06/</id>
     <published>2014-08-26T16:00:00.000Z</published>
-    <updated>2016-03-12T13:52:32.000Z</updated>
+    <updated>2016-03-13T14:03:09.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;The-Preprocessor&quot;&gt;&lt;a href=&quot;#The-Preprocessor&quot; class=&quot;headerlink&quot; title=&quot;The Preprocessor&quot;&gt;&lt;/a&gt;The Preprocessor&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;从语言上定制Objective-C，使其适应自己的编程风格或特定的编程应用&lt;/li&gt;
 &lt;li&gt;是编译过程的一部分，识别散布在程序中的特定语句&lt;/li&gt;
-&lt;li&gt;“#”开头&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h3 id=&quot;define&quot;&gt;&lt;a href=&quot;#define&quot; class=&quot;headerlink&quot; title=&quot;#define&quot;&gt;&lt;/a&gt;#define&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;“#”开头&lt;/li&gt;
+&lt;/ul&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h3 id=&quot;define&quot;&gt;&lt;a href=&quot;#define&quot; class=&quot;headerlink&quot; title=&quot;#define&quot;&gt;&lt;/a&gt;#define&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;给符号名称指派程序常量（包括但不限于）&lt;/li&gt;
 &lt;li&gt;a defined name is not a variable; 字母全部大写&lt;/li&gt;
 &lt;li&gt;often placed toward the beginning of the program, after #import or #include, but not required; must be placed &lt;strong&gt;before it is referenced&lt;/strong&gt; by the program.&lt;/li&gt;
@@ -597,11 +484,12 @@
       &lt;h2 id=&quot;The-Preprocessor&quot;&gt;&lt;a href=&quot;#The-Preprocessor&quot; class=&quot;headerlink&quot; title=&quot;The Preprocessor&quot;&gt;&lt;/a&gt;The Preprocessor&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;从语言上定制Objective-C，使其适应自己的编程风格或特定的编程应用&lt;/li&gt;
 &lt;li&gt;是编译过程的一部分，识别散布在程序中的特定语句&lt;/li&gt;
-&lt;li&gt;“#”开头
+&lt;li&gt;“#”开头&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
-      <category term="技术学习" scheme="http://wut0719.github.io/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
+      <category term="iOS开发" scheme="http://wut0719.github.io/categories/iOS%E5%BC%80%E5%8F%91/"/>
     
     
       <category term="Objective-C" scheme="http://wut0719.github.io/tags/Objective-C/"/>
@@ -613,18 +501,18 @@
     <link href="http://wut0719.github.io/2014/08/27/PiOC05/"/>
     <id>http://wut0719.github.io/2014/08/27/PiOC05/</id>
     <published>2014-08-26T16:00:00.000Z</published>
-    <updated>2016-03-12T13:52:32.000Z</updated>
+    <updated>2016-03-13T14:03:09.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;Chapter-11-Categories-and-Protocols&quot;&gt;&lt;a href=&quot;#Chapter-11-Categories-and-Protocols&quot; class=&quot;headerlink&quot; title=&quot;Chapter 11 Categories and Protocols&quot;&gt;&lt;/a&gt;Chapter 11 Categories and Protocols&lt;/h2&gt;&lt;h3 id=&quot;主要内容：&quot;&gt;&lt;a href=&quot;#主要内容：&quot; class=&quot;headerlink&quot; title=&quot;主要内容：&quot;&gt;&lt;/a&gt;主要内容：&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;Categories&lt;/li&gt;
 &lt;li&gt;Protocols&lt;h3 id=&quot;Categories&quot;&gt;&lt;a href=&quot;#Categories&quot; class=&quot;headerlink&quot; title=&quot;Categories&quot;&gt;&lt;/a&gt;Categories&lt;/h3&gt;&lt;/li&gt;
 &lt;li&gt;将类的定义模块化到相关方法的组或分类中&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;扩展现有类的定义而无需获取源代码，也不用创建子类&lt;/p&gt;
+&lt;li&gt;扩展现有类的定义而无需获取源代码，也不用创建子类&lt;/li&gt;
+&lt;/ul&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;p&gt;syntax:&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;must import the original interface section (unless you incorporate the new category directly into the original (.h) header file)&lt;/p&gt;
-&lt;/li&gt;
+&lt;ul&gt;
+&lt;li&gt;must import the original interface section (unless you incorporate the new category directly into the original (.h) header file)&lt;/li&gt;
 &lt;li&gt;@interface ClassName (CategoryName)&lt;ul&gt;
 &lt;li&gt;no superclass; no properties; 加入的methods的声明&lt;/li&gt;
 &lt;/ul&gt;
@@ -694,11 +582,12 @@
 &lt;li&gt;Categories&lt;/li&gt;
 &lt;li&gt;Protocols&lt;h3 id=&quot;Categories&quot;&gt;&lt;a href=&quot;#Categories&quot; class=&quot;headerlink&quot; title=&quot;Categories&quot;&gt;&lt;/a&gt;Categories&lt;/h3&gt;&lt;/li&gt;
 &lt;li&gt;将类的定义模块化到相关方法的组或分类中&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;扩展现有类的定义而无需获取源代码，也不用创建子类&lt;/p&gt;
+&lt;li&gt;扩展现有类的定义而无需获取源代码，也不用创建子类&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
-      <category term="技术学习" scheme="http://wut0719.github.io/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
+      <category term="iOS开发" scheme="http://wut0719.github.io/categories/iOS%E5%BC%80%E5%8F%91/"/>
     
     
       <category term="Objective-C" scheme="http://wut0719.github.io/tags/Objective-C/"/>
@@ -710,7 +599,7 @@
     <link href="http://wut0719.github.io/2014/08/26/PiOC04/"/>
     <id>http://wut0719.github.io/2014/08/26/PiOC04/</id>
     <published>2014-08-25T16:00:00.000Z</published>
-    <updated>2016-03-12T13:52:32.000Z</updated>
+    <updated>2016-03-13T14:03:09.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;Chapter-10-More-on-Variables-and-Data-Types&quot;&gt;&lt;a href=&quot;#Chapter-10-More-on-Variables-and-Data-Types&quot; class=&quot;headerlink&quot; title=&quot;Chapter 10 More on Variables and Data Types&quot;&gt;&lt;/a&gt;Chapter 10 More on Variables and Data Types&lt;/h2&gt;&lt;h3 id=&quot;主要内容：&quot;&gt;&lt;a href=&quot;#主要内容：&quot; class=&quot;headerlink&quot; title=&quot;主要内容：&quot;&gt;&lt;/a&gt;主要内容：&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;variable scope&lt;/li&gt;
@@ -718,7 +607,10 @@
 &lt;li&gt;data types in more detail ——enum枚举&lt;h3 id=&quot;初始化&quot;&gt;&lt;a href=&quot;#初始化&quot; class=&quot;headerlink&quot; title=&quot;初始化&quot;&gt;&lt;/a&gt;初始化&lt;/h3&gt;&lt;/li&gt;
 &lt;li&gt;initialization methods：初始化+赋初值&lt;/li&gt;
 &lt;li&gt;override init方法的“模板”syntax :&lt;figure class=&quot;highlight objc&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;- (instancetype) init  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt; = [&lt;span class=&quot;keyword&quot;&gt;super&lt;/span&gt; init];  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;) &amp;#123;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;span class=&quot;comment&quot;&gt;// Initialization code here.  &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&amp;#125;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;ul&gt;
 &lt;li&gt;（关键字）特殊类型 instancetype：the return type from the init method will be the same class as the type of object it is initializing (that is, the receiver of the init message).&lt;/li&gt;
 &lt;li&gt;self = [super init]; //首先调用父类的初始化方法，确保所有子类继承的实例变量能够正确初始化；初始化方法可以改变对象在内存中的地址，所以要把返回值赋给对象&lt;/li&gt;
 &lt;li&gt;if (self) //self非空，表示父类初始化方法运行正常，可以进行下一步操作（子类特有的初始化方法）&lt;/li&gt;
@@ -794,10 +686,12 @@
 &lt;li&gt;data types in more detail ——enum枚举&lt;h3 id=&quot;初始化&quot;&gt;&lt;a href=&quot;#初始化&quot; class=&quot;headerlink&quot; title=&quot;初始化&quot;&gt;&lt;/a&gt;初始化&lt;/h3&gt;&lt;/li&gt;
 &lt;li&gt;initialization methods：初始化+赋初值&lt;/li&gt;
 &lt;li&gt;override init方法的“模板”syntax :&lt;figure class=&quot;highlight objc&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;- (instancetype) init  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt; = [&lt;span class=&quot;keyword&quot;&gt;super&lt;/span&gt; init];  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;) &amp;#123;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;span class=&quot;comment&quot;&gt;// Initialization code here.  &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&amp;#125;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
-      <category term="技术学习" scheme="http://wut0719.github.io/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
+      <category term="iOS开发" scheme="http://wut0719.github.io/categories/iOS%E5%BC%80%E5%8F%91/"/>
     
     
       <category term="Objective-C" scheme="http://wut0719.github.io/tags/Objective-C/"/>
@@ -809,13 +703,15 @@
     <link href="http://wut0719.github.io/2014/08/25/PiOC03/"/>
     <id>http://wut0719.github.io/2014/08/25/PiOC03/</id>
     <published>2014-08-24T16:00:00.000Z</published>
-    <updated>2016-03-12T13:52:32.000Z</updated>
+    <updated>2016-03-13T14:05:07.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;PART-I-——-The-Objective-C-Language-ch-9&quot;&gt;&lt;a href=&quot;#PART-I-——-The-Objective-C-Language-ch-9&quot; class=&quot;headerlink&quot; title=&quot;PART I —— The Objective-C Language (ch.9)&quot;&gt;&lt;/a&gt;PART I —— The Objective-C Language (ch.9)&lt;/h2&gt;&lt;h4 id=&quot;Polymorphism-多态&quot;&gt;&lt;a href=&quot;#Polymorphism-多态&quot; class=&quot;headerlink&quot; title=&quot;Polymorphism 多态&quot;&gt;&lt;/a&gt;Polymorphism 多态&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;同名的method，不同的class&lt;/li&gt;
 &lt;li&gt;运行时系统总是携带有关“对象属于哪个类”的信息 → This enables it to make key decisions at runtime instead of at compile time.&lt;/li&gt;
-&lt;li&gt;Each class definition encapsulates the code needed to respond to that particular method, and this makes it independent of the other class definitions.&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h4 id=&quot;Dynamic-Binding-and-the-id-Type-动态绑定和id类型（即dynamic-typing）&quot;&gt;&lt;a href=&quot;#Dynamic-Binding-and-the-id-Type-动态绑定和id类型（即dynamic-typing）&quot; class=&quot;headerlink&quot; title=&quot;Dynamic Binding and the id Type 动态绑定和id类型（即dynamic typing）&quot;&gt;&lt;/a&gt;Dynamic Binding and the id Type 动态绑定和id类型（即dynamic typing）&lt;/h4&gt;&lt;/li&gt;
+&lt;li&gt;Each class definition encapsulates the code needed to respond to that particular method, and this makes it independent of the other class definitions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h4 id=&quot;Dynamic-Binding-and-the-id-Type-动态绑定和id类型（即dynamic-typing）&quot;&gt;&lt;a href=&quot;#Dynamic-Binding-and-the-id-Type-动态绑定和id类型（即dynamic-typing）&quot; class=&quot;headerlink&quot; title=&quot;Dynamic Binding and the id Type 动态绑定和id类型（即dynamic typing）&quot;&gt;&lt;/a&gt;Dynamic Binding and the id Type 动态绑定和id类型（即dynamic typing）&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;During execution of the program, before the system sends the message to id type variable, it first checks the class of the object stored inside the variable.&lt;/li&gt;
 &lt;li&gt;When combined with polymorphism, dynamic binding and dynamic typing enable you to easily write code that can send the same message to objects from different classes.&lt;/li&gt;
 &lt;li&gt;id类型的某些错误（比如使用错误的方法），在编译时不会被发现，只有在运行时会导致程序崩溃&lt;/li&gt;
@@ -869,11 +765,12 @@
       &lt;h2 id=&quot;PART-I-——-The-Objective-C-Language-ch-9&quot;&gt;&lt;a href=&quot;#PART-I-——-The-Objective-C-Language-ch-9&quot; class=&quot;headerlink&quot; title=&quot;PART I —— The Objective-C Language (ch.9)&quot;&gt;&lt;/a&gt;PART I —— The Objective-C Language (ch.9)&lt;/h2&gt;&lt;h4 id=&quot;Polymorphism-多态&quot;&gt;&lt;a href=&quot;#Polymorphism-多态&quot; class=&quot;headerlink&quot; title=&quot;Polymorphism 多态&quot;&gt;&lt;/a&gt;Polymorphism 多态&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;同名的method，不同的class&lt;/li&gt;
 &lt;li&gt;运行时系统总是携带有关“对象属于哪个类”的信息 → This enables it to make key decisions at runtime instead of at compile time.&lt;/li&gt;
-&lt;li&gt;Each class definition encapsulates the code needed to respond to that particular method, and this makes it independent of the other class definitions.
+&lt;li&gt;Each class definition encapsulates the code needed to respond to that particular method, and this makes it independent of the other class definitions.&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
-      <category term="技术学习" scheme="http://wut0719.github.io/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
+      <category term="iOS开发" scheme="http://wut0719.github.io/categories/iOS%E5%BC%80%E5%8F%91/"/>
     
     
       <category term="Objective-C" scheme="http://wut0719.github.io/tags/Objective-C/"/>
@@ -885,7 +782,7 @@
     <link href="http://wut0719.github.io/2014/08/24/PiOC02/"/>
     <id>http://wut0719.github.io/2014/08/24/PiOC02/</id>
     <published>2014-08-23T16:00:00.000Z</published>
-    <updated>2016-03-12T13:52:32.000Z</updated>
+    <updated>2016-03-13T14:03:09.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;PART-I-——-The-Objective-C-Language-ch-5-8&quot;&gt;&lt;a href=&quot;#PART-I-——-The-Objective-C-Language-ch-5-8&quot; class=&quot;headerlink&quot; title=&quot;PART I —— The Objective-C Language (ch.5-8)&quot;&gt;&lt;/a&gt;PART I —— The Objective-C Language (ch.5-8)&lt;/h2&gt;&lt;p&gt;for循环过程：&lt;/p&gt;
 &lt;ul&gt;
@@ -896,12 +793,12 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Step3：计算更新index variable的表达式 loop expression&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;返回Step2&lt;/p&gt;
+&lt;li&gt;返回Step2&lt;/li&gt;
+&lt;/ul&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;p&gt;格式化字符串 %2i ——表示右端对齐的2位整数；左端对齐%-2i&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;scanf(格式化字符串,&amp;amp;变量)&lt;/p&gt;
 &lt;ul&gt;
+&lt;li&gt;scanf(格式化字符串,&amp;amp;变量)&lt;ul&gt;
 &lt;li&gt;字符串是String类型，不是NSString对象（不加@）&lt;/li&gt;
 &lt;li&gt;第二个参数用于指定用户键入的值存储在哪里（“&amp;amp;变量”是指向变量内存空间的指针）&lt;/li&gt;
 &lt;li&gt;当使用scanf输入 &lt;em&gt;char型字符&lt;/em&gt; 时，最好在格式化字符串 &lt;em&gt;%c之前加个空格&lt;/em&gt; (“ %c”) —— 这样可以让scanf跳过“空白字符”（如回车，制表符……），避免读入不想要的字符&lt;/li&gt;
@@ -960,14 +857,105 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Step3：计算更新index variable的表达式 loop expression&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;返回Step2&lt;/p&gt;
+&lt;li&gt;返回Step2&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="iOS开发" scheme="http://wut0719.github.io/categories/iOS%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="Objective-C" scheme="http://wut0719.github.io/tags/Objective-C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo3可用的Markdown语法</title>
+    <link href="http://wut0719.github.io/2014/08/23/markdown%E8%AF%AD%E6%B3%95/"/>
+    <id>http://wut0719.github.io/2014/08/23/markdown语法/</id>
+    <published>2014-08-22T16:00:00.000Z</published>
+    <updated>2016-03-13T16:10:20.000Z</updated>
+    
+    <content type="html">&lt;p&gt;讲Markdown语法的文章在网络上有很多，但是Markdown语法在不同的环境和工具中还有很多变种，本文就记录下在hexo 3.2.0中有效的语法格式。可能有不完善的地方，欢迎在评论中指出。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h1 id=&quot;区块元素&quot;&gt;&lt;a href=&quot;#区块元素&quot; class=&quot;headerlink&quot; title=&quot;区块元素&quot;&gt;&lt;/a&gt;区块元素&lt;/h1&gt;&lt;h2 id=&quot;段落和换行&quot;&gt;&lt;a href=&quot;#段落和换行&quot; class=&quot;headerlink&quot; title=&quot;段落和换行&quot;&gt;&lt;/a&gt;段落和换行&lt;/h2&gt;&lt;p&gt;段落：前后有一个以上的空行&lt;/p&gt;
+&lt;h2 id=&quot;标题&quot;&gt;&lt;a href=&quot;#标题&quot; class=&quot;headerlink&quot; title=&quot;标题&quot;&gt;&lt;/a&gt;标题&lt;/h2&gt;&lt;p&gt;两种方法：&lt;/p&gt;
+&lt;h3 id=&quot;类Setext&quot;&gt;&lt;a href=&quot;#类Setext&quot; class=&quot;headerlink&quot; title=&quot;类Setext&quot;&gt;&lt;/a&gt;类Setext&lt;/h3&gt;&lt;p&gt;两级标题。符号要至少要有一个&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;大标题&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;===&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;小标题&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;---&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&quot;类Atx&quot;&gt;&lt;a href=&quot;#类Atx&quot; class=&quot;headerlink&quot; title=&quot;类Atx&quot;&gt;&lt;/a&gt;类Atx&lt;/h3&gt;&lt;p&gt;六级标题,相当于H1~H6。&lt;code&gt;#&lt;/code&gt;与内容之间有一个空格&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# H1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;## H2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;……&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;###### H6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&quot;区块引用&quot;&gt;&lt;a href=&quot;#区块引用&quot; class=&quot;headerlink&quot; title=&quot;区块引用&quot;&gt;&lt;/a&gt;区块引用&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;引用。引用块在一段落内引用，相当于blockquote&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;引用可以嵌套，&lt;strong&gt;加粗&lt;/strong&gt;也有效&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;四个空格。相当于pre
+&lt;/code&gt;&lt;/pre&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt;引用。引用块在一段落内引用&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; &amp;gt;&amp;gt;引用可以嵌套，**加粗**也有效&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     相当于pre&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;列表&quot;&gt;&lt;a href=&quot;#列表&quot; class=&quot;headerlink&quot; title=&quot;列表&quot;&gt;&lt;/a&gt;列表&lt;/h2&gt;&lt;h3 id=&quot;有序列表&quot;&gt;&lt;a href=&quot;#有序列表&quot; class=&quot;headerlink&quot; title=&quot;有序列表&quot;&gt;&lt;/a&gt;有序列表&lt;/h3&gt;&lt;p&gt;点号后有一个空格,数字乱序也可以。嵌套的缩进是一个空格。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;有序列表&lt;ol&gt;
+&lt;li&gt;嵌套有序列表&lt;/li&gt;
+&lt;li&gt;嵌套有序列表&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;有序列表&lt;/li&gt;
+&lt;li&gt;有序列表&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1. 有序列表&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; 1. 嵌套有序列表&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; 3. 嵌套有序列表&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2. 有序列表&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3. 有序列表&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;无序列表&quot;&gt;&lt;a href=&quot;#无序列表&quot; class=&quot;headerlink&quot; title=&quot;无序列表&quot;&gt;&lt;/a&gt;无序列表&lt;/h3&gt;&lt;p&gt;无序列表的符号有&lt;code&gt;-&lt;/code&gt;,&lt;code&gt;+&lt;/code&gt;,&lt;code&gt;*&lt;/code&gt;。作用相同，可以混用，与列表项之间有一个空格。嵌套的缩进也是一个空格。只能做到两级。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;无序列表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;无序列表&lt;ul&gt;
+&lt;li&gt;嵌套列表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;嵌套子列表&lt;/li&gt;
+&lt;li&gt;嵌套子列表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;嵌套列表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;无序列表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;- 无序列表&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;+ 无序列表&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; - 嵌套列表&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  * 嵌套子列表&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  * 嵌套子列表&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; - 嵌套列表&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;* 无序列表&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;代码区块&quot;&gt;&lt;a href=&quot;#代码区块&quot; class=&quot;headerlink&quot; title=&quot;代码区块&quot;&gt;&lt;/a&gt;代码区块&lt;/h2&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; o = &amp;#123;&amp;#125; &lt;span class=&quot;comment&quot;&gt;//hexo解析&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;console&lt;/span&gt;.log(o)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% codeblock lang:javascript %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;var o = &amp;#123;&amp;#125; //hexo解析&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;console.log(o)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% endcodeblock %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;分隔线&quot;&gt;&lt;a href=&quot;#分隔线&quot; class=&quot;headerlink&quot; title=&quot;分隔线&quot;&gt;&lt;/a&gt;分隔线&lt;/h2&gt;&lt;p&gt;你可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。下面每种写法都可以建立分隔线：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;* * *&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;***&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;*****&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;- - -&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;---------------------------------------&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h1 id=&quot;区段元素&quot;&gt;&lt;a href=&quot;#区段元素&quot; class=&quot;headerlink&quot; title=&quot;区段元素&quot;&gt;&lt;/a&gt;区段元素&lt;/h1&gt;&lt;h2 id=&quot;链接&quot;&gt;&lt;a href=&quot;#链接&quot; class=&quot;headerlink&quot; title=&quot;链接&quot;&gt;&lt;/a&gt;链接&lt;/h2&gt;&lt;p&gt;两种方式：行内式和索引式&lt;br&gt;行内式：&lt;a href=&quot;http://wut0719.github.io&quot; title=&quot;吴桐的博客&quot;&gt;吴桐&lt;/a&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;行内式：[&amp;lt;a&amp;gt;内容](href属性值 &amp;quot;title属性值&amp;quot;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;强调&quot;&gt;&lt;a href=&quot;#强调&quot; class=&quot;headerlink&quot; title=&quot;强调&quot;&gt;&lt;/a&gt;强调&lt;/h2&gt;&lt;p&gt;星号或下划线。一个=em，两个=strong。也可以直接用html标签&lt;em&gt;em&lt;/em&gt;和&lt;strong&gt;strong&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;single asterisks&lt;/em&gt;&lt;br&gt;&lt;em&gt;single underscores&lt;/em&gt;&lt;br&gt;&lt;strong&gt;double asterisks&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;double underscores&lt;/strong&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;*single asterisks*&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;_single underscores_&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;**double asterisks**&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;__double underscores__&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&quot;代码&quot;&gt;&lt;a href=&quot;#代码&quot; class=&quot;headerlink&quot; title=&quot;代码&quot;&gt;&lt;/a&gt;代码&lt;/h2&gt;&lt;p&gt;行内代码:&lt;code&gt;code&lt;/code&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;`code`&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;图片&quot;&gt;&lt;a href=&quot;#图片&quot; class=&quot;headerlink&quot; title=&quot;图片&quot;&gt;&lt;/a&gt;图片&lt;/h2&gt;&lt;p&gt;也有两种方式：行内式和参考式&lt;/p&gt;
+&lt;p&gt;行内式：&lt;img src=&quot;//img3.doubanio.com/f/shire/8308f83ca66946299fc80efb1f10ea21f99ec2a5/pics/nav/lg_main_a11_1.png&quot; alt=&quot;Douban&quot;&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;行内式：![alt属性值](src属性值)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h1 id=&quot;其它&quot;&gt;&lt;a href=&quot;#其它&quot; class=&quot;headerlink&quot; title=&quot;其它&quot;&gt;&lt;/a&gt;其它&lt;/h1&gt;&lt;h2 id=&quot;反斜杠-转义字符&quot;&gt;&lt;a href=&quot;#反斜杠-转义字符&quot; class=&quot;headerlink&quot; title=&quot;反斜杠-转义字符&quot;&gt;&lt;/a&gt;反斜杠-转义字符&lt;/h2&gt;&lt;p&gt;\ 反斜杠&lt;br&gt;` 反引号&lt;br&gt;* 星号&lt;br&gt;_ 下划线&lt;br&gt;{} 大括号&lt;br&gt;[] 中括号&lt;br&gt;() 小括号&lt;br&gt;# 井号&lt;br&gt;+ 加号&lt;br&gt;- 减号&lt;br&gt;. 英文句号&lt;br&gt;! 感叹号&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;\\ 反斜杠&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\` 反引号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\* 星号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\_ 下划线&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\&amp;#123;\&amp;#125; 大括号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\[\] 中括号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\(\) 小括号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\# 井号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\+ 加号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\- 减号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\. 英文句号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\! 感叹号&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&quot;自动链接&quot;&gt;&lt;a href=&quot;#自动链接&quot; class=&quot;headerlink&quot; title=&quot;自动链接&quot;&gt;&lt;/a&gt;自动链接&lt;/h2&gt;&lt;p&gt;尖括号，包括链接和邮件地址。&lt;br&gt;&lt;a href=&quot;http://wut0719.github.io&quot;&gt;http://wut0719.github.io&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;&amp;#109;&amp;#97;&amp;#105;&amp;#108;&amp;#x74;&amp;#111;&amp;#58;&amp;#101;&amp;#x78;&amp;#x61;&amp;#x6d;&amp;#x70;&amp;#x6c;&amp;#101;&amp;#64;&amp;#x65;&amp;#120;&amp;#97;&amp;#109;&amp;#x70;&amp;#108;&amp;#x65;&amp;#x2e;&amp;#x63;&amp;#x6f;&amp;#109;&quot;&gt;&amp;#101;&amp;#x78;&amp;#x61;&amp;#x6d;&amp;#x70;&amp;#x6c;&amp;#101;&amp;#64;&amp;#x65;&amp;#120;&amp;#97;&amp;#109;&amp;#x70;&amp;#108;&amp;#x65;&amp;#x2e;&amp;#x63;&amp;#x6f;&amp;#109;&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;http://wut0719.github.io&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;example@example.com&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;参考：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://ibruce.info/2013/11/26/markdown/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Markdown简明语法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://wowubuntu.com/markdown&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Markdown 语法说明(简体中文版)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;讲Markdown语法的文章在网络上有很多，但是Markdown语法在不同的环境和工具中还有很多变种，本文就记录下在hexo 3.2.0中有效的语法格式。可能有不完善的地方，欢迎在评论中指出。&lt;/p&gt;
     
     </summary>
     
       <category term="技术学习" scheme="http://wut0719.github.io/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="Objective-C" scheme="http://wut0719.github.io/tags/Objective-C/"/>
+      <category term="hexo" scheme="http://wut0719.github.io/tags/hexo/"/>
+    
+      <category term="Markdown" scheme="http://wut0719.github.io/tags/Markdown/"/>
     
   </entry>
   
@@ -976,10 +964,13 @@
     <link href="http://wut0719.github.io/2014/08/23/PiOC01/"/>
     <id>http://wut0719.github.io/2014/08/23/PiOC01/</id>
     <published>2014-08-22T16:00:00.000Z</published>
-    <updated>2016-03-12T13:52:32.000Z</updated>
+    <updated>2016-03-13T14:03:09.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;PART-I-——-The-Objective-C-Language（ch-2-4）&quot;&gt;&lt;a href=&quot;#PART-I-——-The-Objective-C-Language（ch-2-4）&quot; class=&quot;headerlink&quot; title=&quot;PART I —— The Objective-C Language（ch.2-4）&quot;&gt;&lt;/a&gt;PART I —— The Objective-C Language（ch.2-4）&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;在Obj-C中，一个class包含两部分：&lt;br&gt;@interface：继承关系，{实例变量}，方法声明&lt;br&gt;@implementation：@interface中声明的方法的实现代码&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;在Obj-C中，一个class包含两部分：&lt;br&gt;@interface：继承关系，{实例变量}，方法声明&lt;br&gt;@implementation：@interface中声明的方法的实现代码&lt;/li&gt;
+&lt;/ul&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;ul&gt;
 &lt;li&gt;命名：&lt;ul&gt;
 &lt;li&gt;基础规则：&lt;ul&gt;
 &lt;li&gt;选择范围：下划线，字母(‘a’-‘z’, ‘A’-‘Z’)，数字0-9&lt;/li&gt;
@@ -1018,11 +1009,12 @@
     <summary type="html">
     
       &lt;h2 id=&quot;PART-I-——-The-Objective-C-Language（ch-2-4）&quot;&gt;&lt;a href=&quot;#PART-I-——-The-Objective-C-Language（ch-2-4）&quot; class=&quot;headerlink&quot; title=&quot;PART I —— The Objective-C Language（ch.2-4）&quot;&gt;&lt;/a&gt;PART I —— The Objective-C Language（ch.2-4）&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;在Obj-C中，一个class包含两部分：&lt;br&gt;@interface：继承关系，{实例变量}，方法声明&lt;br&gt;@implementation：@interface中声明的方法的实现代码
+&lt;li&gt;在Obj-C中，一个class包含两部分：&lt;br&gt;@interface：继承关系，{实例变量}，方法声明&lt;br&gt;@implementation：@interface中声明的方法的实现代码&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
-      <category term="技术学习" scheme="http://wut0719.github.io/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
+      <category term="iOS开发" scheme="http://wut0719.github.io/categories/iOS%E5%BC%80%E5%8F%91/"/>
     
     
       <category term="Objective-C" scheme="http://wut0719.github.io/tags/Objective-C/"/>
@@ -1192,31 +1184,29 @@
   </entry>
   
   <entry>
-    <title>从高考改革说开去</title>
-    <link href="http://wut0719.github.io/2013/03/19/%E4%BB%8E%E9%AB%98%E8%80%83%E6%94%B9%E9%9D%A9%E8%AF%B4%E5%BC%80%E5%8E%BB/"/>
-    <id>http://wut0719.github.io/2013/03/19/从高考改革说开去/</id>
+    <title>《搜索》</title>
+    <link href="http://wut0719.github.io/2013/03/19/%E3%80%8A%E6%90%9C%E7%B4%A2%E3%80%8B/"/>
+    <id>http://wut0719.github.io/2013/03/19/《搜索》/</id>
     <published>2013-03-18T16:00:00.000Z</published>
-    <updated>2016-03-12T14:02:58.000Z</updated>
+    <updated>2016-03-12T13:52:32.000Z</updated>
     
-    <content type="html">&lt;p&gt;新博客开起来了，总要有些文章撑撑场面。想到自己既然算是比较关心教育的人，又经历了高考这件事，不如就拿这个话题做个开场白，总好过随便或精心转载的文章吧。之所以选择高考改革作为出发点，其实也算是对那篇民间高考改革方案的报道有感而发。我后来在网上搜索了一下，发现方案还不少，比报道里的还多，也不只是民间的，还有机构的。先说民间的三种方案吧。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/3ca59d76gw1evb8qjucopj20h907pt8x.jpg&quot; alt=&quot;民间高考改革方案&quot;&gt;&lt;/p&gt;
-&lt;p&gt;这三种方案虽然侧重点各有不同，不过其核心是相似的，那就是在统考的前提下加强考试的区分度和减轻学生负担。前二种都把考试科目数调低而代之以更为全面的学业水平测试，后一种突出高职与普通高校的区别，也能降低目标高职之考生的压力。这些与西式教育体系下的联考制度有异曲同工之妙，所以不能简单地谓之不现实。对于联考制度，我相信即使这不是我国高考改革的终点，也一定是个必经之路。不过与民间方案“减负”的出发点不同，我认为其中的主要原因是招生自主乃大学办学自主权的最终体现。差异化的招生结构必然反映学校差异化的办学思路，也能促使学校制定更具特色的培养方案。&lt;/p&gt;
-&lt;p&gt;另一方面，民间方案的问题在于其过于理想化。不妨我们先来看一看方案1。这套方案中虽然强调高考只考3门且不分科，但是作为补充的学业水平测试难道不会看作是另一种形式的高考？那岂不是就等同于高考变成了9门(甚至更多)？更不必说依目前各省独立组织这测试的情况下又会滋生多少腐败弊案了。然后再看方案2。实验学科与人文学科各择其一与不分科的矛盾暂且不提，这以报考专业为选择依据不正好必然要求考前填志愿吗？至于专业是不是与实验学科和人文学科相关就更不必说了。最后再谈谈方案3。不是说两种类型的学校不应该分别考试，而是很有必要这么做，这样就能将职业教育同高等教育分割开，对双方都很有好处。只是在现行社会主流思想的背景下，这种做法差不多算是判了高职死刑。所以说这些民间改革方案虽然可以说是反映了某种民间的愿望，而其根本上不足为用。&lt;/p&gt;
-&lt;p&gt;除了民间的方案，还有一些机构也有他们自己的构想，比如21世纪教育研究院的一份&lt;a href=&quot;http://edu.sina.com.cn/l/2009-06-14/1548172839.shtml&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;报告&lt;/a&gt;。与粗糙的民间方案相比，机构方案明显更为规范，内容也更加完整详实，是比较让人满意的。后面所附小调查的结果也是很好的说明。但是从教育的角度出发，我不同意其中有关降低英语权重的内容。首先降低英语权重并不会必然导致对母语重视程度的提高。这一点是显而易见的，即使在目前语数外三者分数权重相同的情况下，数学的重要程度也是要超过其他两门的。实际上，一门学科在实际学习生活中的地位是受很多因素影响的，其中比较关键的一条就是学生在此科目上提分的难易程度。提分容易的自然受更多的重视，而提分难的往往就会被首先牺牲掉。此外，在英语上针对不同地区进行区别对待，虽然短时间内使得那些英语教学薄弱地区少吃点亏，但从长远来看反而促成了更大的不平等。这些地区的教育资源本身就比较匮乏暂且不说，更低的英语标准就意味着一部分在英语上的教学资源需要放到其他更有价值的学科上去，其结果就是这些地区的学生总体英语基础进一步落后。与此同时那些英语教学并不薄弱的地区，与其外向型的经济结构密不可分。也就是说，英语在这些地区本身就具有很高的市场需求，与学校教学资源的分配倒不是密切相关，从不断增长的外语培训行业就可见一斑了。长此以往，这两个地区在英语方面的差距就越来越大，显然这不是我们所愿意看到的，更不必说由此引发的其他影响了。&lt;/p&gt;
-&lt;p&gt;与民间方案相同，机构方案也存在过理想化的缺点，使得一些措施显得十分幼稚。也许有人要问我是不是有个更好的方案，我的答案是除了联考制度便没了。因为联考制度相比于我们现行的制度确实有很多重要的优点。但是如果要立刻改革，或者定个十年二十年的时间表，我都是坚决反对的。谈及这些民间方案与机构方案的利弊，再算上各省已经进行了的各式各样的改革，像什么基本能力，小高考等等，以及舆论讨论最为激烈的录取制度，我想说的是，无论什么样的措施都不可能是完美的，总有人受益亦总有人受损。而且更为重要的是，高考最大的价值，或曰优势，就在于其稳定性。无论加在高考上什么样的改革，都是对学生的新负担，制造了更多的混乱。&lt;/p&gt;
-&lt;p&gt;更为重要的是，一个非常重要的问题往往被大家轻易地忽略掉，那就是高考为什么这么重要。也许有人会说，不就是因为上大学嘛。这话二三十年前说没什么问题，但是在已经进入高等教育大众化的今天恐怕就不能算作是很好的解释了。实际上高考之所以在今天仍然如此之重要并非在于大学，而是在于重点大学，在于名牌大学。从对北大清华的生源结构的争论就能感受到了，其实争来争去不过就是希望能多招本地区的学生而已。就地高考也是同样的道理，不能增加名额，那我就去名额多的地方考，其实质无非就是高考移民。由此引出的一个现象颇值玩味，当年高考移民一片火热之时，反对呼声很强，最终促成了政府的禁令，而如今换汤不换药的就地高考反而一片赞扬之声，个中缘由亦值深思，不过此非本文主旨，按下不表。&lt;/p&gt;
-&lt;p&gt;于是就可以看出，与其改革高考，不如直接从高等教育入手。在我看来，高考的变化是与高校的变化息息相关的，同时高考是服从并服务于高校的。关于高教改革的内容，则涉及的内容更为广泛，非此文之力所能及，但是大概内容还是可以谈谈的。针对高教大众化的现状，改革的重点应当置于平等而不是争什么世界一流。差异化的办学思路实际上是提高了高校的办学门槛，也增加其对资源的需求。另一方面对生源结构问题的最好应对措施，不是把那俩学校变成社会平等的牺牲品，而是让更多地的学校具备他们的条件，也唯有这样道路才能从根本上促进我国高等教育的健康发展，由此而带动的其他各领域的进步才会很坚实有力。同时，这也是最根本性的高考改革。&lt;/p&gt;
+    <content type="html">&lt;p&gt;《搜索》这个片子暑假时就想看了，不过一直没找到机会，碰巧前一阵子得空，又有资源，心想不妨一看。最初这电影吸引我的地方还真就不是什么导演演员阵容什么的，而是这题材。对于国产片，我还是觉得现实点儿题材更能吸引我，也更有值得发挥思绪的空间。豆瓣上的几篇影评都写得不错，入木三分，生动形象，还有一个短评也特别好。所以共性的东西我就不赘言了，就分享几个有趣的细节，权且充当一个不合格的影评罢。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;br&gt;首先就是搞庆典那家公司老总出场头一句“叶秋蓝”。哈哈，其讽刺意味比起沈流舒那句”屁大点儿事”有过之而无不及。叶蓝秋，不让座事件的主角，网络上大名鼎鼎。可偏偏我们这老总不关心。热闹终究不过是茶余饭后的谈资罢了，你想长久也做不到。比如，凤姐芙蓉犀利哥一干人等，现在还能被提起几次呢？网上的名来得快，去得也快，无论是好名声还是臭名声。&lt;/p&gt;
+&lt;p&gt;其次是电影故事开头预设的背景——叶的癌症。叶蓝秋最后死了，由于前面的故事情节和结尾处一些人物的对话，我很自然地想到可见类似于人肉搜索这类的网络暴力是多么可怕。但是不治之症的背景，再加上叶蓝秋自己对那100万的解释，就使得另一套逻辑同样成立。既然自己已经身患绝症，干嘛不去尽情地享受生活的快乐呢？特别是在完全不用考虑费用的情况下。而且沈太太的表现与这一点也是遥相呼应的。她的家庭关系原本就很糟糕，跟有没有小三儿完全没关系。她不是没有怨言，但是幸福传统的家庭生活对她而言更为重要，于是就做了各种有用没用反作用的事儿来力图维持这种“幸福”生活的假象。最终直到叶的死才彻底打破她的幻想，让她明白自身的幸福感是多么重要，多么的宝贵。其实她并不傻，傻人会去转移珠宝么？只是看不透。？虽然作为观众，我们能看得很清楚，但是在人生的舞台上，我们每一个人都是主角，看透谈何容易呢？&lt;/p&gt;
+&lt;p&gt;再者，影片中还有一个细节：叶蓝秋的道歉视频最终也没有发出去，总算是跟网络暴力沾边了。话语权的威力很清晰地显露出来。缺乏话语权的人面对来自网络乃至于发展至现实生活中的铺天盖地的声浪毫无还手之力，而掌握话语权的人也不见得就能高枕无忧，一如我们的陈大记者。如果不能保住自己获得话语权的合法性，再大的影响力也会转瞬即逝。&lt;/p&gt;
+&lt;p&gt;最后一点就是我们的男主角，很帅，也很蠢。当然我所不能理解的就是他最后的移情别恋。跟一个完全陌生的女人呆了八天就把自己相识多年的女友甩了，这算是对陈记者的惩罚么？&lt;/p&gt;
+&lt;p&gt;总而言之，我还是觉得关注现实、关注当下比那些无病呻吟或歌功颂德要好的多。&lt;/p&gt;
 </content>
     
     <summary type="html">
     
-      &lt;p&gt;新博客开起来了，总要有些文章撑撑场面。想到自己既然算是比较关心教育的人，又经历了高考这件事，不如就拿这个话题做个开场白，总好过随便或精心转载的文章吧。之所以选择高考改革作为出发点，其实也算是对那篇民间高考改革方案的报道有感而发。我后来在网上搜索了一下，发现方案还不少，比报道里的还多，也不只是民间的，还有机构的。先说民间的三种方案吧。&lt;br&gt;
+      &lt;p&gt;《搜索》这个片子暑假时就想看了，不过一直没找到机会，碰巧前一阵子得空，又有资源，心想不妨一看。最初这电影吸引我的地方还真就不是什么导演演员阵容什么的，而是这题材。对于国产片，我还是觉得现实点儿题材更能吸引我，也更有值得发挥思绪的空间。豆瓣上的几篇影评都写得不错，入木三分，生动形象，还有一个短评也特别好。所以共性的东西我就不赘言了，就分享几个有趣的细节，权且充当一个不合格的影评罢。&lt;br&gt;
     
     </summary>
     
       <category term="个人" scheme="http://wut0719.github.io/categories/%E4%B8%AA%E4%BA%BA/"/>
     
     
-      <category term="杂谈" scheme="http://wut0719.github.io/tags/%E6%9D%82%E8%B0%88/"/>
+      <category term="观影" scheme="http://wut0719.github.io/tags/%E8%A7%82%E5%BD%B1/"/>
     
   </entry>
   
