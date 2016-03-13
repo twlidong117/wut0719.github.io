@@ -81,7 +81,7 @@
 &lt;p&gt;行内式：&lt;img src=&quot;//img3.doubanio.com/f/shire/8308f83ca66946299fc80efb1f10ea21f99ec2a5/pics/nav/lg_main_a11_1.png&quot; alt=&quot;Douban&quot;&gt;&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;行内式：![alt属性值](src属性值)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h1 id=&quot;其它&quot;&gt;&lt;a href=&quot;#其它&quot; class=&quot;headerlink&quot; title=&quot;其它&quot;&gt;&lt;/a&gt;其它&lt;/h1&gt;&lt;h2 id=&quot;反斜杠-转义字符&quot;&gt;&lt;a href=&quot;#反斜杠-转义字符&quot; class=&quot;headerlink&quot; title=&quot;反斜杠-转义字符&quot;&gt;&lt;/a&gt;反斜杠-转义字符&lt;/h2&gt;&lt;p&gt;\ 反斜杠&lt;br&gt;` 反引号&lt;br&gt;* 星号&lt;br&gt;_ 下划线&lt;br&gt;{} 大括号&lt;br&gt;[] 中括号&lt;br&gt;() 小括号&lt;br&gt;# 井号&lt;br&gt;+ 加号&lt;br&gt;- 减号&lt;br&gt;. 英文句号&lt;br&gt;! 感叹号&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;\\ 反斜杠&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\` 反引号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\* 星号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\_ 下划线&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\&amp;#123;\&amp;#125; 大括号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\[\] 中括号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\(\) 小括号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\# 井号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\+ 加号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\- 减号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\. 英文句号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\! 感叹号&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;h2 id=&quot;自动链接&quot;&gt;&lt;a href=&quot;#自动链接&quot; class=&quot;headerlink&quot; title=&quot;自动链接&quot;&gt;&lt;/a&gt;自动链接&lt;/h2&gt;&lt;p&gt;尖括号，包括链接和邮件地址。&lt;br&gt;&lt;a href=&quot;http://wut0719.github.io&quot;&gt;http://wut0719.github.io&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;&amp;#109;&amp;#x61;&amp;#105;&amp;#108;&amp;#x74;&amp;#x6f;&amp;#58;&amp;#x65;&amp;#120;&amp;#97;&amp;#x6d;&amp;#112;&amp;#x6c;&amp;#x65;&amp;#x40;&amp;#101;&amp;#x78;&amp;#97;&amp;#109;&amp;#112;&amp;#108;&amp;#x65;&amp;#x2e;&amp;#99;&amp;#111;&amp;#109;&quot;&gt;&amp;#x65;&amp;#120;&amp;#97;&amp;#x6d;&amp;#112;&amp;#x6c;&amp;#x65;&amp;#x40;&amp;#101;&amp;#x78;&amp;#97;&amp;#109;&amp;#112;&amp;#108;&amp;#x65;&amp;#x2e;&amp;#99;&amp;#111;&amp;#109;&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;http://wut0719.github.io&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;example@example.com&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&quot;自动链接&quot;&gt;&lt;a href=&quot;#自动链接&quot; class=&quot;headerlink&quot; title=&quot;自动链接&quot;&gt;&lt;/a&gt;自动链接&lt;/h2&gt;&lt;p&gt;尖括号，包括链接和邮件地址。&lt;br&gt;&lt;a href=&quot;http://wut0719.github.io&quot;&gt;http://wut0719.github.io&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;&amp;#109;&amp;#97;&amp;#105;&amp;#x6c;&amp;#116;&amp;#111;&amp;#x3a;&amp;#101;&amp;#120;&amp;#x61;&amp;#x6d;&amp;#x70;&amp;#x6c;&amp;#101;&amp;#64;&amp;#101;&amp;#120;&amp;#x61;&amp;#x6d;&amp;#x70;&amp;#x6c;&amp;#101;&amp;#46;&amp;#99;&amp;#x6f;&amp;#109;&quot;&gt;&amp;#101;&amp;#120;&amp;#x61;&amp;#x6d;&amp;#x70;&amp;#x6c;&amp;#101;&amp;#64;&amp;#101;&amp;#120;&amp;#x61;&amp;#x6d;&amp;#x70;&amp;#x6c;&amp;#101;&amp;#46;&amp;#99;&amp;#x6f;&amp;#109;&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;http://wut0719.github.io&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;example@example.com&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;参考：&lt;/p&gt;
 &lt;ul&gt;
@@ -214,91 +214,6 @@
   </entry>
   
   <entry>
-    <title>PiOC学习笔记09——对象复制与归档</title>
-    <link href="http://wut0719.github.io/2014/08/31/PiOC09/"/>
-    <id>http://wut0719.github.io/2014/08/31/PiOC09/</id>
-    <published>2014-08-30T16:00:00.000Z</published>
-    <updated>2016-03-13T14:03:39.000Z</updated>
-    
-    <content type="html">&lt;p&gt;chapter 18-19&lt;/p&gt;
-&lt;h3 id=&quot;Copy-Objects&quot;&gt;&lt;a href=&quot;#Copy-Objects&quot; class=&quot;headerlink&quot; title=&quot;Copy Objects&quot;&gt;&lt;/a&gt;Copy Objects&lt;/h3&gt;&lt;p&gt;复制对象 → Foundation中的方法：copy和mutableCopy&lt;/p&gt;
-&lt;p&gt;protocol：&lt;code&gt;&amp;lt;NSCopying&amp;gt; , &amp;lt;NSMutableCopying&amp;gt;&lt;/code&gt;→ 在自己写的class中使用&lt;/p&gt;
-&lt;p&gt;mutable复制不要求object是mutable；immutable不要求object是immutable&lt;/p&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;p&gt;mutable复制与 immutable复制的对比：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;对immutable对象复制，copy是指针复制（shadow copy），但mutableCopy就是对象复制（deep copy）。如果是对mutable对象复制，都是deep copy，但是copy返回的对象是immutable&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.cnblogs.com/ydhliphonedev/archive/2012/04/27/2473927.html&quot; title=&quot;iOS开发之深拷贝与浅拷贝详解&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;iOS开发之深拷贝与浅拷贝详解&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;copy的默认值是&lt;strong&gt;shadow&lt;/strong&gt; —— just copying the reference from one element of the array to another&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;与shadow copy相对的是&lt;strong&gt;deep&lt;/strong&gt; copy —— make distinct copies of each element of the array&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;shadow copy、deep copy 与直接赋值(assignment)的对比：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;shadow copy创建新的array对象，但array中的object（实质为引用）直接复制原始array中的object（object引用所指向的object空间不变，不开辟新内存空间）&lt;/li&gt;
-&lt;li&gt;assignment则是直接复制对原始array对象的引用，并不创建新array对象&lt;/li&gt;
-&lt;li&gt;deep copy既创建新array对象，也创建新的array中的object（开辟新内存空间，存放与原始object值相同的新object）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;在property中使用copy：&lt;code&gt;(copy,nonatomic)&lt;/code&gt;（默认值不是copy）&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;nonatomic / atomic → 不使用 / 使用 mutex lock 保护 访问property的accessor&lt;/li&gt;
-&lt;li&gt;mutex lock ( &lt;em&gt;mut&lt;/em&gt; ually  &lt;em&gt;ex&lt;/em&gt; clusive) 互斥锁 —— 在任一时刻，只能有一个线程访问该对象&lt;/li&gt;
-&lt;li&gt;默认值是atomic；atomic更安全，但降低程序运行速度，nonatomic提高效率&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;如果复制的是包含immutable对象的实例变量 → 没有必要把 immutable对象也复制一遍，直接复制其引用就足够了（之后的修改不会影响到immutable对象本身）&lt;/p&gt;
-&lt;h3 id=&quot;Archiving&quot;&gt;&lt;a href=&quot;#Archiving&quot; class=&quot;headerlink&quot; title=&quot;Archiving&quot;&gt;&lt;/a&gt;Archiving&lt;/h3&gt;&lt;p&gt;对象归档：the process of saving one or more objects in a format so that they can later be restored → 即将对象写入文件中&lt;/p&gt;
-&lt;p&gt;两种方式：property list (属性列表，即.plist文件) 和 key-valued coding (KVC机制) —— &lt;a href=&quot;http://zhangbin.cc/2012/08/16/kvc-kvo/&quot; title=&quot;KVC和KVO&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;KVC和KVO&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Key-value coding is a mechanism for &lt;strong&gt;accessing an object’s properties indirectly&lt;/strong&gt;, using strings to identify properties, rather than through invocation of an accessor method or accessing them directly through instance variables.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;XML Property List&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;NSString, NSDictionary, NSArray, NSDate, NSData, or NSNumber类的对象可以使用writeToFile:atomically:方法将对象写入文件中&lt;/li&gt;
-&lt;li&gt;atomically:参数取值YES/NO；YES——先写进一个临时备份文件，全部完成后再移入目标文件中，防止意外情况（system crash等）对plist文件可能造成的损害&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;将plist文件的内容读入程序中：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;返回dictionary：dictionaryWithContentsOfFile: 方法&lt;/li&gt;
-&lt;li&gt;返回array：arrayWithContentsOfFile:方法&lt;/li&gt;
-&lt;li&gt;返回data：dataWithContentsOfFile:方法&lt;/li&gt;
-&lt;li&gt;返回string：stringWithContentsOfFile:方法&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;更灵活的保存方式——NSKeyedArchiver class——任何类型的objects&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;对应的读取方式——NSKeyedUnarchiver class&lt;/li&gt;
-&lt;li&gt;需要在class中定义encodeWithCoder:方法（如何归档，即encode）and initWithCoder:方法（如何解档，即decode），遵守&lt;code&gt;&amp;lt;NSCoding&amp;gt;&lt;/code&gt;协议&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Using &lt;em&gt;NSData&lt;/em&gt; to Create Custom Archives —— 将多种objects收集起来保存到一个文件&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;使用initForWritingWithMutableData:方法从NSData对象创建NSKeyedArchiver对象&lt;/li&gt;
-&lt;li&gt;归档的objects对应所属的class都要实现各自的encoder和decoder方法&lt;/li&gt;
-&lt;li&gt;使用finishEncoding方法结束归档&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;使用归档进行deep copy&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;You don’t need to use a file for this process; the archiving and unarchiving process can all take place in memory. ( buffer )&lt;/li&gt;
-&lt;li&gt;不用遵守NSCopying协议&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;chapter 18-19&lt;/p&gt;
-&lt;h3 id=&quot;Copy-Objects&quot;&gt;&lt;a href=&quot;#Copy-Objects&quot; class=&quot;headerlink&quot; title=&quot;Copy Objects&quot;&gt;&lt;/a&gt;Copy Objects&lt;/h3&gt;&lt;p&gt;复制对象 → Foundation中的方法：copy和mutableCopy&lt;/p&gt;
-&lt;p&gt;protocol：&lt;code&gt;&amp;lt;NSCopying&amp;gt; , &amp;lt;NSMutableCopying&amp;gt;&lt;/code&gt;→ 在自己写的class中使用&lt;/p&gt;
-&lt;p&gt;mutable复制不要求object是mutable；immutable不要求object是immutable&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="iOS开发" scheme="http://wut0719.github.io/categories/iOS%E5%BC%80%E5%8F%91/"/>
-    
-    
-      <category term="Objective-C" scheme="http://wut0719.github.io/tags/Objective-C/"/>
-    
-  </entry>
-  
-  <entry>
     <title>PiOC学习笔记08——文件和ARC</title>
     <link href="http://wut0719.github.io/2014/08/31/PiOC08/"/>
     <id>http://wut0719.github.io/2014/08/31/PiOC08/</id>
@@ -389,6 +304,91 @@
 &lt;li&gt;&lt;strong&gt;NSFileManager&lt;/strong&gt;: 对文件和目录的基本操作&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Create a new file&lt;br&gt;Read from an existing file&lt;br&gt;Write data to a file&lt;br&gt;Rename a file&lt;br&gt;Remove (delete) a file&lt;br&gt;Test for the existence of a file&lt;br&gt;Determine the size of a file as well as other attributes Make a copy of a file&lt;br&gt;Test two files to see whether their contents are equal&lt;br&gt;
+    
+    </summary>
+    
+      <category term="iOS开发" scheme="http://wut0719.github.io/categories/iOS%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="Objective-C" scheme="http://wut0719.github.io/tags/Objective-C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PiOC学习笔记09——对象复制与归档</title>
+    <link href="http://wut0719.github.io/2014/08/31/PiOC09/"/>
+    <id>http://wut0719.github.io/2014/08/31/PiOC09/</id>
+    <published>2014-08-30T16:00:00.000Z</published>
+    <updated>2016-03-13T14:03:39.000Z</updated>
+    
+    <content type="html">&lt;p&gt;chapter 18-19&lt;/p&gt;
+&lt;h3 id=&quot;Copy-Objects&quot;&gt;&lt;a href=&quot;#Copy-Objects&quot; class=&quot;headerlink&quot; title=&quot;Copy Objects&quot;&gt;&lt;/a&gt;Copy Objects&lt;/h3&gt;&lt;p&gt;复制对象 → Foundation中的方法：copy和mutableCopy&lt;/p&gt;
+&lt;p&gt;protocol：&lt;code&gt;&amp;lt;NSCopying&amp;gt; , &amp;lt;NSMutableCopying&amp;gt;&lt;/code&gt;→ 在自己写的class中使用&lt;/p&gt;
+&lt;p&gt;mutable复制不要求object是mutable；immutable不要求object是immutable&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;mutable复制与 immutable复制的对比：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对immutable对象复制，copy是指针复制（shadow copy），但mutableCopy就是对象复制（deep copy）。如果是对mutable对象复制，都是deep copy，但是copy返回的对象是immutable&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.cnblogs.com/ydhliphonedev/archive/2012/04/27/2473927.html&quot; title=&quot;iOS开发之深拷贝与浅拷贝详解&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;iOS开发之深拷贝与浅拷贝详解&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;copy的默认值是&lt;strong&gt;shadow&lt;/strong&gt; —— just copying the reference from one element of the array to another&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;与shadow copy相对的是&lt;strong&gt;deep&lt;/strong&gt; copy —— make distinct copies of each element of the array&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;shadow copy、deep copy 与直接赋值(assignment)的对比：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;shadow copy创建新的array对象，但array中的object（实质为引用）直接复制原始array中的object（object引用所指向的object空间不变，不开辟新内存空间）&lt;/li&gt;
+&lt;li&gt;assignment则是直接复制对原始array对象的引用，并不创建新array对象&lt;/li&gt;
+&lt;li&gt;deep copy既创建新array对象，也创建新的array中的object（开辟新内存空间，存放与原始object值相同的新object）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在property中使用copy：&lt;code&gt;(copy,nonatomic)&lt;/code&gt;（默认值不是copy）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;nonatomic / atomic → 不使用 / 使用 mutex lock 保护 访问property的accessor&lt;/li&gt;
+&lt;li&gt;mutex lock ( &lt;em&gt;mut&lt;/em&gt; ually  &lt;em&gt;ex&lt;/em&gt; clusive) 互斥锁 —— 在任一时刻，只能有一个线程访问该对象&lt;/li&gt;
+&lt;li&gt;默认值是atomic；atomic更安全，但降低程序运行速度，nonatomic提高效率&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果复制的是包含immutable对象的实例变量 → 没有必要把 immutable对象也复制一遍，直接复制其引用就足够了（之后的修改不会影响到immutable对象本身）&lt;/p&gt;
+&lt;h3 id=&quot;Archiving&quot;&gt;&lt;a href=&quot;#Archiving&quot; class=&quot;headerlink&quot; title=&quot;Archiving&quot;&gt;&lt;/a&gt;Archiving&lt;/h3&gt;&lt;p&gt;对象归档：the process of saving one or more objects in a format so that they can later be restored → 即将对象写入文件中&lt;/p&gt;
+&lt;p&gt;两种方式：property list (属性列表，即.plist文件) 和 key-valued coding (KVC机制) —— &lt;a href=&quot;http://zhangbin.cc/2012/08/16/kvc-kvo/&quot; title=&quot;KVC和KVO&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;KVC和KVO&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Key-value coding is a mechanism for &lt;strong&gt;accessing an object’s properties indirectly&lt;/strong&gt;, using strings to identify properties, rather than through invocation of an accessor method or accessing them directly through instance variables.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;XML Property List&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;NSString, NSDictionary, NSArray, NSDate, NSData, or NSNumber类的对象可以使用writeToFile:atomically:方法将对象写入文件中&lt;/li&gt;
+&lt;li&gt;atomically:参数取值YES/NO；YES——先写进一个临时备份文件，全部完成后再移入目标文件中，防止意外情况（system crash等）对plist文件可能造成的损害&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;将plist文件的内容读入程序中：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;返回dictionary：dictionaryWithContentsOfFile: 方法&lt;/li&gt;
+&lt;li&gt;返回array：arrayWithContentsOfFile:方法&lt;/li&gt;
+&lt;li&gt;返回data：dataWithContentsOfFile:方法&lt;/li&gt;
+&lt;li&gt;返回string：stringWithContentsOfFile:方法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;更灵活的保存方式——NSKeyedArchiver class——任何类型的objects&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对应的读取方式——NSKeyedUnarchiver class&lt;/li&gt;
+&lt;li&gt;需要在class中定义encodeWithCoder:方法（如何归档，即encode）and initWithCoder:方法（如何解档，即decode），遵守&lt;code&gt;&amp;lt;NSCoding&amp;gt;&lt;/code&gt;协议&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Using &lt;em&gt;NSData&lt;/em&gt; to Create Custom Archives —— 将多种objects收集起来保存到一个文件&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用initForWritingWithMutableData:方法从NSData对象创建NSKeyedArchiver对象&lt;/li&gt;
+&lt;li&gt;归档的objects对应所属的class都要实现各自的encoder和decoder方法&lt;/li&gt;
+&lt;li&gt;使用finishEncoding方法结束归档&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;使用归档进行deep copy&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You don’t need to use a file for this process; the archiving and unarchiving process can all take place in memory. ( buffer )&lt;/li&gt;
+&lt;li&gt;不用遵守NSCopying协议&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;chapter 18-19&lt;/p&gt;
+&lt;h3 id=&quot;Copy-Objects&quot;&gt;&lt;a href=&quot;#Copy-Objects&quot; class=&quot;headerlink&quot; title=&quot;Copy Objects&quot;&gt;&lt;/a&gt;Copy Objects&lt;/h3&gt;&lt;p&gt;复制对象 → Foundation中的方法：copy和mutableCopy&lt;/p&gt;
+&lt;p&gt;protocol：&lt;code&gt;&amp;lt;NSCopying&amp;gt; , &amp;lt;NSMutableCopying&amp;gt;&lt;/code&gt;→ 在自己写的class中使用&lt;/p&gt;
+&lt;p&gt;mutable复制不要求object是mutable；immutable不要求object是immutable&lt;/p&gt;
     
     </summary>
     
@@ -1184,29 +1184,31 @@
   </entry>
   
   <entry>
-    <title>《搜索》</title>
-    <link href="http://wut0719.github.io/2013/03/19/%E3%80%8A%E6%90%9C%E7%B4%A2%E3%80%8B/"/>
-    <id>http://wut0719.github.io/2013/03/19/《搜索》/</id>
+    <title>从高考改革说开去</title>
+    <link href="http://wut0719.github.io/2013/03/19/%E4%BB%8E%E9%AB%98%E8%80%83%E6%94%B9%E9%9D%A9%E8%AF%B4%E5%BC%80%E5%8E%BB/"/>
+    <id>http://wut0719.github.io/2013/03/19/从高考改革说开去/</id>
     <published>2013-03-18T16:00:00.000Z</published>
-    <updated>2016-03-12T13:52:32.000Z</updated>
+    <updated>2016-03-12T14:02:58.000Z</updated>
     
-    <content type="html">&lt;p&gt;《搜索》这个片子暑假时就想看了，不过一直没找到机会，碰巧前一阵子得空，又有资源，心想不妨一看。最初这电影吸引我的地方还真就不是什么导演演员阵容什么的，而是这题材。对于国产片，我还是觉得现实点儿题材更能吸引我，也更有值得发挥思绪的空间。豆瓣上的几篇影评都写得不错，入木三分，生动形象，还有一个短评也特别好。所以共性的东西我就不赘言了，就分享几个有趣的细节，权且充当一个不合格的影评罢。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;br&gt;首先就是搞庆典那家公司老总出场头一句“叶秋蓝”。哈哈，其讽刺意味比起沈流舒那句”屁大点儿事”有过之而无不及。叶蓝秋，不让座事件的主角，网络上大名鼎鼎。可偏偏我们这老总不关心。热闹终究不过是茶余饭后的谈资罢了，你想长久也做不到。比如，凤姐芙蓉犀利哥一干人等，现在还能被提起几次呢？网上的名来得快，去得也快，无论是好名声还是臭名声。&lt;/p&gt;
-&lt;p&gt;其次是电影故事开头预设的背景——叶的癌症。叶蓝秋最后死了，由于前面的故事情节和结尾处一些人物的对话，我很自然地想到可见类似于人肉搜索这类的网络暴力是多么可怕。但是不治之症的背景，再加上叶蓝秋自己对那100万的解释，就使得另一套逻辑同样成立。既然自己已经身患绝症，干嘛不去尽情地享受生活的快乐呢？特别是在完全不用考虑费用的情况下。而且沈太太的表现与这一点也是遥相呼应的。她的家庭关系原本就很糟糕，跟有没有小三儿完全没关系。她不是没有怨言，但是幸福传统的家庭生活对她而言更为重要，于是就做了各种有用没用反作用的事儿来力图维持这种“幸福”生活的假象。最终直到叶的死才彻底打破她的幻想，让她明白自身的幸福感是多么重要，多么的宝贵。其实她并不傻，傻人会去转移珠宝么？只是看不透。？虽然作为观众，我们能看得很清楚，但是在人生的舞台上，我们每一个人都是主角，看透谈何容易呢？&lt;/p&gt;
-&lt;p&gt;再者，影片中还有一个细节：叶蓝秋的道歉视频最终也没有发出去，总算是跟网络暴力沾边了。话语权的威力很清晰地显露出来。缺乏话语权的人面对来自网络乃至于发展至现实生活中的铺天盖地的声浪毫无还手之力，而掌握话语权的人也不见得就能高枕无忧，一如我们的陈大记者。如果不能保住自己获得话语权的合法性，再大的影响力也会转瞬即逝。&lt;/p&gt;
-&lt;p&gt;最后一点就是我们的男主角，很帅，也很蠢。当然我所不能理解的就是他最后的移情别恋。跟一个完全陌生的女人呆了八天就把自己相识多年的女友甩了，这算是对陈记者的惩罚么？&lt;/p&gt;
-&lt;p&gt;总而言之，我还是觉得关注现实、关注当下比那些无病呻吟或歌功颂德要好的多。&lt;/p&gt;
+    <content type="html">&lt;p&gt;新博客开起来了，总要有些文章撑撑场面。想到自己既然算是比较关心教育的人，又经历了高考这件事，不如就拿这个话题做个开场白，总好过随便或精心转载的文章吧。之所以选择高考改革作为出发点，其实也算是对那篇民间高考改革方案的报道有感而发。我后来在网上搜索了一下，发现方案还不少，比报道里的还多，也不只是民间的，还有机构的。先说民间的三种方案吧。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/3ca59d76gw1evb8qjucopj20h907pt8x.jpg&quot; alt=&quot;民间高考改革方案&quot;&gt;&lt;/p&gt;
+&lt;p&gt;这三种方案虽然侧重点各有不同，不过其核心是相似的，那就是在统考的前提下加强考试的区分度和减轻学生负担。前二种都把考试科目数调低而代之以更为全面的学业水平测试，后一种突出高职与普通高校的区别，也能降低目标高职之考生的压力。这些与西式教育体系下的联考制度有异曲同工之妙，所以不能简单地谓之不现实。对于联考制度，我相信即使这不是我国高考改革的终点，也一定是个必经之路。不过与民间方案“减负”的出发点不同，我认为其中的主要原因是招生自主乃大学办学自主权的最终体现。差异化的招生结构必然反映学校差异化的办学思路，也能促使学校制定更具特色的培养方案。&lt;/p&gt;
+&lt;p&gt;另一方面，民间方案的问题在于其过于理想化。不妨我们先来看一看方案1。这套方案中虽然强调高考只考3门且不分科，但是作为补充的学业水平测试难道不会看作是另一种形式的高考？那岂不是就等同于高考变成了9门(甚至更多)？更不必说依目前各省独立组织这测试的情况下又会滋生多少腐败弊案了。然后再看方案2。实验学科与人文学科各择其一与不分科的矛盾暂且不提，这以报考专业为选择依据不正好必然要求考前填志愿吗？至于专业是不是与实验学科和人文学科相关就更不必说了。最后再谈谈方案3。不是说两种类型的学校不应该分别考试，而是很有必要这么做，这样就能将职业教育同高等教育分割开，对双方都很有好处。只是在现行社会主流思想的背景下，这种做法差不多算是判了高职死刑。所以说这些民间改革方案虽然可以说是反映了某种民间的愿望，而其根本上不足为用。&lt;/p&gt;
+&lt;p&gt;除了民间的方案，还有一些机构也有他们自己的构想，比如21世纪教育研究院的一份&lt;a href=&quot;http://edu.sina.com.cn/l/2009-06-14/1548172839.shtml&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;报告&lt;/a&gt;。与粗糙的民间方案相比，机构方案明显更为规范，内容也更加完整详实，是比较让人满意的。后面所附小调查的结果也是很好的说明。但是从教育的角度出发，我不同意其中有关降低英语权重的内容。首先降低英语权重并不会必然导致对母语重视程度的提高。这一点是显而易见的，即使在目前语数外三者分数权重相同的情况下，数学的重要程度也是要超过其他两门的。实际上，一门学科在实际学习生活中的地位是受很多因素影响的，其中比较关键的一条就是学生在此科目上提分的难易程度。提分容易的自然受更多的重视，而提分难的往往就会被首先牺牲掉。此外，在英语上针对不同地区进行区别对待，虽然短时间内使得那些英语教学薄弱地区少吃点亏，但从长远来看反而促成了更大的不平等。这些地区的教育资源本身就比较匮乏暂且不说，更低的英语标准就意味着一部分在英语上的教学资源需要放到其他更有价值的学科上去，其结果就是这些地区的学生总体英语基础进一步落后。与此同时那些英语教学并不薄弱的地区，与其外向型的经济结构密不可分。也就是说，英语在这些地区本身就具有很高的市场需求，与学校教学资源的分配倒不是密切相关，从不断增长的外语培训行业就可见一斑了。长此以往，这两个地区在英语方面的差距就越来越大，显然这不是我们所愿意看到的，更不必说由此引发的其他影响了。&lt;/p&gt;
+&lt;p&gt;与民间方案相同，机构方案也存在过理想化的缺点，使得一些措施显得十分幼稚。也许有人要问我是不是有个更好的方案，我的答案是除了联考制度便没了。因为联考制度相比于我们现行的制度确实有很多重要的优点。但是如果要立刻改革，或者定个十年二十年的时间表，我都是坚决反对的。谈及这些民间方案与机构方案的利弊，再算上各省已经进行了的各式各样的改革，像什么基本能力，小高考等等，以及舆论讨论最为激烈的录取制度，我想说的是，无论什么样的措施都不可能是完美的，总有人受益亦总有人受损。而且更为重要的是，高考最大的价值，或曰优势，就在于其稳定性。无论加在高考上什么样的改革，都是对学生的新负担，制造了更多的混乱。&lt;/p&gt;
+&lt;p&gt;更为重要的是，一个非常重要的问题往往被大家轻易地忽略掉，那就是高考为什么这么重要。也许有人会说，不就是因为上大学嘛。这话二三十年前说没什么问题，但是在已经进入高等教育大众化的今天恐怕就不能算作是很好的解释了。实际上高考之所以在今天仍然如此之重要并非在于大学，而是在于重点大学，在于名牌大学。从对北大清华的生源结构的争论就能感受到了，其实争来争去不过就是希望能多招本地区的学生而已。就地高考也是同样的道理，不能增加名额，那我就去名额多的地方考，其实质无非就是高考移民。由此引出的一个现象颇值玩味，当年高考移民一片火热之时，反对呼声很强，最终促成了政府的禁令，而如今换汤不换药的就地高考反而一片赞扬之声，个中缘由亦值深思，不过此非本文主旨，按下不表。&lt;/p&gt;
+&lt;p&gt;于是就可以看出，与其改革高考，不如直接从高等教育入手。在我看来，高考的变化是与高校的变化息息相关的，同时高考是服从并服务于高校的。关于高教改革的内容，则涉及的内容更为广泛，非此文之力所能及，但是大概内容还是可以谈谈的。针对高教大众化的现状，改革的重点应当置于平等而不是争什么世界一流。差异化的办学思路实际上是提高了高校的办学门槛，也增加其对资源的需求。另一方面对生源结构问题的最好应对措施，不是把那俩学校变成社会平等的牺牲品，而是让更多地的学校具备他们的条件，也唯有这样道路才能从根本上促进我国高等教育的健康发展，由此而带动的其他各领域的进步才会很坚实有力。同时，这也是最根本性的高考改革。&lt;/p&gt;
 </content>
     
     <summary type="html">
     
-      &lt;p&gt;《搜索》这个片子暑假时就想看了，不过一直没找到机会，碰巧前一阵子得空，又有资源，心想不妨一看。最初这电影吸引我的地方还真就不是什么导演演员阵容什么的，而是这题材。对于国产片，我还是觉得现实点儿题材更能吸引我，也更有值得发挥思绪的空间。豆瓣上的几篇影评都写得不错，入木三分，生动形象，还有一个短评也特别好。所以共性的东西我就不赘言了，就分享几个有趣的细节，权且充当一个不合格的影评罢。&lt;br&gt;
+      &lt;p&gt;新博客开起来了，总要有些文章撑撑场面。想到自己既然算是比较关心教育的人，又经历了高考这件事，不如就拿这个话题做个开场白，总好过随便或精心转载的文章吧。之所以选择高考改革作为出发点，其实也算是对那篇民间高考改革方案的报道有感而发。我后来在网上搜索了一下，发现方案还不少，比报道里的还多，也不只是民间的，还有机构的。先说民间的三种方案吧。&lt;br&gt;
     
     </summary>
     
       <category term="个人" scheme="http://wut0719.github.io/categories/%E4%B8%AA%E4%BA%BA/"/>
     
     
-      <category term="观影" scheme="http://wut0719.github.io/tags/%E8%A7%82%E5%BD%B1/"/>
+      <category term="杂谈" scheme="http://wut0719.github.io/tags/%E6%9D%82%E8%B0%88/"/>
     
   </entry>
   
