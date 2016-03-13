@@ -1,0 +1,1223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>吴桐的博客</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://wut0719.github.io/"/>
+  <updated>2015-08-23T15:32:20.000Z</updated>
+  <id>http://wut0719.github.io/</id>
+  
+  <author>
+    <name>吴桐</name>
+    <email>oliverwu@outlook.com</email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>测试hexo支持的markdown语法</title>
+    <link href="http://wut0719.github.io/2015/08/23/%E6%B5%8B%E8%AF%95hexo%E6%94%AF%E6%8C%81%E7%9A%84markdown%E8%AF%AD%E6%B3%95/"/>
+    <id>http://wut0719.github.io/2015/08/23/测试hexo支持的markdown语法/</id>
+    <published>2015-08-22T16:00:00.000Z</published>
+    <updated>2015-08-23T15:32:20.000Z</updated>
+    
+    <content type="html">&lt;h3 id=&quot;区块元素&quot;&gt;&lt;a href=&quot;#区块元素&quot; class=&quot;headerlink&quot; title=&quot;区块元素&quot;&gt;&lt;/a&gt;区块元素&lt;/h3&gt;&lt;h4 id=&quot;段落与换行&quot;&gt;&lt;a href=&quot;#段落与换行&quot; class=&quot;headerlink&quot; title=&quot;段落与换行&quot;&gt;&lt;/a&gt;段落与换行&lt;/h4&gt;&lt;p&gt;一个 Markdown 段落是由一个或多个连续的文本行组成，它的前后要有一个以上的空行（空行的定义是显示上看起来像是空的，便会被视为空行。比方说，若某一行只包含空格和制表符，则该行也会被视为空行）。&lt;/p&gt;
+&lt;p&gt;段内强制换行直接回车，不用加两个空格。&lt;/p&gt;
+&lt;h4 id=&quot;标题&quot;&gt;&lt;a href=&quot;#标题&quot; class=&quot;headerlink&quot; title=&quot;标题&quot;&gt;&lt;/a&gt;标题&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;方法一：1到6个#，分别表示一到六级标题。#后要加一个空格与标题内容分开。&lt;/li&gt;
+&lt;li&gt;方法二：使用“=”和“-”，用法如下：&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;测试标题，“=”相当于h1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;==&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;测试标题h2，“-”相当于h2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;---&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;效果：&lt;/p&gt;
+&lt;h1 id=&quot;测试标题，“-”相当于h1&quot;&gt;&lt;a href=&quot;#测试标题，“-”相当于h1&quot; class=&quot;headerlink&quot; title=&quot;测试标题，“=”相当于h1&quot;&gt;&lt;/a&gt;测试标题，“=”相当于h1&lt;/h1&gt;&lt;h2 id=&quot;测试标题h2，“-”相当于h2&quot;&gt;&lt;a href=&quot;#测试标题h2，“-”相当于h2&quot; class=&quot;headerlink&quot; title=&quot;测试标题h2，“-”相当于h2&quot;&gt;&lt;/a&gt;测试标题h2，“-”相当于h2&lt;/h2&gt;&lt;p&gt;方法二仍然有效，但最少要2个。（且不会与分隔线混淆）&lt;/p&gt;
+&lt;h4 id=&quot;区块引用-Blockquote&quot;&gt;&lt;a href=&quot;#区块引用-Blockquote&quot; class=&quot;headerlink&quot; title=&quot;区块引用 Blockquote&quot;&gt;&lt;/a&gt;区块引用 Blockquote&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;方法一：在引文的每行或每段前面加上&lt;code&gt;&amp;gt;&lt;/code&gt;，用一个空格与后文分开&lt;/li&gt;
+&lt;li&gt;方法二：利用block quote插件。语法是：&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% blockquote [参数] %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;引用内容&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% endblockquote %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;可选参数：作者、链接地址、链接名称（书名、网页标题……）。用空格分开。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;——在blockquote中markdown语法依然有效。如果期望其失效，则可用&lt;code&gt;&amp;lt;pre&amp;gt;&lt;/code&gt;标签包裹之。此外，raw标签插件中的内容不会被解析，可以保留原样。&lt;/p&gt;
+&lt;h4 id=&quot;列表&quot;&gt;&lt;a href=&quot;#列表&quot; class=&quot;headerlink&quot; title=&quot;列表&quot;&gt;&lt;/a&gt;列表&lt;/h4&gt;&lt;p&gt;无序列表用减号或星号都可以，但不要混用。有序列表用数字接一个英文句点。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;第一级&lt;/li&gt;
+&lt;li&gt;第一级&lt;ul&gt;
+&lt;li&gt;第二级&lt;/li&gt;
+&lt;li&gt;第二级&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;第二级&lt;/li&gt;
+&lt;li&gt;第二级&lt;ul&gt;
+&lt;li&gt;第三级&lt;/li&gt;
+&lt;li&gt;第三级&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;第三级&lt;/li&gt;
+&lt;li&gt;第三级&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;第一级&lt;br&gt;列表的嵌套支持超过两级以上，缩进为两个空格。无序列表的标号会根据层级变化，有序列表的数字标号则不受影响。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;代码区块&quot;&gt;&lt;a href=&quot;#代码区块&quot; class=&quot;headerlink&quot; title=&quot;代码区块&quot;&gt;&lt;/a&gt;代码区块&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;方法一：使用```。在起始```后加上语言即可实现代码高亮。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;举例：&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;undefined&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;方法二：使用code block插件&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% codeblock [参数] %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;引用内容&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% endcodeblock %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;可选参数：指定语言（lang:xxx，用于代码高亮）、附加说明、链接地址。用空格分开。&lt;/p&gt;
+&lt;h4 id=&quot;分隔线&quot;&gt;&lt;a href=&quot;#分隔线&quot; class=&quot;headerlink&quot; title=&quot;分隔线&quot;&gt;&lt;/a&gt;分隔线&lt;/h4&gt;&lt;p&gt;遵循markdown标准语法：在一行中用&lt;strong&gt;三个以上&lt;/strong&gt;的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。&lt;/p&gt;
+&lt;h3 id=&quot;区段元素&quot;&gt;&lt;a href=&quot;#区段元素&quot; class=&quot;headerlink&quot; title=&quot;区段元素&quot;&gt;&lt;/a&gt;区段元素&lt;/h3&gt;&lt;h4 id=&quot;链接&quot;&gt;&lt;a href=&quot;#链接&quot; class=&quot;headerlink&quot; title=&quot;链接&quot;&gt;&lt;/a&gt;链接&lt;/h4&gt;&lt;p&gt;支持两种形式：行内式和参考式。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;行内式：&lt;code&gt;[显示的文字](链接地址 &amp;quot;title内容&amp;quot;)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;参考式：&lt;code&gt;[显示的文字][数字标号]&lt;/code&gt;&lt;br&gt;然后在文章末尾，&lt;code&gt;[对应数字标号]:链接地址 &amp;quot;title内容&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;直接添加链接：&lt;a href=&quot;http://example.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://example.com&lt;/a&gt; 如果要使链接加上&lt;code&gt;target=&amp;quot;_blank&amp;quot;&lt;/code&gt;属性，则可用link插件，使用方法：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;% link text url [external] [title] %&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h4 id=&quot;强调&quot;&gt;&lt;a href=&quot;#强调&quot; class=&quot;headerlink&quot; title=&quot;强调&quot;&gt;&lt;/a&gt;强调&lt;/h4&gt;&lt;p&gt;不用下划线，只用星号。&lt;em&gt;斜体（em）&lt;/em&gt; ，&lt;strong&gt;加粗（strong）&lt;/strong&gt;。两者嵌套：&lt;strong&gt;&lt;em&gt;Everyone&lt;/em&gt; must attend the meeting at 5 o’clock today.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;删除线：&lt;code&gt;~~&lt;/code&gt;。&lt;del&gt;删除&lt;/del&gt;&lt;/p&gt;
+&lt;h4 id=&quot;代码&quot;&gt;&lt;a href=&quot;#代码&quot; class=&quot;headerlink&quot; title=&quot;代码&quot;&gt;&lt;/a&gt;代码&lt;/h4&gt;&lt;p&gt;行内代码使用单反引号。效果：Here’s an idea: why don’t we take &lt;code&gt;SuperiorProject&lt;/code&gt; and turn it into &lt;code&gt;**Reasonable**Project&lt;/code&gt;.&lt;/p&gt;
+&lt;h4 id=&quot;图片&quot;&gt;&lt;a href=&quot;#图片&quot; class=&quot;headerlink&quot; title=&quot;图片&quot;&gt;&lt;/a&gt;图片&lt;/h4&gt;&lt;p&gt;与链接类似，支持两种形式：行内式和参考式。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;行内式：&lt;code&gt;![alt文本](链接地址)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;参考式：&lt;code&gt;![alt文本][数字标号]&lt;/code&gt;&lt;br&gt;然后在文章末尾，&lt;code&gt;[对应数字标号]:链接地址&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;反斜杠&quot;&gt;&lt;a href=&quot;#反斜杠&quot; class=&quot;headerlink&quot; title=&quot;反斜杠&quot;&gt;&lt;/a&gt;反斜杠&lt;/h4&gt;&lt;p&gt;可以利用反斜杠来插入一些在语法中有其它意义的符号。如反引号`&lt;/p&gt;
+&lt;h3 id=&quot;其他&quot;&gt;&lt;a href=&quot;#其他&quot; class=&quot;headerlink&quot; title=&quot;其他&quot;&gt;&lt;/a&gt;其他&lt;/h3&gt;&lt;h4 id=&quot;表格&quot;&gt;&lt;a href=&quot;#表格&quot; class=&quot;headerlink&quot; title=&quot;表格&quot;&gt;&lt;/a&gt;表格&lt;/h4&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Left-Aligned&lt;/th&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;Center Aligned&lt;/th&gt;
+&lt;th style=&quot;text-align:right&quot;&gt;Right Aligned&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;col 3 is&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;some wordy text&lt;/td&gt;
+&lt;td style=&quot;text-align:right&quot;&gt;$1600&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;col 2 is&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;centered&lt;/td&gt;
+&lt;td style=&quot;text-align:right&quot;&gt;$12&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;zebra stripes&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;are neat&lt;/td&gt;
+&lt;td style=&quot;text-align:right&quot;&gt;$1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;代码如下：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;| Left-Aligned  | Center Aligned  | Right Aligned |&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;| ------------ |:---------------:| -----:|&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;| col 3 is      | some wordy text | $1600 |&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;| col 2 is      | centered        |   $12 |&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;| zebra stripes | are neat        |    $1 |&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;文本对齐：默认为左对齐。冒号在右边则为右对齐。冒号在两边则为居中。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;参考：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://hp256.com/2014/12/23/post-1/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo于Markdown语法的支持之基础篇&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://hp256.com/2014/12/24/post-0002/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo于Markdown语法的支持之进阶篇&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://help.github.com/articles/markdown-basics/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Markdown Basics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://help.github.com/articles/github-flavored-markdown/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub Flavored Markdown&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://wowubuntu.com/markdown/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Markdown 语法说明 (简体中文版)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://hexo.io/zh-cn/docs/tag-plugins.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo官方文档-标签插件&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;区块元素&quot;&gt;&lt;a href=&quot;#区块元素&quot; class=&quot;headerlink&quot; title=&quot;区块元素&quot;&gt;&lt;/a&gt;区块元素&lt;/h3&gt;&lt;h4 id=&quot;段落与换行&quot;&gt;&lt;a href=&quot;#段落与换行&quot; class=&quot;headerlink&quot; title=&quot;段落与换行&quot;&gt;
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="http://wut0719.github.io/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>新工具hexo</title>
+    <link href="http://wut0719.github.io/2015/08/22/%E6%96%B0%E5%B7%A5%E5%85%B7hexo/"/>
+    <id>http://wut0719.github.io/2015/08/22/新工具hexo/</id>
+    <published>2015-08-21T16:00:00.000Z</published>
+    <updated>2016-03-12T13:52:32.000Z</updated>
+    
+    <content type="html">&lt;p&gt;其实也算不上“新”，因为hexo这个静态页面生成程序早就有所耳闻，当时就想把它弄过来，然而因为各种各样的原因耽搁下来。最近碰巧有时间，也对写博客又有了需求，所以就花点时间给它搭起来。借用现成的主题，当然并不能直接使用，简单定制一下也还ok，以后慢慢打磨吧。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;br&gt;值得注意的几点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;社交网络账号在sidebar中。instagram被墙，用tofo.me代替&lt;/li&gt;
+&lt;li&gt;图床用新浪微博图册，不必在github上添加了。目前缺陷：图片清晰度不足&lt;/li&gt;
+&lt;li&gt;hexo对markdown语法的支持情况有待进一步验证&lt;/li&gt;
+&lt;li&gt;在这个主题下，分类（categories）似乎并没有什么用&lt;/li&gt;
+&lt;li&gt;引用和代码块最好用hexo文档提供的方法&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;其实也算不上“新”，因为hexo这个静态页面生成程序早就有所耳闻，当时就想把它弄过来，然而因为各种各样的原因耽搁下来。最近碰巧有时间，也对写博客又有了需求，所以就花点时间给它搭起来。借用现成的主题，当然并不能直接使用，简单定制一下也还ok，以后慢慢打磨吧。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="http://wut0719.github.io/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>iOS主要设备支持的视频格式</title>
+    <link href="http://wut0719.github.io/2014/09/18/iOS_supported_video_formats/"/>
+    <id>http://wut0719.github.io/2014/09/18/iOS_supported_video_formats/</id>
+    <published>2014-09-17T16:00:00.000Z</published>
+    <updated>2016-03-10T10:33:03.000Z</updated>
+    
+    <content type="html">&lt;h3 id=&quot;iPhone-5-5s-5c-6-6-iPad-Air-iPad-mini-2&quot;&gt;&lt;a href=&quot;#iPhone-5-5s-5c-6-6-iPad-Air-iPad-mini-2&quot; class=&quot;headerlink&quot; title=&quot;iPhone 5/5s/5c/6/6+, iPad Air, iPad mini 2&quot;&gt;&lt;/a&gt;iPhone 5/5s/5c/6/6+, iPad Air, iPad mini 2&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;http://ww4.sinaimg.cn/mw690/3ca59d76gw1evb8qici9qj20u40bkq55.jpg&quot; alt=&quot;支持视频格式&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;iPad-3-4-iPad-mini-2&quot;&gt;&lt;a href=&quot;#iPad-3-4-iPad-mini-2&quot; class=&quot;headerlink&quot; title=&quot;iPad 3/4, iPad mini 2&quot;&gt;&lt;/a&gt;iPad 3/4, iPad mini 2&lt;/h3&gt;&lt;p&gt;H.264部分的视频为HP level 4.1，其余同上&lt;/p&gt;
+&lt;h3 id=&quot;iPhone-4-4s-iPad-1-2-iPod-Touch-4-5&quot;&gt;&lt;a href=&quot;#iPhone-4-4s-iPad-1-2-iPod-Touch-4-5&quot; class=&quot;headerlink&quot; title=&quot;iPhone 4/4s, iPad 1/2, iPod Touch 4/5&quot;&gt;&lt;/a&gt;iPhone 4/4s, iPad 1/2, iPod Touch 4/5&lt;/h3&gt;&lt;p&gt;H.264部分的视频为720p, 30fps, MP level 3.1，其余同上&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;iPhone-5-5s-5c-6-6-iPad-Air-iPad-mini-2&quot;&gt;&lt;a href=&quot;#iPhone-5-5s-5c-6-6-iPad-Air-iPad-mini-2&quot; class=&quot;headerlink&quot; title=&quot;iPhone 5/5s/5c
+    
+    </summary>
+    
+      <category term="技术学习" scheme="http://wut0719.github.io/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="iOS" scheme="http://wut0719.github.io/tags/iOS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PiOC学习笔记10——Cocoa, Cocoa Touch and the iOS SDK</title>
+    <link href="http://wut0719.github.io/2014/09/01/PiOC10/"/>
+    <id>http://wut0719.github.io/2014/09/01/PiOC10/</id>
+    <published>2014-08-31T16:00:00.000Z</published>
+    <updated>2016-03-12T13:52:32.000Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;PART-III-——-Cocoa-Cocoa-Touch-and-the-iOS-SDK&quot;&gt;&lt;a href=&quot;#PART-III-——-Cocoa-Cocoa-Touch-and-the-iOS-SDK&quot; class=&quot;headerlink&quot; title=&quot;PART III —— Cocoa, Cocoa Touch and the iOS SDK&quot;&gt;&lt;/a&gt;PART III —— Cocoa, Cocoa Touch and the iOS SDK&lt;/h2&gt;&lt;p&gt; chapter 20, 21&lt;/p&gt;
+&lt;h3 id=&quot;Introduction-to-Cocoa-and-Cocoa-Touch&quot;&gt;&lt;a href=&quot;#Introduction-to-Cocoa-and-Cocoa-Touch&quot; class=&quot;headerlink&quot; title=&quot;Introduction to Cocoa and Cocoa Touch&quot;&gt;&lt;/a&gt;Introduction to Cocoa and Cocoa Touch&lt;/h3&gt;&lt;p&gt;framework layers （Mac OS X）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww4.sinaimg.cn/large/3ca59d76gw1evb8qirlxmj20dm0dwgm3.jpg&quot; alt=&quot;framework layers&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Writing-iOS-Applications&quot;&gt;&lt;a href=&quot;#Writing-iOS-Applications&quot; class=&quot;headerlink&quot; title=&quot;Writing iOS Applications&quot;&gt;&lt;/a&gt;Writing iOS Applications&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Class Prefix:设置类名前缀&lt;/li&gt;
+&lt;li&gt;outlet：一种instance variable，与view内容的管理相关联&lt;/li&gt;
+&lt;li&gt;虽然IBOutlet，IBAction本身没有实际内容，但Xcode需要利用它们来确定哪些instance variable和method需要与何种特定view对象和动作绑定&lt;/li&gt;
+&lt;li&gt;设置button的Tag属性 → tag与button一一对应&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;部分C语言特性&quot;&gt;&lt;a href=&quot;#部分C语言特性&quot; class=&quot;headerlink&quot; title=&quot;部分C语言特性&quot;&gt;&lt;/a&gt;部分C语言特性&lt;/h3&gt;&lt;p&gt;chapter 13&lt;/p&gt;
+&lt;h4 id=&quot;Blocks&quot;&gt;&lt;a href=&quot;#Blocks&quot; class=&quot;headerlink&quot; title=&quot;Blocks&quot;&gt;&lt;/a&gt;&lt;strong&gt;Blocks&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;与函数相似：可以接收参数，可以有返回值&lt;/p&gt;
+&lt;p&gt;与函数不同：可以使用blocks外的变量（在其作用域内），但是不能改变其值&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;__block modifier （两道下划线）——此种变量可以在block内改变其值&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;__block&lt;/code&gt;的使用方法：在声明变量的语句前插入&lt;code&gt;__block&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;block可以作为函数和方法的参数传递 ——好处之一：可以由系统分配给其他处理器或其他线程运算&lt;/p&gt;
+&lt;p&gt;block可以被声明为全局的（main函数外）或局部的（方法内）&lt;/p&gt;
+&lt;p&gt;syntax：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;声明并赋初值：&lt;code&gt;返回值类型 ^(block名)(参数1类型, 参数2类型, …) = ^(参数1类型 参数1名, 参数2类型 参数2名, …) { … body … };&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;使用block：&lt;code&gt;block名(参数);&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;PART-III-——-Cocoa-Cocoa-Touch-and-the-iOS-SDK&quot;&gt;&lt;a href=&quot;#PART-III-——-Cocoa-Cocoa-Touch-and-the-iOS-SDK&quot; class=&quot;headerlink&quot; title=&quot;PART III —— Cocoa, Cocoa Touch and the iOS SDK&quot;&gt;&lt;/a&gt;PART III —— Cocoa, Cocoa Touch and the iOS SDK&lt;/h2&gt;&lt;p&gt; chapter 20, 21&lt;/p&gt;
+&lt;h3 id=&quot;Introduction-to-Cocoa-and-Cocoa-Touch&quot;&gt;&lt;a href=&quot;#Introduction-to-Cocoa-and-Cocoa-Touch&quot; class=&quot;headerlink&quot; title=&quot;Introduction to Cocoa and Cocoa Touch&quot;&gt;&lt;/a&gt;Introduction to Cocoa and Cocoa Touch&lt;/h3&gt;&lt;p&gt;framework layers （Mac OS X）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww4.sinaimg.cn/large/3ca59d76gw1evb8qirlxmj20dm0dwgm3.jpg&quot; alt=&quot;framework layers&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Writing-iOS-Applications&quot;&gt;&lt;a href=&quot;#Writing-iOS-Applications&quot; class=&quot;headerlink&quot; title=&quot;Writing iOS Applications&quot;&gt;&lt;/a&gt;Writing iOS Applications&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Class Prefix:设置类名前缀&lt;/li&gt;
+&lt;li&gt;outlet：一种instance variable，与view内容的管理相关联&lt;/li&gt;
+&lt;li&gt;虽然IBOutlet，IBAction本身没有实际内容，但Xcode需要利用它们来确定哪些instance variable和method需要与何种特定view对象和动作绑定&lt;/li&gt;
+&lt;li&gt;设置button的Tag属性 → tag与button一一对应
+    
+    </summary>
+    
+      <category term="技术学习" scheme="http://wut0719.github.io/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Objective-C" scheme="http://wut0719.github.io/tags/Objective-C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PiOC学习笔记08——文件和ARC</title>
+    <link href="http://wut0719.github.io/2014/08/31/PiOC08/"/>
+    <id>http://wut0719.github.io/2014/08/31/PiOC08/</id>
+    <published>2014-08-30T16:00:00.000Z</published>
+    <updated>2016-03-12T13:52:32.000Z</updated>
+    
+    <content type="html">&lt;h3 id=&quot;Working-with-files&quot;&gt;&lt;a href=&quot;#Working-with-files&quot; class=&quot;headerlink&quot; title=&quot;Working with files&quot;&gt;&lt;/a&gt;Working with files&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;NSFileManager&lt;/strong&gt;: 对文件和目录的基本操作&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Create a new file&lt;br&gt;Read from an existing file&lt;br&gt;Write data to a file&lt;br&gt;Rename a file&lt;br&gt;Remove (delete) a file&lt;br&gt;Test for the existence of a file&lt;br&gt;Determine the size of a file as well as other attributes Make a copy of a file&lt;br&gt;Test two files to see whether their contents are equal&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;NSFileHandle&lt;/strong&gt;: 对文件内容的基本操作&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Open a file for reading, writing, or updating (reading and writing)&lt;br&gt;Seek to a specified position within a file&lt;br&gt;Read or write a specified number of bytes from and to a file&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;NSURL&lt;/strong&gt; —— work with URLs&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;NSBundle&lt;/strong&gt; —— work with application’s bundle&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;Managing-Files-and-Directories-NSFileManager&quot;&gt;&lt;a href=&quot;#Managing-Files-and-Directories-NSFileManager&quot; class=&quot;headerlink&quot; title=&quot;Managing Files and Directories: NSFileManager&quot;&gt;&lt;/a&gt;Managing Files and Directories: &lt;em&gt;NSFileManager&lt;/em&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;relative pathname: relative to the current directory&lt;/li&gt;
+&lt;li&gt;absolute pathname: begin with root directory “/”&lt;/li&gt;
+&lt;li&gt;“~username”: 用户的home directory地址（=/User/username）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;创建一个NSFileManeger对象：&lt;code&gt;[NSFileManager defaultManager];&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;attributes dictionary 属性词典：includes information such as the file’s owner, its size, its creation date, ……&lt;/p&gt;
+&lt;p&gt;symbolic link（符号链接、软链接）：一类特殊的文件， 其包含有一条以绝对路径或者相对路径的形式指向其它文件或者目录的引用。一个符号链接文件仅包含有一个文本字符串，其被操作系统解释为一条指向另一个文件或者目录的路径。它是一个独立文件，其存在并不依赖于目标文件。（与快捷方式不同，快捷方式是普通文件，具有.lnk扩展名）&lt;/p&gt;
+&lt;h3 id=&quot;NSData&quot;&gt;&lt;a href=&quot;#NSData&quot; class=&quot;headerlink&quot; title=&quot;NSData:&quot;&gt;&lt;/a&gt;NSData:&lt;/h3&gt;&lt;p&gt;set up a buffer(内存缓冲区), read the contents of the file into it, or write the contents of a buffer out to a file.&lt;/p&gt;
+&lt;p&gt;immutable (NSData) or mutable (NSMutableData)&lt;/p&gt;
+&lt;p&gt;枚举目录的内容：获得目录内容的列表，enumeratorAtPath:（枚举子目录内容）和contentsOfDirectoryAtPath:方法（不检索子目录）&lt;/p&gt;
+&lt;h3 id=&quot;NSPathUtilities-h&quot;&gt;&lt;a href=&quot;#NSPathUtilities-h&quot; class=&quot;headerlink&quot; title=&quot;NSPathUtilities.h&quot;&gt;&lt;/a&gt;NSPathUtilities.h&lt;/h3&gt;&lt;p&gt;Work with path：包含NSString的函数和category扩展，可以操作路径名。尽量使用&lt;/p&gt;
+&lt;p&gt;函数NSTemporaryDirectory返回系统用来存放临时文件的目录路径名，如果在此目录中创建临时文件，在运行结束时一定要删除之，并且要保证文件名的唯一性，特别是应用程序有多个实例运行时（多用户登录系统且运行程序时）。&lt;/p&gt;
+&lt;p&gt;lastPathComponent方法用来从路径中提取最后一个组成部分：从绝对路径中提取文件名&lt;/p&gt;
+&lt;h3 id=&quot;常用iOS应用文件目录&quot;&gt;&lt;a href=&quot;#常用iOS应用文件目录&quot; class=&quot;headerlink&quot; title=&quot;常用iOS应用文件目录&quot;&gt;&lt;/a&gt;常用iOS应用文件目录&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;http://ww4.sinaimg.cn/large/3ca59d76gw1evb8qjdjqlj20j60d3dhm.jpg&quot; alt=&quot;常用iOS应用文件目录&quot;&gt;&lt;/p&gt;
+&lt;p&gt;【注】&lt;a href=&quot;https://developer.apple.com/icloud/documentation/data-storage/index.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;iOS Data Storage Guidelines&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;NSProcessInfo-class&quot;&gt;&lt;a href=&quot;#NSProcessInfo-class&quot; class=&quot;headerlink&quot; title=&quot;NSProcessInfo class&quot;&gt;&lt;/a&gt;NSProcessInfo class&lt;/h3&gt;&lt;p&gt;set and retrieve various types of information about your running application（进程）&lt;/p&gt;
+&lt;h3 id=&quot;NSFileHandle-class&quot;&gt;&lt;a href=&quot;#NSFileHandle-class&quot; class=&quot;headerlink&quot; title=&quot;NSFileHandle class&quot;&gt;&lt;/a&gt;NSFileHandle class&lt;/h3&gt;&lt;p&gt;处理文件的通用步骤（3 steps）：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;打开文件，生成NSFileHandle对象以在接下来的I/O操作中引用文件&lt;/li&gt;
+&lt;li&gt;在打开的文件中进行I/O操作&lt;/li&gt;
+&lt;li&gt;关闭文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;NSFileHandle class不包含创建文件的方法，需要使用NSFileManager class中的方法完成&lt;/p&gt;
+&lt;h3 id=&quot;NSBundle-class&quot;&gt;&lt;a href=&quot;#NSBundle-class&quot; class=&quot;headerlink&quot; title=&quot;NSBundle class&quot;&gt;&lt;/a&gt;NSBundle class&lt;/h3&gt;&lt;p&gt;application bundle: 应用所使用的一些资源，包括图片、本地化语言、图标…&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;Memory-Management-and-Automatic-Reference-Counting-ARC&quot;&gt;&lt;a href=&quot;#Memory-Management-and-Automatic-Reference-Counting-ARC&quot; class=&quot;headerlink&quot; title=&quot;Memory Management and Automatic Reference Counting(ARC)&quot;&gt;&lt;/a&gt;Memory Management and Automatic Reference Counting(ARC)&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Memory Management的核心是回收不用的内存空间以重复利用&lt;/li&gt;
+&lt;li&gt;两种内存管理模式：Manual Reference Counting和Automatic Reference Counting（垃圾回收机制已经被抛弃了）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;Manual-Reference-Counting&quot;&gt;&lt;a href=&quot;#Manual-Reference-Counting&quot; class=&quot;headerlink&quot; title=&quot;Manual Reference Counting&quot;&gt;&lt;/a&gt;Manual Reference Counting&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;learn how to work with reference counts&lt;/li&gt;
+&lt;li&gt;general concept：当一个对象创建时，其初始引用计数(initial reference count)置为1。每次需要确认对象存在时，你会通过引用计数加1的方式创建一个指向对象的引用: (具体方法)向对象发送retain消息。当不需要对象时，引用计数减1：(具体方法)向对象发送release消息。当对象的引用计数为0时，系统认为对象不会再被使用，就释放其所占用的内存(deallocate)：(具体方法)向对象发送dealloc消息。dealloc方法可能需要根据具体情形进行override&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;有些方法会改变引用计数：对象使用NSMutableArray的addObject:方法加入到一个array中，一个view通过UIView的addSubview:方法加入为子视图；与之相反的动作则减少引用计数&lt;/p&gt;
+&lt;p&gt;对象被销毁（引用计数降为0且发送了dealloc消息）后，就不能被引用&lt;/p&gt;
+&lt;p&gt;Autorelease pool 自动释放池&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;某些方法使用完对象后因为需要返回对象而不能释放之 → 需要自动释放池来辅助管理&lt;/li&gt;
+&lt;li&gt;当自动释放池“干涸”(drained)时，就释放其管理的对象：向自动释放池对象发送drain消息&lt;/li&gt;
+&lt;li&gt;将对象加入自动释放池：向对象发送autorelease消息&lt;/li&gt;
+&lt;li&gt;当程序使用Foundation、UIKit、或AppKit框架中的class时，需要用@autorelease指令创建一个自动释放池&lt;/li&gt;
+&lt;li&gt;使用以alloc、copy、mutableCopy 或 new 开头的方法创建的对象都不会自动释放，需要手动释放或手动加入自动释放池&lt;/li&gt;
+&lt;li&gt;Event Loop 事件轮询机制&lt;ul&gt;
+&lt;li&gt;当外界操作出发事件时，系统自动创建一个自动释放池然后调用应用程序的一些方法处理之。当事件处理完毕时，系统销毁自动释放池，返回event loop等待下一个事件，而所有在这个自动释放池中的对象也都会被释放，除非被retained&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;override dealloc方法：先释放自己创建的对象，再[super dealloc];&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;Automatic-Reference-Counting&quot;&gt;&lt;a href=&quot;#Automatic-Reference-Counting&quot; class=&quot;headerlink&quot; title=&quot;Automatic Reference Counting&quot;&gt;&lt;/a&gt;Automatic Reference Counting&lt;/h3&gt;&lt;p&gt;Strong variables ——(变量的default值)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;声明变量的关键字：_strong —— “_strong ClassName var;”&lt;/li&gt;
+&lt;li&gt;assigning an object reference to such a variable causes that object to be automatically retained&lt;/li&gt;
+&lt;li&gt;the old object reference will be released before the assignment is made&lt;/li&gt;
+&lt;li&gt;strong variables are initialized to zero by default&lt;/li&gt;
+&lt;li&gt;properties的默认属性不是strong，而是unsafe_unretained(相当于assign) → 需要手动声明：(strong, nonatomic)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Weak variables&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;背景：互相引用的对象（main view 与 subview）→ 若两者都是strong，则产生retain circle，导致两者都不能销毁 → 解决：weak reference，拥有另个对象的对象（main view 拥有 subview）设置为strong，而余下一个设置为weak&lt;/li&gt;
+&lt;li&gt;声明变量的关键字：_weak —— “_weak … ;”&lt;/li&gt;
+&lt;li&gt;相应的properties的声明：(weak, nonatomic)&lt;/li&gt;
+&lt;li&gt;另一个用处：delegates —— By making the variable that holds the reference to the delegate a weak variable, you’re assured that the variable will be zeroed if the delegate object gets deallocated.&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Working-with-files&quot;&gt;&lt;a href=&quot;#Working-with-files&quot; class=&quot;headerlink&quot; title=&quot;Working with files&quot;&gt;&lt;/a&gt;Working with files&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;NSFileManager&lt;/strong&gt;: 对文件和目录的基本操作&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Create a new file&lt;br&gt;Read from an existing file&lt;br&gt;Write data to a file&lt;br&gt;Rename a file&lt;br&gt;Remove (delete) a file&lt;br&gt;Test for the existence of a file&lt;br&gt;Determine the size of a file as well as other attributes Make a copy of a file&lt;br&gt;Test two files to see whether their contents are equal&lt;br&gt;
+    
+    </summary>
+    
+      <category term="技术学习" scheme="http://wut0719.github.io/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Objective-C" scheme="http://wut0719.github.io/tags/Objective-C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PiOC学习笔记09——对象复制与归档</title>
+    <link href="http://wut0719.github.io/2014/08/31/PiOC09/"/>
+    <id>http://wut0719.github.io/2014/08/31/PiOC09/</id>
+    <published>2014-08-30T16:00:00.000Z</published>
+    <updated>2016-03-12T13:52:32.000Z</updated>
+    
+    <content type="html">&lt;p&gt;chapter 18-19&lt;/p&gt;
+&lt;h3 id=&quot;Copy-Objects&quot;&gt;&lt;a href=&quot;#Copy-Objects&quot; class=&quot;headerlink&quot; title=&quot;Copy Objects&quot;&gt;&lt;/a&gt;Copy Objects&lt;/h3&gt;&lt;p&gt;复制对象 → Foundation中的方法：copy和mutableCopy&lt;/p&gt;
+&lt;p&gt;protocol：&lt;code&gt;&amp;lt;NSCopying&amp;gt; , &amp;lt;NSMutableCopying&amp;gt;&lt;/code&gt;→ 在自己写的class中使用&lt;/p&gt;
+&lt;p&gt;mutable复制不要求object是mutable；immutable不要求object是immutable&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;br&gt;mutable复制与 immutable复制的对比：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对immutable对象复制，copy是指针复制（shadow copy），但mutableCopy就是对象复制（deep copy）。如果是对mutable对象复制，都是deep copy，但是copy返回的对象是immutable&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.cnblogs.com/ydhliphonedev/archive/2012/04/27/2473927.html&quot; title=&quot;iOS开发之深拷贝与浅拷贝详解&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;iOS开发之深拷贝与浅拷贝详解&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;copy的默认值是&lt;strong&gt;shadow&lt;/strong&gt; —— just copying the reference from one element of the array to another&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;与shadow copy相对的是&lt;strong&gt;deep&lt;/strong&gt; copy —— make distinct copies of each element of the array&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;shadow copy、deep copy 与直接赋值(assignment)的对比：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;shadow copy创建新的array对象，但array中的object（实质为引用）直接复制原始array中的object（object引用所指向的object空间不变，不开辟新内存空间）&lt;/li&gt;
+&lt;li&gt;assignment则是直接复制对原始array对象的引用，并不创建新array对象&lt;/li&gt;
+&lt;li&gt;deep copy既创建新array对象，也创建新的array中的object（开辟新内存空间，存放与原始object值相同的新object）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在property中使用copy：&lt;code&gt;(copy,nonatomic)&lt;/code&gt;（默认值不是copy）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;nonatomic / atomic → 不使用 / 使用 mutex lock 保护 访问property的accessor&lt;/li&gt;
+&lt;li&gt;mutex lock ( &lt;em&gt;mut&lt;/em&gt; ually  &lt;em&gt;ex&lt;/em&gt; clusive) 互斥锁 —— 在任一时刻，只能有一个线程访问该对象&lt;/li&gt;
+&lt;li&gt;默认值是atomic；atomic更安全，但降低程序运行速度，nonatomic提高效率&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果复制的是包含immutable对象的实例变量 → 没有必要把 immutable对象也复制一遍，直接复制其引用就足够了（之后的修改不会影响到immutable对象本身）&lt;/p&gt;
+&lt;h3 id=&quot;Archiving&quot;&gt;&lt;a href=&quot;#Archiving&quot; class=&quot;headerlink&quot; title=&quot;Archiving&quot;&gt;&lt;/a&gt;Archiving&lt;/h3&gt;&lt;p&gt;对象归档：the process of saving one or more objects in a format so that they can later be restored → 即将对象写入文件中&lt;/p&gt;
+&lt;p&gt;两种方式：property list (属性列表，即.plist文件) 和 key-valued coding (KVC机制) —— &lt;a href=&quot;http://zhangbin.cc/2012/08/16/kvc-kvo/&quot; title=&quot;KVC和KVO&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;KVC和KVO&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Key-value coding is a mechanism for &lt;strong&gt;accessing an object’s properties indirectly&lt;/strong&gt;, using strings to identify properties, rather than through invocation of an accessor method or accessing them directly through instance variables.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;XML Property List&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;NSString, NSDictionary, NSArray, NSDate, NSData, or NSNumber类的对象可以使用writeToFile:atomically:方法将对象写入文件中&lt;/li&gt;
+&lt;li&gt;atomically:参数取值YES/NO；YES——先写进一个临时备份文件，全部完成后再移入目标文件中，防止意外情况（system crash等）对plist文件可能造成的损害&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;将plist文件的内容读入程序中：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;返回dictionary：dictionaryWithContentsOfFile: 方法&lt;/li&gt;
+&lt;li&gt;返回array：arrayWithContentsOfFile:方法&lt;/li&gt;
+&lt;li&gt;返回data：dataWithContentsOfFile:方法&lt;/li&gt;
+&lt;li&gt;返回string：stringWithContentsOfFile:方法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;更灵活的保存方式——NSKeyedArchiver class——任何类型的objects&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对应的读取方式——NSKeyedUnarchiver class&lt;/li&gt;
+&lt;li&gt;需要在class中定义encodeWithCoder:方法（如何归档，即encode）and initWithCoder:方法（如何解档，即decode），遵守&lt;code&gt;&amp;lt;NSCoding&amp;gt;&lt;/code&gt;协议&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Using &lt;em&gt;NSData&lt;/em&gt; to Create Custom Archives —— 将多种objects收集起来保存到一个文件&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用initForWritingWithMutableData:方法从NSData对象创建NSKeyedArchiver对象&lt;/li&gt;
+&lt;li&gt;归档的objects对应所属的class都要实现各自的encoder和decoder方法&lt;/li&gt;
+&lt;li&gt;使用finishEncoding方法结束归档&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;使用归档进行deep copy&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You don’t need to use a file for this process; the archiving and unarchiving process can all take place in memory. ( buffer )&lt;/li&gt;
+&lt;li&gt;不用遵守NSCopying协议&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;chapter 18-19&lt;/p&gt;
+&lt;h3 id=&quot;Copy-Objects&quot;&gt;&lt;a href=&quot;#Copy-Objects&quot; class=&quot;headerlink&quot; title=&quot;Copy Objects&quot;&gt;&lt;/a&gt;Copy Objects&lt;/h3&gt;&lt;p&gt;复制对象 → Foundation中的方法：copy和mutableCopy&lt;/p&gt;
+&lt;p&gt;protocol：&lt;code&gt;&amp;lt;NSCopying&amp;gt; , &amp;lt;NSMutableCopying&amp;gt;&lt;/code&gt;→ 在自己写的class中使用&lt;/p&gt;
+&lt;p&gt;mutable复制不要求object是mutable；immutable不要求object是immutable&lt;br&gt;
+    
+    </summary>
+    
+      <category term="技术学习" scheme="http://wut0719.github.io/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Objective-C" scheme="http://wut0719.github.io/tags/Objective-C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PiOC学习笔记07——Foundation框架基础1</title>
+    <link href="http://wut0719.github.io/2014/08/30/PiOC07/"/>
+    <id>http://wut0719.github.io/2014/08/30/PiOC07/</id>
+    <published>2014-08-29T16:00:00.000Z</published>
+    <updated>2016-03-12T13:52:32.000Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;PART-II-——-Foundation-Framework&quot;&gt;&lt;a href=&quot;#PART-II-——-Foundation-Framework&quot; class=&quot;headerlink&quot; title=&quot;PART II —— Foundation Framework&quot;&gt;&lt;/a&gt;PART II —— Foundation Framework&lt;/h2&gt;&lt;p&gt;Chapter 14-15&lt;/p&gt;
+&lt;h4 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;a &lt;strong&gt;framework&lt;/strong&gt; is &lt;strong&gt;a collection of classes, methods, functions and documentation&lt;/strong&gt; logically grouped together to make developing programs easier.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Foundation framework&lt;/strong&gt; —— provides the base of foundation for all your program development：numbers, strings, arrays, dictionaries, and sets&lt;/li&gt;
+&lt;li&gt;Application Kit framework —— an extensive collection of classes and methods to develop interactive graphical applications：texts, menus, toolbars, tables, …&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cocoa&lt;/strong&gt; (OS X)环境包括Foundation framework、the Application Kit framework 和 Core Data&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cocoa Touch&lt;/strong&gt; (iOS)环境包括Foundation、Core Data 和 UIKit framework&lt;/li&gt;
+&lt;li&gt;官方提供的Foundation Documentation&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h4 id=&quot;数字对象-—-NSNumber&quot;&gt;&lt;a href=&quot;#数字对象-—-NSNumber&quot; class=&quot;headerlink&quot; title=&quot;数字对象 — NSNumber&quot;&gt;&lt;/a&gt;数字对象 — NSNumber&lt;/h4&gt;&lt;/li&gt;
+&lt;li&gt;Xcode 5 新特性——“modules” can help speed up compilation time as well as help to avoid name conflicts between different libraries&lt;ul&gt;
+&lt;li&gt;Modules相当于将框架进行了封装，然后加入在实际编译之时加入了一个用来存放已编译添加过的Modules列表&lt;a href=&quot;http://www.cocoachina.com/ios/20131106/7308.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;1&lt;/a&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;All number objects must be newly created. You cannot change the value of a previously created NSNumber object. &lt;em&gt;immutable&lt;/em&gt;&lt;ul&gt;
+&lt;li&gt;numberWithInt: → intValue → %i&lt;/li&gt;
+&lt;li&gt;numberWithInteger： → integerValue → %li&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;字符串对象-—-NSString&quot;&gt;&lt;a href=&quot;#字符串对象-—-NSString&quot; class=&quot;headerlink&quot; title=&quot;字符串对象 — NSString&quot;&gt;&lt;/a&gt;字符串对象 — NSString&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;objects(NSString….) → %@&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;description&lt;/strong&gt;方法：使用%@格式化输出自己写的class的对象；默认显示class名和objects的内存地址，override就可以修改其显示内容 → good debugging tool&lt;/li&gt;
+&lt;li&gt;NSString对象 → immutable&lt;ul&gt;
+&lt;li&gt;但是指向对象的引用可以更改&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;NSMutableString对象 → mutable&lt;/li&gt;
+&lt;li&gt;stringWithString: → 复制字符串的内容，创建新的NSString对象 ； “=” →复制指向对象的引用，不创建新对象&lt;/li&gt;
+&lt;li&gt;caseInsensitiveCompare: → 不区分大小写的比较&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;NSRange&lt;/strong&gt;&lt;ul&gt;
+&lt;li&gt;一个C结构体的别名，包含location和length两个元素（类型NSUInteger）&lt;/li&gt;
+&lt;li&gt;字符串中的location从0开始&lt;/li&gt;
+&lt;li&gt;创建一个NSRange：NSMakeRange(location, length)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;数组对象-—-NSArray&quot;&gt;&lt;a href=&quot;#数组对象-—-NSArray&quot; class=&quot;headerlink&quot; title=&quot;数组对象 — NSArray&quot;&gt;&lt;/a&gt;数组对象 — NSArray&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;an ordered collection of &lt;strong&gt;objects&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;immutable (NSArray) and mutable (NSMutableArray, subclass of NSArray)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;[NSArray arrayWithObjects: elem1,…,nil];&lt;/code&gt;等价于 &lt;code&gt;@[elem1, elem2, …]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;array[index]&lt;/code&gt; 等价于&lt;code&gt;[array objectAtIndex:index]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;array[index] = object&lt;/code&gt; 等价于 &lt;code&gt;[array setObject: object forIndex: index]&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;for each element in the array, NSLog uses the description method from the class the element belongs to&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;利用复杂算法处理大量的数据数组，c语言的方法更好&lt;/li&gt;
+&lt;li&gt;property的attributes    (copy, nonatomic,…)&lt;ul&gt;
+&lt;li&gt;copy：make a copy of the instance variable in the setter method；default是not copy&lt;/li&gt;
+&lt;li&gt;nonatomic：don’t need to worry about race conditions that could occur from multiple threads trying to access the instance variable at the same time&lt;/li&gt;
+&lt;li&gt;strong：make an additional reference to the object whenever the setter method is used. Influence the life span of the object.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;初始化（init，initWith……）方法的返回值类型使用instancetype，便于其subclass使用：编译器会根据receiver的类型确定方法的返回值类型&lt;/li&gt;
+&lt;li&gt;fast enumeration ：for（variable in array）{……}&lt;/li&gt;
+&lt;li&gt;enumerateObjectUsingBlock&lt;/li&gt;
+&lt;li&gt;identical object → objects with the same location in memory&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;NSComparator&lt;/em&gt; → &lt;code&gt;typedef NSComparisonResult (^NSComparator)(id obj1, id obj2);&lt;/code&gt;&lt;ul&gt;
+&lt;li&gt;NSComparator is a block that takes two objects as its arguments and that returns a value of type NSComparisonResult.&lt;/li&gt;
+&lt;li&gt;使用block可以提速（多线程）&lt;/li&gt;
+&lt;li&gt;don’t have to add a comparison method to the class whose objects are being compared&lt;/li&gt;
+&lt;li&gt;if you want to change the way they are compared, you can do it directly in the method (block), which means you don’t have to change original class.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;NSValue class ： 结构体 →wrap→ 对象；对象 →unwrap→ 结构体&lt;ul&gt;
+&lt;li&gt;CGPoint, CGSize, CGRect 等是结构体而非对象，不能直接放入array中&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;字典对象-—-NSDictionary&quot;&gt;&lt;a href=&quot;#字典对象-—-NSDictionary&quot; class=&quot;headerlink&quot; title=&quot;字典对象 — NSDictionary&quot;&gt;&lt;/a&gt;字典对象 — NSDictionary&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;key must be unique, but can be of any type object; often is string&lt;br&gt;value can also be of any type object, but not nil.&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;dict[key]&lt;/code&gt; 等价于&lt;code&gt;[dict objectForKey: key]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dict[key] = object&lt;/code&gt;等价于 &lt;code&gt;[dict setObject: object forKey: key]&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;Set-Objects&quot;&gt;&lt;a href=&quot;#Set-Objects&quot; class=&quot;headerlink&quot; title=&quot;Set Objects&quot;&gt;&lt;/a&gt;Set Objects&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;a collection of unique object&lt;/li&gt;
+&lt;li&gt;NSSet, NSMutableSet, NSIndexSet, NSCountedSet, …&lt;/li&gt;
+&lt;li&gt;包含的一些操作：&lt;ul&gt;
+&lt;li&gt;searching, adding, and removing members (mutable sets); comparing two sets; and finding the intersection(交集) and union(并集) of two sets.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;NSIndexSet&lt;/em&gt; ：store ordered indexes into some other data structure, typically an array&lt;ul&gt;
+&lt;li&gt;只有immutable，没有mutable的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;PART-II-——-Foundation-Framework&quot;&gt;&lt;a href=&quot;#PART-II-——-Foundation-Framework&quot; class=&quot;headerlink&quot; title=&quot;PART II —— Foundation Framework&quot;&gt;&lt;/a&gt;PART II —— Foundation Framework&lt;/h2&gt;&lt;p&gt;Chapter 14-15&lt;/p&gt;
+&lt;h4 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;a &lt;strong&gt;framework&lt;/strong&gt; is &lt;strong&gt;a collection of classes, methods, functions and documentation&lt;/strong&gt; logically grouped together to make developing programs easier.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Foundation framework&lt;/strong&gt; —— provides the base of foundation for all your program development：numbers, strings, arrays, dictionaries, and sets&lt;/li&gt;
+&lt;li&gt;Application Kit framework —— an extensive collection of classes and methods to develop interactive graphical applications：texts, menus, toolbars, tables, …&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cocoa&lt;/strong&gt; (OS X)环境包括Foundation framework、the Application Kit framework 和 Core Data&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cocoa Touch&lt;/strong&gt; (iOS)环境包括Foundation、Core Data 和 UIKit framework&lt;/li&gt;
+&lt;li&gt;官方提供的Foundation Documentation
+    
+    </summary>
+    
+      <category term="技术学习" scheme="http://wut0719.github.io/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Objective-C" scheme="http://wut0719.github.io/tags/Objective-C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PiOC学习笔记06—— Preprocessor</title>
+    <link href="http://wut0719.github.io/2014/08/27/PiOC06/"/>
+    <id>http://wut0719.github.io/2014/08/27/PiOC06/</id>
+    <published>2014-08-26T16:00:00.000Z</published>
+    <updated>2016-03-12T13:52:32.000Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;The-Preprocessor&quot;&gt;&lt;a href=&quot;#The-Preprocessor&quot; class=&quot;headerlink&quot; title=&quot;The Preprocessor&quot;&gt;&lt;/a&gt;The Preprocessor&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;从语言上定制Objective-C，使其适应自己的编程风格或特定的编程应用&lt;/li&gt;
+&lt;li&gt;是编译过程的一部分，识别散布在程序中的特定语句&lt;/li&gt;
+&lt;li&gt;“#”开头&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h3 id=&quot;define&quot;&gt;&lt;a href=&quot;#define&quot; class=&quot;headerlink&quot; title=&quot;#define&quot;&gt;&lt;/a&gt;#define&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;给符号名称指派程序常量（包括但不限于）&lt;/li&gt;
+&lt;li&gt;a defined name is not a variable; 字母全部大写&lt;/li&gt;
+&lt;li&gt;often placed toward the beginning of the program, after #import or #include, but not required; must be placed &lt;strong&gt;before it is referenced&lt;/strong&gt; by the program.&lt;/li&gt;
+&lt;li&gt;more than a constant value: expression, “;”(所以不要用“;”结尾), 逻辑运算符, …&lt;ul&gt;
+&lt;li&gt;Careful：使用#define重新定义底层语言语法的行为不是好习惯（会让人费解）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;在#define语句中可以使用其他#define（不分前后）定义的符号名称&lt;/li&gt;
+&lt;li&gt;good use of #define often reduces the need for comments&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;macro&lt;/strong&gt; 宏——常用带一个或多个参数的定义；&lt;ul&gt;
+&lt;li&gt;syntax——#define NAME(参数) （表达式(参数));  //参数和表达式都要用（）括起来，确保完整替换&lt;/li&gt;
+&lt;li&gt;简化表达式的编写&lt;/li&gt;
+&lt;li&gt;macro中也可以使用其他macro&lt;h3 id=&quot;import&quot;&gt;&lt;a href=&quot;#import&quot; class=&quot;headerlink&quot; title=&quot;#import&quot;&gt;&lt;/a&gt;#import&lt;/h3&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;collect all your definitions into a separate file; import it and you can use&lt;/li&gt;
+&lt;li&gt;(in Xcode 5) “@import UIKit;” &lt;strong&gt;module&lt;/strong&gt; (new feature)&lt;/li&gt;
+&lt;li&gt;条件编译 Conditional Compilation&lt;/li&gt;
+&lt;li&gt;often used to create one program that can be compiled to run on different computer systems (for example, an iPhone versus an iPad)&lt;/li&gt;
+&lt;li&gt;switch on or off various statements in the program&lt;h3 id=&quot;条件控制语句&quot;&gt;&lt;a href=&quot;#条件控制语句&quot; class=&quot;headerlink&quot; title=&quot;条件控制语句&quot;&gt;&lt;/a&gt;条件控制语句&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;#ifdef，#endif，#else，#ifndef 语句&lt;ul&gt;
+&lt;li&gt;检查某name是否已预编译（判断机型，系统，是否是debug状态……）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;#ifndef 与#ifdef 功能相同，条件相反&lt;/li&gt;
+&lt;li&gt;if，#elif 语句——更加通用的条件编译控制&lt;ul&gt;
+&lt;li&gt;test whether a constant expression evaluates to nonzero.是就执行后面语句直到#else、#elif或#endif；否就直接跳过&lt;/li&gt;
+&lt;li&gt;#if defined (name) 与 #ifdef name 等价&lt;/li&gt;
+&lt;li&gt;添加注释的新方法：“#if 0 …注释… #endif”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;#undef 语句——remove the definition of a particular name :“#undef name”&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;The-Preprocessor&quot;&gt;&lt;a href=&quot;#The-Preprocessor&quot; class=&quot;headerlink&quot; title=&quot;The Preprocessor&quot;&gt;&lt;/a&gt;The Preprocessor&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;从语言上定制Objective-C，使其适应自己的编程风格或特定的编程应用&lt;/li&gt;
+&lt;li&gt;是编译过程的一部分，识别散布在程序中的特定语句&lt;/li&gt;
+&lt;li&gt;“#”开头
+    
+    </summary>
+    
+      <category term="技术学习" scheme="http://wut0719.github.io/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Objective-C" scheme="http://wut0719.github.io/tags/Objective-C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PiOC学习笔记05——Category和Protocol</title>
+    <link href="http://wut0719.github.io/2014/08/27/PiOC05/"/>
+    <id>http://wut0719.github.io/2014/08/27/PiOC05/</id>
+    <published>2014-08-26T16:00:00.000Z</published>
+    <updated>2016-03-12T13:52:32.000Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;Chapter-11-Categories-and-Protocols&quot;&gt;&lt;a href=&quot;#Chapter-11-Categories-and-Protocols&quot; class=&quot;headerlink&quot; title=&quot;Chapter 11 Categories and Protocols&quot;&gt;&lt;/a&gt;Chapter 11 Categories and Protocols&lt;/h2&gt;&lt;h3 id=&quot;主要内容：&quot;&gt;&lt;a href=&quot;#主要内容：&quot; class=&quot;headerlink&quot; title=&quot;主要内容：&quot;&gt;&lt;/a&gt;主要内容：&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Categories&lt;/li&gt;
+&lt;li&gt;Protocols&lt;h3 id=&quot;Categories&quot;&gt;&lt;a href=&quot;#Categories&quot; class=&quot;headerlink&quot; title=&quot;Categories&quot;&gt;&lt;/a&gt;Categories&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;将类的定义模块化到相关方法的组或分类中&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;扩展现有类的定义而无需获取源代码，也不用创建子类&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;syntax:&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;must import the original interface section (unless you incorporate the new category directly into the original (.h) header file)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;@interface ClassName (CategoryName)&lt;ul&gt;
+&lt;li&gt;no superclass; no properties; 加入的methods的声明&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;@implementation部分：category中的方法可以与@interface部分的方法放在同一个@implementation部分里实现，也可以单独在@implementation ClassName (CategoryName)部分里实现&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Class Extensions—— &lt;strong&gt;a category without a name&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;extend the class by adding &lt;strong&gt;additional instance variables and properties&lt;/strong&gt; (not allowed for named categories)&lt;/li&gt;
+&lt;li&gt;位于.m文件中，@implementation部分之前&lt;/li&gt;
+&lt;li&gt;相应的@implementation部分在class的@implementation部分中，不是独立的&lt;/li&gt;
+&lt;li&gt;Useful——“private”方法（仅在implementation部分使用的方法；不用在class的@interface（.h）中声明，外界看不到），但是如果事先得知方法名，仍然可以调用&lt;/li&gt;
+&lt;li&gt;※ 如果有独立的category模块，在其中使用extensions里的方法，也需要在.m文件中添加extension的声明&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在category中可以override类中的方法，不过是不好的习惯 → 如有override方法的需求，创建subclass更好&lt;/p&gt;
+&lt;p&gt;category的数目没有限制，如果一个方法在多个category中都有定义，不会指定是哪个&lt;/p&gt;
+&lt;p&gt;通过category给class增加新方法不仅会影响class，也会影响其subclass&lt;/p&gt;
+&lt;p&gt;加入新方法可能与class的原始设计或意图相冲突&lt;/p&gt;
+&lt;p&gt;object/category 命名对必须是唯一的（在给定的Objective-C名称空间中）→ 潜在的麻烦：Objective-C名称空间为程序代码和所有libraries、frameworks 和 plug-ins所共享。&lt;/p&gt;
+&lt;h3 id=&quot;Protocols-and-Delegation&quot;&gt;&lt;a href=&quot;#Protocols-and-Delegation&quot; class=&quot;headerlink&quot; title=&quot;Protocols and Delegation&quot;&gt;&lt;/a&gt;Protocols and Delegation&lt;/h3&gt;&lt;p&gt;protocol —— a list of methods that is shared &lt;strong&gt;among classes&lt;/strong&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;these methods do not have corresponding implementations ；需要别人（使用者）在自己的class中去实现&lt;/li&gt;
+&lt;li&gt;通常有文档documentation说明&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;protocol中的方法有些是可选的，有些是必须实现的（可以都是可选的或都是必须实现的）：实现protocol中的方法称为遵守（conform to）或采用（adopt）这项协议&lt;/p&gt;
+&lt;p&gt;syntax：在.h文件中&lt;br&gt;&lt;figure class=&quot;highlight objc&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;@protocol&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;ProtocolName&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; 声明方法（与&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;@interface&lt;/span&gt;相同）&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;在&lt;span class=&quot;keyword&quot;&gt;@optional&lt;/span&gt;之前声明的是必须实现的方法，其后声明的方法都是可选的（可以通过@require来再列出必须实现的方法）&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;@end&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;br&gt;在class中使用protocol：&lt;br&gt;&lt;code&gt;@interface ClassName &amp;lt; ProtocolName1, ProtocolName2,… &amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;在class中声明的protocol不必在其@implementation部分中实现；但是提醒其他人遵守protocol所要实现的方法&lt;/p&gt;
+&lt;p&gt;class中遵守的protocol，其subclass也遵守（尽管并不意味着能够在subclass中正确地实现）&lt;/p&gt;
+&lt;p&gt;protocol不依赖于class，任何class都可以遵守之而无需继承&lt;/p&gt;
+&lt;p&gt;编译器检查变量的一致性：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;id currentObject;&lt;/li&gt;
+&lt;li&gt;对于currentObject接收的对象，编译器都会检查其是否遵守指定的protocol&lt;/li&gt;
+&lt;li&gt;而对于currentObject本身，编译器不会检查（原因：id类型）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;扩充已有protocol：&lt;code&gt;@protocol NewProtocolName &amp;lt;OldProtocolName&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;遵守这个NewProtocol不仅需要实现其自定的方法，还有实现原来Protocol的方法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;category和extension都可以可以遵守protocol&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;protocol命名必须唯一&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&quot;delegation&quot;&gt;&lt;a href=&quot;#delegation&quot; class=&quot;headerlink&quot; title=&quot;delegation&quot;&gt;&lt;/a&gt;delegation&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;如果把protocol看作是两个class之间的interface definition，那么定义protocol的class可以看作是将定义在protocol中的方法委托（delegate）给另一个class去实现&lt;/li&gt;
+&lt;li&gt;class可以更加抽象，具体工作（对具体事件的响应和处理特定参数…）通过protocol交给the delegate class实现&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;informal-protocol&quot;&gt;&lt;a href=&quot;#informal-protocol&quot; class=&quot;headerlink&quot; title=&quot;informal protocol&quot;&gt;&lt;/a&gt;informal protocol&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;实质是一个category，定义一组方法但不实现&lt;/li&gt;
+&lt;li&gt;通常由root class（比如NSObject）定义；也被称为抽象协议（abstract protocol）&lt;/li&gt;
+&lt;li&gt;辅助文档说明和模块化方法&lt;/li&gt;
+&lt;li&gt;这些方法要在subclass中实现，需要在自己的@interface部分重新声明，然后再实现&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;对遵守formal protocol的对象的检查，编译时和运行时都会进行；对informal protocol，对象不必全都实现其方法，编译时不检查，运行时可以通过方法respondsToSelector:进行检查（手动）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;在Objective-C 2.0中使用@optional来代替informal protocol的使用&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;合成对象Composite-Objects&quot;&gt;&lt;a href=&quot;#合成对象Composite-Objects&quot; class=&quot;headerlink&quot; title=&quot;合成对象Composite Objects&quot;&gt;&lt;/a&gt;合成对象Composite Objects&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;其class中包含其他class的一个或多个对象&lt;/li&gt;
+&lt;li&gt;subclass的麻烦：superclass的一些方法在subclass中并不适用（但是都一并继承）；必须确保superclass的方法都能在subclass中正确使用；对superclass的修改同样会影响subclass（可能造成意外状况）&lt;/li&gt;
+&lt;li&gt;替代方案：定义一个包含所需要扩展的实例变量（通过对象）的新class，然后在新class中只用定义合适的方法即可&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果以这种方式定义新class的对象，alloc和init方法只会创建新class的对象而不会为存储在实例变量中的对象分配空间 → 需要override init方法或编写新的initWith……方法进行此操作（rect = [Rectangle alloc];）&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Chapter-11-Categories-and-Protocols&quot;&gt;&lt;a href=&quot;#Chapter-11-Categories-and-Protocols&quot; class=&quot;headerlink&quot; title=&quot;Chapter 11 Categories and Protocols&quot;&gt;&lt;/a&gt;Chapter 11 Categories and Protocols&lt;/h2&gt;&lt;h3 id=&quot;主要内容：&quot;&gt;&lt;a href=&quot;#主要内容：&quot; class=&quot;headerlink&quot; title=&quot;主要内容：&quot;&gt;&lt;/a&gt;主要内容：&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Categories&lt;/li&gt;
+&lt;li&gt;Protocols&lt;h3 id=&quot;Categories&quot;&gt;&lt;a href=&quot;#Categories&quot; class=&quot;headerlink&quot; title=&quot;Categories&quot;&gt;&lt;/a&gt;Categories&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;将类的定义模块化到相关方法的组或分类中&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;扩展现有类的定义而无需获取源代码，也不用创建子类&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术学习" scheme="http://wut0719.github.io/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Objective-C" scheme="http://wut0719.github.io/tags/Objective-C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PiOC学习笔记04——变量和数据类型</title>
+    <link href="http://wut0719.github.io/2014/08/26/PiOC04/"/>
+    <id>http://wut0719.github.io/2014/08/26/PiOC04/</id>
+    <published>2014-08-25T16:00:00.000Z</published>
+    <updated>2016-03-12T13:52:32.000Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;Chapter-10-More-on-Variables-and-Data-Types&quot;&gt;&lt;a href=&quot;#Chapter-10-More-on-Variables-and-Data-Types&quot; class=&quot;headerlink&quot; title=&quot;Chapter 10 More on Variables and Data Types&quot;&gt;&lt;/a&gt;Chapter 10 More on Variables and Data Types&lt;/h2&gt;&lt;h3 id=&quot;主要内容：&quot;&gt;&lt;a href=&quot;#主要内容：&quot; class=&quot;headerlink&quot; title=&quot;主要内容：&quot;&gt;&lt;/a&gt;主要内容：&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;variable scope&lt;/li&gt;
+&lt;li&gt;initialization methods for objects&lt;/li&gt;
+&lt;li&gt;data types in more detail ——enum枚举&lt;h3 id=&quot;初始化&quot;&gt;&lt;a href=&quot;#初始化&quot; class=&quot;headerlink&quot; title=&quot;初始化&quot;&gt;&lt;/a&gt;初始化&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;initialization methods：初始化+赋初值&lt;/li&gt;
+&lt;li&gt;override init方法的“模板”syntax :&lt;figure class=&quot;highlight objc&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;- (instancetype) init  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt; = [&lt;span class=&quot;keyword&quot;&gt;super&lt;/span&gt; init];  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;) &amp;#123;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;span class=&quot;comment&quot;&gt;// Initialization code here.  &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&amp;#125;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;（关键字）特殊类型 instancetype：the return type from the init method will be the same class as the type of object it is initializing (that is, the receiver of the init message).&lt;/li&gt;
+&lt;li&gt;self = [super init]; //首先调用父类的初始化方法，确保所有子类继承的实例变量能够正确初始化；初始化方法可以改变对象在内存中的地址，所以要把返回值赋给对象&lt;/li&gt;
+&lt;li&gt;if (self) //self非空，表示父类初始化方法运行正常，可以进行下一步操作（子类特有的初始化方法）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;多个初始化方法的情形：应该指定一个初始化方法（通常为参数最多的一个，一般名为initWith……）作为其余初始化方法的参考（即其他方法使用此指定方法），对子类override init方法也很重要。&lt;/p&gt;
+&lt;p&gt;当程序运行时，初始化消息会发送给所有的类（继承序列上的）：父类先于子类接收，每个类只接收一次，所有类最先接收到的消息必定是初始化消息。&lt;/p&gt;
+&lt;h3 id=&quot;变量作用域&quot;&gt;&lt;a href=&quot;#变量作用域&quot; class=&quot;headerlink&quot; title=&quot;变量作用域&quot;&gt;&lt;/a&gt;变量作用域&lt;/h3&gt;&lt;p&gt;module 模块 ：any number of method or function definitions contained within &lt;strong&gt;a single source file&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;use an underscore(_) as the leading character for an instance variable&lt;/p&gt;
+&lt;p&gt;使用“@synthesize 属性名 = 对应实例变量名”（_属性名）→ 实例变量也能获得accessor methods，但是使用实例变量是依然要用 &lt;em&gt;实例变量名&lt;/em&gt; 或 &lt;em&gt;self.属性名&lt;/em&gt;（better）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;private → 子类只有通过继承的accessor方法才能访问&lt;/li&gt;
+&lt;li&gt;在@interface中声明的@property，会在@implementation部分中自动添加对应实例变量(加_)而不需要再写@synthesize语句&lt;/li&gt;
+&lt;li&gt;加入@synthesize语句则可以直接使用变量（不加_，也不用self.）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;全局变量 Global variables&lt;/strong&gt;：通常首字母使用小写g，以向读者表明这是全局变量&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;外部external global variables&lt;/strong&gt;：用关键字extern声明 → &lt;code&gt;extern int gGlobalVar;&lt;/code&gt;  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;其他module可以通过此种声明形式来访问变量gGlobalVar（先声明后访问）&lt;/li&gt;
+&lt;li&gt;必须在source file中定义global variables（不能在extern声明语句中）；此文件使用此global variable不用extern声明&lt;/li&gt;
+&lt;li&gt;extern声明可以（方法内/外）有多次，但是定义只能有一次&lt;/li&gt;
+&lt;li&gt;较好的使用方式：&lt;ul&gt;
+&lt;li&gt;如果有多个方法需要访问此global variable，在文件的前面使用一次extern声明（简化code）&lt;/li&gt;
+&lt;li&gt;如果只有一个或少量方法需要访问，在每个方法内单独使用extern声明（结构清晰）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;静态变量 Static variables&lt;/strong&gt;：用关键字static定义 → &lt;code&gt;static int gGlobalVar = 0;&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;global, but not external ——作用域限定在定义的module内&lt;/li&gt;
+&lt;li&gt;可以供类方法使用的变量（类方法不能使用实例变量）&lt;ul&gt;
+&lt;li&gt;a simple example is a class allocator method that you want to keep track of the number of objects it has allocated.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;不要override alloc方法（与内存操作有关），而是在其基础上扩展功能&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;枚举类型&quot;&gt;&lt;a href=&quot;#枚举类型&quot; class=&quot;headerlink&quot; title=&quot;枚举类型&quot;&gt;&lt;/a&gt;枚举类型&lt;/h3&gt;&lt;p&gt;定义枚举类型的syntax：&lt;code&gt;enum 名称 {Identifier 1, Identifier 2, Identifier 3, …};&lt;/code&gt;&lt;br&gt;使用：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;声明一个枚举类型的变量：“enum 枚举类型名 变量1, 变量2, …;”&lt;/li&gt;
+&lt;li&gt;枚举类型变量可赋值，可直接用于判断&lt;/li&gt;
+&lt;li&gt;理论上，枚举类型变量能接收的赋值仅限于枚举类型限定的Identifier&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;直接定义枚举类型变量：&lt;code&gt;enum { identifiers} 变量名;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;编译器&lt;/strong&gt;处理：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Identifier 1如果没有赋值则默认为整数0，赋值即为对应值&lt;/li&gt;
+&lt;li&gt;后面的Identifier，如果没有赋值，则自动设为前一个Identifier的值+1；赋值则为对应值&lt;/li&gt;
+&lt;li&gt;Identifiers之间可以共用一个值&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;枚举类型变量赋值给其他变量：对应Identifier所具有的int型常数&lt;/p&gt;
+&lt;p&gt;int型变量变量可以赋值给枚举类型变量：强制类型转换“(enum 枚举类型变量名)”&lt;/p&gt;
+&lt;p&gt;定义位置决定其作用域：在block内则限于block内使用；在文件开头则可在整个文件内使用&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;typedef语句&lt;/strong&gt;——提高变量定义的可读性&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;write the statement as if a variable of the desired type were being declared&lt;/li&gt;
+&lt;li&gt;在变量名的地方，用新的类型名替换之&lt;/li&gt;
+&lt;li&gt;in front of everything, place the keyword typedef&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;typedef enum {identifiers} newName;  //用newName直接声明变量&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&quot;数据类型转换&quot;&gt;&lt;a href=&quot;#数据类型转换&quot; class=&quot;headerlink&quot; title=&quot;数据类型转换&quot;&gt;&lt;/a&gt;数据类型转换&lt;/h3&gt;&lt;p&gt;简要关系&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;long double &amp;gt; double &amp;gt; float&lt;/li&gt;
+&lt;li&gt;_BOOL, char, short int, bitfield, enum → int&lt;/li&gt;
+&lt;li&gt;long long int &amp;gt; long int &amp;gt; int&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;强制类型转换符&lt;br&gt;位运算符 Bit Operators&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Chapter-10-More-on-Variables-and-Data-Types&quot;&gt;&lt;a href=&quot;#Chapter-10-More-on-Variables-and-Data-Types&quot; class=&quot;headerlink&quot; title=&quot;Chapter 10 More on Variables and Data Types&quot;&gt;&lt;/a&gt;Chapter 10 More on Variables and Data Types&lt;/h2&gt;&lt;h3 id=&quot;主要内容：&quot;&gt;&lt;a href=&quot;#主要内容：&quot; class=&quot;headerlink&quot; title=&quot;主要内容：&quot;&gt;&lt;/a&gt;主要内容：&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;variable scope&lt;/li&gt;
+&lt;li&gt;initialization methods for objects&lt;/li&gt;
+&lt;li&gt;data types in more detail ——enum枚举&lt;h3 id=&quot;初始化&quot;&gt;&lt;a href=&quot;#初始化&quot; class=&quot;headerlink&quot; title=&quot;初始化&quot;&gt;&lt;/a&gt;初始化&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;initialization methods：初始化+赋初值&lt;/li&gt;
+&lt;li&gt;override init方法的“模板”syntax :&lt;figure class=&quot;highlight objc&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;- (instancetype) init  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt; = [&lt;span class=&quot;keyword&quot;&gt;super&lt;/span&gt; init];  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;) &amp;#123;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;span class=&quot;comment&quot;&gt;// Initialization code here.  &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&amp;#125;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="技术学习" scheme="http://wut0719.github.io/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Objective-C" scheme="http://wut0719.github.io/tags/Objective-C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PiOC学习笔记03——多态、动态绑定和动态类型</title>
+    <link href="http://wut0719.github.io/2014/08/25/PiOC03/"/>
+    <id>http://wut0719.github.io/2014/08/25/PiOC03/</id>
+    <published>2014-08-24T16:00:00.000Z</published>
+    <updated>2016-03-12T13:52:32.000Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;PART-I-——-The-Objective-C-Language-ch-9&quot;&gt;&lt;a href=&quot;#PART-I-——-The-Objective-C-Language-ch-9&quot; class=&quot;headerlink&quot; title=&quot;PART I —— The Objective-C Language (ch.9)&quot;&gt;&lt;/a&gt;PART I —— The Objective-C Language (ch.9)&lt;/h2&gt;&lt;h4 id=&quot;Polymorphism-多态&quot;&gt;&lt;a href=&quot;#Polymorphism-多态&quot; class=&quot;headerlink&quot; title=&quot;Polymorphism 多态&quot;&gt;&lt;/a&gt;Polymorphism 多态&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;同名的method，不同的class&lt;/li&gt;
+&lt;li&gt;运行时系统总是携带有关“对象属于哪个类”的信息 → This enables it to make key decisions at runtime instead of at compile time.&lt;/li&gt;
+&lt;li&gt;Each class definition encapsulates the code needed to respond to that particular method, and this makes it independent of the other class definitions.&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h4 id=&quot;Dynamic-Binding-and-the-id-Type-动态绑定和id类型（即dynamic-typing）&quot;&gt;&lt;a href=&quot;#Dynamic-Binding-and-the-id-Type-动态绑定和id类型（即dynamic-typing）&quot; class=&quot;headerlink&quot; title=&quot;Dynamic Binding and the id Type 动态绑定和id类型（即dynamic typing）&quot;&gt;&lt;/a&gt;Dynamic Binding and the id Type 动态绑定和id类型（即dynamic typing）&lt;/h4&gt;&lt;/li&gt;
+&lt;li&gt;During execution of the program, before the system sends the message to id type variable, it first checks the class of the object stored inside the variable.&lt;/li&gt;
+&lt;li&gt;When combined with polymorphism, dynamic binding and dynamic typing enable you to easily write code that can send the same message to objects from different classes.&lt;/li&gt;
+&lt;li&gt;id类型的某些错误（比如使用错误的方法），在编译时不会被发现，只有在运行时会导致程序崩溃&lt;/li&gt;
+&lt;li&gt;对id类型的对象不能使用点操作符（“.”）,编译器会报错&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;id类型作参数类型和返回值类型&lt;/strong&gt;&lt;ul&gt;
+&lt;li&gt;若某方法在一个class中使用基本数据类型作参数类型而在另一个class中使用对象作参数类型（返回值同理），当用id类型调用此方法（或传参）时，编译器会生成错误错误代码&lt;/li&gt;
+&lt;li&gt;但是若方法的参数类型（返回值类型）是不同class的对象，则用id类型时不会产生编译错误（原因：传递的时指向对象的引用）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Static typing 静态类型：定义一个变量用于存放特定class的对象&lt;/li&gt;
+&lt;li&gt;尽量使用static typing → ①便于编译器检查错误；②提高代码的可读性&lt;/li&gt;
+&lt;li&gt;NSObject类提供一些用于处理Dynamic types的方法&lt;/li&gt;
+&lt;li&gt;class-object（类对象）——generated with the class method（方法名为class）&lt;/li&gt;
+&lt;li&gt;selector 是 SEL类型的值——由@selector指令产生&lt;/li&gt;
+&lt;li&gt;根据class名或另一个对象生成类对象（class object），可以向它发送class消息&lt;ol&gt;
+&lt;li&gt;[class名 class];&lt;/li&gt;
+&lt;li&gt;[对象名 class];   //可以获知对象所属的class&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;@selector：生成SEL类型的值，可以保存到SEL类型的变量中&lt;ul&gt;
+&lt;li&gt;@selector(方法名)   //方法如果有参数，冒号要写，参数不用写&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;判断id类型对象能否执行某方法 respondsToSelector:@selector(…)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;使用-try处理异常&quot;&gt;&lt;a href=&quot;#使用-try处理异常&quot; class=&quot;headerlink&quot; title=&quot;使用@try处理异常&quot;&gt;&lt;/a&gt;使用@try处理异常&lt;/h3&gt;&lt;p&gt;Good programming practice dictate that you try to anticipate problems that can occur in your program.&lt;br&gt;syntax:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;@try block中运行正常，程序继续；若出现异常，则进入@catch block中执行语句，通常为记录错误信息，清理，结束程序&lt;/li&gt;
+&lt;li&gt;@finally block ：无论@try block中是否抛出异常（exception）都要执行的code，比如release/clean up resources like open sockets, open files, database locks, semaphore locks, and so on.&lt;ul&gt;
+&lt;li&gt;The finally block is the last, best chance to exit cleaning from an application that is about to crash.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;@throw：“@throw;” enables you to throw your own exception. → 让系统完成其余工作&lt;ul&gt;
+&lt;li&gt;可以抛出特定异常，或者处理@catch block中的异常&lt;/li&gt;
+&lt;li&gt;完成异常处理后（比如清理）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;可以使用多个@catch blocks处理不同类型的异常&lt;/li&gt;
+&lt;li&gt;It’s better to&lt;ul&gt;
+&lt;li&gt;test for errors before they occur rather than catch them&lt;/li&gt;
+&lt;li&gt;test for an error in a method and return some value as an error indicator than to throw an exception&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;If you catch an exception, you only do so with the intention of cleaning up and terminating your application.&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;PART-I-——-The-Objective-C-Language-ch-9&quot;&gt;&lt;a href=&quot;#PART-I-——-The-Objective-C-Language-ch-9&quot; class=&quot;headerlink&quot; title=&quot;PART I —— The Objective-C Language (ch.9)&quot;&gt;&lt;/a&gt;PART I —— The Objective-C Language (ch.9)&lt;/h2&gt;&lt;h4 id=&quot;Polymorphism-多态&quot;&gt;&lt;a href=&quot;#Polymorphism-多态&quot; class=&quot;headerlink&quot; title=&quot;Polymorphism 多态&quot;&gt;&lt;/a&gt;Polymorphism 多态&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;同名的method，不同的class&lt;/li&gt;
+&lt;li&gt;运行时系统总是携带有关“对象属于哪个类”的信息 → This enables it to make key decisions at runtime instead of at compile time.&lt;/li&gt;
+&lt;li&gt;Each class definition encapsulates the code needed to respond to that particular method, and this makes it independent of the other class definitions.
+    
+    </summary>
+    
+      <category term="技术学习" scheme="http://wut0719.github.io/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Objective-C" scheme="http://wut0719.github.io/tags/Objective-C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PiOC学习笔记——OC相关2</title>
+    <link href="http://wut0719.github.io/2014/08/24/PiOC02/"/>
+    <id>http://wut0719.github.io/2014/08/24/PiOC02/</id>
+    <published>2014-08-23T16:00:00.000Z</published>
+    <updated>2016-03-12T13:52:32.000Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;PART-I-——-The-Objective-C-Language-ch-5-8&quot;&gt;&lt;a href=&quot;#PART-I-——-The-Objective-C-Language-ch-5-8&quot; class=&quot;headerlink&quot; title=&quot;PART I —— The Objective-C Language (ch.5-8)&quot;&gt;&lt;/a&gt;PART I —— The Objective-C Language (ch.5-8)&lt;/h2&gt;&lt;p&gt;for循环过程：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Step1：index variable赋初值&lt;/li&gt;
+&lt;li&gt;Step2：循环条件判断  → 执行循环体前先做一次判断&lt;ul&gt;
+&lt;li&gt;true则执行循环体&lt;/li&gt;
+&lt;li&gt;false则直接跳出循环，继续程序&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Step3：计算更新index variable的表达式 loop expression&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;返回Step2&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;格式化字符串 %2i ——表示右端对齐的2位整数；左端对齐%-2i&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;scanf(格式化字符串,&amp;amp;变量)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;字符串是String类型，不是NSString对象（不加@）&lt;/li&gt;
+&lt;li&gt;第二个参数用于指定用户键入的值存储在哪里（“&amp;amp;变量”是指向变量内存空间的指针）&lt;/li&gt;
+&lt;li&gt;当使用scanf输入 &lt;em&gt;char型字符&lt;/em&gt; 时，最好在格式化字符串 &lt;em&gt;%c之前加个空格&lt;/em&gt; (“ %c”) —— 这样可以让scanf跳过“空白字符”（如回车，制表符……），避免读入不想要的字符&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;for循环的变体：多个index variables；fast enumerations快速遍历（ch.15）&lt;br&gt;for循环适合的情景：预先确定循环次数的循环；initial expression, looping expression, and looping condition都使用相同的变量&lt;/p&gt;
+&lt;p&gt;字符测试最好使用standard library提供的方法，避免内部表示问题&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;相关库文件：ctype.h&lt;/li&gt;
+&lt;li&gt;方法：islower(char ch)是否为小写；isupper(char ch)是否为大写；isdigit(char ch)是否为数字（0-9）……是则返回非0值，否则返回0（返回值类型int）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;条件运算符的一种特殊情形（non-ANSI extension）:   “condition?: expression”&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果condition的结果是真，则运算的值是计算condition的结果；若condition是假，则值为计算expression的结果&lt;/li&gt;
+&lt;li&gt;与“condition? condition: expression”对比：前者condition计算一次，后者condition计算两次&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Think of the &lt;strong&gt;interface file(.h文件)&lt;/strong&gt; as containing the &lt;strong&gt;public&lt;/strong&gt; information about a class—the information you share with the users of the class. In contrast, the &lt;strong&gt;implementation section(.m文件)&lt;/strong&gt; contains the &lt;strong&gt;private&lt;/strong&gt; information—the instance variables and the actual code.&lt;br&gt;(In fact, the code may actually be stored someplace else, such as in a framework or library.)&lt;/p&gt;
+&lt;p&gt;在objective-c 2.0中的新特性：自动生成setter和getter方法（统称accessor methods）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;首先要在interface部分使用@property声明属性（总是与实例变量重名，但非必须）&lt;/li&gt;
+&lt;li&gt;然后要在implementation部分使用@synthesize，给属性加上accessor methods&lt;/li&gt;
+&lt;li&gt;注：&lt;ul&gt;
+&lt;li&gt;优点：更有效率，也能更安全地运行在多核多线程环境中&lt;/li&gt;
+&lt;li&gt;如果省略@synthesize部分，编译器会自动创建一个相关联的实例变量，以“&lt;em&gt;属性名”为变量名(则@implementation部分中所有使用属性名的地方都要替换为“&lt;/em&gt;属性名”)&lt;/li&gt;
+&lt;li&gt;不要使用new, alloc, copy, init作为属性名的开头&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;当使用对象做为方法的参数时，参数类型是“（Class名 *）”（星号不可少）&lt;br&gt;返回对象（引用）时，接收的变量不用alloc和init而直接获取对象；对象的alloc和init已经在method的执行中完成。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;#import和@class&lt;/strong&gt;：在@interface部分使用@class告诉编译器这是一个class名，提高编译效率（不必导入整个文件），而如果要使用这个class中定义的属性和方法，需要在@implementation部分使用#import&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;特殊情形：若两个class彼此之间互相依赖，用#import会引发编译错误，要用@class&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;对象类型的实例变量不要用@synthesize合成（@synthesize自动生成的accessor方法只是复制指向对象的引用，而不是对象），单独写setter和getter，同样要注意复制对象&lt;br&gt;override：在subclass中对superclass的方法修改，方法名，参数，返回值类型都相同&lt;br&gt;多个class中override的方法，编译器选择在receiver所属的class中查找&lt;br&gt;使用subclass的情形？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;通过增加方法和（或）实例变量，扩展superclass的功能&lt;/li&gt;
+&lt;li&gt;对superclass进行细化（如在图形class的基础上细化得到矩形class、椭圆class……）&lt;/li&gt;
+&lt;li&gt;通过override改变class的default behavior&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;abstract class：仅仅是用于方便创建子类的类（定义实例变量和方法，但不会创建实例）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;abstract class有很多concrete subclasses，总称为簇（a class cluster）。这些子类是private的，不能直接访问，只能通过abstract class中定义的公共接口访问。创建对象也是使用abstract class，alloc和init由其concrete subclass解决，不用coder处理&lt;/li&gt;
+&lt;li&gt;举例：NSNumber……&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;PART-I-——-The-Objective-C-Language-ch-5-8&quot;&gt;&lt;a href=&quot;#PART-I-——-The-Objective-C-Language-ch-5-8&quot; class=&quot;headerlink&quot; title=&quot;PART I —— The Objective-C Language (ch.5-8)&quot;&gt;&lt;/a&gt;PART I —— The Objective-C Language (ch.5-8)&lt;/h2&gt;&lt;p&gt;for循环过程：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Step1：index variable赋初值&lt;/li&gt;
+&lt;li&gt;Step2：循环条件判断  → 执行循环体前先做一次判断&lt;ul&gt;
+&lt;li&gt;true则执行循环体&lt;/li&gt;
+&lt;li&gt;false则直接跳出循环，继续程序&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Step3：计算更新index variable的表达式 loop expression&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;返回Step2&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术学习" scheme="http://wut0719.github.io/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Objective-C" scheme="http://wut0719.github.io/tags/Objective-C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Programming in Objective-C 6th Edition学习笔记1</title>
+    <link href="http://wut0719.github.io/2014/08/23/PiOC01/"/>
+    <id>http://wut0719.github.io/2014/08/23/PiOC01/</id>
+    <published>2014-08-22T16:00:00.000Z</published>
+    <updated>2016-03-12T13:52:32.000Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;PART-I-——-The-Objective-C-Language（ch-2-4）&quot;&gt;&lt;a href=&quot;#PART-I-——-The-Objective-C-Language（ch-2-4）&quot; class=&quot;headerlink&quot; title=&quot;PART I —— The Objective-C Language（ch.2-4）&quot;&gt;&lt;/a&gt;PART I —— The Objective-C Language（ch.2-4）&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;在Obj-C中，一个class包含两部分：&lt;br&gt;@interface：继承关系，{实例变量}，方法声明&lt;br&gt;@implementation：@interface中声明的方法的实现代码&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;命名：&lt;ul&gt;
+&lt;li&gt;基础规则：&lt;ul&gt;
+&lt;li&gt;选择范围：下划线，字母(‘a’-‘z’, ‘A’-‘Z’)，数字0-9&lt;/li&gt;
+&lt;li&gt;不能以数字开头&lt;/li&gt;
+&lt;li&gt;不能选择关键字&lt;/li&gt;
+&lt;li&gt;Obj-C大小写敏感&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;好的原则：&lt;ul&gt;
+&lt;li&gt;class name 首字母大写&lt;/li&gt;
+&lt;li&gt;variable name和method name首字母小写&lt;/li&gt;
+&lt;li&gt;method name 以动词开头&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;创建对象的过程（三步走）&lt;ul&gt;
+&lt;li&gt;Step1：建立指向待新建对象的引用（对应class的类型，在Stack）&lt;/li&gt;
+&lt;li&gt;Step2：向class发送分配内存空间（Heap）的消息（alloc），返回相应的内存地址给变量，实现引用与对象的绑定&lt;/li&gt;
+&lt;li&gt;Step3：向对象发送初始化的消息（init），返回初始化后的可用对象&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Data Encapsulation 数据封装&lt;ul&gt;
+&lt;li&gt;class外的方法不能直接读写class中声明的instance variables，而是通过getters和setters方法（都在class中定义）来读和写 =&amp;gt;阻止意外访问&lt;/li&gt;
+&lt;li&gt;setters方法不需要返回值；getters方法一定要有返回值&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;一种特殊的数据类型(泛型) Type id&lt;ul&gt;
+&lt;li&gt;用于存储任何类型的对象，通用对象类型&lt;/li&gt;
+&lt;li&gt;The id type is the basis for very important features in Objective-C known as polymorphism and dynamic binding&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;PART-I-——-The-Objective-C-Language（ch-2-4）&quot;&gt;&lt;a href=&quot;#PART-I-——-The-Objective-C-Language（ch-2-4）&quot; class=&quot;headerlink&quot; title=&quot;PART I —— The Objective-C Language（ch.2-4）&quot;&gt;&lt;/a&gt;PART I —— The Objective-C Language（ch.2-4）&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;在Obj-C中，一个class包含两部分：&lt;br&gt;@interface：继承关系，{实例变量}，方法声明&lt;br&gt;@implementation：@interface中声明的方法的实现代码
+    
+    </summary>
+    
+      <category term="技术学习" scheme="http://wut0719.github.io/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Objective-C" scheme="http://wut0719.github.io/tags/Objective-C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>四地游记（上）</title>
+    <link href="http://wut0719.github.io/2014/04/15/%E5%9B%9B%E5%9C%B0%E6%B8%B8%E8%AE%B0%EF%BC%88%E4%B8%8A%EF%BC%89/"/>
+    <id>http://wut0719.github.io/2014/04/15/四地游记（上）/</id>
+    <published>2014-04-14T16:00:00.000Z</published>
+    <updated>2016-03-12T13:52:32.000Z</updated>
+    
+    <content type="html">&lt;p&gt;早有动笔的打算，只是出于懒的缘由一直没有真正开始。想来大学生活也已近尾声，总要留些记录，遂有此文。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;####上海·陆家嘴中心绿地&lt;/p&gt;
+&lt;p&gt;魔都是我步入大学以来出游的第一站，也是唯一一个两次到访的地方，仔细想想还真是奇妙。作为一个一般游人，一些外滩豫园三个球之类的大众景点也基本都逛了一圈，感受果然也跟流传的说法相似——不去后悔，去了更后悔。因为住处里复旦不远，于是顺便也去了一遭。两座高耸入云的大厦很是雄伟，不过也大煞风景，别的就没什么特殊之处了。在某校上学的一个极大的坏处就是很难去感受到其他学校的美。世博还没谢幕，正好也去凑回热闹，毕竟是一般游人嘛。入园还是很顺利，不过并没有游览多少场馆。虽然已经到了快完事的时节，但是热门场馆的队伍还是很恐怖的。最后还买了纪念品明信片，然后就一直放家里边吃灰。看来至少是起到了纪念的作用。第二次时间就更为仓促了，不过吃得很好（自我感觉）。&lt;/p&gt;
+&lt;p&gt;如果说有什么地方给我留下了最深的印象，我会选择陆家嘴中心绿地。我也不知道这名字对不对，至少印象当中是这样的。也许是放假的缘故罢，路人很少，显得格外安静。我就随便挑个长椅坐下来，正巧能看到夕阳的余晖透过高楼大厦的缝隙洒落其间。在这披挂着冷峻玻璃幕墙的高楼围绕之中，竟有这样一小块可爱而柔和的绿色草坪，更不必说还点缀了一个纯白膜结构的棚子。这景象给我一种很奇妙的触动，想来平时这里是怎样的车水马龙，又不知有多少生意往来，有多少尔虞我诈，可是今日却能如此之宁静，如此之平和，真是不知道该如何形容了。也许旅行的意义就在于这些不经意间的感动罢。&lt;/p&gt;
+&lt;p&gt;总而言之，上海至今给我留下的印象还都算不错。作为一个特大城市，这很不科学，当然可能只是我接触的时间实在太短，认识十分肤浅而已。&lt;/p&gt;
+&lt;p&gt;####南京·总统府&lt;/p&gt;
+&lt;p&gt;严格来说，这并不是我第一次来南京。很小的时候曾经来过，但是没有留下什么印象，毕竟年纪太小。这也并非完全是旅游，毕竟是打着社会实践的旗号。时间比较充足，所以玩得很随意，明孝陵，明故宫，南大，中山陵、南京博物院等等都逛了一圈。作为对岸的法定首都（不知道现在有没有改），确实有很多很多相关的印迹。明故宫很坑，虽然不要钱，但是也就剩了些石头基座，基本就没什么看头了。孝陵倒是很完整，导致后来去十三陵的时候不禁兴趣大减，毕竟结构都很类似，也就少了很多新奇之处。大屠杀纪念馆自然是不可不去，好玩的是，我们走错了路，阴差阳错从后门进去，平添许多诡异气氛。比较可惜的是，由于赶上暴雨的缘故，长江大桥没能去成。当然还有很多别的地方亦未涉足，都可以当作再来的理由。&lt;/p&gt;
+&lt;p&gt;单说一个印象最深的地方，我会选总统府。最初我对总统府的印象来自于历史课本上的一幅著名照片。想必有人一定会猜到，就是解放军占领总统府的那张照片。由于采用了仰视的角度，这张照片给我留下了总统府十分高大的形象。然而当自己亲身来到此地之时，有那么一瞬间是很失望的。一个人在看到自己原来心目中的巨大存在其实不过尔尔的时候，是很难不失望的。不过这失望也只维持了一瞬间，特别是在我注意到那高耸的光秃秃的旗杆和三个金光闪闪的大字之后。取而代之的，是一种想笑的感觉。用现在的眼光来看待过去的事物，自然不免要闹笑话。我明知故犯，却是更加可笑了。当然总统府有趣的地方远不止这一处，篇幅所限终不能一一记述。作为南京城内民国余韵的代表，总统府是这座城市当仁不让的地标。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;早有动笔的打算，只是出于懒的缘由一直没有真正开始。想来大学生活也已近尾声，总要留些记录，遂有此文。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="个人" scheme="http://wut0719.github.io/categories/%E4%B8%AA%E4%BA%BA/"/>
+    
+    
+      <category term="旅游" scheme="http://wut0719.github.io/tags/%E6%97%85%E6%B8%B8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>杂谈</title>
+    <link href="http://wut0719.github.io/2014/02/21/%E6%9D%82%E8%B0%88/"/>
+    <id>http://wut0719.github.io/2014/02/21/杂谈/</id>
+    <published>2014-02-20T16:00:00.000Z</published>
+    <updated>2016-03-12T13:52:32.000Z</updated>
+    
+    <content type="html">&lt;p&gt;在“魔都晨曦来临”某一期上看到几篇关于科研人员的文章。很多天之前看到的，具体细节记不大清，大概的内容是某老师对评副教授这件事发发牢骚。后面的另一篇文章对此进行了一番反驳，大体意思是批评别人之前不如先给自己照照镜子之类的。毕竟也是同道中人，大学士在其后加上了一些自己的看法和见解。大学士的一番言论简直就是呵呵呵，不能不让人点上32个赞。当然我作为一个外行人实际上并没有什么说三道四的资格，也不会像有些人似的去挥舞“纳税人”这个大棒，仿佛自己是天下主宰或是已经天降大任一般。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;br&gt;这几篇文章，再加上王天旭那件事，给我了很多触动。我并非要由此对现行制度进行一番批判，这既超出了我的能力之外，也不是我的意愿，因为现状总是有人要不满的，现行制度总有等待改进的空间。然而这些东西与我一直以来都在不时思考的问题产生了正面碰撞——研究是我的人生吗？&lt;/p&gt;
+&lt;p&gt;原本这也不是个问题，因为考虑它的时间有的是。本科没想清楚可以研究生的时候想，研究生没想清楚还有博士，甚至进了学校还有机会再选择。现在看来这些“机会”不过是自己一厢情愿的想法罢了，不能承受的或者是想象中的选择是不能称之为“机会”的。&lt;/p&gt;
+&lt;p&gt;另一方面，很多事物的面貌随着时间的流逝也在不断的变化，更准确的说，是我对它们的认知在不断的变化。从某种角度看，理清思路是一种毫无意义的行为，因为思路是永远也理不清的，是从回顾过去的经历中摸索而来的。可惜的是，经历不会主动吐露答案，正如史料不会自己说话一样。对于史料，可以有历史学，有史观，但是对于每个个体的经历，却不存在这样一种学问，或者说不存在足够的时间以供此种学问形成与发展。过往的经历什么都知道，又什么也不知道；什么都能说明，又什么都说明不了。&lt;/p&gt;
+&lt;p&gt;也许我只是想为自己的懒惰寻找一些乏善可陈的托辞，也许是我没有给自己找到足够的正面反馈，也许……我永远都不会找到答案，也不应该再去寻找，而是翻开新的一页，虽然依旧是那个老故事。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在“魔都晨曦来临”某一期上看到几篇关于科研人员的文章。很多天之前看到的，具体细节记不大清，大概的内容是某老师对评副教授这件事发发牢骚。后面的另一篇文章对此进行了一番反驳，大体意思是批评别人之前不如先给自己照照镜子之类的。毕竟也是同道中人，大学士在其后加上了一些自己的看法和见解。大学士的一番言论简直就是呵呵呵，不能不让人点上32个赞。当然我作为一个外行人实际上并没有什么说三道四的资格，也不会像有些人似的去挥舞“纳税人”这个大棒，仿佛自己是天下主宰或是已经天降大任一般。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="个人" scheme="http://wut0719.github.io/categories/%E4%B8%AA%E4%BA%BA/"/>
+    
+    
+      <category term="杂谈" scheme="http://wut0719.github.io/tags/%E6%9D%82%E8%B0%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android重制第一季第9集习题—CheckBox全选</title>
+    <link href="http://wut0719.github.io/2013/12/22/Android%E9%87%8D%E5%88%B6%E7%AC%AC%E4%B8%80%E5%AD%A3%E7%AC%AC9%E9%9B%86%E4%B9%A0%E9%A2%98%E2%80%94CheckBox%E5%85%A8%E9%80%89/"/>
+    <id>http://wut0719.github.io/2013/12/22/Android重制第一季第9集习题—CheckBox全选/</id>
+    <published>2013-12-21T16:00:00.000Z</published>
+    <updated>2016-03-12T13:52:32.000Z</updated>
+    
+    <content type="html">&lt;p&gt;关键代码：&lt;br&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//CheckBox全选的实现，关键是控制选择的条件，不能想当然地使用else  &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (buttonView.getId() == R.id.allCheckId &amp;amp;&amp;amp; 	    isChecked == &lt;span class=&quot;keyword&quot;&gt;true&lt;/span&gt;) &amp;#123;  &lt;span class=&quot;comment&quot;&gt;//使用&amp;amp;&amp;amp;相当于使用两个if语句  &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2eatBox.setChecked(isChecked);  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2sleepBox.setChecked(isChecked);  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2dotaBox.setChecked(isChecked);  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(buttonView.getId() == R.id.allCheckId &amp;amp;&amp;amp; isChecked == &lt;span class=&quot;keyword&quot;&gt;false&lt;/span&gt;) &amp;#123;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2eatBox.setChecked(&lt;span class=&quot;keyword&quot;&gt;false&lt;/span&gt;);  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2sleepBox.setChecked(&lt;span class=&quot;keyword&quot;&gt;false&lt;/span&gt;);  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2dotaBox.setChecked(&lt;span class=&quot;keyword&quot;&gt;false&lt;/span&gt;);  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;br&gt;一开始还想了好一阵子，各种上网找，看官方文档也不是很明白。还是去mars的论坛找到了灵感，不过看他们的方法挺搓的，就按照自己的想法重新写一个。其实实现起来真是简单得不得了。&lt;br&gt;有两点发现：&lt;br&gt;1、setChecked设置成false，手动选择失效，但是后台还是会有checked状态返回&lt;br&gt;2、java的基础还需要提高（要系统地学习下）&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;关键代码：&lt;br&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//CheckBox全选的实现，关键是控制选择的条件，不能想当然地使用else  &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (buttonView.getId() == R.id.allCheckId &amp;amp;&amp;amp; 	    isChecked == &lt;span class=&quot;keyword&quot;&gt;true&lt;/span&gt;) &amp;#123;  &lt;span class=&quot;comment&quot;&gt;//使用&amp;amp;&amp;amp;相当于使用两个if语句  &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2eatBox.setChecked(isChecked);  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2sleepBox.setChecked(isChecked);  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2dotaBox.setChecked(isChecked);  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(buttonView.getId() == R.id.allCheckId &amp;amp;&amp;amp; isChecked == &lt;span class=&quot;keyword&quot;&gt;false&lt;/span&gt;) &amp;#123;  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2eatBox.setChecked(&lt;span class=&quot;keyword&quot;&gt;false&lt;/span&gt;);  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2sleepBox.setChecked(&lt;span class=&quot;keyword&quot;&gt;false&lt;/span&gt;);  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2dotaBox.setChecked(&lt;span class=&quot;keyword&quot;&gt;false&lt;/span&gt;);  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="技术学习" scheme="http://wut0719.github.io/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Android" scheme="http://wut0719.github.io/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>刘小枫的“国父”</title>
+    <link href="http://wut0719.github.io/2013/05/26/%E5%88%98%E5%B0%8F%E6%9E%AB%E7%9A%84%E2%80%9C%E5%9B%BD%E7%88%B6%E2%80%9D/"/>
+    <id>http://wut0719.github.io/2013/05/26/刘小枫的“国父”/</id>
+    <published>2013-05-25T16:00:00.000Z</published>
+    <updated>2016-03-12T13:52:32.000Z</updated>
+    
+    <content type="html">&lt;p&gt;前几日在豆瓣广播上看到有人推荐一篇日记《谁是中国现代的“国父”？——不说“为刘小枫辩护”而说他的“国父”论所引发的思考》，有所感悟，简单整理一些。关于刘小枫本人，我了解并不多，只是看到一些人引用他的观点和另一些人的评价，所以我想说的更多的是自己的一些思考，并不是针对他。我对这些左右的争论没有兴趣。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;br&gt;言归正传，文章的第一部分我是十分赞同的。这种状况几乎随处可见，而不是仅存于学术圈中。举个简单的例子，狗肉该不该吃。其斗争的激烈程度也不亚于长沙集会了。有句话说得好，我国网络只有在种子链接下面评论才是清一色的“楼主一生平安”。不过，站队现象存在又如何呢？它总是要存在的，正如主流与非主流的对立一般。各人管好各人的事就很不错了，在这个问题上过于计较难免显得小家子气。&lt;/p&gt;
+&lt;p&gt;“国父”毛泽东&lt;br&gt;这是刘小枫给他自己提出问题的回答，也是争论的起点。他提出的问题就是——“谁是中国现代的国父呢？”。文章的作者给出了自己的解读。首先他强调这个问题给定的历史范围是“现代”，也就是说不要去扯古人。即使这一番努力排除了古人的干扰，它仍然没有给出一个明晰的范围，即此“现代”的具体所指。那么我就斗胆猜测一下，他于此处所指的“现代”就是共和国，这样才能与其答案相呼应吧。&lt;/p&gt;
+&lt;p&gt;然后作者又将刘小枫提及“国父”的场合都表述出来，以供读者参考。这些引文给我的感觉，说实话，很让人震惊，这种水准直接让人联想起乌有之乡和强国论坛。当然作者很快的做出了一番详细的解释。居于首要位置的是对“国父”一词的定义——“我们说政治哲学就是立法，立法组织者就是国父。”作者对这个定义进行了“我们说”、“政治哲学”和后半句三方面的解读，不可谓不详细。但是首先强调“我们说”，不正是在划分阵营么？不管是你们我们还是他们，大家能够聚在一起讨论就是因为彼此之间存在基础的共识。如果没有此种共识，恐怕进行讨论的必要性也同样不存在吧。最后作者得出的结论是，刘小枫所谓“国父”的内涵与流行的含义不同。既然意义不同，又何必非此词不用，混淆视听呢？完全可以造个新词出来。个中缘由我是不敢妄加揣测的。另一方面，刘小枫和作者都没有解释“立法组织者”的含义，或者说就是在刘小枫所提出的新背景下“国父”候选人的标准是什么。从后面的说法看，他直接使用了流行的3位候选人。不同的候选标准却得到同样的候选结果，很有意思。我倒是觉得如果原本就打算说毛是国父，那就直接说好了，毕竟这种说法比起什么神仙下凡之类的要好多了。但是现在这样绕来绕去、扯东扯西的，反而给人一种底气不足的感觉。&lt;/p&gt;
+&lt;p&gt;其实到底谁是国父这个问题，从历史的角度而言（不是政治的角度），并没有什么意义。美国国父指的是哪些人这个大家都很清楚。但是英国国父呢？法国国父？德国国父？日本国父？甚至说，苏联国父？似乎“国父”这个词在大多数情况下是与美国紧密相连的。每个国家都有自己的尊称，比如欧洲人喜欢用奥古斯都或者元首什么的，咱们用太祖太宗之类的，苏联则是导师，不见得大家都要跟美国学习去改称“国父”。就算“国父”可以拿过来用，我也很不赞同现在流行的说法。孙中山的这个“国父”头衔实际上是蒋介石全力推动的结果。虽然在此之前孙先生的名号也很响，但是远远达不到此种“国父”的水平。除他之外还有很多人，做的工作也不比他的少，而“国父”这种说法未免显得对这些人不太公平。即使是对毛来说也不是什么好的选择。人家上有“伟大的导师，伟大的领袖，伟大的统帅，伟大的舵手”、“红太阳”、“人民大救星”等的尊称，区区“国父”怎能相比？&lt;/p&gt;
+&lt;p&gt;总的来说，各路左派的表现都是很差劲的，只是抱着那点儿老本钱不撒手，而对现实问题基本上束手无策。同时理论上也没有看出什么新意。有意思的是，他们还去争论什么普世价值。普世价值，顾名思义，是具有普遍意义的价值。没有普遍意义的价值哪能算普世价值？所以说不承认普世价值的存在本身只不过是愚蠢的表现。这个问题的焦点在于哪些价值应该算作普世价值。当然一般讨论不会进行至此种程度而早已演变为一场无疾而终的骂战了。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;前几日在豆瓣广播上看到有人推荐一篇日记《谁是中国现代的“国父”？——不说“为刘小枫辩护”而说他的“国父”论所引发的思考》，有所感悟，简单整理一些。关于刘小枫本人，我了解并不多，只是看到一些人引用他的观点和另一些人的评价，所以我想说的更多的是自己的一些思考，并不是针对他。我对这些左右的争论没有兴趣。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="个人" scheme="http://wut0719.github.io/categories/%E4%B8%AA%E4%BA%BA/"/>
+    
+    
+      <category term="杂谈" scheme="http://wut0719.github.io/tags/%E6%9D%82%E8%B0%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Monopoly随想</title>
+    <link href="http://wut0719.github.io/2013/05/11/Monopoly%E9%9A%8F%E6%83%B3/"/>
+    <id>http://wut0719.github.io/2013/05/11/Monopoly随想/</id>
+    <published>2013-05-10T16:00:00.000Z</published>
+    <updated>2016-03-12T13:52:32.000Z</updated>
+    
+    <content type="html">&lt;p&gt;前一阵子在网上下载的这个游戏，EA公司出品。英文名叫Monopoly，中文名是地产大亨，一款大富翁类的棋牌游戏。相比之于不痛不痒的中文名，monopoly这个词更为准确地反映出这游戏的实质——垄断。  &lt;/p&gt;
+&lt;p&gt;同一色块的土地，如果你只拥有其中一部分，则每一块单独计算租金；反之，则增加为原来租金的两倍。在公用事业和火车站上体现的更为明显。自来水公司或电力公司两者占有其一，收取4倍步数的费用；全部占有，则涨为10倍。车站共有4个，占有1个可收取的费用是25，2个为50，3个为100，4个就再翻倍。相比于众多而分散的产业而言，垄断一小部分可以获得多得多的收益，甚至于转瞬间反败为胜。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;br&gt;游戏毕竟只是游戏而已，相比于现实社会，它简单到不值一提。但是它的理念却与现实社会颇有相同之处：垄断是通向最大利润的必由之路。正如《资本论》中所揭示的，高额利润对资本具有无穷的吸引力，那么垄断自然也就成为一种不可避免之现象。而反垄断的干预就显得有些多余，甚至为另一些集团的垄断充当打手。  &lt;/p&gt;
+&lt;p&gt;影响利润的因素有很多，售价是其中一个，还有各种形形色色可控不可控的成本和销量。看起来好像很复杂的样子，实际上完全可以归结为一点——风险。这种几乎无处不在的东西，是利润的死敌。当然风险本身也可以产生利润，比如各种金融产品。但这是以把风险分摊给社会为代价的，而且风险本身依然存在，甚至会产生通过此种渠道扩大其危害的可能性。  &lt;/p&gt;
+&lt;p&gt;垄断则是从风险本身入手，无论是垂直整合上下游，还是横向兼并竞争对手。如果可能的话，两种手段都会被使用。这样的垄断，不仅控制住某些风险（比如落后产能和恶性竞争），而且可以增加企业选择自身经营策略的自由度。虽说常言道船小好调头，但是在大风大浪面前，还是大船更从容镇定。  &lt;/p&gt;
+&lt;p&gt;最后一点，与游戏中会转瞬间反败为胜一样，现实社会中的垄断企业也不是必然一帆风顺的，它本质上仍然是一个企业。这个游戏还真是经典的很啊。  &lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;前一阵子在网上下载的这个游戏，EA公司出品。英文名叫Monopoly，中文名是地产大亨，一款大富翁类的棋牌游戏。相比之于不痛不痒的中文名，monopoly这个词更为准确地反映出这游戏的实质——垄断。  &lt;/p&gt;
+&lt;p&gt;同一色块的土地，如果你只拥有其中一部分，则每一块单独计算租金；反之，则增加为原来租金的两倍。在公用事业和火车站上体现的更为明显。自来水公司或电力公司两者占有其一，收取4倍步数的费用；全部占有，则涨为10倍。车站共有4个，占有1个可收取的费用是25，2个为50，3个为100，4个就再翻倍。相比于众多而分散的产业而言，垄断一小部分可以获得多得多的收益，甚至于转瞬间反败为胜。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="个人" scheme="http://wut0719.github.io/categories/%E4%B8%AA%E4%BA%BA/"/>
+    
+    
+      <category term="杂谈" scheme="http://wut0719.github.io/tags/%E6%9D%82%E8%B0%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>启蒙与犬儒主义</title>
+    <link href="http://wut0719.github.io/2013/03/23/%E5%90%AF%E8%92%99%E4%B8%8E%E7%8A%AC%E5%84%92%E4%B8%BB%E4%B9%89/"/>
+    <id>http://wut0719.github.io/2013/03/23/启蒙与犬儒主义/</id>
+    <published>2013-03-22T16:00:00.000Z</published>
+    <updated>2016-03-12T13:52:32.000Z</updated>
+    
+    <content type="html">&lt;p&gt;昨天正好去听了刘老师的讲座，姑且简单记录一点自己的感想和体会。讲座的内容还是很多的，也很庞杂，有中有外，有流变，当然也有希冀。总的来说是值得一听的，可惜到场的人并不算多。从某种角度看，这正印证了老师对我们这代犬儒主义者的判断，可悲可叹。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;br&gt;外国暂且按下不表，单论我国。依老师所言，我国至今已有三波犬儒主义者出现的浪潮。第一波是在文革后期，主要受林彪事件影响。第二波是在八十年代末到九十年代中期，主要受政治风波和西方后现代主义影响。第三波就是今天的八零九零后了，亦即我们这一代。在谈到第三波的时候，老师指出一种现象——与前两波不同，这一波的年龄明显降低。这个现象的趣味之处就在于，犬儒主义居然出现在还没有经历过理想主义破灭的年轻人身上，与以往犬儒主义者的形成历程大相径庭。&lt;/p&gt;
+&lt;p&gt;如果对我们这代人的成长过程考察一番，那么就不会对此感到意外了。虽然我们不必上山下乡，也没有政治风波，但是我们同样经历着一场前所未有的巨变，也许未必是政治上的，但一定是经济上的，是生活上的，甚至于是思想观念上的。作为年轻一代，我们的历练和视野确实不能与已经人到中年的第二波第一波相比，不过比起他们年轻的时候，还是要多一些的。所以说，第三波同样经历过，或者至少感受过，理想主义破灭的滋味，只不过现在的理想已经不同于过去单纯的政治理想了。它泛化了，涵盖了更为广阔的领域。（老师也有提到，过上一种普通生活的“理想”，在拼爹的今天也陷于一种破灭的境地。即是一例。）&lt;/p&gt;
+&lt;p&gt;另一方面，老师也有提到，就是经济社会的副产品——消费主义及其影响，用电影电视剧作为例子。后来提问的时候也有同学对此提出异议，认为电影也能够引发深思。在我看来，首先电影和电视剧并没有本质上的区别，都存在好片和烂片的情形。而且好片烂片同样可以引发各种各样的思考，更不必说不同的人的区分好片烂片的标准还有不同。&lt;/p&gt;
+&lt;p&gt;相比于书本，电影的确有很多劣势，其中个人认为最重要的一点是，电影的思想承载力远不及书本，虽然它可以任意制造各式各样的想象空间。我无意于去批评电影，而且还很喜欢这种艺术形式，不过对于其能力界限还是应该有所认识的。而对于启蒙而言，电影则是一个不能忽视的手段。回顾五四前辈的新文化运动，他们就敢于运用各种新兴的艺术形式去推广启蒙思想，像白话小说、新体诗、话剧……作为早已进入艺术殿堂的电影，为什么不能够成为启蒙思想传播的途径？启蒙不应该被局限在什么小圈子里，那必然会失去其生命力，而是要走向大众，去实践其自身的普适性。&lt;/p&gt;
+&lt;p&gt;提问环节的“月经”题是少不了的——我们应该怎么做？可能提问者觉得老师说得比较模糊，没法转换成实际的行动。换个角度想，对于老师的回答，她心里应该有个大致估计，而且之前所讲的内容不太符合这个估计。有些问题表面上看是征求意见，其实只是要对方证实自己的想法罢了。更有甚者还提出要不要入党的问题，让我颇为惊异。可见，我国启蒙工作的效果还差得远呢，绝不像西方那样已经完成了其自身的历史使命。&lt;/p&gt;
+&lt;p&gt;说到底，启蒙是自己的事。输入大脑的知识思想，要靠自己消化，这个别人帮不上忙。同时，正如老师所提醒的，要给超越性的终极价值留下空间，以尽力消解启蒙隐含的怀疑主义的负面影响。至于这个终极价值可以是什么，我想到几个选项。除去几个宗教以外，进步主义也可以算上。肯定还有别的可能性，不过一时想不到。虽然这些听起来虚无缥缈，但是总得给自己的行动找点支撑吧。说到行动，“穷则独善其身，达则兼济天下”一句足以。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;昨天正好去听了刘老师的讲座，姑且简单记录一点自己的感想和体会。讲座的内容还是很多的，也很庞杂，有中有外，有流变，当然也有希冀。总的来说是值得一听的，可惜到场的人并不算多。从某种角度看，这正印证了老师对我们这代犬儒主义者的判断，可悲可叹。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="个人" scheme="http://wut0719.github.io/categories/%E4%B8%AA%E4%BA%BA/"/>
+    
+    
+      <category term="杂谈" scheme="http://wut0719.github.io/tags/%E6%9D%82%E8%B0%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>从高考改革说开去</title>
+    <link href="http://wut0719.github.io/2013/03/19/%E4%BB%8E%E9%AB%98%E8%80%83%E6%94%B9%E9%9D%A9%E8%AF%B4%E5%BC%80%E5%8E%BB/"/>
+    <id>http://wut0719.github.io/2013/03/19/从高考改革说开去/</id>
+    <published>2013-03-18T16:00:00.000Z</published>
+    <updated>2016-03-12T14:02:58.000Z</updated>
+    
+    <content type="html">&lt;p&gt;新博客开起来了，总要有些文章撑撑场面。想到自己既然算是比较关心教育的人，又经历了高考这件事，不如就拿这个话题做个开场白，总好过随便或精心转载的文章吧。之所以选择高考改革作为出发点，其实也算是对那篇民间高考改革方案的报道有感而发。我后来在网上搜索了一下，发现方案还不少，比报道里的还多，也不只是民间的，还有机构的。先说民间的三种方案吧。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/3ca59d76gw1evb8qjucopj20h907pt8x.jpg&quot; alt=&quot;民间高考改革方案&quot;&gt;&lt;/p&gt;
+&lt;p&gt;这三种方案虽然侧重点各有不同，不过其核心是相似的，那就是在统考的前提下加强考试的区分度和减轻学生负担。前二种都把考试科目数调低而代之以更为全面的学业水平测试，后一种突出高职与普通高校的区别，也能降低目标高职之考生的压力。这些与西式教育体系下的联考制度有异曲同工之妙，所以不能简单地谓之不现实。对于联考制度，我相信即使这不是我国高考改革的终点，也一定是个必经之路。不过与民间方案“减负”的出发点不同，我认为其中的主要原因是招生自主乃大学办学自主权的最终体现。差异化的招生结构必然反映学校差异化的办学思路，也能促使学校制定更具特色的培养方案。&lt;/p&gt;
+&lt;p&gt;另一方面，民间方案的问题在于其过于理想化。不妨我们先来看一看方案1。这套方案中虽然强调高考只考3门且不分科，但是作为补充的学业水平测试难道不会看作是另一种形式的高考？那岂不是就等同于高考变成了9门(甚至更多)？更不必说依目前各省独立组织这测试的情况下又会滋生多少腐败弊案了。然后再看方案2。实验学科与人文学科各择其一与不分科的矛盾暂且不提，这以报考专业为选择依据不正好必然要求考前填志愿吗？至于专业是不是与实验学科和人文学科相关就更不必说了。最后再谈谈方案3。不是说两种类型的学校不应该分别考试，而是很有必要这么做，这样就能将职业教育同高等教育分割开，对双方都很有好处。只是在现行社会主流思想的背景下，这种做法差不多算是判了高职死刑。所以说这些民间改革方案虽然可以说是反映了某种民间的愿望，而其根本上不足为用。&lt;/p&gt;
+&lt;p&gt;除了民间的方案，还有一些机构也有他们自己的构想，比如21世纪教育研究院的一份&lt;a href=&quot;http://edu.sina.com.cn/l/2009-06-14/1548172839.shtml&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;报告&lt;/a&gt;。与粗糙的民间方案相比，机构方案明显更为规范，内容也更加完整详实，是比较让人满意的。后面所附小调查的结果也是很好的说明。但是从教育的角度出发，我不同意其中有关降低英语权重的内容。首先降低英语权重并不会必然导致对母语重视程度的提高。这一点是显而易见的，即使在目前语数外三者分数权重相同的情况下，数学的重要程度也是要超过其他两门的。实际上，一门学科在实际学习生活中的地位是受很多因素影响的，其中比较关键的一条就是学生在此科目上提分的难易程度。提分容易的自然受更多的重视，而提分难的往往就会被首先牺牲掉。此外，在英语上针对不同地区进行区别对待，虽然短时间内使得那些英语教学薄弱地区少吃点亏，但从长远来看反而促成了更大的不平等。这些地区的教育资源本身就比较匮乏暂且不说，更低的英语标准就意味着一部分在英语上的教学资源需要放到其他更有价值的学科上去，其结果就是这些地区的学生总体英语基础进一步落后。与此同时那些英语教学并不薄弱的地区，与其外向型的经济结构密不可分。也就是说，英语在这些地区本身就具有很高的市场需求，与学校教学资源的分配倒不是密切相关，从不断增长的外语培训行业就可见一斑了。长此以往，这两个地区在英语方面的差距就越来越大，显然这不是我们所愿意看到的，更不必说由此引发的其他影响了。&lt;/p&gt;
+&lt;p&gt;与民间方案相同，机构方案也存在过理想化的缺点，使得一些措施显得十分幼稚。也许有人要问我是不是有个更好的方案，我的答案是除了联考制度便没了。因为联考制度相比于我们现行的制度确实有很多重要的优点。但是如果要立刻改革，或者定个十年二十年的时间表，我都是坚决反对的。谈及这些民间方案与机构方案的利弊，再算上各省已经进行了的各式各样的改革，像什么基本能力，小高考等等，以及舆论讨论最为激烈的录取制度，我想说的是，无论什么样的措施都不可能是完美的，总有人受益亦总有人受损。而且更为重要的是，高考最大的价值，或曰优势，就在于其稳定性。无论加在高考上什么样的改革，都是对学生的新负担，制造了更多的混乱。&lt;/p&gt;
+&lt;p&gt;更为重要的是，一个非常重要的问题往往被大家轻易地忽略掉，那就是高考为什么这么重要。也许有人会说，不就是因为上大学嘛。这话二三十年前说没什么问题，但是在已经进入高等教育大众化的今天恐怕就不能算作是很好的解释了。实际上高考之所以在今天仍然如此之重要并非在于大学，而是在于重点大学，在于名牌大学。从对北大清华的生源结构的争论就能感受到了，其实争来争去不过就是希望能多招本地区的学生而已。就地高考也是同样的道理，不能增加名额，那我就去名额多的地方考，其实质无非就是高考移民。由此引出的一个现象颇值玩味，当年高考移民一片火热之时，反对呼声很强，最终促成了政府的禁令，而如今换汤不换药的就地高考反而一片赞扬之声，个中缘由亦值深思，不过此非本文主旨，按下不表。&lt;/p&gt;
+&lt;p&gt;于是就可以看出，与其改革高考，不如直接从高等教育入手。在我看来，高考的变化是与高校的变化息息相关的，同时高考是服从并服务于高校的。关于高教改革的内容，则涉及的内容更为广泛，非此文之力所能及，但是大概内容还是可以谈谈的。针对高教大众化的现状，改革的重点应当置于平等而不是争什么世界一流。差异化的办学思路实际上是提高了高校的办学门槛，也增加其对资源的需求。另一方面对生源结构问题的最好应对措施，不是把那俩学校变成社会平等的牺牲品，而是让更多地的学校具备他们的条件，也唯有这样道路才能从根本上促进我国高等教育的健康发展，由此而带动的其他各领域的进步才会很坚实有力。同时，这也是最根本性的高考改革。&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;新博客开起来了，总要有些文章撑撑场面。想到自己既然算是比较关心教育的人，又经历了高考这件事，不如就拿这个话题做个开场白，总好过随便或精心转载的文章吧。之所以选择高考改革作为出发点，其实也算是对那篇民间高考改革方案的报道有感而发。我后来在网上搜索了一下，发现方案还不少，比报道里的还多，也不只是民间的，还有机构的。先说民间的三种方案吧。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="个人" scheme="http://wut0719.github.io/categories/%E4%B8%AA%E4%BA%BA/"/>
+    
+    
+      <category term="杂谈" scheme="http://wut0719.github.io/tags/%E6%9D%82%E8%B0%88/"/>
+    
+  </entry>
+  
+</feed>
