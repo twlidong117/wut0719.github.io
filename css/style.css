@@ -933,6 +933,9 @@ p.article-more-link a:hover {
 #weibo:before {
   content: "\f18a";
 }
+#github:before {
+  content: "\f09b";
+}
 #comments {
   background: #dad4b9;
   padding: 30px;
