@@ -95,94 +95,80 @@
 </li>
 <li><p><code>flags</code>是特殊参数： <code>g</code> ——全局匹配； <code>i</code>——忽略大小写； <code>m</code> ——让开头（^）和结尾（$）字符工作在多行模式（由 \n 或 \r 分割的）</p>
 </li>
-<li><ul>
-<li>多行模式：每一行的开头结尾也可匹配。关闭多行模式则只匹配整个字符串的开头和结尾</li>
-</ul>
+<li><p>多行模式：每一行的开头结尾也可匹配。关闭多行模式则只匹配整个字符串的开头和结尾</p>
 </li>
 <li><p>静态常量：构造完成后保持不变</p>
 </li>
 </ul>
 </li>
-<li><p>构造函数：<code>new RegExp(&quot;pattern&quot;,&quot;flags&quot;)</code></p>
-</li>
-<li><ul>
-<li>pattern是字符串，<em>注意对 \ 的转义（” \\ “）</em></li>
-<li>运行时编译→表达式可变</li>
 </ul>
-</li>
-</ul>
-<p>表达式文本由<strong>普通字符</strong>、<strong>特殊字符</strong>以及对应的重复规则组合而成。</p>
-<p>例子：<code>/abc/</code>匹配字符串中的’abc’子串</p>
-<h2 id="特殊字符"><a href="#特殊字符" class="headerlink" title="特殊字符"></a>特殊字符</h2><p>★ 特殊字符都是单个字符！</p>
-<ul>
-<li><p>字符类别</p>
-</li>
-<li><ul>
-<li><code>.</code>英文句点，小数点——匹配任意单个字符（换行符除外）</li>
-<li><code>\d</code>一个数字<code>[0-9]</code>；<code>\D</code> 一个非数字<code>[^0-9]</code></li>
-<li><code>\w</code> 一个字母或数字或下划线<code>[a-zA-Z0-9_]</code>；<code>\W</code>一个非字母非数字非下划线的字符<code>[^a-zA-Z0-9_]</code></li>
-<li><code>\s</code> 一个空白符；<code>\S</code> 一个非空白符</li>
-<li><code>\xhh</code> 一个编码为两位十六进制数(hh)的字符（ASCII码）</li>
-<li><code>\uhhhh</code> 一个Unicode字符，四位十六进制数</li>
-<li>其他：<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp" target="_blank" rel="external">RexExp-MDN</a></li>
-</ul>
-</li>
-<li><p>字符集合</p>
-</li>
-<li><ul>
-<li><code>[abcde]</code>匹配集合中的任意一个字符。abcde 等价于 a-e</li>
-<li><code>[^abcde]</code>匹配任意一个不在集合中的字符。abcde 等价于 a-e</li>
-</ul>
-</li>
-<li><p>边界</p>
-</li>
-<li><ul>
-<li><code>^</code> 开头（字符串或每行）</li>
-<li><code>$</code> 结尾（字符串或每行）</li>
-<li><code>\b</code> 单词边界</li>
-<li><code>\B</code>非单词边界（内部）</li>
-</ul>
-</li>
-</ul>
-<h2 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h2><ul>
-<li><p>捕获括号 <code>(pattern)</code> ：匹配表达式并保存括号内的字符串。</p>
-</li>
-<li><ul>
-<li>replace()函数的第二个参数中使用<code>$1</code>,<code>$2</code>,…<code>$9</code>获取</li>
-</ul>
-</li>
-<li><p>反向引用 <code>\n</code> (n是正整数)：指向正则表达式中左起第 n 个括号所匹配的字符串</p>
-</li>
-<li><p>非捕获括号 <code>(?:pattern)</code> ：匹配但不保存</p>
-</li>
-</ul>
-<p>//不大理解。放上另一个说法：分组用于指定<strong>子表达式</strong>，单独确定重复次数或其他操作。<a href="http://deerchao.net/tutorials/regex/regex.htm" target="_blank" rel="external">参考</a></p>
-<h2 id="数量词（表达式或分组的重复次数）"><a href="#数量词（表达式或分组的重复次数）" class="headerlink" title="数量词（表达式或分组的重复次数）"></a>数量词（表达式或分组的重复次数）</h2><p>位于表达式后面</p>
-<ul>
-<li><code>*</code>：0或多次</li>
-</ul>
-<ul>
-<li><code>+</code> ：1或多次</li>
-<li><code>?</code> ：0或1次</li>
-<li><code>{n,}</code> ：至少 n 次</li>
-<li><code>{n,m}</code>：至少 n 次，至多 m 次</li>
-</ul>
-<p>默认匹配模式是<strong>贪婪</strong>模式，即一个匹配结果包含<strong>尽可能多</strong>的字符。在上述数量词后加上一个 ? 就设置成<strong>非贪婪</strong>模式，即一个匹配结果包含<strong>尽可能少</strong>的字符。</p>
-<p>★另有一条更高优先级的匹配规则：最先开始的匹配拥有最高优先权</p>
-<ul>
-<li><code>{n}</code> ：n次（多于 n 时也只匹配n次，无所谓贪婪懒惰）</li>
-<li><code>x(?=y)</code>：只有当 x 后面紧跟着 y 时，才匹配 x 。</li>
-<li><code>x(?!y)</code> ：只有当 x 后面不紧跟着 y 时，才匹配 x 。</li>
-<li><code>x|y</code> ：匹配 x 或 y 。</li>
-</ul>
-
+        
+          <p class="article-more-link">
+            <a href="/2016/03/26/2016:3:26-JavaScript中的正则表达式/#more">More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
-      <!--<a data-url="http://wut0719.github.io/2016/03/26/2016:3:26-JavaScript中的正则表达式/" data-id="cim8vwf610001q03eyfi0zdjs" class="article-share-link">Share</a>
+      <!--<a data-url="http://wut0719.github.io/2016/03/26/2016:3:26-JavaScript中的正则表达式/" data-id="cim8wn7h300015m3ezg0a28fn" class="article-share-link">Share</a>
       -->
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/正则表达式/">正则表达式</a></li></ul>
+
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2016:3:25-慕课网AngularJS实战课程笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/03/25/2016:3:25-慕课网AngularJS实战课程笔记/" class="article-date">
+    <time datetime="2016-03-24T16:00:00.000Z" itemprop="datePublished">2016-03-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/AngularJS/">AngularJS</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/25/2016:3:25-慕课网AngularJS实战课程笔记/">慕课网AngularJS实战课程笔记</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="基础概念"><a href="#基础概念" class="headerlink" title="基础概念"></a>基础概念</h2><h3 id="前端框架与前端类库"><a href="#前端框架与前端类库" class="headerlink" title="前端框架与前端类库"></a>前端框架与前端类库</h3><ul>
+<li><strong>类库</strong>：函数集合。其内容是封装一些实现复杂功能的或可复用的代码，目的是提高编码工作的效率。举例：jQuery, <a href="http://greensock.com/">GreenSock</a>(JS动画库)，<a href="http://mootools.net/">mootools</a>（JS API封装库），zeptojs（移动端jQuery）……</li>
+</ul>
+<p>参考：<a href="http://www.yunxiu.org/javascript-libraries-framework/">常用JavaScript类库与框架总结</a></p>
+<p>（补充：<a href="JavaScript全栈开发必备工具">JavaScript全栈开发必备工具</a>）</p>
+<ul>
+<li><strong>框架</strong>：一种设计模式或几种模式组合的体现。改变以DOM操作为核心的前端工作流，向后端工作方式靠拢。针对某些领域或场景提供完整解决方案，提高开发效率。举例：AngularJS，React，Vue.js……</li>
+</ul>
+        
+          <p class="article-more-link">
+            <a href="/2016/03/25/2016:3:25-慕课网AngularJS实战课程笔记/#more">More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <!--<a data-url="http://wut0719.github.io/2016/03/25/2016:3:25-慕课网AngularJS实战课程笔记/" data-id="cim8wn7il001i5m3e1nm39z4r" class="article-share-link">Share</a>
+      -->
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AngularJS/">AngularJS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
 
       
     </footer>
@@ -227,7 +213,7 @@
       
     </div>
     <footer class="article-footer">
-      <!--<a data-url="http://wut0719.github.io/2016/03/14/markdown语法/" data-id="cim8vwf7d0010q03ef18vw9cd" class="article-share-link">Share</a>
+      <!--<a data-url="http://wut0719.github.io/2016/03/14/markdown语法/" data-id="cim8wn7i4000v5m3e4ort0jhu" class="article-share-link">Share</a>
       -->
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Markdown/">Markdown</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
@@ -271,7 +257,7 @@
       
     </div>
     <footer class="article-footer">
-      <!--<a data-url="http://wut0719.github.io/2015/08/22/新工具hexo/" data-id="cim8vwf84001rq03elx8my0az" class="article-share-link">Share</a>
+      <!--<a data-url="http://wut0719.github.io/2015/08/22/新工具hexo/" data-id="cim8wn7iw001w5m3evwq20hzy" class="article-share-link">Share</a>
       -->
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
@@ -317,7 +303,7 @@
       
     </div>
     <footer class="article-footer">
-      <!--<a data-url="http://wut0719.github.io/2014/09/18/iOS_supported_video_formats/" data-id="cim8vwf7i0016q03enr4nl0i2" class="article-share-link">Share</a>
+      <!--<a data-url="http://wut0719.github.io/2014/09/18/iOS_supported_video_formats/" data-id="cim8wn7ic00175m3eny2p5s7b" class="article-share-link">Share</a>
       -->
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
@@ -373,7 +359,7 @@
       
     </div>
     <footer class="article-footer">
-      <!--<a data-url="http://wut0719.github.io/2014/09/01/PiOC10/" data-id="cim8vwf7a000wq03esl3hx3sy" class="article-share-link">Share</a>
+      <!--<a data-url="http://wut0719.github.io/2014/09/01/PiOC10/" data-id="cim8wn7i700105m3e41xg5gqs" class="article-share-link">Share</a>
       -->
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Objective-C/">Objective-C</a></li></ul>
@@ -424,7 +410,7 @@
       
     </div>
     <footer class="article-footer">
-      <!--<a data-url="http://wut0719.github.io/2014/08/31/PiOC09/" data-id="cim8vwf7f0013q03esafpqn6a" class="article-share-link">Share</a>
+      <!--<a data-url="http://wut0719.github.io/2014/08/31/PiOC09/" data-id="cim8wn7i900135m3eulozxcoo" class="article-share-link">Share</a>
       -->
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Objective-C/">Objective-C</a></li></ul>
@@ -475,7 +461,7 @@
       
     </div>
     <footer class="article-footer">
-      <!--<a data-url="http://wut0719.github.io/2014/08/31/PiOC08/" data-id="cim8vwf76000tq03e5wct77rg" class="article-share-link">Share</a>
+      <!--<a data-url="http://wut0719.github.io/2014/08/31/PiOC08/" data-id="cim8wn7i0000n5m3e7n0l19ya" class="article-share-link">Share</a>
       -->
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Objective-C/">Objective-C</a></li></ul>
@@ -531,7 +517,7 @@
       
     </div>
     <footer class="article-footer">
-      <!--<a data-url="http://wut0719.github.io/2014/08/30/PiOC07/" data-id="cim8vwf6w000hq03e7nqd4yoi" class="article-share-link">Share</a>
+      <!--<a data-url="http://wut0719.github.io/2014/08/30/PiOC07/" data-id="cim8wn7hn000c5m3e8ncri9mz" class="article-share-link">Share</a>
       -->
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Objective-C/">Objective-C</a></li></ul>
@@ -584,59 +570,7 @@
       
     </div>
     <footer class="article-footer">
-      <!--<a data-url="http://wut0719.github.io/2014/08/27/PiOC05/" data-id="cim8vwf71000oq03epx3k9ofh" class="article-share-link">Share</a>
-      -->
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Objective-C/">Objective-C</a></li></ul>
-
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-PiOC06" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2014/08/27/PiOC06/" class="article-date">
-    <time datetime="2014-08-26T16:00:00.000Z" itemprop="datePublished">2014-08-27</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/iOS开发/">iOS开发</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2014/08/27/PiOC06/">PiOC学习笔记06—— Preprocessor</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="The-Preprocessor"><a href="#The-Preprocessor" class="headerlink" title="The Preprocessor"></a>The Preprocessor</h2><ul>
-<li>从语言上定制Objective-C，使其适应自己的编程风格或特定的编程应用</li>
-<li>是编译过程的一部分，识别散布在程序中的特定语句</li>
-<li>“#”开头</li>
-</ul>
-        
-          <p class="article-more-link">
-            <a href="/2014/08/27/PiOC06/#more">More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <!--<a data-url="http://wut0719.github.io/2014/08/27/PiOC06/" data-id="cim8vwf6y000lq03etaq2kzzp" class="article-share-link">Share</a>
+      <!--<a data-url="http://wut0719.github.io/2014/08/27/PiOC05/" data-id="cim8wn7hv000g5m3et3paqfbx" class="article-share-link">Share</a>
       -->
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Objective-C/">Objective-C</a></li></ul>
@@ -663,7 +597,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS开发/">iOS开发</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/个人/">个人</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术学习/">技术学习</a><span class="category-list-count">3</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AngularJS/">AngularJS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS开发/">iOS开发</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/个人/">个人</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术学习/">技术学习</a><span class="category-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -679,6 +613,10 @@
           </li>
         
           <li>
+            <a href="/2016/03/25/2016:3:25-慕课网AngularJS实战课程笔记/">慕课网AngularJS实战课程笔记</a>
+          </li>
+        
+          <li>
             <a href="/2016/03/14/markdown语法/">hexo3可用的Markdown语法</a>
           </li>
         
@@ -690,10 +628,6 @@
             <a href="/2014/09/18/iOS_supported_video_formats/">iOS主要设备支持的视频格式</a>
           </li>
         
-          <li>
-            <a href="/2014/09/01/PiOC10/">PiOC学习笔记10——Cocoa, Cocoa Touch and the iOS SDK</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -703,7 +637,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Objective-C/" style="font-size: 20px;">Objective-C</a> <a href="/tags/hexo/" style="font-size: 13.33px;">hexo</a> <a href="/tags/iOS/" style="font-size: 10px;">iOS</a> <a href="/tags/前端/" style="font-size: 10px;">前端</a> <a href="/tags/旅游/" style="font-size: 10px;">旅游</a> <a href="/tags/杂谈/" style="font-size: 16.67px;">杂谈</a> <a href="/tags/正则表达式/" style="font-size: 10px;">正则表达式</a> <a href="/tags/观影/" style="font-size: 13.33px;">观影</a> <a href="/tags/读书/" style="font-size: 13.33px;">读书</a>
+      <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/AngularJS/" style="font-size: 10px;">AngularJS</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Objective-C/" style="font-size: 20px;">Objective-C</a> <a href="/tags/hexo/" style="font-size: 13.33px;">hexo</a> <a href="/tags/iOS/" style="font-size: 10px;">iOS</a> <a href="/tags/前端/" style="font-size: 13.33px;">前端</a> <a href="/tags/旅游/" style="font-size: 10px;">旅游</a> <a href="/tags/杂谈/" style="font-size: 16.67px;">杂谈</a> <a href="/tags/正则表达式/" style="font-size: 10px;">正则表达式</a> <a href="/tags/观影/" style="font-size: 13.33px;">观影</a> <a href="/tags/读书/" style="font-size: 13.33px;">读书</a>
     </div>
   </div>
 
@@ -712,7 +646,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">八月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">九月 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">八月 2014</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">四月 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02/">二月 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">十二月 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">五月 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/03/">三月 2013</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/10/">十月 2012</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">八月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">九月 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">八月 2014</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">四月 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02/">二月 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">十二月 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/05/">五月 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/03/">三月 2013</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/10/">十月 2012</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wut0719.github.io/"/>
-  <updated>2016-03-26T07:31:17.000Z</updated>
+  <updated>2016-03-26T08:58:22.000Z</updated>
   <id>http://wut0719.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://wut0719.github.io/2016/03/26/2016:3:26-JavaScript%E4%B8%AD%E7%9A%84%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
     <id>http://wut0719.github.io/2016/03/26/2016:3:26-JavaScript中的正则表达式/</id>
     <published>2016-03-25T16:00:00.000Z</published>
-    <updated>2016-03-26T07:31:17.000Z</updated>
+    <updated>2016-03-26T08:58:22.000Z</updated>
     
     <content type="html">&lt;h2 id=&quot;JavaScript-正则表达式的构成方式&quot;&gt;&lt;a href=&quot;#JavaScript-正则表达式的构成方式&quot; class=&quot;headerlink&quot; title=&quot;JavaScript 正则表达式的构成方式&quot;&gt;&lt;/a&gt;JavaScript 正则表达式的构成方式&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;字面量&lt;code&gt;/pattern/flags&lt;/code&gt;&lt;/p&gt;
@@ -29,20 +29,20 @@
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;code&gt;flags&lt;/code&gt;是特殊参数： &lt;code&gt;g&lt;/code&gt; ——全局匹配； &lt;code&gt;i&lt;/code&gt;——忽略大小写； &lt;code&gt;m&lt;/code&gt; ——让开头（^）和结尾（$）字符工作在多行模式（由 \n 或 \r 分割的）&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;ul&gt;
-&lt;li&gt;多行模式：每一行的开头结尾也可匹配。关闭多行模式则只匹配整个字符串的开头和结尾&lt;/li&gt;
-&lt;/ul&gt;
+&lt;li&gt;&lt;p&gt;多行模式：每一行的开头结尾也可匹配。关闭多行模式则只匹配整个字符串的开头和结尾&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;静态常量：构造完成后保持不变&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;构造函数：&lt;code&gt;new RegExp(&amp;quot;pattern&amp;quot;,&amp;quot;flags&amp;quot;)&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;ul&gt;
-&lt;li&gt;pattern是字符串，&lt;em&gt;注意对 \ 的转义（” \\ “）&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;运行时编译→表达式可变&lt;/li&gt;
-&lt;/ul&gt;
+&lt;li&gt;&lt;p&gt;pattern是字符串，&lt;em&gt;注意对 \ 的转义（” \\ “）&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;运行时编译→表达式可变&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;表达式文本由&lt;strong&gt;普通字符&lt;/strong&gt;、&lt;strong&gt;特殊字符&lt;/strong&gt;以及对应的重复规则组合而成。&lt;/p&gt;
@@ -50,8 +50,7 @@
 &lt;h2 id=&quot;特殊字符&quot;&gt;&lt;a href=&quot;#特殊字符&quot; class=&quot;headerlink&quot; title=&quot;特殊字符&quot;&gt;&lt;/a&gt;特殊字符&lt;/h2&gt;&lt;p&gt;★ 特殊字符都是单个字符！&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;字符类别&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;ul&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;code&gt;.&lt;/code&gt;英文句点，小数点——匹配任意单个字符（换行符除外）&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;\d&lt;/code&gt;一个数字&lt;code&gt;[0-9]&lt;/code&gt;；&lt;code&gt;\D&lt;/code&gt; 一个非数字&lt;code&gt;[^0-9]&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;\w&lt;/code&gt; 一个字母或数字或下划线&lt;code&gt;[a-zA-Z0-9_]&lt;/code&gt;；&lt;code&gt;\W&lt;/code&gt;一个非字母非数字非下划线的字符&lt;code&gt;[^a-zA-Z0-9_]&lt;/code&gt;&lt;/li&gt;
@@ -62,28 +61,24 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;字符集合&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;ul&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;code&gt;[abcde]&lt;/code&gt;匹配集合中的任意一个字符。abcde 等价于 a-e&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;[^abcde]&lt;/code&gt;匹配任意一个不在集合中的字符。abcde 等价于 a-e&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;边界&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;ul&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;code&gt;^&lt;/code&gt; 开头（字符串或每行）&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;$&lt;/code&gt; 结尾（字符串或每行）&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;\b&lt;/code&gt; 单词边界&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;\B&lt;/code&gt;非单词边界（内部）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\B&lt;/code&gt; 非单词边界（内部）&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;分组&quot;&gt;&lt;a href=&quot;#分组&quot; class=&quot;headerlink&quot; title=&quot;分组&quot;&gt;&lt;/a&gt;分组&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;捕获括号 &lt;code&gt;(pattern)&lt;/code&gt; ：匹配表达式并保存括号内的字符串。&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;ul&gt;
-&lt;li&gt;replace()函数的第二个参数中使用&lt;code&gt;$1&lt;/code&gt;,&lt;code&gt;$2&lt;/code&gt;,…&lt;code&gt;$9&lt;/code&gt;获取&lt;/li&gt;
-&lt;/ul&gt;
+&lt;li&gt;&lt;p&gt;replace()函数的第二个参数中使用&lt;code&gt;$1&lt;/code&gt;,&lt;code&gt;$2&lt;/code&gt;,…&lt;code&gt;$9&lt;/code&gt;获取&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;反向引用 &lt;code&gt;\n&lt;/code&gt; (n是正整数)：指向正则表达式中左起第 n 个括号所匹配的字符串&lt;/p&gt;
 &lt;/li&gt;
@@ -94,15 +89,13 @@
 &lt;h2 id=&quot;数量词（表达式或分组的重复次数）&quot;&gt;&lt;a href=&quot;#数量词（表达式或分组的重复次数）&quot; class=&quot;headerlink&quot; title=&quot;数量词（表达式或分组的重复次数）&quot;&gt;&lt;/a&gt;数量词（表达式或分组的重复次数）&lt;/h2&gt;&lt;p&gt;位于表达式后面&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;*&lt;/code&gt;：0或多次&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
 &lt;li&gt;&lt;code&gt;+&lt;/code&gt; ：1或多次&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;?&lt;/code&gt; ：0或1次&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;{n,}&lt;/code&gt; ：至少 n 次&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;{n,m}&lt;/code&gt;：至少 n 次，至多 m 次&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;默认匹配模式是&lt;strong&gt;贪婪&lt;/strong&gt;模式，即一个匹配结果包含&lt;strong&gt;尽可能多&lt;/strong&gt;的字符。在上述数量词后加上一个 ? 就设置成&lt;strong&gt;非贪婪&lt;/strong&gt;模式，即一个匹配结果包含&lt;strong&gt;尽可能少&lt;/strong&gt;的字符。&lt;/p&gt;
-&lt;p&gt;★另有一条更高优先级的匹配规则：最先开始的匹配拥有最高优先权&lt;/p&gt;
+&lt;p&gt;★ 另有一条更高优先级的匹配规则：最先开始的匹配拥有最高优先权&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;{n}&lt;/code&gt; ：n次（多于 n 时也只匹配n次，无所谓贪婪懒惰）&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;x(?=y)&lt;/code&gt;：只有当 x 后面紧跟着 y 时，才匹配 x 。&lt;/li&gt;
@@ -113,7 +106,20 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;JavaScript-正则表达式的构成方式&quot;&gt;&lt;a href=&quot;#JavaScript-正则表达式的构成方式&quot; class=&quot;headerlink&quot; title=&quot;JavaScript 正则表达式的构成方式&quot;&gt;&lt;/a&gt;JavaScript 正则表达式的构成方式&lt;/
+      &lt;h2 id=&quot;JavaScript-正则表达式的构成方式&quot;&gt;&lt;a href=&quot;#JavaScript-正则表达式的构成方式&quot; class=&quot;headerlink&quot; title=&quot;JavaScript 正则表达式的构成方式&quot;&gt;&lt;/a&gt;JavaScript 正则表达式的构成方式&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;字面量&lt;code&gt;/pattern/flags&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;pattern&lt;/code&gt;是表达式文本&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;flags&lt;/code&gt;是特殊参数： &lt;code&gt;g&lt;/code&gt; ——全局匹配； &lt;code&gt;i&lt;/code&gt;——忽略大小写； &lt;code&gt;m&lt;/code&gt; ——让开头（^）和结尾（$）字符工作在多行模式（由 \n 或 \r 分割的）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;多行模式：每一行的开头结尾也可匹配。关闭多行模式则只匹配整个字符串的开头和结尾&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;静态常量：构造完成后保持不变&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
@@ -125,6 +131,163 @@
       <category term="正则表达式" scheme="http://wut0719.github.io/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
     
       <category term="前端" scheme="http://wut0719.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>慕课网AngularJS实战课程笔记</title>
+    <link href="http://wut0719.github.io/2016/03/25/2016:3:25-%E6%85%95%E8%AF%BE%E7%BD%91AngularJS%E5%AE%9E%E6%88%98%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/"/>
+    <id>http://wut0719.github.io/2016/03/25/2016:3:25-慕课网AngularJS实战课程笔记/</id>
+    <published>2016-03-24T16:00:00.000Z</published>
+    <updated>2016-03-26T08:58:24.000Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;基础概念&quot;&gt;&lt;a href=&quot;#基础概念&quot; class=&quot;headerlink&quot; title=&quot;基础概念&quot;&gt;&lt;/a&gt;基础概念&lt;/h2&gt;&lt;h3 id=&quot;前端框架与前端类库&quot;&gt;&lt;a href=&quot;#前端框架与前端类库&quot; class=&quot;headerlink&quot; title=&quot;前端框架与前端类库&quot;&gt;&lt;/a&gt;前端框架与前端类库&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;类库&lt;/strong&gt;：函数集合。其内容是封装一些实现复杂功能的或可复用的代码，目的是提高编码工作的效率。举例：jQuery, &lt;a href=&quot;http://greensock.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GreenSock&lt;/a&gt;(JS动画库)，&lt;a href=&quot;http://mootools.net/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;mootools&lt;/a&gt;（JS API封装库），zeptojs（移动端jQuery）……&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;参考：&lt;a href=&quot;http://www.yunxiu.org/javascript-libraries-framework/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;常用JavaScript类库与框架总结&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;（补充：&lt;a href=&quot;JavaScript全栈开发必备工具&quot;&gt;JavaScript全栈开发必备工具&lt;/a&gt;）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;框架&lt;/strong&gt;：一种设计模式或几种模式组合的体现。改变以DOM操作为核心的前端工作流，向后端工作方式靠拢。针对某些领域或场景提供完整解决方案，提高开发效率。举例：AngularJS，React，Vue.js……&lt;/li&gt;
+&lt;/ul&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h3 id=&quot;AngularJS-1-x-四大特性&quot;&gt;&lt;a href=&quot;#AngularJS-1-x-四大特性&quot; class=&quot;headerlink&quot; title=&quot;AngularJS 1.x 四大特性&quot;&gt;&lt;/a&gt;AngularJS 1.x 四大特性&lt;/h3&gt;&lt;p&gt;①MVC&lt;br&gt;②模块化（依赖注入，服务）&lt;br&gt;③指令&lt;br&gt;④双向数据绑定&lt;/p&gt;
+&lt;h3 id=&quot;前端开发环境-工具组合&quot;&gt;&lt;a href=&quot;#前端开发环境-工具组合&quot; class=&quot;headerlink&quot; title=&quot;前端开发环境/工具组合&quot;&gt;&lt;/a&gt;前端开发环境/工具组合&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;代码编辑：sublime、webstorm&lt;/li&gt;
+&lt;li&gt;断点调试：浏览器开发者工具、batarang（AngularJS定制）&lt;/li&gt;
+&lt;li&gt;版本管理：git&lt;/li&gt;
+&lt;li&gt;代码合并压缩混淆：grunt，gulp&lt;/li&gt;
+&lt;li&gt;依赖管理：bower，npm&lt;/li&gt;
+&lt;li&gt;单元测试：Karma（容器）+Jasmine（测试语法）&lt;/li&gt;
+&lt;li&gt;集成（e2e）测试：protractor&lt;/li&gt;
+&lt;li&gt;轻量级服务器：http-server（基于node.js的HTTP接口）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;核心：node.js&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;参考：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.kancloud.cn/jikeytang/qq/81145&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;开发工具等综合性资源！！！&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://pinkyjie.com/2016/02/21/e2e-testing-in-angular/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;AngularJS端到端测试&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Controller&quot;&gt;&lt;a href=&quot;#Controller&quot; class=&quot;headerlink&quot; title=&quot;Controller&quot;&gt;&lt;/a&gt;Controller&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://ww4.sinaimg.cn/large/3ca59d76gw1f2abwq6bsqj20k00dmdgq.jpg&quot; alt=&quot;ng的MVC结构&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一个Controller控制一小块View（单一功能）&lt;/li&gt;
+&lt;li&gt;在Controller中不操作DOM（在指令中操作）&lt;/li&gt;
+&lt;li&gt;在Controller中不做数据过滤或格式化（$filter服务、表单控件）&lt;/li&gt;
+&lt;li&gt;Controller彼此不会调用，通过scope的继承或事件机制通信&lt;/li&gt;
+&lt;li&gt;Controller不继承，复用的代码写进服务（Service/Provider/factory…）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;模块&quot;&gt;&lt;a href=&quot;#模块&quot; class=&quot;headerlink&quot; title=&quot;模块&quot;&gt;&lt;/a&gt;模块&lt;/h2&gt;&lt;h3 id=&quot;项目结构&quot;&gt;&lt;a href=&quot;#项目结构&quot; class=&quot;headerlink&quot; title=&quot;项目结构&quot;&gt;&lt;/a&gt;项目结构&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;HTML：引入资源文件的index.html和放模板html代码的文件夹&lt;/li&gt;
+&lt;li&gt;CSS：单独文件夹&lt;/li&gt;
+&lt;li&gt;图片等资源：单独文件夹&lt;/li&gt;
+&lt;li&gt;framework文件夹：angular.js等引入的框架&lt;/li&gt;
+&lt;li&gt;JS：module创建注入和配置（app.js），controller创建和配置（controllers.js），指令（directives.js），过滤器（filters.js），服务（services.js），路由（routes.js）&lt;/li&gt;
+&lt;li&gt;依赖管理（包、配置文件……）&lt;/li&gt;
+&lt;li&gt;测试（单元、端到端）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;模块划分&quot;&gt;&lt;a href=&quot;#模块划分&quot; class=&quot;headerlink&quot; title=&quot;模块划分&quot;&gt;&lt;/a&gt;模块划分&lt;/h3&gt;&lt;p&gt;一个总的app模块为入口，controller、directives、services、routes、filters分别放一个模块中。app模块依赖这些模块&lt;/p&gt;
+&lt;h2 id=&quot;指令&quot;&gt;&lt;a href=&quot;#指令&quot; class=&quot;headerlink&quot; title=&quot;指令&quot;&gt;&lt;/a&gt;指令&lt;/h2&gt;&lt;h3 id=&quot;核心配置项（config）&quot;&gt;&lt;a href=&quot;#核心配置项（config）&quot; class=&quot;headerlink&quot; title=&quot;核心配置项（config）&quot;&gt;&lt;/a&gt;核心配置项（config）&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;restrict&lt;/code&gt;（匹配模式）：Attribute Element coMment Class （&lt;strong&gt;AEMC&lt;/strong&gt;）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;template&lt;/code&gt;（HTML模板代码）：”HTML代码”&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;templateUrl&lt;/code&gt;：”HTML模板文件的地址”&lt;br&gt;//模板缓存服务$templateCache，可在多个指令内使用同一个模板&lt;/li&gt;
+&lt;li&gt;模板替换方式&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;replace&lt;/code&gt;: true，替换指令（包括本身和子元素）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;transclude&lt;/code&gt;: true，保留指令子元素的内容。需要template中用ng-transclude属性指定接收内容的元素&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;指令的运行（加载→编译→链接）&quot;&gt;&lt;a href=&quot;#指令的运行（加载→编译→链接）&quot; class=&quot;headerlink&quot; title=&quot;指令的运行（加载→编译→链接）&quot;&gt;&lt;/a&gt;指令的运行（加载→编译→链接）&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;编译&lt;code&gt;compile：function(elem,attrs,transclude){...}&lt;/code&gt; //一般不写&lt;/li&gt;
+&lt;li&gt;链接&lt;code&gt;link: function(scope, elem, attrs, contrller){...}&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;compile&lt;/code&gt;和&lt;code&gt;link&lt;/code&gt;同时存在，以&lt;code&gt;compile&lt;/code&gt;为主，&lt;code&gt;link&lt;/code&gt;失效&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;compile&lt;/code&gt;与&lt;code&gt;link&lt;/code&gt;的区别：&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;compile&lt;/code&gt;：对指令的模板进行转换&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;link&lt;/code&gt;：在model和view之间建立关联，注册监听事件。监控model的变化：&lt;code&gt;$scope.$watch(&amp;#39;变量名&amp;#39;,回调)&lt;/code&gt; &lt;em&gt;注意“防抖动”：使用$timeout服务延迟发送&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;在link阶段scope才绑定，在compile阶段不能操作scope&lt;/li&gt;
+&lt;li&gt;同一指令多个实例，compile只执行一次，link每个实例都执行一次&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;交互&quot;&gt;&lt;a href=&quot;#交互&quot; class=&quot;headerlink&quot; title=&quot;交互&quot;&gt;&lt;/a&gt;交互&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;指令与controller：scope.函数。&lt;code&gt;scope.$apply(函数/Angular表达式)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;指令之间：配置项scope、controller、require   ​&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;独立scope&quot;&gt;&lt;a href=&quot;#独立scope&quot; class=&quot;headerlink&quot; title=&quot;独立scope&quot;&gt;&lt;/a&gt;独立scope&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;配置项scope取值为空对象（&lt;code&gt;{}&lt;/code&gt;）&lt;/li&gt;
+&lt;li&gt;绑定策略：&lt;code&gt;{ 变量名：绑定策略}&lt;/code&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;@&lt;/code&gt;：字符串变量的双向绑定&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;=&lt;/code&gt;：对象变量的双向绑定&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;amp;&lt;/code&gt;：在指令中绑定父级scope的函数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;内置指令-官方文档&quot;&gt;&lt;a href=&quot;#内置指令-官方文档&quot; class=&quot;headerlink&quot; title=&quot;内置指令(官方文档)&quot;&gt;&lt;/a&gt;内置指令(官方文档)&lt;/h3&gt;&lt;p&gt;a、form、各式input、ngInclude、script&lt;/p&gt;
+&lt;h3 id=&quot;指令库&quot;&gt;&lt;a href=&quot;#指令库&quot; class=&quot;headerlink&quot; title=&quot;指令库&quot;&gt;&lt;/a&gt;指令库&lt;/h3&gt;&lt;p&gt;angular-ui&lt;/p&gt;
+&lt;h2 id=&quot;服务&quot;&gt;&lt;a href=&quot;#服务&quot; class=&quot;headerlink&quot; title=&quot;服务&quot;&gt;&lt;/a&gt;服务&lt;/h2&gt;&lt;p&gt;$http服务：&lt;code&gt;$http({配置对象}).success(function).error(function)&lt;/code&gt;（promise风格）&lt;/p&gt;
+&lt;p&gt;自定义Service注意：①命名不要用’$’开头②注入时系统在前，自定义在后&lt;/p&gt;
+&lt;p&gt;特性：&lt;/p&gt;
+&lt;p&gt;①服务是单例的&lt;/p&gt;
+&lt;p&gt;②注入机制：先由$injector实例化&lt;/p&gt;
+&lt;p&gt;③存在于整个应用的生命周期（可用来共享数据）&lt;/p&gt;
+&lt;p&gt;Service、Factory、Provider、Constant、Value本质上都是Provider，而语法上有差异。&lt;/p&gt;
+&lt;p&gt;数据格式化专用服务：$filter。内置格式化方式，也可以自定义。&lt;/p&gt;
+&lt;h2 id=&quot;路由&quot;&gt;&lt;a href=&quot;#路由&quot; class=&quot;headerlink&quot; title=&quot;路由&quot;&gt;&lt;/a&gt;路由&lt;/h2&gt;&lt;p&gt;原生：ng-route&lt;/p&gt;
+&lt;p&gt;扩展插件：ui-router，可以嵌套&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;子模板指令 ui-view&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;状态指令 ui-sref&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;嵌套：状态可以有子状态。用点标记：&lt;code&gt;父状态.子状态&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&quot;表单&quot;&gt;&lt;a href=&quot;#表单&quot; class=&quot;headerlink&quot; title=&quot;表单&quot;&gt;&lt;/a&gt;表单&lt;/h2&gt;&lt;p&gt;Angular表格插件：ng-grid&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://docs.angularjs.org/api/ng.directive:form&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;form指令&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;扩展form元素：允许嵌套、自动校验、防止重复提交&lt;/p&gt;
+&lt;p&gt;给input增加type属性（HTML5更多）&lt;/p&gt;
+&lt;p&gt;添加4个css类样式&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://damoqiongqiu.iteye.com/blog/1920191&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;AngularJS表单基础&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://damoqiongqiu.iteye.com/blog/1920993&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;AngularJS Form 进阶：远程校验和自定义输入项&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;双向数据绑定&quot;&gt;&lt;a href=&quot;#双向数据绑定&quot; class=&quot;headerlink&quot; title=&quot;双向数据绑定&quot;&gt;&lt;/a&gt;双向数据绑定&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;$scope——树&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;根：$rootScope，每个模块只有一个。&lt;/p&gt;
+&lt;p&gt;子scope可以继承父scope的属性和方法。&lt;/p&gt;
+&lt;p&gt;传播事件：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;$emit()&lt;/code&gt;，向上（根）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;$broadcast()&lt;/code&gt;，向下（包含兄弟）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;scope对象：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;属性（在scope构造函数中添加）：内部id……&lt;/li&gt;
+&lt;li&gt;方法（在prototype中）：$new、$watch、$digest、$eval……&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$eval调用$parse服务解析计算内嵌Angular表达式&lt;/p&gt;
+&lt;p&gt;$digest机制——对象深比较：缓存上一次对象的全部值，与新对象逐一比较&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;不适合树型结构（对象嵌套对象），性能差。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;数据绑定关键点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;观察者模式：一个Model绑定多个View&lt;/li&gt;
+&lt;li&gt;判断Model是否变化：脏值检查遍历$watch列表，有变化应用就进入$digest循环，直到值不再变化就应用新值，继续遍历$watch列表。遍历完成时即Model稳定，再更新View&lt;/li&gt;
+&lt;li&gt;判断深层嵌套的Model某属性是否变化，对象深比较&lt;/li&gt;
+&lt;li&gt;A、B两方法互相watch，避免“振荡”——TTL：连续检测到10次（阈值）就停止监听并报错&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;基础概念&quot;&gt;&lt;a href=&quot;#基础概念&quot; class=&quot;headerlink&quot; title=&quot;基础概念&quot;&gt;&lt;/a&gt;基础概念&lt;/h2&gt;&lt;h3 id=&quot;前端框架与前端类库&quot;&gt;&lt;a href=&quot;#前端框架与前端类库&quot; class=&quot;headerlink&quot; title=&quot;前端框架与前端类库&quot;&gt;&lt;/a&gt;前端框架与前端类库&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;类库&lt;/strong&gt;：函数集合。其内容是封装一些实现复杂功能的或可复用的代码，目的是提高编码工作的效率。举例：jQuery, &lt;a href=&quot;http://greensock.com/&quot;&gt;GreenSock&lt;/a&gt;(JS动画库)，&lt;a href=&quot;http://mootools.net/&quot;&gt;mootools&lt;/a&gt;（JS API封装库），zeptojs（移动端jQuery）……&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;参考：&lt;a href=&quot;http://www.yunxiu.org/javascript-libraries-framework/&quot;&gt;常用JavaScript类库与框架总结&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;（补充：&lt;a href=&quot;JavaScript全栈开发必备工具&quot;&gt;JavaScript全栈开发必备工具&lt;/a&gt;）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;框架&lt;/strong&gt;：一种设计模式或几种模式组合的体现。改变以DOM操作为核心的前端工作流，向后端工作方式靠拢。针对某些领域或场景提供完整解决方案，提高开发效率。举例：AngularJS，React，Vue.js……&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="AngularJS" scheme="http://wut0719.github.io/categories/AngularJS/"/>
+    
+    
+      <category term="前端" scheme="http://wut0719.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="AngularJS" scheme="http://wut0719.github.io/tags/AngularJS/"/>
     
   </entry>
   
@@ -194,7 +357,7 @@
 &lt;p&gt;行内式：&lt;img src=&quot;//img3.doubanio.com/f/shire/8308f83ca66946299fc80efb1f10ea21f99ec2a5/pics/nav/lg_main_a11_1.png&quot; alt=&quot;Douban&quot;&gt;&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;行内式：![alt属性值](src属性值)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h1 id=&quot;其它&quot;&gt;&lt;a href=&quot;#其它&quot; class=&quot;headerlink&quot; title=&quot;其它&quot;&gt;&lt;/a&gt;其它&lt;/h1&gt;&lt;h2 id=&quot;反斜杠-转义字符&quot;&gt;&lt;a href=&quot;#反斜杠-转义字符&quot; class=&quot;headerlink&quot; title=&quot;反斜杠-转义字符&quot;&gt;&lt;/a&gt;反斜杠-转义字符&lt;/h2&gt;&lt;p&gt;\ 反斜杠&lt;br&gt;` 反引号&lt;br&gt;* 星号&lt;br&gt;_ 下划线&lt;br&gt;{} 大括号&lt;br&gt;[] 中括号&lt;br&gt;() 小括号&lt;br&gt;# 井号&lt;br&gt;+ 加号&lt;br&gt;- 减号&lt;br&gt;. 英文句号&lt;br&gt;! 感叹号&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;\\ 反斜杠&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\` 反引号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\* 星号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\_ 下划线&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\&amp;#123;\&amp;#125; 大括号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\[\] 中括号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\(\) 小括号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\# 井号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\+ 加号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\- 减号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\. 英文句号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\! 感叹号&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;h2 id=&quot;自动链接&quot;&gt;&lt;a href=&quot;#自动链接&quot; class=&quot;headerlink&quot; title=&quot;自动链接&quot;&gt;&lt;/a&gt;自动链接&lt;/h2&gt;&lt;p&gt;尖括号，包括链接和邮件地址。&lt;br&gt;&lt;a href=&quot;http://wut0719.github.io&quot;&gt;http://wut0719.github.io&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;&amp;#x6d;&amp;#x61;&amp;#105;&amp;#x6c;&amp;#x74;&amp;#x6f;&amp;#58;&amp;#x65;&amp;#x78;&amp;#97;&amp;#109;&amp;#112;&amp;#108;&amp;#x65;&amp;#x40;&amp;#101;&amp;#120;&amp;#97;&amp;#x6d;&amp;#x70;&amp;#x6c;&amp;#101;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#x6d;&quot;&gt;&amp;#x65;&amp;#x78;&amp;#97;&amp;#109;&amp;#112;&amp;#108;&amp;#x65;&amp;#x40;&amp;#101;&amp;#120;&amp;#97;&amp;#x6d;&amp;#x70;&amp;#x6c;&amp;#101;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#x6d;&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;http://wut0719.github.io&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;example@example.com&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&quot;自动链接&quot;&gt;&lt;a href=&quot;#自动链接&quot; class=&quot;headerlink&quot; title=&quot;自动链接&quot;&gt;&lt;/a&gt;自动链接&lt;/h2&gt;&lt;p&gt;尖括号，包括链接和邮件地址。&lt;br&gt;&lt;a href=&quot;http://wut0719.github.io&quot;&gt;http://wut0719.github.io&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;&amp;#x6d;&amp;#97;&amp;#x69;&amp;#108;&amp;#116;&amp;#x6f;&amp;#x3a;&amp;#101;&amp;#120;&amp;#97;&amp;#109;&amp;#112;&amp;#x6c;&amp;#x65;&amp;#x40;&amp;#101;&amp;#x78;&amp;#x61;&amp;#109;&amp;#112;&amp;#108;&amp;#x65;&amp;#x2e;&amp;#99;&amp;#x6f;&amp;#109;&quot;&gt;&amp;#101;&amp;#120;&amp;#97;&amp;#109;&amp;#112;&amp;#x6c;&amp;#x65;&amp;#x40;&amp;#101;&amp;#x78;&amp;#x61;&amp;#109;&amp;#112;&amp;#108;&amp;#x65;&amp;#x2e;&amp;#99;&amp;#x6f;&amp;#109;&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;http://wut0719.github.io&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;example@example.com&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;参考：&lt;/p&gt;
 &lt;ul&gt;
@@ -1258,34 +1421,6 @@
     
       &lt;p&gt;前一阵子在网上下载的这个游戏，EA公司出品。英文名叫Monopoly，中文名是地产大亨，一款大富翁类的棋牌游戏。相比之于不痛不痒的中文名，monopoly这个词更为准确地反映出这游戏的实质——垄断。  &lt;/p&gt;
 &lt;p&gt;同一色块的土地，如果你只拥有其中一部分，则每一块单独计算租金；反之，则增加为原来租金的两倍。在公用事业和火车站上体现的更为明显。自来水公司或电力公司两者占有其一，收取4倍步数的费用；全部占有，则涨为10倍。车站共有4个，占有1个可收取的费用是25，2个为50，3个为100，4个就再翻倍。相比于众多而分散的产业而言，垄断一小部分可以获得多得多的收益，甚至于转瞬间反败为胜。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="个人" scheme="http://wut0719.github.io/categories/%E4%B8%AA%E4%BA%BA/"/>
-    
-    
-      <category term="杂谈" scheme="http://wut0719.github.io/tags/%E6%9D%82%E8%B0%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>启蒙与犬儒主义</title>
-    <link href="http://wut0719.github.io/2013/03/23/%E5%90%AF%E8%92%99%E4%B8%8E%E7%8A%AC%E5%84%92%E4%B8%BB%E4%B9%89/"/>
-    <id>http://wut0719.github.io/2013/03/23/启蒙与犬儒主义/</id>
-    <published>2013-03-22T16:00:00.000Z</published>
-    <updated>2016-03-12T13:52:32.000Z</updated>
-    
-    <content type="html">&lt;p&gt;昨天正好去听了刘老师的讲座，姑且简单记录一点自己的感想和体会。讲座的内容还是很多的，也很庞杂，有中有外，有流变，当然也有希冀。总的来说是值得一听的，可惜到场的人并不算多。从某种角度看，这正印证了老师对我们这代犬儒主义者的判断，可悲可叹。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;br&gt;外国暂且按下不表，单论我国。依老师所言，我国至今已有三波犬儒主义者出现的浪潮。第一波是在文革后期，主要受林彪事件影响。第二波是在八十年代末到九十年代中期，主要受政治风波和西方后现代主义影响。第三波就是今天的八零九零后了，亦即我们这一代。在谈到第三波的时候，老师指出一种现象——与前两波不同，这一波的年龄明显降低。这个现象的趣味之处就在于，犬儒主义居然出现在还没有经历过理想主义破灭的年轻人身上，与以往犬儒主义者的形成历程大相径庭。&lt;/p&gt;
-&lt;p&gt;如果对我们这代人的成长过程考察一番，那么就不会对此感到意外了。虽然我们不必上山下乡，也没有政治风波，但是我们同样经历着一场前所未有的巨变，也许未必是政治上的，但一定是经济上的，是生活上的，甚至于是思想观念上的。作为年轻一代，我们的历练和视野确实不能与已经人到中年的第二波第一波相比，不过比起他们年轻的时候，还是要多一些的。所以说，第三波同样经历过，或者至少感受过，理想主义破灭的滋味，只不过现在的理想已经不同于过去单纯的政治理想了。它泛化了，涵盖了更为广阔的领域。（老师也有提到，过上一种普通生活的“理想”，在拼爹的今天也陷于一种破灭的境地。即是一例。）&lt;/p&gt;
-&lt;p&gt;另一方面，老师也有提到，就是经济社会的副产品——消费主义及其影响，用电影电视剧作为例子。后来提问的时候也有同学对此提出异议，认为电影也能够引发深思。在我看来，首先电影和电视剧并没有本质上的区别，都存在好片和烂片的情形。而且好片烂片同样可以引发各种各样的思考，更不必说不同的人的区分好片烂片的标准还有不同。&lt;/p&gt;
-&lt;p&gt;相比于书本，电影的确有很多劣势，其中个人认为最重要的一点是，电影的思想承载力远不及书本，虽然它可以任意制造各式各样的想象空间。我无意于去批评电影，而且还很喜欢这种艺术形式，不过对于其能力界限还是应该有所认识的。而对于启蒙而言，电影则是一个不能忽视的手段。回顾五四前辈的新文化运动，他们就敢于运用各种新兴的艺术形式去推广启蒙思想，像白话小说、新体诗、话剧……作为早已进入艺术殿堂的电影，为什么不能够成为启蒙思想传播的途径？启蒙不应该被局限在什么小圈子里，那必然会失去其生命力，而是要走向大众，去实践其自身的普适性。&lt;/p&gt;
-&lt;p&gt;提问环节的“月经”题是少不了的——我们应该怎么做？可能提问者觉得老师说得比较模糊，没法转换成实际的行动。换个角度想，对于老师的回答，她心里应该有个大致估计，而且之前所讲的内容不太符合这个估计。有些问题表面上看是征求意见，其实只是要对方证实自己的想法罢了。更有甚者还提出要不要入党的问题，让我颇为惊异。可见，我国启蒙工作的效果还差得远呢，绝不像西方那样已经完成了其自身的历史使命。&lt;/p&gt;
-&lt;p&gt;说到底，启蒙是自己的事。输入大脑的知识思想，要靠自己消化，这个别人帮不上忙。同时，正如老师所提醒的，要给超越性的终极价值留下空间，以尽力消解启蒙隐含的怀疑主义的负面影响。至于这个终极价值可以是什么，我想到几个选项。除去几个宗教以外，进步主义也可以算上。肯定还有别的可能性，不过一时想不到。虽然这些听起来虚无缥缈，但是总得给自己的行动找点支撑吧。说到行动，“穷则独善其身，达则兼济天下”一句足以。&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;昨天正好去听了刘老师的讲座，姑且简单记录一点自己的感想和体会。讲座的内容还是很多的，也很庞杂，有中有外，有流变，当然也有希冀。总的来说是值得一听的，可惜到场的人并不算多。从某种角度看，这正印证了老师对我们这代犬儒主义者的判断，可悲可叹。&lt;br&gt;
     
     </summary>
     

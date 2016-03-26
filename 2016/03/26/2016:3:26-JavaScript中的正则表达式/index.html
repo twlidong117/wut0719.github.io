@@ -12,15 +12,9 @@ pattern是表达式文本
 
 flags是特殊参数： g ——全局匹配； i——忽略大小写； m ——让开头（^）和结尾（$）字符工作在多行模式（由 \n 或 \r 分割的）
 
-
 多行模式：每一行的开头结尾也可匹配。关闭多行模式则只匹配整个字符串的开头和结尾
 
-
-静态常量：构造完成后保持不变
-
-
-
-构造函数：new">
+静态常量：构造完成后保持不变">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript中的正则表达式">
 <meta property="og:url" content="http://wut0719.github.io/2016/03/26/2016:3:26-JavaScript中的正则表达式/index.html">
@@ -32,16 +26,10 @@ pattern是表达式文本
 
 flags是特殊参数： g ——全局匹配； i——忽略大小写； m ——让开头（^）和结尾（$）字符工作在多行模式（由 \n 或 \r 分割的）
 
-
 多行模式：每一行的开头结尾也可匹配。关闭多行模式则只匹配整个字符串的开头和结尾
 
-
-静态常量：构造完成后保持不变
-
-
-
-构造函数：new">
-<meta property="og:updated_time" content="2016-03-26T07:31:17.000Z">
+静态常量：构造完成后保持不变">
+<meta property="og:updated_time" content="2016-03-26T08:58:22.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript中的正则表达式">
 <meta name="twitter:description" content="JavaScript 正则表达式的构成方式
@@ -51,15 +39,9 @@ pattern是表达式文本
 
 flags是特殊参数： g ——全局匹配； i——忽略大小写； m ——让开头（^）和结尾（$）字符工作在多行模式（由 \n 或 \r 分割的）
 
-
 多行模式：每一行的开头结尾也可匹配。关闭多行模式则只匹配整个字符串的开头和结尾
 
-
-静态常量：构造完成后保持不变
-
-
-
-构造函数：new">
+静态常量：构造完成后保持不变">
   
     <link rel="alternative" href="/atom.xml" title="吴桐的博客" type="application/atom+xml">
   
@@ -139,20 +121,20 @@ flags是特殊参数： g ——全局匹配； i——忽略大小写； m —�
 </li>
 <li><p><code>flags</code>是特殊参数： <code>g</code> ——全局匹配； <code>i</code>——忽略大小写； <code>m</code> ——让开头（^）和结尾（$）字符工作在多行模式（由 \n 或 \r 分割的）</p>
 </li>
-<li><ul>
-<li>多行模式：每一行的开头结尾也可匹配。关闭多行模式则只匹配整个字符串的开头和结尾</li>
-</ul>
+<li><p>多行模式：每一行的开头结尾也可匹配。关闭多行模式则只匹配整个字符串的开头和结尾</p>
 </li>
 <li><p>静态常量：构造完成后保持不变</p>
 </li>
 </ul>
 </li>
+</ul>
+<a id="more"></a>
+<ul>
 <li><p>构造函数：<code>new RegExp(&quot;pattern&quot;,&quot;flags&quot;)</code></p>
 </li>
-<li><ul>
-<li>pattern是字符串，<em>注意对 \ 的转义（” \\ “）</em></li>
-<li>运行时编译→表达式可变</li>
-</ul>
+<li><p>pattern是字符串，<em>注意对 \ 的转义（” \\ “）</em></p>
+</li>
+<li><p>运行时编译→表达式可变</p>
 </li>
 </ul>
 <p>表达式文本由<strong>普通字符</strong>、<strong>特殊字符</strong>以及对应的重复规则组合而成。</p>
@@ -160,8 +142,7 @@ flags是特殊参数： g ——全局匹配； i——忽略大小写； m —�
 <h2 id="特殊字符"><a href="#特殊字符" class="headerlink" title="特殊字符"></a>特殊字符</h2><p>★ 特殊字符都是单个字符！</p>
 <ul>
 <li><p>字符类别</p>
-</li>
-<li><ul>
+<ul>
 <li><code>.</code>英文句点，小数点——匹配任意单个字符（换行符除外）</li>
 <li><code>\d</code>一个数字<code>[0-9]</code>；<code>\D</code> 一个非数字<code>[^0-9]</code></li>
 <li><code>\w</code> 一个字母或数字或下划线<code>[a-zA-Z0-9_]</code>；<code>\W</code>一个非字母非数字非下划线的字符<code>[^a-zA-Z0-9_]</code></li>
@@ -172,28 +153,24 @@ flags是特殊参数： g ——全局匹配； i——忽略大小写； m —�
 </ul>
 </li>
 <li><p>字符集合</p>
-</li>
-<li><ul>
+<ul>
 <li><code>[abcde]</code>匹配集合中的任意一个字符。abcde 等价于 a-e</li>
 <li><code>[^abcde]</code>匹配任意一个不在集合中的字符。abcde 等价于 a-e</li>
 </ul>
 </li>
 <li><p>边界</p>
-</li>
-<li><ul>
+<ul>
 <li><code>^</code> 开头（字符串或每行）</li>
 <li><code>$</code> 结尾（字符串或每行）</li>
 <li><code>\b</code> 单词边界</li>
-<li><code>\B</code>非单词边界（内部）</li>
+<li><code>\B</code> 非单词边界（内部）</li>
 </ul>
 </li>
 </ul>
 <h2 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h2><ul>
 <li><p>捕获括号 <code>(pattern)</code> ：匹配表达式并保存括号内的字符串。</p>
 </li>
-<li><ul>
-<li>replace()函数的第二个参数中使用<code>$1</code>,<code>$2</code>,…<code>$9</code>获取</li>
-</ul>
+<li><p>replace()函数的第二个参数中使用<code>$1</code>,<code>$2</code>,…<code>$9</code>获取</p>
 </li>
 <li><p>反向引用 <code>\n</code> (n是正整数)：指向正则表达式中左起第 n 个括号所匹配的字符串</p>
 </li>
@@ -204,15 +181,13 @@ flags是特殊参数： g ——全局匹配； i——忽略大小写； m —�
 <h2 id="数量词（表达式或分组的重复次数）"><a href="#数量词（表达式或分组的重复次数）" class="headerlink" title="数量词（表达式或分组的重复次数）"></a>数量词（表达式或分组的重复次数）</h2><p>位于表达式后面</p>
 <ul>
 <li><code>*</code>：0或多次</li>
-</ul>
-<ul>
 <li><code>+</code> ：1或多次</li>
 <li><code>?</code> ：0或1次</li>
 <li><code>{n,}</code> ：至少 n 次</li>
 <li><code>{n,m}</code>：至少 n 次，至多 m 次</li>
 </ul>
 <p>默认匹配模式是<strong>贪婪</strong>模式，即一个匹配结果包含<strong>尽可能多</strong>的字符。在上述数量词后加上一个 ? 就设置成<strong>非贪婪</strong>模式，即一个匹配结果包含<strong>尽可能少</strong>的字符。</p>
-<p>★另有一条更高优先级的匹配规则：最先开始的匹配拥有最高优先权</p>
+<p>★ 另有一条更高优先级的匹配规则：最先开始的匹配拥有最高优先权</p>
 <ul>
 <li><code>{n}</code> ：n次（多于 n 时也只匹配n次，无所谓贪婪懒惰）</li>
 <li><code>x(?=y)</code>：只有当 x 后面紧跟着 y 时，才匹配 x 。</li>
@@ -223,7 +198,7 @@ flags是特殊参数： g ——全局匹配； i——忽略大小写； m —�
       
     </div>
     <footer class="article-footer">
-      <!--<a data-url="http://wut0719.github.io/2016/03/26/2016:3:26-JavaScript中的正则表达式/" data-id="cim8vwf610001q03eyfi0zdjs" class="article-share-link">Share</a>
+      <!--<a data-url="http://wut0719.github.io/2016/03/26/2016:3:26-JavaScript中的正则表达式/" data-id="cim8wn7h300015m3ezg0a28fn" class="article-share-link">Share</a>
       -->
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/正则表达式/">正则表达式</a></li></ul>
@@ -236,9 +211,9 @@ flags是特殊参数： g ——全局匹配； i——忽略大小写； m —�
 <nav id="article-nav">
   
   
-    <a href="/2016/03/14/markdown语法/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2016/03/25/2016:3:25-慕课网AngularJS实战课程笔记/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">下一篇</strong>
-      <div class="article-nav-title">hexo3可用的Markdown语法</div>
+      <div class="article-nav-title">慕课网AngularJS实战课程笔记</div>
     </a>
   
 </nav>
