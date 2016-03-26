@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wut0719.github.io/"/>
-  <updated>2016-03-13T16:25:09.000Z</updated>
+  <updated>2016-03-26T07:31:17.000Z</updated>
   <id>http://wut0719.github.io/</id>
   
   <author>
@@ -14,6 +14,119 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JavaScript中的正则表达式</title>
+    <link href="http://wut0719.github.io/2016/03/26/2016:3:26-JavaScript%E4%B8%AD%E7%9A%84%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    <id>http://wut0719.github.io/2016/03/26/2016:3:26-JavaScript中的正则表达式/</id>
+    <published>2016-03-25T16:00:00.000Z</published>
+    <updated>2016-03-26T07:31:17.000Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;JavaScript-正则表达式的构成方式&quot;&gt;&lt;a href=&quot;#JavaScript-正则表达式的构成方式&quot; class=&quot;headerlink&quot; title=&quot;JavaScript 正则表达式的构成方式&quot;&gt;&lt;/a&gt;JavaScript 正则表达式的构成方式&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;字面量&lt;code&gt;/pattern/flags&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;pattern&lt;/code&gt;是表达式文本&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;flags&lt;/code&gt;是特殊参数： &lt;code&gt;g&lt;/code&gt; ——全局匹配； &lt;code&gt;i&lt;/code&gt;——忽略大小写； &lt;code&gt;m&lt;/code&gt; ——让开头（^）和结尾（$）字符工作在多行模式（由 \n 或 \r 分割的）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;多行模式：每一行的开头结尾也可匹配。关闭多行模式则只匹配整个字符串的开头和结尾&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;静态常量：构造完成后保持不变&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;构造函数：&lt;code&gt;new RegExp(&amp;quot;pattern&amp;quot;,&amp;quot;flags&amp;quot;)&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;pattern是字符串，&lt;em&gt;注意对 \ 的转义（” \\ “）&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;运行时编译→表达式可变&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;表达式文本由&lt;strong&gt;普通字符&lt;/strong&gt;、&lt;strong&gt;特殊字符&lt;/strong&gt;以及对应的重复规则组合而成。&lt;/p&gt;
+&lt;p&gt;例子：&lt;code&gt;/abc/&lt;/code&gt;匹配字符串中的’abc’子串&lt;/p&gt;
+&lt;h2 id=&quot;特殊字符&quot;&gt;&lt;a href=&quot;#特殊字符&quot; class=&quot;headerlink&quot; title=&quot;特殊字符&quot;&gt;&lt;/a&gt;特殊字符&lt;/h2&gt;&lt;p&gt;★ 特殊字符都是单个字符！&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;字符类别&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;.&lt;/code&gt;英文句点，小数点——匹配任意单个字符（换行符除外）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\d&lt;/code&gt;一个数字&lt;code&gt;[0-9]&lt;/code&gt;；&lt;code&gt;\D&lt;/code&gt; 一个非数字&lt;code&gt;[^0-9]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\w&lt;/code&gt; 一个字母或数字或下划线&lt;code&gt;[a-zA-Z0-9_]&lt;/code&gt;；&lt;code&gt;\W&lt;/code&gt;一个非字母非数字非下划线的字符&lt;code&gt;[^a-zA-Z0-9_]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\s&lt;/code&gt; 一个空白符；&lt;code&gt;\S&lt;/code&gt; 一个非空白符&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\xhh&lt;/code&gt; 一个编码为两位十六进制数(hh)的字符（ASCII码）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\uhhhh&lt;/code&gt; 一个Unicode字符，四位十六进制数&lt;/li&gt;
+&lt;li&gt;其他：&lt;a href=&quot;https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;RexExp-MDN&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;字符集合&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;[abcde]&lt;/code&gt;匹配集合中的任意一个字符。abcde 等价于 a-e&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[^abcde]&lt;/code&gt;匹配任意一个不在集合中的字符。abcde 等价于 a-e&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;边界&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;^&lt;/code&gt; 开头（字符串或每行）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;$&lt;/code&gt; 结尾（字符串或每行）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\b&lt;/code&gt; 单词边界&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\B&lt;/code&gt;非单词边界（内部）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;分组&quot;&gt;&lt;a href=&quot;#分组&quot; class=&quot;headerlink&quot; title=&quot;分组&quot;&gt;&lt;/a&gt;分组&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;捕获括号 &lt;code&gt;(pattern)&lt;/code&gt; ：匹配表达式并保存括号内的字符串。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;replace()函数的第二个参数中使用&lt;code&gt;$1&lt;/code&gt;,&lt;code&gt;$2&lt;/code&gt;,…&lt;code&gt;$9&lt;/code&gt;获取&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;反向引用 &lt;code&gt;\n&lt;/code&gt; (n是正整数)：指向正则表达式中左起第 n 个括号所匹配的字符串&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;非捕获括号 &lt;code&gt;(?:pattern)&lt;/code&gt; ：匹配但不保存&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;//不大理解。放上另一个说法：分组用于指定&lt;strong&gt;子表达式&lt;/strong&gt;，单独确定重复次数或其他操作。&lt;a href=&quot;http://deerchao.net/tutorials/regex/regex.htm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;参考&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;数量词（表达式或分组的重复次数）&quot;&gt;&lt;a href=&quot;#数量词（表达式或分组的重复次数）&quot; class=&quot;headerlink&quot; title=&quot;数量词（表达式或分组的重复次数）&quot;&gt;&lt;/a&gt;数量词（表达式或分组的重复次数）&lt;/h2&gt;&lt;p&gt;位于表达式后面&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;*&lt;/code&gt;：0或多次&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;+&lt;/code&gt; ：1或多次&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;?&lt;/code&gt; ：0或1次&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;{n,}&lt;/code&gt; ：至少 n 次&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;{n,m}&lt;/code&gt;：至少 n 次，至多 m 次&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;默认匹配模式是&lt;strong&gt;贪婪&lt;/strong&gt;模式，即一个匹配结果包含&lt;strong&gt;尽可能多&lt;/strong&gt;的字符。在上述数量词后加上一个 ? 就设置成&lt;strong&gt;非贪婪&lt;/strong&gt;模式，即一个匹配结果包含&lt;strong&gt;尽可能少&lt;/strong&gt;的字符。&lt;/p&gt;
+&lt;p&gt;★另有一条更高优先级的匹配规则：最先开始的匹配拥有最高优先权&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;{n}&lt;/code&gt; ：n次（多于 n 时也只匹配n次，无所谓贪婪懒惰）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;x(?=y)&lt;/code&gt;：只有当 x 后面紧跟着 y 时，才匹配 x 。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;x(?!y)&lt;/code&gt; ：只有当 x 后面不紧跟着 y 时，才匹配 x 。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;x|y&lt;/code&gt; ：匹配 x 或 y 。&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;JavaScript-正则表达式的构成方式&quot;&gt;&lt;a href=&quot;#JavaScript-正则表达式的构成方式&quot; class=&quot;headerlink&quot; title=&quot;JavaScript 正则表达式的构成方式&quot;&gt;&lt;/a&gt;JavaScript 正则表达式的构成方式&lt;/
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="http://wut0719.github.io/categories/JavaScript/"/>
+    
+    
+      <category term="JavaScript" scheme="http://wut0719.github.io/tags/JavaScript/"/>
+    
+      <category term="正则表达式" scheme="http://wut0719.github.io/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    
+      <category term="前端" scheme="http://wut0719.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>hexo3可用的Markdown语法</title>
@@ -81,7 +194,7 @@
 &lt;p&gt;行内式：&lt;img src=&quot;//img3.doubanio.com/f/shire/8308f83ca66946299fc80efb1f10ea21f99ec2a5/pics/nav/lg_main_a11_1.png&quot; alt=&quot;Douban&quot;&gt;&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;行内式：![alt属性值](src属性值)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h1 id=&quot;其它&quot;&gt;&lt;a href=&quot;#其它&quot; class=&quot;headerlink&quot; title=&quot;其它&quot;&gt;&lt;/a&gt;其它&lt;/h1&gt;&lt;h2 id=&quot;反斜杠-转义字符&quot;&gt;&lt;a href=&quot;#反斜杠-转义字符&quot; class=&quot;headerlink&quot; title=&quot;反斜杠-转义字符&quot;&gt;&lt;/a&gt;反斜杠-转义字符&lt;/h2&gt;&lt;p&gt;\ 反斜杠&lt;br&gt;` 反引号&lt;br&gt;* 星号&lt;br&gt;_ 下划线&lt;br&gt;{} 大括号&lt;br&gt;[] 中括号&lt;br&gt;() 小括号&lt;br&gt;# 井号&lt;br&gt;+ 加号&lt;br&gt;- 减号&lt;br&gt;. 英文句号&lt;br&gt;! 感叹号&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;\\ 反斜杠&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\` 反引号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\* 星号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\_ 下划线&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\&amp;#123;\&amp;#125; 大括号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\[\] 中括号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\(\) 小括号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\# 井号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\+ 加号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\- 减号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\. 英文句号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\! 感叹号&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;h2 id=&quot;自动链接&quot;&gt;&lt;a href=&quot;#自动链接&quot; class=&quot;headerlink&quot; title=&quot;自动链接&quot;&gt;&lt;/a&gt;自动链接&lt;/h2&gt;&lt;p&gt;尖括号，包括链接和邮件地址。&lt;br&gt;&lt;a href=&quot;http://wut0719.github.io&quot;&gt;http://wut0719.github.io&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;&amp;#x6d;&amp;#x61;&amp;#105;&amp;#x6c;&amp;#x74;&amp;#x6f;&amp;#58;&amp;#101;&amp;#120;&amp;#x61;&amp;#x6d;&amp;#112;&amp;#x6c;&amp;#101;&amp;#64;&amp;#x65;&amp;#120;&amp;#97;&amp;#109;&amp;#x70;&amp;#108;&amp;#x65;&amp;#46;&amp;#99;&amp;#x6f;&amp;#109;&quot;&gt;&amp;#101;&amp;#120;&amp;#x61;&amp;#x6d;&amp;#112;&amp;#x6c;&amp;#101;&amp;#64;&amp;#x65;&amp;#120;&amp;#97;&amp;#109;&amp;#x70;&amp;#108;&amp;#x65;&amp;#46;&amp;#99;&amp;#x6f;&amp;#109;&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;http://wut0719.github.io&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;example@example.com&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&quot;自动链接&quot;&gt;&lt;a href=&quot;#自动链接&quot; class=&quot;headerlink&quot; title=&quot;自动链接&quot;&gt;&lt;/a&gt;自动链接&lt;/h2&gt;&lt;p&gt;尖括号，包括链接和邮件地址。&lt;br&gt;&lt;a href=&quot;http://wut0719.github.io&quot;&gt;http://wut0719.github.io&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;&amp;#x6d;&amp;#x61;&amp;#105;&amp;#x6c;&amp;#x74;&amp;#x6f;&amp;#58;&amp;#x65;&amp;#x78;&amp;#97;&amp;#109;&amp;#112;&amp;#108;&amp;#x65;&amp;#x40;&amp;#101;&amp;#120;&amp;#97;&amp;#x6d;&amp;#x70;&amp;#x6c;&amp;#101;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#x6d;&quot;&gt;&amp;#x65;&amp;#x78;&amp;#97;&amp;#109;&amp;#112;&amp;#108;&amp;#x65;&amp;#x40;&amp;#101;&amp;#120;&amp;#97;&amp;#x6d;&amp;#x70;&amp;#x6c;&amp;#101;&amp;#46;&amp;#x63;&amp;#x6f;&amp;#x6d;&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;http://wut0719.github.io&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;example@example.com&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;参考：&lt;/p&gt;
 &lt;ul&gt;
@@ -1173,35 +1286,6 @@
     <summary type="html">
     
       &lt;p&gt;昨天正好去听了刘老师的讲座，姑且简单记录一点自己的感想和体会。讲座的内容还是很多的，也很庞杂，有中有外，有流变，当然也有希冀。总的来说是值得一听的，可惜到场的人并不算多。从某种角度看，这正印证了老师对我们这代犬儒主义者的判断，可悲可叹。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="个人" scheme="http://wut0719.github.io/categories/%E4%B8%AA%E4%BA%BA/"/>
-    
-    
-      <category term="杂谈" scheme="http://wut0719.github.io/tags/%E6%9D%82%E8%B0%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>从高考改革说开去</title>
-    <link href="http://wut0719.github.io/2013/03/19/%E4%BB%8E%E9%AB%98%E8%80%83%E6%94%B9%E9%9D%A9%E8%AF%B4%E5%BC%80%E5%8E%BB/"/>
-    <id>http://wut0719.github.io/2013/03/19/从高考改革说开去/</id>
-    <published>2013-03-18T16:00:00.000Z</published>
-    <updated>2016-03-12T14:02:58.000Z</updated>
-    
-    <content type="html">&lt;p&gt;新博客开起来了，总要有些文章撑撑场面。想到自己既然算是比较关心教育的人，又经历了高考这件事，不如就拿这个话题做个开场白，总好过随便或精心转载的文章吧。之所以选择高考改革作为出发点，其实也算是对那篇民间高考改革方案的报道有感而发。我后来在网上搜索了一下，发现方案还不少，比报道里的还多，也不只是民间的，还有机构的。先说民间的三种方案吧。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;br&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/3ca59d76gw1evb8qjucopj20h907pt8x.jpg&quot; alt=&quot;民间高考改革方案&quot;&gt;&lt;/p&gt;
-&lt;p&gt;这三种方案虽然侧重点各有不同，不过其核心是相似的，那就是在统考的前提下加强考试的区分度和减轻学生负担。前二种都把考试科目数调低而代之以更为全面的学业水平测试，后一种突出高职与普通高校的区别，也能降低目标高职之考生的压力。这些与西式教育体系下的联考制度有异曲同工之妙，所以不能简单地谓之不现实。对于联考制度，我相信即使这不是我国高考改革的终点，也一定是个必经之路。不过与民间方案“减负”的出发点不同，我认为其中的主要原因是招生自主乃大学办学自主权的最终体现。差异化的招生结构必然反映学校差异化的办学思路，也能促使学校制定更具特色的培养方案。&lt;/p&gt;
-&lt;p&gt;另一方面，民间方案的问题在于其过于理想化。不妨我们先来看一看方案1。这套方案中虽然强调高考只考3门且不分科，但是作为补充的学业水平测试难道不会看作是另一种形式的高考？那岂不是就等同于高考变成了9门(甚至更多)？更不必说依目前各省独立组织这测试的情况下又会滋生多少腐败弊案了。然后再看方案2。实验学科与人文学科各择其一与不分科的矛盾暂且不提，这以报考专业为选择依据不正好必然要求考前填志愿吗？至于专业是不是与实验学科和人文学科相关就更不必说了。最后再谈谈方案3。不是说两种类型的学校不应该分别考试，而是很有必要这么做，这样就能将职业教育同高等教育分割开，对双方都很有好处。只是在现行社会主流思想的背景下，这种做法差不多算是判了高职死刑。所以说这些民间改革方案虽然可以说是反映了某种民间的愿望，而其根本上不足为用。&lt;/p&gt;
-&lt;p&gt;除了民间的方案，还有一些机构也有他们自己的构想，比如21世纪教育研究院的一份&lt;a href=&quot;http://edu.sina.com.cn/l/2009-06-14/1548172839.shtml&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;报告&lt;/a&gt;。与粗糙的民间方案相比，机构方案明显更为规范，内容也更加完整详实，是比较让人满意的。后面所附小调查的结果也是很好的说明。但是从教育的角度出发，我不同意其中有关降低英语权重的内容。首先降低英语权重并不会必然导致对母语重视程度的提高。这一点是显而易见的，即使在目前语数外三者分数权重相同的情况下，数学的重要程度也是要超过其他两门的。实际上，一门学科在实际学习生活中的地位是受很多因素影响的，其中比较关键的一条就是学生在此科目上提分的难易程度。提分容易的自然受更多的重视，而提分难的往往就会被首先牺牲掉。此外，在英语上针对不同地区进行区别对待，虽然短时间内使得那些英语教学薄弱地区少吃点亏，但从长远来看反而促成了更大的不平等。这些地区的教育资源本身就比较匮乏暂且不说，更低的英语标准就意味着一部分在英语上的教学资源需要放到其他更有价值的学科上去，其结果就是这些地区的学生总体英语基础进一步落后。与此同时那些英语教学并不薄弱的地区，与其外向型的经济结构密不可分。也就是说，英语在这些地区本身就具有很高的市场需求，与学校教学资源的分配倒不是密切相关，从不断增长的外语培训行业就可见一斑了。长此以往，这两个地区在英语方面的差距就越来越大，显然这不是我们所愿意看到的，更不必说由此引发的其他影响了。&lt;/p&gt;
-&lt;p&gt;与民间方案相同，机构方案也存在过理想化的缺点，使得一些措施显得十分幼稚。也许有人要问我是不是有个更好的方案，我的答案是除了联考制度便没了。因为联考制度相比于我们现行的制度确实有很多重要的优点。但是如果要立刻改革，或者定个十年二十年的时间表，我都是坚决反对的。谈及这些民间方案与机构方案的利弊，再算上各省已经进行了的各式各样的改革，像什么基本能力，小高考等等，以及舆论讨论最为激烈的录取制度，我想说的是，无论什么样的措施都不可能是完美的，总有人受益亦总有人受损。而且更为重要的是，高考最大的价值，或曰优势，就在于其稳定性。无论加在高考上什么样的改革，都是对学生的新负担，制造了更多的混乱。&lt;/p&gt;
-&lt;p&gt;更为重要的是，一个非常重要的问题往往被大家轻易地忽略掉，那就是高考为什么这么重要。也许有人会说，不就是因为上大学嘛。这话二三十年前说没什么问题，但是在已经进入高等教育大众化的今天恐怕就不能算作是很好的解释了。实际上高考之所以在今天仍然如此之重要并非在于大学，而是在于重点大学，在于名牌大学。从对北大清华的生源结构的争论就能感受到了，其实争来争去不过就是希望能多招本地区的学生而已。就地高考也是同样的道理，不能增加名额，那我就去名额多的地方考，其实质无非就是高考移民。由此引出的一个现象颇值玩味，当年高考移民一片火热之时，反对呼声很强，最终促成了政府的禁令，而如今换汤不换药的就地高考反而一片赞扬之声，个中缘由亦值深思，不过此非本文主旨，按下不表。&lt;/p&gt;
-&lt;p&gt;于是就可以看出，与其改革高考，不如直接从高等教育入手。在我看来，高考的变化是与高校的变化息息相关的，同时高考是服从并服务于高校的。关于高教改革的内容，则涉及的内容更为广泛，非此文之力所能及，但是大概内容还是可以谈谈的。针对高教大众化的现状，改革的重点应当置于平等而不是争什么世界一流。差异化的办学思路实际上是提高了高校的办学门槛，也增加其对资源的需求。另一方面对生源结构问题的最好应对措施，不是把那俩学校变成社会平等的牺牲品，而是让更多地的学校具备他们的条件，也唯有这样道路才能从根本上促进我国高等教育的健康发展，由此而带动的其他各领域的进步才会很坚实有力。同时，这也是最根本性的高考改革。&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;新博客开起来了，总要有些文章撑撑场面。想到自己既然算是比较关心教育的人，又经历了高考这件事，不如就拿这个话题做个开场白，总好过随便或精心转载的文章吧。之所以选择高考改革作为出发点，其实也算是对那篇民间高考改革方案的报道有感而发。我后来在网上搜索了一下，发现方案还不少，比报道里的还多，也不只是民间的，还有机构的。先说民间的三种方案吧。&lt;br&gt;
     
     </summary>
     
