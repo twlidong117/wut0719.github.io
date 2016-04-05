@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wut0719.github.io/"/>
-  <updated>2016-03-26T08:58:22.000Z</updated>
+  <updated>2016-04-05T02:39:51.000Z</updated>
   <id>http://wut0719.github.io/</id>
   
   <author>
@@ -14,6 +14,66 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>几种常见排序算法的JavaScript代码</title>
+    <link href="http://wut0719.github.io/2016/04/04/2016:4:4-%E5%87%A0%E7%A7%8D%E5%B8%B8%E8%A7%81%E6%8E%92%E5%BA%8F/"/>
+    <id>http://wut0719.github.io/2016/04/04/2016:4:4-几种常见排序/</id>
+    <published>2016-04-03T16:00:00.000Z</published>
+    <updated>2016-04-05T02:39:51.000Z</updated>
+    
+    <content type="html">&lt;p&gt;就JavaScript而言，Array对象有方法sort()可以对数组成员进行排序，默认是字典顺序。自定义排序规则需要给sort()方法提供一个函数。此函数本身有2个参数，表示进行比较的两个元素。如果返回值大于0，表示第1个元素在后面，其他情况下第1个元素在前面。&lt;/p&gt;
+&lt;p&gt;下面时其他排序算法的代码，扩充Array的排序功能。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;稳定的排序&quot;&gt;&lt;a href=&quot;#稳定的排序&quot; class=&quot;headerlink&quot; title=&quot;稳定的排序&quot;&gt;&lt;/a&gt;稳定的排序&lt;/h2&gt;&lt;h3 id=&quot;冒泡排序&quot;&gt;&lt;a href=&quot;#冒泡排序&quot; class=&quot;headerlink&quot; title=&quot;冒泡排序&quot;&gt;&lt;/a&gt;冒泡排序&lt;/h3&gt;&lt;p&gt;时间复杂度是&lt;strong&gt;O(n2)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;代码如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;Array&lt;/span&gt;.prototype.bubbleSort = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; len = &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.length&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; temp = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt; (len) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;; i &amp;lt; len; i++) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;[i&lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;] &amp;gt; &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;[i]) &amp;#123; &lt;span class=&quot;comment&quot;&gt;//升序排列&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        temp = &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;[i&lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;[i&lt;span class=&quot;number&quot;&gt;-1&lt;/span&gt;] = &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;[i]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;[i] = temp&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    len--&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;插入排序&quot;&gt;&lt;a href=&quot;#插入排序&quot; class=&quot;headerlink&quot; title=&quot;插入排序&quot;&gt;&lt;/a&gt;插入排序&lt;/h3&gt;&lt;p&gt;时间复杂度是&lt;strong&gt;O(n2)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;代码如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;Array&lt;/span&gt;.prototype.insertionSort = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; i, j, temp&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; len = &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.length&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (i = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;; i &amp;lt; len; i++) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    temp = &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;[i]  &lt;span class=&quot;comment&quot;&gt;//无序区的第一个元素&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (j = i - &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;; j &amp;gt;= &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &amp;amp;&amp;amp; &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;[j] &amp;gt; temp; j--)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;[j+&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;] = &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;[j]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;[j+&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;] = temp&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;可以视为将数组分成两个区域：（有序区，无序区）&lt;/p&gt;
+&lt;p&gt;过程：把无序区的第一个元素插入到有序区的合适的位置。&lt;/p&gt;
+&lt;p&gt;操作：比较得少，换得多。&lt;/p&gt;
+&lt;h3 id=&quot;归并排序&quot;&gt;&lt;a href=&quot;#归并排序&quot; class=&quot;headerlink&quot; title=&quot;归并排序&quot;&gt;&lt;/a&gt;归并排序&lt;/h3&gt;&lt;p&gt;时间复杂度是&lt;strong&gt;O(n log n)&lt;/strong&gt;；需要O(n)额外空间&lt;/p&gt;
+&lt;p&gt;代码如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;Array&lt;/span&gt;.prototype.mergeSort = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;//合并&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; merge = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;left, right&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; final = []&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt; (left.length &amp;amp;&amp;amp; right.length)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      final.push(left[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;] &amp;lt;= right[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;] ? left.shift() : right.shift())&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; final.concat(left.concat(right))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;//递归分块&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; len = &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.length&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (len &amp;lt; &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;) &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; mid = len &amp;gt;&amp;gt; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; merge(&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.slice(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;,mid).mergeSort(),&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.slice(mid).mergeSort())&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;不稳定的排序&quot;&gt;&lt;a href=&quot;#不稳定的排序&quot; class=&quot;headerlink&quot; title=&quot;不稳定的排序&quot;&gt;&lt;/a&gt;不稳定的排序&lt;/h2&gt;&lt;h3 id=&quot;选择排序&quot;&gt;&lt;a href=&quot;#选择排序&quot; class=&quot;headerlink&quot; title=&quot;选择排序&quot;&gt;&lt;/a&gt;选择排序&lt;/h3&gt;&lt;p&gt;时间复杂度是&lt;strong&gt;O(n2)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;代码如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;Array&lt;/span&gt;.prototype.selectionSort = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; i, j, min, temp&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; len = &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.length&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt; len - &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;; i++) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    min = i&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (j = i + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;; j &amp;lt; len; j++)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;[min] &amp;gt; &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;[j]) min = j&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    temp = &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;[min]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;[min] = &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;[i]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;[i] = temp&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;将数组分为两个部分：（有序区，无序区）&lt;/p&gt;
+&lt;p&gt;过程：在无序区里找一个最小的元素跟在有序区的后面&lt;/p&gt;
+&lt;p&gt;操作：比较得多，换得少。&lt;/p&gt;
+&lt;h3 id=&quot;希尔排序&quot;&gt;&lt;a href=&quot;#希尔排序&quot; class=&quot;headerlink&quot; title=&quot;希尔排序&quot;&gt;&lt;/a&gt;希尔排序&lt;/h3&gt;&lt;p&gt;时间复杂度是&lt;strong&gt;O(n log2 n)&lt;/strong&gt; &lt;em&gt;(log n)的平方&lt;/em&gt; 略差于比较算法的 O(n log n)。&lt;/p&gt;
+&lt;p&gt;也称递减增量排序算法，是插入排序的一种更高效的改进版本，通过将待比较的元素分成几个区域来提升插入排序的性能。（插入排序对于接近排好的数据进行操作时效率很高，可达到线性）&lt;/p&gt;
+&lt;p&gt;→ 关键在于步长的选择。&lt;/p&gt;
+&lt;p&gt;代码如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;Array&lt;/span&gt;.prototype.shellSort = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; gap, i, j, temp&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; len = &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.length&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (gap = len &amp;gt;&amp;gt; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;; gap &amp;gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; gap &amp;gt;&amp;gt;= &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;) &lt;span class=&quot;comment&quot;&gt;//步长折半&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (i = gap; i &amp;lt; len; i++) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      temp = &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;[i]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (j = i - gap; j &amp;gt;= &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &amp;amp;&amp;amp; &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;[j] &amp;gt; temp; j -= gap)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;[j + gap] = &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;[j]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;[j + gap] = temp&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;堆排序&quot;&gt;&lt;a href=&quot;#堆排序&quot; class=&quot;headerlink&quot; title=&quot;堆排序&quot;&gt;&lt;/a&gt;堆排序&lt;/h3&gt;&lt;p&gt;时间复杂度为&lt;strong&gt;O(n log n)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;代码如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;Array&lt;/span&gt;.prototype.heapSort = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; arr = &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.slice(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;swap&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;i, j&lt;/span&gt;) &lt;/span&gt;&amp;#123; &lt;span class=&quot;comment&quot;&gt;//封装交换操作&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; temp = arr[i]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    arr[i] = arr[j]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    arr[j] = temp&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;max_heapify&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;start, end&lt;/span&gt;) &lt;/span&gt;&amp;#123; &lt;span class=&quot;comment&quot;&gt;//最大堆调整。使得根节点为堆的最大值&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; dad = start&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; son = dad * &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt; + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (son &amp;gt;= end) &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;//递归终止条件&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (son + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; &amp;lt; end &amp;amp;&amp;amp; arr[son] &amp;lt; arr[son + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;]) son++ &lt;span class=&quot;comment&quot;&gt;//选择左右子节点中的大者&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (arr[dad] &amp;lt;= arr[son]) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      swap(dad, son)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      max_heapify(son, end)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; len = arr.length&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;//初始化，i从最后一个父节点开始往前调整。最终数组第一个元素为最大值&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; i = (len &amp;gt;&amp;gt; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;) - &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;; i &amp;gt;= &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i--) max_heapify(i, len)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;comment&quot;&gt;//把堆顶元素交换到末位(进入有序区)，然后剩余元素再次进行调整，直至排序结束&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; i = len - &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;; i &amp;gt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i--) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    swap(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;, i)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    max_heapify(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;, i)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; arr&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;可把数组看作2部分：（最大堆，有序区）&lt;/p&gt;
+&lt;p&gt;过程：从堆顶把根卸出来放在有序区之前，然后在调整最大堆。&lt;/p&gt;
+&lt;h3 id=&quot;快速排序&quot;&gt;&lt;a href=&quot;#快速排序&quot; class=&quot;headerlink&quot; title=&quot;快速排序&quot;&gt;&lt;/a&gt;快速排序&lt;/h3&gt;&lt;p&gt;时间复杂度为&lt;strong&gt;平均O(n log n)&lt;/strong&gt;，最坏O(n2)。适合于大的、随机数列表。&lt;/p&gt;
+&lt;p&gt;代码如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;Array&lt;/span&gt;.prototype.quickSort = &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; len = &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.length&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (len &amp;lt;= &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;) &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.slice(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; left = []&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; right = []&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; mid = [&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;]]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;; i &amp;lt; len; i++)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;[i] &amp;lt; mid[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;])&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      left.push(&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;[i])&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;      right.push(&lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;[i])&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; left.quickSort().concat(mid.concat(right.quickSort()))&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;参考：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://zh.wikipedia.org/wiki/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;排序算法 - 维基百科&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;就JavaScript而言，Array对象有方法sort()可以对数组成员进行排序，默认是字典顺序。自定义排序规则需要给sort()方法提供一个函数。此函数本身有2个参数，表示进行比较的两个元素。如果返回值大于0，表示第1个元素在后面，其他情况下第1个元素在前面。&lt;/p&gt;
+&lt;p&gt;下面时其他排序算法的代码，扩充Array的排序功能。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="http://wut0719.github.io/categories/JavaScript/"/>
+    
+    
+      <category term="JavaScript" scheme="http://wut0719.github.io/tags/JavaScript/"/>
+    
+      <category term="排序算法" scheme="http://wut0719.github.io/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>JavaScript中的正则表达式</title>
@@ -126,11 +186,11 @@
       <category term="JavaScript" scheme="http://wut0719.github.io/categories/JavaScript/"/>
     
     
+      <category term="前端" scheme="http://wut0719.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
       <category term="JavaScript" scheme="http://wut0719.github.io/tags/JavaScript/"/>
     
       <category term="正则表达式" scheme="http://wut0719.github.io/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
-    
-      <category term="前端" scheme="http://wut0719.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -285,9 +345,9 @@
       <category term="AngularJS" scheme="http://wut0719.github.io/categories/AngularJS/"/>
     
     
-      <category term="前端" scheme="http://wut0719.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
-    
       <category term="AngularJS" scheme="http://wut0719.github.io/tags/AngularJS/"/>
+    
+      <category term="前端" scheme="http://wut0719.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -357,7 +417,7 @@
 &lt;p&gt;行内式：&lt;img src=&quot;//img3.doubanio.com/f/shire/8308f83ca66946299fc80efb1f10ea21f99ec2a5/pics/nav/lg_main_a11_1.png&quot; alt=&quot;Douban&quot;&gt;&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;行内式：![alt属性值](src属性值)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h1 id=&quot;其它&quot;&gt;&lt;a href=&quot;#其它&quot; class=&quot;headerlink&quot; title=&quot;其它&quot;&gt;&lt;/a&gt;其它&lt;/h1&gt;&lt;h2 id=&quot;反斜杠-转义字符&quot;&gt;&lt;a href=&quot;#反斜杠-转义字符&quot; class=&quot;headerlink&quot; title=&quot;反斜杠-转义字符&quot;&gt;&lt;/a&gt;反斜杠-转义字符&lt;/h2&gt;&lt;p&gt;\ 反斜杠&lt;br&gt;` 反引号&lt;br&gt;* 星号&lt;br&gt;_ 下划线&lt;br&gt;{} 大括号&lt;br&gt;[] 中括号&lt;br&gt;() 小括号&lt;br&gt;# 井号&lt;br&gt;+ 加号&lt;br&gt;- 减号&lt;br&gt;. 英文句号&lt;br&gt;! 感叹号&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;\\ 反斜杠&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\` 反引号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\* 星号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\_ 下划线&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\&amp;#123;\&amp;#125; 大括号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\[\] 中括号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\(\) 小括号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\# 井号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\+ 加号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\- 减号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\. 英文句号&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;\! 感叹号&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;h2 id=&quot;自动链接&quot;&gt;&lt;a href=&quot;#自动链接&quot; class=&quot;headerlink&quot; title=&quot;自动链接&quot;&gt;&lt;/a&gt;自动链接&lt;/h2&gt;&lt;p&gt;尖括号，包括链接和邮件地址。&lt;br&gt;&lt;a href=&quot;http://wut0719.github.io&quot;&gt;http://wut0719.github.io&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;&amp;#x6d;&amp;#x61;&amp;#x69;&amp;#108;&amp;#x74;&amp;#x6f;&amp;#x3a;&amp;#x65;&amp;#120;&amp;#x61;&amp;#x6d;&amp;#x70;&amp;#108;&amp;#x65;&amp;#64;&amp;#x65;&amp;#120;&amp;#97;&amp;#x6d;&amp;#112;&amp;#x6c;&amp;#x65;&amp;#46;&amp;#x63;&amp;#111;&amp;#109;&quot;&gt;&amp;#x65;&amp;#120;&amp;#x61;&amp;#x6d;&amp;#x70;&amp;#108;&amp;#x65;&amp;#64;&amp;#x65;&amp;#120;&amp;#97;&amp;#x6d;&amp;#112;&amp;#x6c;&amp;#x65;&amp;#46;&amp;#x63;&amp;#111;&amp;#109;&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;http://wut0719.github.io&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;example@example.com&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&quot;自动链接&quot;&gt;&lt;a href=&quot;#自动链接&quot; class=&quot;headerlink&quot; title=&quot;自动链接&quot;&gt;&lt;/a&gt;自动链接&lt;/h2&gt;&lt;p&gt;尖括号，包括链接和邮件地址。&lt;br&gt;&lt;a href=&quot;http://wut0719.github.io&quot;&gt;http://wut0719.github.io&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;&amp;#109;&amp;#x61;&amp;#105;&amp;#x6c;&amp;#x74;&amp;#x6f;&amp;#x3a;&amp;#101;&amp;#x78;&amp;#97;&amp;#x6d;&amp;#112;&amp;#108;&amp;#x65;&amp;#x40;&amp;#101;&amp;#x78;&amp;#x61;&amp;#x6d;&amp;#112;&amp;#x6c;&amp;#101;&amp;#x2e;&amp;#99;&amp;#111;&amp;#x6d;&quot;&gt;&amp;#101;&amp;#x78;&amp;#97;&amp;#x6d;&amp;#112;&amp;#108;&amp;#x65;&amp;#x40;&amp;#101;&amp;#x78;&amp;#x61;&amp;#x6d;&amp;#112;&amp;#x6c;&amp;#101;&amp;#x2e;&amp;#99;&amp;#111;&amp;#x6d;&lt;/a&gt;&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;http://wut0719.github.io&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;example@example.com&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;参考：&lt;/p&gt;
 &lt;ul&gt;
@@ -490,6 +550,91 @@
   </entry>
   
   <entry>
+    <title>PiOC学习笔记09——对象复制与归档</title>
+    <link href="http://wut0719.github.io/2014/08/31/PiOC09/"/>
+    <id>http://wut0719.github.io/2014/08/31/PiOC09/</id>
+    <published>2014-08-30T16:00:00.000Z</published>
+    <updated>2016-03-13T14:03:39.000Z</updated>
+    
+    <content type="html">&lt;p&gt;chapter 18-19&lt;/p&gt;
+&lt;h3 id=&quot;Copy-Objects&quot;&gt;&lt;a href=&quot;#Copy-Objects&quot; class=&quot;headerlink&quot; title=&quot;Copy Objects&quot;&gt;&lt;/a&gt;Copy Objects&lt;/h3&gt;&lt;p&gt;复制对象 → Foundation中的方法：copy和mutableCopy&lt;/p&gt;
+&lt;p&gt;protocol：&lt;code&gt;&amp;lt;NSCopying&amp;gt; , &amp;lt;NSMutableCopying&amp;gt;&lt;/code&gt;→ 在自己写的class中使用&lt;/p&gt;
+&lt;p&gt;mutable复制不要求object是mutable；immutable不要求object是immutable&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;mutable复制与 immutable复制的对比：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对immutable对象复制，copy是指针复制（shadow copy），但mutableCopy就是对象复制（deep copy）。如果是对mutable对象复制，都是deep copy，但是copy返回的对象是immutable&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.cnblogs.com/ydhliphonedev/archive/2012/04/27/2473927.html&quot; title=&quot;iOS开发之深拷贝与浅拷贝详解&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;iOS开发之深拷贝与浅拷贝详解&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;copy的默认值是&lt;strong&gt;shadow&lt;/strong&gt; —— just copying the reference from one element of the array to another&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;与shadow copy相对的是&lt;strong&gt;deep&lt;/strong&gt; copy —— make distinct copies of each element of the array&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;shadow copy、deep copy 与直接赋值(assignment)的对比：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;shadow copy创建新的array对象，但array中的object（实质为引用）直接复制原始array中的object（object引用所指向的object空间不变，不开辟新内存空间）&lt;/li&gt;
+&lt;li&gt;assignment则是直接复制对原始array对象的引用，并不创建新array对象&lt;/li&gt;
+&lt;li&gt;deep copy既创建新array对象，也创建新的array中的object（开辟新内存空间，存放与原始object值相同的新object）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在property中使用copy：&lt;code&gt;(copy,nonatomic)&lt;/code&gt;（默认值不是copy）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;nonatomic / atomic → 不使用 / 使用 mutex lock 保护 访问property的accessor&lt;/li&gt;
+&lt;li&gt;mutex lock ( &lt;em&gt;mut&lt;/em&gt; ually  &lt;em&gt;ex&lt;/em&gt; clusive) 互斥锁 —— 在任一时刻，只能有一个线程访问该对象&lt;/li&gt;
+&lt;li&gt;默认值是atomic；atomic更安全，但降低程序运行速度，nonatomic提高效率&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果复制的是包含immutable对象的实例变量 → 没有必要把 immutable对象也复制一遍，直接复制其引用就足够了（之后的修改不会影响到immutable对象本身）&lt;/p&gt;
+&lt;h3 id=&quot;Archiving&quot;&gt;&lt;a href=&quot;#Archiving&quot; class=&quot;headerlink&quot; title=&quot;Archiving&quot;&gt;&lt;/a&gt;Archiving&lt;/h3&gt;&lt;p&gt;对象归档：the process of saving one or more objects in a format so that they can later be restored → 即将对象写入文件中&lt;/p&gt;
+&lt;p&gt;两种方式：property list (属性列表，即.plist文件) 和 key-valued coding (KVC机制) —— &lt;a href=&quot;http://zhangbin.cc/2012/08/16/kvc-kvo/&quot; title=&quot;KVC和KVO&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;KVC和KVO&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Key-value coding is a mechanism for &lt;strong&gt;accessing an object’s properties indirectly&lt;/strong&gt;, using strings to identify properties, rather than through invocation of an accessor method or accessing them directly through instance variables.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;XML Property List&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;NSString, NSDictionary, NSArray, NSDate, NSData, or NSNumber类的对象可以使用writeToFile:atomically:方法将对象写入文件中&lt;/li&gt;
+&lt;li&gt;atomically:参数取值YES/NO；YES——先写进一个临时备份文件，全部完成后再移入目标文件中，防止意外情况（system crash等）对plist文件可能造成的损害&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;将plist文件的内容读入程序中：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;返回dictionary：dictionaryWithContentsOfFile: 方法&lt;/li&gt;
+&lt;li&gt;返回array：arrayWithContentsOfFile:方法&lt;/li&gt;
+&lt;li&gt;返回data：dataWithContentsOfFile:方法&lt;/li&gt;
+&lt;li&gt;返回string：stringWithContentsOfFile:方法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;更灵活的保存方式——NSKeyedArchiver class——任何类型的objects&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对应的读取方式——NSKeyedUnarchiver class&lt;/li&gt;
+&lt;li&gt;需要在class中定义encodeWithCoder:方法（如何归档，即encode）and initWithCoder:方法（如何解档，即decode），遵守&lt;code&gt;&amp;lt;NSCoding&amp;gt;&lt;/code&gt;协议&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Using &lt;em&gt;NSData&lt;/em&gt; to Create Custom Archives —— 将多种objects收集起来保存到一个文件&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用initForWritingWithMutableData:方法从NSData对象创建NSKeyedArchiver对象&lt;/li&gt;
+&lt;li&gt;归档的objects对应所属的class都要实现各自的encoder和decoder方法&lt;/li&gt;
+&lt;li&gt;使用finishEncoding方法结束归档&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;使用归档进行deep copy&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You don’t need to use a file for this process; the archiving and unarchiving process can all take place in memory. ( buffer )&lt;/li&gt;
+&lt;li&gt;不用遵守NSCopying协议&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;chapter 18-19&lt;/p&gt;
+&lt;h3 id=&quot;Copy-Objects&quot;&gt;&lt;a href=&quot;#Copy-Objects&quot; class=&quot;headerlink&quot; title=&quot;Copy Objects&quot;&gt;&lt;/a&gt;Copy Objects&lt;/h3&gt;&lt;p&gt;复制对象 → Foundation中的方法：copy和mutableCopy&lt;/p&gt;
+&lt;p&gt;protocol：&lt;code&gt;&amp;lt;NSCopying&amp;gt; , &amp;lt;NSMutableCopying&amp;gt;&lt;/code&gt;→ 在自己写的class中使用&lt;/p&gt;
+&lt;p&gt;mutable复制不要求object是mutable；immutable不要求object是immutable&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="iOS开发" scheme="http://wut0719.github.io/categories/iOS%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="Objective-C" scheme="http://wut0719.github.io/tags/Objective-C/"/>
+    
+  </entry>
+  
+  <entry>
     <title>PiOC学习笔记08——文件和ARC</title>
     <link href="http://wut0719.github.io/2014/08/31/PiOC08/"/>
     <id>http://wut0719.github.io/2014/08/31/PiOC08/</id>
@@ -580,91 +725,6 @@
 &lt;li&gt;&lt;strong&gt;NSFileManager&lt;/strong&gt;: 对文件和目录的基本操作&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Create a new file&lt;br&gt;Read from an existing file&lt;br&gt;Write data to a file&lt;br&gt;Rename a file&lt;br&gt;Remove (delete) a file&lt;br&gt;Test for the existence of a file&lt;br&gt;Determine the size of a file as well as other attributes Make a copy of a file&lt;br&gt;Test two files to see whether their contents are equal&lt;br&gt;
-    
-    </summary>
-    
-      <category term="iOS开发" scheme="http://wut0719.github.io/categories/iOS%E5%BC%80%E5%8F%91/"/>
-    
-    
-      <category term="Objective-C" scheme="http://wut0719.github.io/tags/Objective-C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PiOC学习笔记09——对象复制与归档</title>
-    <link href="http://wut0719.github.io/2014/08/31/PiOC09/"/>
-    <id>http://wut0719.github.io/2014/08/31/PiOC09/</id>
-    <published>2014-08-30T16:00:00.000Z</published>
-    <updated>2016-03-13T14:03:39.000Z</updated>
-    
-    <content type="html">&lt;p&gt;chapter 18-19&lt;/p&gt;
-&lt;h3 id=&quot;Copy-Objects&quot;&gt;&lt;a href=&quot;#Copy-Objects&quot; class=&quot;headerlink&quot; title=&quot;Copy Objects&quot;&gt;&lt;/a&gt;Copy Objects&lt;/h3&gt;&lt;p&gt;复制对象 → Foundation中的方法：copy和mutableCopy&lt;/p&gt;
-&lt;p&gt;protocol：&lt;code&gt;&amp;lt;NSCopying&amp;gt; , &amp;lt;NSMutableCopying&amp;gt;&lt;/code&gt;→ 在自己写的class中使用&lt;/p&gt;
-&lt;p&gt;mutable复制不要求object是mutable；immutable不要求object是immutable&lt;/p&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;p&gt;mutable复制与 immutable复制的对比：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;对immutable对象复制，copy是指针复制（shadow copy），但mutableCopy就是对象复制（deep copy）。如果是对mutable对象复制，都是deep copy，但是copy返回的对象是immutable&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.cnblogs.com/ydhliphonedev/archive/2012/04/27/2473927.html&quot; title=&quot;iOS开发之深拷贝与浅拷贝详解&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;iOS开发之深拷贝与浅拷贝详解&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;copy的默认值是&lt;strong&gt;shadow&lt;/strong&gt; —— just copying the reference from one element of the array to another&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;与shadow copy相对的是&lt;strong&gt;deep&lt;/strong&gt; copy —— make distinct copies of each element of the array&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;shadow copy、deep copy 与直接赋值(assignment)的对比：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;shadow copy创建新的array对象，但array中的object（实质为引用）直接复制原始array中的object（object引用所指向的object空间不变，不开辟新内存空间）&lt;/li&gt;
-&lt;li&gt;assignment则是直接复制对原始array对象的引用，并不创建新array对象&lt;/li&gt;
-&lt;li&gt;deep copy既创建新array对象，也创建新的array中的object（开辟新内存空间，存放与原始object值相同的新object）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;在property中使用copy：&lt;code&gt;(copy,nonatomic)&lt;/code&gt;（默认值不是copy）&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;nonatomic / atomic → 不使用 / 使用 mutex lock 保护 访问property的accessor&lt;/li&gt;
-&lt;li&gt;mutex lock ( &lt;em&gt;mut&lt;/em&gt; ually  &lt;em&gt;ex&lt;/em&gt; clusive) 互斥锁 —— 在任一时刻，只能有一个线程访问该对象&lt;/li&gt;
-&lt;li&gt;默认值是atomic；atomic更安全，但降低程序运行速度，nonatomic提高效率&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;如果复制的是包含immutable对象的实例变量 → 没有必要把 immutable对象也复制一遍，直接复制其引用就足够了（之后的修改不会影响到immutable对象本身）&lt;/p&gt;
-&lt;h3 id=&quot;Archiving&quot;&gt;&lt;a href=&quot;#Archiving&quot; class=&quot;headerlink&quot; title=&quot;Archiving&quot;&gt;&lt;/a&gt;Archiving&lt;/h3&gt;&lt;p&gt;对象归档：the process of saving one or more objects in a format so that they can later be restored → 即将对象写入文件中&lt;/p&gt;
-&lt;p&gt;两种方式：property list (属性列表，即.plist文件) 和 key-valued coding (KVC机制) —— &lt;a href=&quot;http://zhangbin.cc/2012/08/16/kvc-kvo/&quot; title=&quot;KVC和KVO&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;KVC和KVO&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Key-value coding is a mechanism for &lt;strong&gt;accessing an object’s properties indirectly&lt;/strong&gt;, using strings to identify properties, rather than through invocation of an accessor method or accessing them directly through instance variables.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;XML Property List&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;NSString, NSDictionary, NSArray, NSDate, NSData, or NSNumber类的对象可以使用writeToFile:atomically:方法将对象写入文件中&lt;/li&gt;
-&lt;li&gt;atomically:参数取值YES/NO；YES——先写进一个临时备份文件，全部完成后再移入目标文件中，防止意外情况（system crash等）对plist文件可能造成的损害&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;将plist文件的内容读入程序中：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;返回dictionary：dictionaryWithContentsOfFile: 方法&lt;/li&gt;
-&lt;li&gt;返回array：arrayWithContentsOfFile:方法&lt;/li&gt;
-&lt;li&gt;返回data：dataWithContentsOfFile:方法&lt;/li&gt;
-&lt;li&gt;返回string：stringWithContentsOfFile:方法&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;更灵活的保存方式——NSKeyedArchiver class——任何类型的objects&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;对应的读取方式——NSKeyedUnarchiver class&lt;/li&gt;
-&lt;li&gt;需要在class中定义encodeWithCoder:方法（如何归档，即encode）and initWithCoder:方法（如何解档，即decode），遵守&lt;code&gt;&amp;lt;NSCoding&amp;gt;&lt;/code&gt;协议&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Using &lt;em&gt;NSData&lt;/em&gt; to Create Custom Archives —— 将多种objects收集起来保存到一个文件&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;使用initForWritingWithMutableData:方法从NSData对象创建NSKeyedArchiver对象&lt;/li&gt;
-&lt;li&gt;归档的objects对应所属的class都要实现各自的encoder和decoder方法&lt;/li&gt;
-&lt;li&gt;使用finishEncoding方法结束归档&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;使用归档进行deep copy&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;You don’t need to use a file for this process; the archiving and unarchiving process can all take place in memory. ( buffer )&lt;/li&gt;
-&lt;li&gt;不用遵守NSCopying协议&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;chapter 18-19&lt;/p&gt;
-&lt;h3 id=&quot;Copy-Objects&quot;&gt;&lt;a href=&quot;#Copy-Objects&quot; class=&quot;headerlink&quot; title=&quot;Copy Objects&quot;&gt;&lt;/a&gt;Copy Objects&lt;/h3&gt;&lt;p&gt;复制对象 → Foundation中的方法：copy和mutableCopy&lt;/p&gt;
-&lt;p&gt;protocol：&lt;code&gt;&amp;lt;NSCopying&amp;gt; , &amp;lt;NSMutableCopying&amp;gt;&lt;/code&gt;→ 在自己写的class中使用&lt;/p&gt;
-&lt;p&gt;mutable复制不要求object是mutable；immutable不要求object是immutable&lt;/p&gt;
     
     </summary>
     
@@ -797,6 +857,72 @@
   </entry>
   
   <entry>
+    <title>PiOC学习笔记06—— Preprocessor</title>
+    <link href="http://wut0719.github.io/2014/08/27/PiOC06/"/>
+    <id>http://wut0719.github.io/2014/08/27/PiOC06/</id>
+    <published>2014-08-26T16:00:00.000Z</published>
+    <updated>2016-03-13T14:03:09.000Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;The-Preprocessor&quot;&gt;&lt;a href=&quot;#The-Preprocessor&quot; class=&quot;headerlink&quot; title=&quot;The Preprocessor&quot;&gt;&lt;/a&gt;The Preprocessor&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;从语言上定制Objective-C，使其适应自己的编程风格或特定的编程应用&lt;/li&gt;
+&lt;li&gt;是编译过程的一部分，识别散布在程序中的特定语句&lt;/li&gt;
+&lt;li&gt;“#”开头&lt;/li&gt;
+&lt;/ul&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h3 id=&quot;define&quot;&gt;&lt;a href=&quot;#define&quot; class=&quot;headerlink&quot; title=&quot;#define&quot;&gt;&lt;/a&gt;#define&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;给符号名称指派程序常量（包括但不限于）&lt;/li&gt;
+&lt;li&gt;a defined name is not a variable; 字母全部大写&lt;/li&gt;
+&lt;li&gt;often placed toward the beginning of the program, after #import or #include, but not required; must be placed &lt;strong&gt;before it is referenced&lt;/strong&gt; by the program.&lt;/li&gt;
+&lt;li&gt;more than a constant value: expression, “;”(所以不要用“;”结尾), 逻辑运算符, …&lt;ul&gt;
+&lt;li&gt;Careful：使用#define重新定义底层语言语法的行为不是好习惯（会让人费解）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;在#define语句中可以使用其他#define（不分前后）定义的符号名称&lt;/li&gt;
+&lt;li&gt;good use of #define often reduces the need for comments&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;macro&lt;/strong&gt; 宏——常用带一个或多个参数的定义；&lt;ul&gt;
+&lt;li&gt;syntax——#define NAME(参数) （表达式(参数));  //参数和表达式都要用（）括起来，确保完整替换&lt;/li&gt;
+&lt;li&gt;简化表达式的编写&lt;/li&gt;
+&lt;li&gt;macro中也可以使用其他macro&lt;h3 id=&quot;import&quot;&gt;&lt;a href=&quot;#import&quot; class=&quot;headerlink&quot; title=&quot;#import&quot;&gt;&lt;/a&gt;#import&lt;/h3&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;collect all your definitions into a separate file; import it and you can use&lt;/li&gt;
+&lt;li&gt;(in Xcode 5) “@import UIKit;” &lt;strong&gt;module&lt;/strong&gt; (new feature)&lt;/li&gt;
+&lt;li&gt;条件编译 Conditional Compilation&lt;/li&gt;
+&lt;li&gt;often used to create one program that can be compiled to run on different computer systems (for example, an iPhone versus an iPad)&lt;/li&gt;
+&lt;li&gt;switch on or off various statements in the program&lt;h3 id=&quot;条件控制语句&quot;&gt;&lt;a href=&quot;#条件控制语句&quot; class=&quot;headerlink&quot; title=&quot;条件控制语句&quot;&gt;&lt;/a&gt;条件控制语句&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;#ifdef，#endif，#else，#ifndef 语句&lt;ul&gt;
+&lt;li&gt;检查某name是否已预编译（判断机型，系统，是否是debug状态……）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;#ifndef 与#ifdef 功能相同，条件相反&lt;/li&gt;
+&lt;li&gt;if，#elif 语句——更加通用的条件编译控制&lt;ul&gt;
+&lt;li&gt;test whether a constant expression evaluates to nonzero.是就执行后面语句直到#else、#elif或#endif；否就直接跳过&lt;/li&gt;
+&lt;li&gt;#if defined (name) 与 #ifdef name 等价&lt;/li&gt;
+&lt;li&gt;添加注释的新方法：“#if 0 …注释… #endif”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;#undef 语句——remove the definition of a particular name :“#undef name”&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;The-Preprocessor&quot;&gt;&lt;a href=&quot;#The-Preprocessor&quot; class=&quot;headerlink&quot; title=&quot;The Preprocessor&quot;&gt;&lt;/a&gt;The Preprocessor&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;从语言上定制Objective-C，使其适应自己的编程风格或特定的编程应用&lt;/li&gt;
+&lt;li&gt;是编译过程的一部分，识别散布在程序中的特定语句&lt;/li&gt;
+&lt;li&gt;“#”开头&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="iOS开发" scheme="http://wut0719.github.io/categories/iOS%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="Objective-C" scheme="http://wut0719.github.io/tags/Objective-C/"/>
+    
+  </entry>
+  
+  <entry>
     <title>PiOC学习笔记05——Category和Protocol</title>
     <link href="http://wut0719.github.io/2014/08/27/PiOC05/"/>
     <id>http://wut0719.github.io/2014/08/27/PiOC05/</id>
@@ -883,72 +1009,6 @@
 &lt;li&gt;Protocols&lt;h3 id=&quot;Categories&quot;&gt;&lt;a href=&quot;#Categories&quot; class=&quot;headerlink&quot; title=&quot;Categories&quot;&gt;&lt;/a&gt;Categories&lt;/h3&gt;&lt;/li&gt;
 &lt;li&gt;将类的定义模块化到相关方法的组或分类中&lt;/li&gt;
 &lt;li&gt;扩展现有类的定义而无需获取源代码，也不用创建子类&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="iOS开发" scheme="http://wut0719.github.io/categories/iOS%E5%BC%80%E5%8F%91/"/>
-    
-    
-      <category term="Objective-C" scheme="http://wut0719.github.io/tags/Objective-C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PiOC学习笔记06—— Preprocessor</title>
-    <link href="http://wut0719.github.io/2014/08/27/PiOC06/"/>
-    <id>http://wut0719.github.io/2014/08/27/PiOC06/</id>
-    <published>2014-08-26T16:00:00.000Z</published>
-    <updated>2016-03-13T14:03:09.000Z</updated>
-    
-    <content type="html">&lt;h2 id=&quot;The-Preprocessor&quot;&gt;&lt;a href=&quot;#The-Preprocessor&quot; class=&quot;headerlink&quot; title=&quot;The Preprocessor&quot;&gt;&lt;/a&gt;The Preprocessor&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;从语言上定制Objective-C，使其适应自己的编程风格或特定的编程应用&lt;/li&gt;
-&lt;li&gt;是编译过程的一部分，识别散布在程序中的特定语句&lt;/li&gt;
-&lt;li&gt;“#”开头&lt;/li&gt;
-&lt;/ul&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h3 id=&quot;define&quot;&gt;&lt;a href=&quot;#define&quot; class=&quot;headerlink&quot; title=&quot;#define&quot;&gt;&lt;/a&gt;#define&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;给符号名称指派程序常量（包括但不限于）&lt;/li&gt;
-&lt;li&gt;a defined name is not a variable; 字母全部大写&lt;/li&gt;
-&lt;li&gt;often placed toward the beginning of the program, after #import or #include, but not required; must be placed &lt;strong&gt;before it is referenced&lt;/strong&gt; by the program.&lt;/li&gt;
-&lt;li&gt;more than a constant value: expression, “;”(所以不要用“;”结尾), 逻辑运算符, …&lt;ul&gt;
-&lt;li&gt;Careful：使用#define重新定义底层语言语法的行为不是好习惯（会让人费解）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;在#define语句中可以使用其他#define（不分前后）定义的符号名称&lt;/li&gt;
-&lt;li&gt;good use of #define often reduces the need for comments&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;macro&lt;/strong&gt; 宏——常用带一个或多个参数的定义；&lt;ul&gt;
-&lt;li&gt;syntax——#define NAME(参数) （表达式(参数));  //参数和表达式都要用（）括起来，确保完整替换&lt;/li&gt;
-&lt;li&gt;简化表达式的编写&lt;/li&gt;
-&lt;li&gt;macro中也可以使用其他macro&lt;h3 id=&quot;import&quot;&gt;&lt;a href=&quot;#import&quot; class=&quot;headerlink&quot; title=&quot;#import&quot;&gt;&lt;/a&gt;#import&lt;/h3&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;collect all your definitions into a separate file; import it and you can use&lt;/li&gt;
-&lt;li&gt;(in Xcode 5) “@import UIKit;” &lt;strong&gt;module&lt;/strong&gt; (new feature)&lt;/li&gt;
-&lt;li&gt;条件编译 Conditional Compilation&lt;/li&gt;
-&lt;li&gt;often used to create one program that can be compiled to run on different computer systems (for example, an iPhone versus an iPad)&lt;/li&gt;
-&lt;li&gt;switch on or off various statements in the program&lt;h3 id=&quot;条件控制语句&quot;&gt;&lt;a href=&quot;#条件控制语句&quot; class=&quot;headerlink&quot; title=&quot;条件控制语句&quot;&gt;&lt;/a&gt;条件控制语句&lt;/h3&gt;&lt;/li&gt;
-&lt;li&gt;#ifdef，#endif，#else，#ifndef 语句&lt;ul&gt;
-&lt;li&gt;检查某name是否已预编译（判断机型，系统，是否是debug状态……）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;#ifndef 与#ifdef 功能相同，条件相反&lt;/li&gt;
-&lt;li&gt;if，#elif 语句——更加通用的条件编译控制&lt;ul&gt;
-&lt;li&gt;test whether a constant expression evaluates to nonzero.是就执行后面语句直到#else、#elif或#endif；否就直接跳过&lt;/li&gt;
-&lt;li&gt;#if defined (name) 与 #ifdef name 等价&lt;/li&gt;
-&lt;li&gt;添加注释的新方法：“#if 0 …注释… #endif”&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;#undef 语句——remove the definition of a particular name :“#undef name”&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;The-Preprocessor&quot;&gt;&lt;a href=&quot;#The-Preprocessor&quot; class=&quot;headerlink&quot; title=&quot;The Preprocessor&quot;&gt;&lt;/a&gt;The Preprocessor&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;从语言上定制Objective-C，使其适应自己的编程风格或特定的编程应用&lt;/li&gt;
-&lt;li&gt;是编译过程的一部分，识别散布在程序中的特定语句&lt;/li&gt;
-&lt;li&gt;“#”开头&lt;/li&gt;
 &lt;/ul&gt;
     
     </summary>
@@ -1393,34 +1453,6 @@
     <summary type="html">
     
       &lt;p&gt;前几日在豆瓣广播上看到有人推荐一篇日记《谁是中国现代的“国父”？——不说“为刘小枫辩护”而说他的“国父”论所引发的思考》，有所感悟，简单整理一些。关于刘小枫本人，我了解并不多，只是看到一些人引用他的观点和另一些人的评价，所以我想说的更多的是自己的一些思考，并不是针对他。我对这些左右的争论没有兴趣。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="个人" scheme="http://wut0719.github.io/categories/%E4%B8%AA%E4%BA%BA/"/>
-    
-    
-      <category term="杂谈" scheme="http://wut0719.github.io/tags/%E6%9D%82%E8%B0%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Monopoly随想</title>
-    <link href="http://wut0719.github.io/2013/05/11/Monopoly%E9%9A%8F%E6%83%B3/"/>
-    <id>http://wut0719.github.io/2013/05/11/Monopoly随想/</id>
-    <published>2013-05-10T16:00:00.000Z</published>
-    <updated>2016-03-12T13:52:32.000Z</updated>
-    
-    <content type="html">&lt;p&gt;前一阵子在网上下载的这个游戏，EA公司出品。英文名叫Monopoly，中文名是地产大亨，一款大富翁类的棋牌游戏。相比之于不痛不痒的中文名，monopoly这个词更为准确地反映出这游戏的实质——垄断。  &lt;/p&gt;
-&lt;p&gt;同一色块的土地，如果你只拥有其中一部分，则每一块单独计算租金；反之，则增加为原来租金的两倍。在公用事业和火车站上体现的更为明显。自来水公司或电力公司两者占有其一，收取4倍步数的费用；全部占有，则涨为10倍。车站共有4个，占有1个可收取的费用是25，2个为50，3个为100，4个就再翻倍。相比于众多而分散的产业而言，垄断一小部分可以获得多得多的收益，甚至于转瞬间反败为胜。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;br&gt;游戏毕竟只是游戏而已，相比于现实社会，它简单到不值一提。但是它的理念却与现实社会颇有相同之处：垄断是通向最大利润的必由之路。正如《资本论》中所揭示的，高额利润对资本具有无穷的吸引力，那么垄断自然也就成为一种不可避免之现象。而反垄断的干预就显得有些多余，甚至为另一些集团的垄断充当打手。  &lt;/p&gt;
-&lt;p&gt;影响利润的因素有很多，售价是其中一个，还有各种形形色色可控不可控的成本和销量。看起来好像很复杂的样子，实际上完全可以归结为一点——风险。这种几乎无处不在的东西，是利润的死敌。当然风险本身也可以产生利润，比如各种金融产品。但这是以把风险分摊给社会为代价的，而且风险本身依然存在，甚至会产生通过此种渠道扩大其危害的可能性。  &lt;/p&gt;
-&lt;p&gt;垄断则是从风险本身入手，无论是垂直整合上下游，还是横向兼并竞争对手。如果可能的话，两种手段都会被使用。这样的垄断，不仅控制住某些风险（比如落后产能和恶性竞争），而且可以增加企业选择自身经营策略的自由度。虽说常言道船小好调头，但是在大风大浪面前，还是大船更从容镇定。  &lt;/p&gt;
-&lt;p&gt;最后一点，与游戏中会转瞬间反败为胜一样，现实社会中的垄断企业也不是必然一帆风顺的，它本质上仍然是一个企业。这个游戏还真是经典的很啊。  &lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;前一阵子在网上下载的这个游戏，EA公司出品。英文名叫Monopoly，中文名是地产大亨，一款大富翁类的棋牌游戏。相比之于不痛不痒的中文名，monopoly这个词更为准确地反映出这游戏的实质——垄断。  &lt;/p&gt;
-&lt;p&gt;同一色块的土地，如果你只拥有其中一部分，则每一块单独计算租金；反之，则增加为原来租金的两倍。在公用事业和火车站上体现的更为明显。自来水公司或电力公司两者占有其一，收取4倍步数的费用；全部占有，则涨为10倍。车站共有4个，占有1个可收取的费用是25，2个为50，3个为100，4个就再翻倍。相比于众多而分散的产业而言，垄断一小部分可以获得多得多的收益，甚至于转瞬间反败为胜。&lt;br&gt;
     
     </summary>
     
